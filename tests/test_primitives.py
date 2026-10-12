@@ -731,5 +731,80 @@ class TestJointLegality(unittest.TestCase):
         self.assertEqual(h.terminus_boundary, "rim")
 
 
+class TestGraphJsonSchema(unittest.TestCase):
+    """§12 graph JSON shape — version, gauge, tolerances, collections."""
+
+    def test_to_dict_shape_matches_spec(self):
+        d = _sealed_graph().to_dict()
+        self.assertEqual(d["version"], 2)
+        self.assertEqual(d["gauge"], {"wale_mm": 2.5, "course_mm": 1.6})
+        for const, default in (("T_ANCHOR", 0.5), ("T_RIM", 1.0),
+                               ("T_LOOPS", 2.0), ("T_AXIS_EPS", 1e-9),
+                               ("MAX_CONT_TURN_DEG", 90.0),
+                               ("MAX_BRANCH_TILT_DEG", 90.0)):
+            self.assertEqual(d["tolerances"][const], default)
+        self.assertEqual(set(d["joints"].keys()),
+                         {"rim_joints", "surface_branches",
+                          "terminus_continuations"})
+        self.assertEqual([o["op"] for o in d["ops"]],
+                         ["cast_on", "pick_up", "bind_off"])
+
+    def test_op_instance_schema_fields(self):
+        d = _sealed_graph().to_dict()
+        pu = [o for o in d["ops"] if o["op"] == "pick_up"][0]
+        self.assertEqual(set(pu.keys()),
+                         {"id", "op", "consumes", "produces", "params"})
+        self.assertEqual(pu["consumes"], ["t1/rim_end"])
+        self.assertEqual(pu["produces"], "t2/rim_start")
+
+    def test_joint_json_schema_fields(self):
+        d = _sealed_graph().to_dict()
+        j = d["joints"]["terminus_continuations"][0]
+        self.assertEqual(set(j.keys()),
+                         {"id", "joint", "child", "child_boundary", "parent",
+                          "parent_boundary", "construction", "anchor",
+                          "realized_by"})
+        self.assertEqual(set(j["anchor"].keys()),
+                         {"feature", "boundary", "point"})
+
+    def test_roundtrip_preserves_joints_ops_gauge(self):
+        g = _sealed_graph()
+        rt = P.UGPGraph.from_json(g.to_json())
+        self.assertEqual(len(rt.terminus_continuations), 1)
+        self.assertEqual(len(rt.ops), 3)
+        self.assertEqual(rt.gauge, g.gauge)
+        self.assertEqual(rt.open_boundaries, [])
+        self.assertEqual(rt.get("t2").origin, (0.0, 100.0, 0.0))
+
+    def test_roundtrip_validates(self):
+        rt = P.UGPGraph.from_json(_sealed_graph().to_json())
+        self.assertEqual(_status(P.validate(rt), "I-GRAPH"), ["PASS"])
+
+    def test_old_version_json_is_rejected(self):
+        with self.assertRaises(P.SchemaError):
+            P.UGPGraph.from_dict({"version": 1, "primitives": []})
+
+    def test_tolerances_roundtrip_and_validate_against_them(self):
+        g = _sealed_graph()
+        g.tolerances["T_RIM"] = 0.001
+        rt = P.UGPGraph.from_json(g.to_json())
+        self.assertEqual(rt.tolerances["T_RIM"], 0.001)
+        # with T_RIM at 0.001, equal rims still pass, but the I-LOOP
+        # tolerance stays 2.0 — this graph remains valid
+        self.assertFalse(_failed(P.validate(rt), "I-RIMMATCH"))
+
+    def test_unknown_tolerance_constant_rejected(self):
+        with self.assertRaises(P.SchemaError):
+            P.UGPGraph(tolerances={"T_VIBES": 1.0})
+
+    def test_open_boundaries_roundtrip(self):
+        g = _sealed_graph()
+        g.ops = [o for o in g.ops if o.id != "op_bo"]
+        g.open_boundaries = ["t2/rim_end"]
+        rt = P.UGPGraph.from_json(g.to_json())
+        self.assertEqual(rt.open_boundaries, ["t2/rim_end"])
+        self.assertEqual(_status(P.validate(rt), "I-SEAL"), ["PASS"])
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
