@@ -163,6 +163,16 @@ never a crash and never a partial program.
 Committed reports: `benchmark/report.json` (ungauged),
 `benchmark/report-gauged.json` (wale 2.5 mm / course 3 mm).
 
+## Results
+
+`benchmark/RESULTS.md` is the honest roll-up — headline LOC accounting
+(shared representation vs nine-family builders, emitted by
+`benchmark/loc_accounting.py` and pinned by `tests/test_loc_accounting.py`,
+never `wc -l`), the machine op library actually emitted, buildability
+honesty (`I-LOOP: UNVERIFIED` without gauge, `UNSIMULATED` verdicts,
+refusals recorded), and the documented known-open list. Regenerate both
+reports and they are byte-identical to the committed ones.
+
 ## Layout
 
 ```
