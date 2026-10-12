@@ -656,6 +656,48 @@ class TestCanonicalOrdering(unittest.TestCase):
         self.assertEqual(d["actual"], 10.0)
 
 
+# ---------------------------------------------------------------------------
+# C4 — loop correspondence with gauge, byte-level determinism
+# ---------------------------------------------------------------------------
+class TestLoopMismatch(unittest.TestCase):
+    def test_loop_count_mismatch_beyond_T_LOOPS(self):
+        g = _cont_graph(child_r2=20)     # rim arcs 62.83 vs 125.66 mm
+        g.gauge = {"wale_mm": 2.5, "course_mm": 1.6}
+        r = V.validate(g)
+        e = _by_kind(r, "loop_mismatch")[0]
+        self.assertEqual(e.code, "I-LOOP")
+        self.assertEqual(e.ids, ("pick_up_1",))
+        self.assertEqual(e.expected, 2.0)
+        self.assertAlmostEqual(e.actual, 25.13, places=1)
+        self.assertFalse(r.ok)
+
+    def test_unverified_loop_maps_to_nothing(self):
+        # no gauge -> engine UNVERIFIED -> no error, ok stays True
+        r = V.validate(_cont_graph())
+        self.assertTrue(r.ok)
+        loop = [f for f in r.findings if f.invariant == "I-LOOP"][0]
+        self.assertEqual(loop.status, "UNVERIFIED")
+
+
+class TestByteDeterminism(unittest.TestCase):
+    def test_repeated_validate_json_identical(self):
+        import json
+        g1 = build_garment("glove")
+        g2 = build_garment("glove")
+        j1 = json.dumps(V.validate(g1).to_dict(), sort_keys=True)
+        j2 = json.dumps(V.validate(g2).to_dict(), sort_keys=True)
+        self.assertEqual(j1, j2)
+
+    def test_mutated_graph_deterministic_across_rebuilds(self):
+        import json
+
+        def build():
+            g = _cont_graph(child_r2=20)
+            g.gauge = {"wale_mm": 2.5, "course_mm": 1.6}
+            return json.dumps(V.validate(g).to_dict(), sort_keys=True)
+        self.assertEqual(build(), build())
+
+
 if __name__ == "__main__":
     unittest.main()
 

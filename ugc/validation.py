@@ -29,7 +29,8 @@ Catalog (code, kind):
   I-CONT        radius_step           |dr| > T_RIM mm across a continuation
                 axis_turn             |turn| > MAX_CONT_TURN_DEG
   I-BRANCHORIENT branch_into_material child axis . outward normal < 0
-  I-LOOP        loop_overflow         course loops beyond T_LOOPS of target
+  I-LOOP        loop_mismatch         loop counts differ across a
+                                      loop-bearing op beyond T_LOOPS
   I-SEAL        inert_consumed        an inert boundary consumed by an op
                 floating_rim          knit-bearing rim with no op, not open
                 conflicting_states    rim in >1 of produced/consumed/open
@@ -316,7 +317,7 @@ _MSG_MARKERS = (
     ("radius step", "radius_step"),
     ("axis turn", "axis_turn"),
     ("points into parent material", "branch_into_material"),
-    ("course loops", "loop_overflow"),
+    ("loop counts differ", "loop_mismatch"),
     ("inert boundary consumed", "inert_consumed"),
     ("floating knit-bearing rim", "floating_rim"),
     ("conflicting states", "conflicting_states"),
@@ -368,6 +369,10 @@ def _numbers_from(message):
     m = re.search(r"norm (-?[0-9.eE+-]+) beyond T_AXIS_EPS", message)
     if m:
         return 1.0, float(m.group(1))
+    m = re.search(r"loop counts differ by (-?\d+\.?\d*) across "
+                  r"(\S+) <-> (\S+) \(T_LOOPS=(-?\d+\.?\d*)\)", message)
+    if m:
+        return float(m.group(4)), float(m.group(1))
     m = re.search(r"by (-?\d+\.?\d*) mm \(T_ANCHOR=(-?\d+\.?\d*)\)", message)
     if m:
         return float(m.group(2)), float(m.group(1))
