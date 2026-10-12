@@ -33,12 +33,27 @@ Contract
 5. Determinism: identical input -> identical bytes. json.dumps uses
    sort_keys=True everywhere; nothing is sourced from wall clock or
    dict iteration order.
+6. build --out PATH (t_bb76d3b7): writes the exact --json payload bytes
+   (same json.dumps call, trailing newline included) to PATH, creating
+   missing parent directories; stdout gets a one-line confirmation.
+   Unwritable targets are usage errors (exit 2), not crashes.
+7. serve (t_bb76d3b7): read-only static file server (stdlib
+   http.server, ThreadingHTTPServer) over --root (default: the repo
+   root, so viewer/ and out/ resolve), bound to 127.0.0.1,
+   --port (default 8765, 0 = pick a free port). Prints
+   "serving <root> at http://127.0.0.1:<port>" on stdout when ready —
+   that line is the ready signal for tests and scripts — then serves
+   until terminated. GET only: no uploads, no CGI, no writes; request
+   logging stays off stdout so the ready line remains parseable.
 """
 import argparse
+import functools
 import json
 import math
+import os
 import sys
 import traceback
+from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 
 from ugc.backend import BackendNotApplicable, lowered_to_json
 from ugc.garments import GARMENT_FAMILIES, build_garment
@@ -52,6 +67,9 @@ EXIT_OK = 0
 EXIT_REFUSED = 1
 EXIT_USAGE = 2
 EXIT_BUG = 3
+
+_REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+_DEFAULT_SERVE_PORT = 8765
 
 _GRAPH_ERRORS = (SchemaError, PrimitiveError, JointError, OpError,
                  KeyError, TypeError, ValueError)
@@ -152,6 +170,71 @@ def _dump(payload):
     return json.dumps(payload, indent=2, sort_keys=True)
 
 
+def _write_out(path, payload):
+    """Write the payload (with trailing newline) to PATH, creating missing
+    parent dirs. The file bytes are byte-identical to `--json` stdout."""
+    where = os.path.abspath(path)
+    parent = os.path.dirname(where) or "."
+    try:
+        os.makedirs(parent, exist_ok=True)
+        with open(where, "w", encoding="utf-8", newline="\n") as fh:
+            fh.write(payload + "\n")
+    except OSError as exc:
+        raise _UsageError("cannot write --out %s: %s" % (path, exc))
+    print("wrote %s" % where)
+
+
+def cmd_serve(args):
+    root = os.path.abspath(args.root)
+    if not os.path.isdir(root):
+        raise _UsageError("--root %s is not a directory" % args.root)
+    handler = functools.partial(_ViewerRequestHandler, directory=root)
+    try:
+        httpd = ThreadingHTTPServer(("127.0.0.1", args.port), handler)
+    except OSError as exc:
+        raise _UsageError("cannot bind 127.0.0.1:%d: %s"
+                          % (args.port, exc))
+    url = "http://127.0.0.1:%d" % httpd.server_address[1]
+    print("serving %s at %s" % (root, url), flush=True)
+    try:
+        httpd.serve_forever()
+    except KeyboardInterrupt:
+        pass
+    finally:
+        httpd.server_close()
+    return EXIT_OK
+
+
+class _ViewerRequestHandler(SimpleHTTPRequestHandler):
+    """GET-only static handler; silent on stdout (the ready line must
+    stay parseable), quiet on stderr, no directory listings."""
+
+    def __init__(self, *fwd, **kw):
+        kw.setdefault("directory", ".")
+        super().__init__(*fwd, **kw)
+
+    def do_GET(self):
+        super().do_GET()
+
+    def do_PUT(self):
+        self.send_error(405)
+
+    def do_POST(self):
+        self.send_error(405)
+
+    def do_DELETE(self):
+        self.send_error(405)
+
+    def log_message(self, format, *log_args):   # noqa: A002 (stdlib signature)
+        pass                                    # keep stdout clean
+
+    def log_error(self, format, *log_args):     # noqa: A002
+        pass                                    # 404s are expected; stay quiet
+
+    def list_directory(self, path):
+        return None                             # no directory listings
+
+
 # ---------------------------------------------------------------------------
 # subcommands
 # ---------------------------------------------------------------------------
@@ -170,10 +253,15 @@ def cmd_build(args):
     family = _resolve_family(args.family)
     scale = _parse_scale(args.scale)
     graph = build_garment(family, scale)
+    payload = _dump({"family": family, "scale": scale,
+                     "graph": graph.to_dict()})
+    if args.out:
+        _write_out(args.out, payload)
     if args.json:
-        print(_dump({"family": family, "scale": scale,
-                     "graph": graph.to_dict()}))
+        print(payload)
         return EXIT_OK
+    if args.out:
+        return EXIT_OK        # confirmation already printed by _write_out
     prim_ids = [p.id for p in graph]
     joint_count = sum(1 for _ in graph.joints())
     print("built: %s (scale %s)" % (family, scale))
@@ -298,6 +386,9 @@ def _build_parser():
                    help="positive finite scale factor (default 1.0)")
     p.add_argument("--json", action="store_true",
                    help="print family + scale + graph.to_dict() as JSON")
+    p.add_argument("--out", metavar="PATH", default=None,
+                   help="also write the --json payload bytes to PATH "
+                        "(parent dirs are created)")
     p.set_defaults(func=cmd_build)
 
     p = sub.add_parser("validate", help="run the invariant catalog on a graph")
@@ -325,6 +416,16 @@ def _build_parser():
     p.add_argument("--json", action="store_true",
                    help="print the report dict (JSON)")
     p.set_defaults(func=cmd_report)
+
+    p = sub.add_parser(
+        "serve",
+        help="serve viewer/ + out/ over http://127.0.0.1 (read-only)")
+    p.add_argument("--port", type=int, default=_DEFAULT_SERVE_PORT,
+                   help="TCP port (default %d; 0 picks a free port)"
+                        % _DEFAULT_SERVE_PORT)
+    p.add_argument("--root", default=_REPO_ROOT,
+                   help="directory to serve (default: the repo root)")
+    p.set_defaults(func=cmd_serve)
     return parser
 
 

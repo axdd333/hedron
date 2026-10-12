@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>hedron — UGP garment spec viewer</title>
+<style>
+  :root {
+    --ink: #1c2733;
+    --ink-soft: #51606f;
+    --ink-faint: #8494a5;
+    --glass: rgba(255, 255, 255, 0.55);
+    --glass-strong: rgba(255, 255, 255, 0.78);
+    --line: rgba(255, 255, 255, 0.65);
+    --line-soft: rgba(28, 39, 51, 0.10);
+    --accent: #2e6fa3;
+    --pass: #2f7d4f;
+    --unverified: #a8730f;
+    --fail: #b3372e;
+    --unsupported: #a8730f;
+    --mono: "SF Mono", ui-monospace, Menlo, Consolas, monospace;
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    color: var(--ink);
+    font: 14px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Inter, Roboto, sans-serif;
+    background:
+      radial-gradient(1200px 800px at 15% 0%, #eaf3fb 0%, transparent 60%),
+      radial-gradient(1000px 700px at 85% 100%, #e7f0f7 0%, transparent 55%),
+      linear-gradient(160deg, #f4f8fc 0%, #dfe9f2 100%);
+    overflow: hidden;
+  }
+  #app { display: flex; flex-direction: column; height: 100vh; }
+
+  header {
+    display: flex; align-items: baseline; gap: 14px;
+    padding: 14px 22px 10px;
+    border-bottom: 1px solid var(--line);
+    background: linear-gradient(180deg, rgba(255,255,255,0.72),
+                                rgba(255,255,255,0.38));
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+  header h1 { margin: 0; font-size: 16px; font-weight: 600; letter-spacing: 0.2px; }
+  header .sub { color: var(--ink-soft); font-size: 12.5px; }
+  header .spacer { flex: 1; }
+  header .howto { color: var(--ink-faint); font-size: 11.5px; font-family: var(--mono); }
+
+  #main { display: flex; flex: 1; min-height: 0; }
+
+  /* ---- left rail: families + legend + toggles ---- */
+  #rail {
+    width: 230px; flex: none; padding: 14px;
+    border-right: 1px solid var(--line);
+    background: var(--glass);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    overflow-y: auto;
+  }
+  #rail h2 { margin: 2px 0 8px; font-size: 11px; font-weight: 600;
+             text-transform: uppercase; letter-spacing: 1.1px;
+             color: var(--ink-faint); }
+  .fambtn {
+    display: flex; align-items: center; gap: 8px; width: 100%;
+    margin: 0 0 6px; padding: 8px 10px;
+    border: 1px solid var(--line-soft); border-radius: 10px;
+    background: rgba(255,255,255,0.55);
+    color: var(--ink); font: inherit; text-align: left; cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+  }
+  .fambtn:hover { background: rgba(255,255,255,0.85); }
+  .fambtn.active { border-color: var(--accent);
+                   background: rgba(46,111,163,0.10); font-weight: 600; }
+  .fambtn .dot { width: 8px; height: 8px; border-radius: 50%; flex: none;
+                 background: var(--ink-faint); }
+  .fambtn .dot.pass { background: var(--pass); }
+  .fambtn .dot.unverified { background: var(--unverified); }
+  .fambtn .dot.fail { background: var(--fail); }
+  .fambtn .dot.missing { background: transparent;
+                         border: 1.5px solid var(--fail); }
+  .fambtn .fam { flex: 1; }
+  .fambtn .pieces { color: var(--ink-faint); font-size: 11.5px;
+                    font-family: var(--mono); }
+  .legend { margin: 10px 0 0; }
+  .legend .row { display: flex; align-items: center; gap: 8px;
+                 margin: 0 0 5px; font-size: 12px; color: var(--ink-soft); }
+  .legend .swatch { width: 12px; height: 12px; border-radius: 3px;
+                    border: 1px solid rgba(0,0,0,0.12); }
+  .toggle { display: flex; align-items: center; gap: 8px; margin: 12px 0 4px;
+            font-size: 12.5px; color: var(--ink-soft); cursor: pointer; }
+  .toggle input { accent-color: var(--accent); }
+
+  /* ---- stage ---- */
+  #stage { position: relative; flex: 1; min-width: 0; }
+  #glcanvas { position: absolute; inset: 0; width: 100%; height: 100%;
+              display: block; cursor: grab; }
+  #glcanvas.dragging { cursor: grabbing; }
+  #labels { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+  .plabel {
+    position: absolute; transform: translate(-50%, -130%);
+    padding: 2px 7px; border-radius: 8px;
+    background: rgba(255,255,255,0.72); border: 1px solid var(--line);
+    backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+    font-size: 10.5px; font-family: var(--mono); color: var(--ink-soft);
+    white-space: nowrap; pointer-events: none;
+  }
+  .plabel.unsupported { border-color: rgba(168,115,15,0.55); color: var(--unsupported); }
+  .plabel.selected { border-color: var(--accent); color: var(--accent); font-weight: 700; }
+  #tooltip {
+    position: absolute; display: none; z-index: 5; max-width: 260px;
+    padding: 8px 10px; border-radius: 10px;
+    background: var(--glass-strong); border: 1px solid var(--line);
+    box-shadow: 0 8px 24px rgba(28,39,51,0.14);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    font-size: 12px; pointer-events: none;
+  }
+  #tooltip .tt-id { font-family: var(--mono); font-weight: 700; }
+  #tooltip .tt-kind { color: var(--ink-faint); font-family: var(--mono); }
+  #tooltip .tt-hint { color: var(--ink-faint); margin-top: 3px; font-size: 11px; }
+  #stagemsg {
+    position: absolute; left: 50%; bottom: 14px; transform: translateX(-50%);
+    padding: 5px 12px; border-radius: 999px;
+    background: rgba(255,255,255,0.6); border: 1px solid var(--line);
+    color: var(--ink-faint); font-size: 11px; pointer-events: none;
+  }
+
+  /* ---- right panel ---- */
+  #panel {
+    width: 400px; flex: none; overflow-y: auto;
+    border-left: 1px solid var(--line);
+    background: var(--glass);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    padding: 14px;
+  }
+  #panel h2 { margin: 4px 0 8px; font-size: 11px; font-weight: 600;
+              text-transform: uppercase; letter-spacing: 1.1px;
+              color: var(--ink-faint); }
+  .card {
+    margin: 0 0 12px; padding: 11px 12px;
+    border: 1px solid var(--line-soft); border-radius: 12px;
+    background: rgba(255,255,255,0.6);
+  }
+  .card h3 { margin: 0 0 6px; font-size: 13px; font-weight: 650; }
+  .kv { display: flex; gap: 8px; margin: 2px 0; font-size: 12.5px; }
+  .kv .k { width: 128px; flex: none; color: var(--ink-faint); }
+  .kv .v { font-family: var(--mono); font-size: 12px; word-break: break-word; }
+  .chips { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 6px; }
+  .chip {
+    padding: 2px 8px; border-radius: 999px; font-size: 10.5px;
+    font-family: var(--mono);
+    background: rgba(46,111,163,0.10); color: var(--accent);
+    border: 1px solid rgba(46,111,163,0.25);
+  }
+  .chip.unsupported { background: rgba(168,115,15,0.10);
+                      color: var(--unsupported);
+                      border-color: rgba(168,115,15,0.4); }
+  .chip.renderonly { background: rgba(132,148,165,0.12); color: var(--ink-soft);
+                     border-color: rgba(132,148,165,0.4); }
+  .chip.pass { background: rgba(47,125,79,0.10); color: var(--pass);
+               border-color: rgba(47,125,79,0.35); }
+  .chip.unverified { background: rgba(168,115,15,0.10); color: var(--unverified);
+                     border-color: rgba(168,115,15,0.4); }
+  .chip.fail { background: rgba(179,55,46,0.10); color: var(--fail);
+               border-color: rgba(179,55,46,0.4); }
+  .chip.plain { background: rgba(255,255,255,0.6); color: var(--ink-soft);
+                border-color: var(--line-soft); }
+
+  .primrow {
+    padding: 8px 10px; margin: 0 0 7px;
+    border: 1px solid var(--line-soft); border-radius: 10px;
+    background: rgba(255,255,255,0.5); cursor: pointer;
+  }
+  .primrow:hover { background: rgba(255,255,255,0.85); }
+  .primrow.selected { border-color: var(--accent);
+                      background: rgba(46,111,163,0.08); }
+  .primrow .pr-head { display: flex; align-items: center; gap: 7px; }
+  .primrow .pr-id { font-family: var(--mono); font-weight: 700; font-size: 12.5px; }
+  .primrow .pr-kind { color: var(--ink-faint); font-family: var(--mono); font-size: 11px; }
+  .primrow .pr-status { margin-left: auto; }
+  .primrow .pr-sub { margin-top: 4px; font-size: 11.5px; color: var(--ink-soft); }
+  .primrow .pr-bnd { margin-top: 5px; font-family: var(--mono); font-size: 10.5px;
+                     color: var(--ink-soft); }
+  .primrow .pr-bnd .inert { color: var(--ink-faint); }
+
+  table.findings { width: 100%; border-collapse: collapse; font-size: 11px; }
+  table.findings th { text-align: left; color: var(--ink-faint); font-weight: 600;
+                      padding: 2px 6px 4px; border-bottom: 1px solid var(--line-soft); }
+  table.findings td { padding: 3px 6px; vertical-align: top;
+                      border-bottom: 1px solid rgba(28,39,51,0.05); }
+  table.findings td.mono { font-family: var(--mono); font-size: 10.5px; }
+  .st-PASS { color: var(--pass); font-weight: 700; }
+  .st-UNVERIFIED { color: var(--unverified); font-weight: 700; }
+  .st-FAIL { color: var(--fail); font-weight: 700; }
+
+  .classgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 10px;
+               margin-top: 6px; }
+  .classgrid .cg { display: flex; justify-content: space-between; gap: 6px;
+                   font-family: var(--mono); font-size: 10.5px; }
+  .note { margin-top: 8px; padding: 7px 9px; border-radius: 8px;
+          background: rgba(46,111,163,0.06); border: 1px solid rgba(46,111,163,0.18);
+          color: var(--ink-soft); font-size: 11px; }
+  .note.unsupported-note { background: rgba(168,115,15,0.07);
+                           border-color: rgba(168,115,15,0.25); }
+  .footnote { color: var(--ink-faint); font-size: 10.5px; margin-top: 8px; }
+
+  /* ---- error overlay ---- */
+  #overlay {
+    position: fixed; inset: 0; z-index: 50; display: none;
+    align-items: center; justify-content: center;
+    background: rgba(223,233,242,0.72);
+    backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  }
+  #overlay .box {
+    max-width: 560px; padding: 26px 30px; border-radius: 16px;
+    background: var(--glass-strong); border: 1px solid var(--line);
+    box-shadow: 0 18px 50px rgba(28,39,51,0.20);
+  }
+  #overlay h2 { margin: 0 0 8px; font-size: 16px; }
+  #overlay p { margin: 6px 0; color: var(--ink-soft); font-size: 13px; }
+  #overlay code {
+    display: inline-block; padding: 2px 7px; border-radius: 6px;
+    background: rgba(28,39,51,0.07); font-family: var(--mono); font-size: 12px;
+  }
+  #overlay .cmd {
+    display: block; margin: 10px 0; padding: 9px 12px; border-radius: 9px;
+    background: rgba(28,39,51,0.86); color: #dff0e2;
+    font-family: var(--mono); font-size: 12.5px; overflow-x: auto;
+  }
+  #overlay .detail { color: var(--ink-faint); font-size: 11.5px;
+                     font-family: var(--mono); margin-top: 10px; }
+
+  @media (max-width: 1080px) { #panel { width: 330px; } }
+</style>
+</head>
+<body>
+<div id="app">
+  <header>
+    <h1>hedron</h1>
+    <span class="sub">UGP garment spec viewer — renders only what the emitted
+      spec JSONs contain (out/&lt;family&gt;.json); geometric validity never
+      implies knitability.</span>
+    <span class="spacer"></span>
+    <span class="howto">drag rotate · wheel zoom · shift-drag pan · hover pick</span>
+  </header>
+  <div id="main">
+    <nav id="rail">
+      <h2>Families</h2>
+      <div id="fambtns"></div>
+      <h2 style="margin-top:16px">Primitive kinds</h2>
+      <div class="legend" id="legend"></div>
+      <h2 style="margin-top:16px">Display</h2>
+      <label class="toggle"><input type="checkbox" id="tgl-labels" checked>
+        primitive id labels</label>
+      <label class="toggle"><input type="checkbox" id="tgl-unsup" checked>
+        highlight unsupported joints</label>
+    </nav>
+    <div id="stage">
+      <canvas id="glcanvas"></canvas>
+      <div id="labels"></div>
+      <div id="tooltip">
+        <div class="tt-id"></div>
+        <div class="tt-kind"></div>
+        <div class="tt-hint">click to select</div>
+      </div>
+      <div id="stagemsg"></div>
+    </div>
+    <aside id="panel"></aside>
+  </div>
+</div>
+<div id="overlay">
+  <div class="box">
+    <h2 id="ov-title">Spec data unavailable</h2>
+    <div id="ov-body"></div>
+    <div class="detail" id="ov-detail"></div>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

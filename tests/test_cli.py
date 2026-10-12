@@ -15,10 +15,12 @@ Contract (this cycle's decision log):
 """
 import json
 import os
+import re
 import subprocess
 import sys
 import tempfile
 import unittest
+import urllib.request
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -395,6 +397,107 @@ class TestCliCrossCutting(unittest.TestCase):
                                    json.dumps(build_sock_like_valid_graph())])
         self.assertEqual(rc, 3)
         self.assertIn("ZeroDivisionError", buf.getvalue())
+
+
+# ---------------------------------------------------------------------------
+# build --out (t_bb76d3b7)
+# ---------------------------------------------------------------------------
+class TestBuildOutFlag(unittest.TestCase):
+    def test_build_out_writes_json_payload_file(self):
+        out_path = os.path.join(tempfile.mkdtemp(), "sock.json")
+        rc, out, err = _run_cli(["build", "sock", "--out", out_path])
+        self.assertEqual(rc, 0, err)
+        self.assertTrue(os.path.isfile(out_path))
+        with open(out_path, "r", encoding="utf-8") as fh:
+            payload = json.load(fh)
+        self.assertEqual(payload["family"], "sock")
+        self.assertEqual(payload["scale"], 1.0)
+        self.assertEqual(payload["graph"]["version"], 2)
+
+    def test_build_out_bytes_match_json_stdout(self):
+        out_path = os.path.join(tempfile.mkdtemp(), "spec.json")
+        rc, _, err = _run_cli(["build", "sock", "--out", out_path])
+        self.assertEqual(rc, 0, err)
+        with open(out_path, "r", encoding="utf-8") as fh:
+            file_bytes = fh.read()
+        _, stdout, _ = _run_cli(["build", "sock", "--json"])
+        self.assertEqual(file_bytes, stdout)
+
+    def test_build_out_creates_missing_directories(self):
+        base = tempfile.mkdtemp()
+        out_path = os.path.join(base, "nested", "dir", "shirt.json")
+        rc, out, err = _run_cli(["build", "shirt", "--out", out_path])
+        self.assertEqual(rc, 0, err)
+        self.assertTrue(os.path.isfile(out_path))
+
+    def test_build_out_names_the_file_on_stdout(self):
+        out_path = os.path.join(tempfile.mkdtemp(), "hat.json")
+        rc, out, err = _run_cli(["build", "hat", "--out", out_path])
+        self.assertEqual(rc, 0, err)
+        self.assertIn(out_path, out)
+
+
+# ---------------------------------------------------------------------------
+# serve (t_bb76d3b7)
+# ---------------------------------------------------------------------------
+class TestServeSubcommand(unittest.TestCase):
+    def _start(self, *extra):
+        proc = subprocess.Popen(
+            [sys.executable, "-m", "ugc.cli", "serve"] + list(extra),
+            cwd=REPO, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        if proc.stdout is None:
+            self.fail("serve subprocess has no captured stdout")
+        return proc
+
+    @staticmethod
+    def _stop(proc):
+        proc.terminate()
+        proc.wait(timeout=10)
+        for stream in (proc.stdout, proc.stderr):
+            if stream is not None:
+                stream.close()
+
+    def _ready_url(self, proc):
+        """Read the serve ready line and return the printed base URL."""
+        line = proc.stdout.readline().decode("utf-8")
+        m = re.search(r"http://127\.0\.0\.1:(\d+)", line)
+        if m is None:
+            self.fail("no ready URL on stdout: %r" % line)
+        return "http://127.0.0.1:%s" % m.group(1)
+
+    def test_serve_starts_serves_spec_file_and_shuts_down(self):
+        root = tempfile.mkdtemp()
+        outdir = os.path.join(root, "out")
+        os.makedirs(outdir)
+        spec = {"family": "sock", "scale": 1.0, "graph": {"version": 2}}
+        with open(os.path.join(outdir, "sock.json"), "w",
+                  encoding="utf-8") as fh:
+            json.dump(spec, fh)
+        proc = self._start("--port", "0", "--root", root)
+        try:
+            url = self._ready_url(proc) + "/out/sock.json"
+            with urllib.request.urlopen(url, timeout=5) as resp:
+                self.assertEqual(resp.status, 200)
+                self.assertEqual(json.load(resp), spec)
+        finally:
+            self._stop(proc)
+            self.assertIsNotNone(proc.returncode)
+
+    def test_serve_default_root_is_repo_root_with_viewer(self):
+        proc = self._start("--port", "0")
+        try:
+            base = self._ready_url(proc)
+            with urllib.request.urlopen(base + "/viewer/index.html",
+                                        timeout=5) as resp:
+                self.assertEqual(resp.status, 200)
+                self.assertIn(b"app.js", resp.read())
+            with urllib.request.urlopen(base + "/out/sock.json",
+                                        timeout=5) as resp:
+                self.assertEqual(resp.status, 200)
+                self.assertEqual(json.load(resp)["family"], "sock")
+        finally:
+            self._stop(proc)
+            self.assertIsNotNone(proc.returncode)
 
 
 if __name__ == "__main__":

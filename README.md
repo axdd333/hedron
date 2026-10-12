@@ -172,9 +172,26 @@ ugc/garments.py      U-01 family builders (9 families)
 ugc/backend.py       lowering, stats ledger, JSON envelope
 ugc/__main__.py      CLI
 benchmark/           U-01 benchmark + canonical JSON reports
-tests/               238 tests, unittest, no deps
+tests/               unittest, no deps (CLI + viewer smoke incl.)
+tools/emit_specs.py  emit per-family viewer bundles to out/<family>.json
+viewer/              zero-dependency WebGL viewer (index.html + app.js)
 DESIGN.md            spec-v2: primitives, joints, ops, invariants, §8
 ```
+
+## Viewer
+
+Browse the emitted spec graphs at `http://127.0.0.1:<port>/viewer/`:
+
+```
+python3 tools/emit_specs.py          # regenerate out/<family>.json
+python3 -m ugc.cli serve             # read-only http://127.0.0.1:8765
+```
+
+The page renders exactly what the bundles contain: per-primitive geometry
+(tube / hemisphere / disk) from the spec params, rim overlays, joint
+anchors, and the validation/buildability/plan facts — including
+unsupported constructions and `machine_verdict=UNSIMULATED`, surfaced
+verbatim. `out/` is gitignored; regenerate after any library change.
 
 Geometric validity never implies knitability (§9). This is a planning and
 simulation reference; it does not drive hardware.
