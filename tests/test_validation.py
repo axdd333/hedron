@@ -343,5 +343,251 @@ class TestConnectivity(unittest.TestCase):
         self.assertIn("b", e.ids)
 
 
+# ---------------------------------------------------------------------------
+# C2 — engine-class mapping: numeric expected/actual per catalog row
+# ---------------------------------------------------------------------------
+class TestRimMatch(unittest.TestCase):
+    def _mismatch_graph(self, child_r):
+        a = _tube("a")
+        b = _tube("b", r1=child_r, r2=child_r, l=50, origin=(0, 100, 0))
+        g = P.UGPGraph(primitives=[a, b], open_boundaries=["b/rim_end"])
+        _cast_on(g, "a", "cast_on_1")
+        _pick_up(g, "pick_up_1", "a", "b")
+        g.add_joint(_rim_joint("j1", "b", "a", (10, 100, 0), ["pick_up_1"]))
+        return g
+
+    def test_rim_length_mismatch_beyond_T_RIM(self):
+        r = V.validate(self._mismatch_graph(10.5))   # 2pi*0.5 = 3.14 mm
+        e = _by_kind(r, "rim_length_mismatch")[0]
+        self.assertEqual(e.code, "I-RIMMATCH")
+        self.assertEqual(e.ids, ("j1",))
+        self.assertAlmostEqual(e.expected, 1.0, places=9)
+        self.assertAlmostEqual(e.actual, 3.142, places=2)
+
+    def test_rim_mismatch_within_T_RIM_is_clean(self):
+        a = _tube("a")
+        b = _tube("b", r1=10.05, r2=10.05, l=50, origin=(0, 100, 0))
+        g = P.UGPGraph(primitives=[a, b], open_boundaries=["b/rim_end"])
+        _cast_on(g, "a", "cast_on_1")
+        _pick_up(g, "pick_up_1", "a", "b")
+        g.add_joint(_rim_joint("j1", "b", "a", (10, 100, 0), ["pick_up_1"]))
+        r = V.validate(g)
+        self.assertTrue(r.ok, _kinds(r))
+
+
+class TestContinuation(unittest.TestCase):
+    def test_radius_step_beyond_T_RIM(self):
+        g = _cont_graph(child_r2=20)                 # dr = 10 mm
+        r = V.validate(g)
+        e = _by_kind(r, "radius_step")[0]
+        self.assertEqual(e.code, "I-CONT")
+        self.assertEqual(e.ids, ("j1",))
+        self.assertAlmostEqual(e.expected, 1.0, places=9)
+        self.assertAlmostEqual(e.actual, 10.0, places=9)
+
+    def test_axis_turn_beyond_max(self):
+        # 120-degree continuation turn: only |turn| > MAX (90) fails, so
+        # tilt the child 30 degrees off the parent then 120 total via -150:
+        # use a 120-degree turn directly (sin120/cos120)
+        a = _tube("a")
+        ang = math.radians(120)
+        b = _tube("b", l=50, origin=(0, 100, 0),
+                  axis=(math.sin(ang), math.cos(ang), 0.0))
+        g = P.UGPGraph(primitives=[a, b], open_boundaries=["b/rim_end"])
+        _cast_on(g, "a", "cast_on_1")
+        _pick_up(g, "pick_up_1", "a", "b")
+        g.add_joint(_cont_joint("j1", "b", "a", (0, 100, 0), ["pick_up_1"]))
+        r = V.validate(g)
+        e = _by_kind(r, "axis_turn")[0]
+        self.assertEqual(e.code, "I-CONT")
+        self.assertAlmostEqual(e.expected, 90.0, places=9)
+        self.assertAlmostEqual(e.actual, 120.0, places=9)
+
+    def test_axis_turn_within_max_clean(self):
+        # 30-degree continuation turn: legal
+        a = _tube("a")
+        b = _tube("b", l=50, origin=(0, 100, 0),
+                  axis=(math.sin(math.radians(30)), math.cos(math.radians(30)),
+                        0.0))
+        g = P.UGPGraph(primitives=[a, b], open_boundaries=["b/rim_end"])
+        _cast_on(g, "a", "cast_on_1")
+        _pick_up(g, "pick_up_1", "a", "b")
+        g.add_joint(_cont_joint("j1", "b", "a", (0, 100, 0), ["pick_up_1"]))
+        r = V.validate(g)
+        self.assertTrue(r.ok, _kinds(r))
+
+
+class TestSeal(unittest.TestCase):
+    def test_floating_rim(self):
+        g = _cont_graph()
+        g.open_boundaries.remove("b/rim_end")
+        g.ops = [o for o in g.ops if o.id != "cast_on_1"]
+        # b/rim_start stays produced by pick_up_1; a/rim_end is now floating
+        r = V.validate(g)
+        e = _by_kind(r, "floating_rim")[0]
+        self.assertEqual(e.code, "I-SEAL")
+        self.assertEqual(e.ids[0], "a/rim_start")
+
+    def test_conflicting_states(self):
+        g = _cont_graph()
+        g.open_boundaries.append("a/rim_start")  # produced + declared_open
+        r = V.validate(g)
+        e = _by_kind(r, "conflicting_states")[0]
+        self.assertEqual(e.code, "I-SEAL")
+        self.assertEqual(e.ids[0], "a/rim_start")
+
+    def test_multi_consumed(self):
+        # consumption must be the rim's ONLY state: b/rim_end stays off
+        # open_boundaries and two bind_offs claim it
+        g = _cont_graph()
+        g.open_boundaries.remove("b/rim_end")
+        g.add_op(P.KnitOp(id="bind_off_1", op="bind_off",
+                          consumes=["b/rim_end"]))
+        g.add_op(P.KnitOp(id="bind_off_2", op="bind_off",
+                          consumes=["b/rim_end"]))
+        r = V.validate(g)
+        kinds = _kinds(r)
+        self.assertIn(("I-SEAL", "multi_consumed"), kinds)
+        e = _by_kind(r, "multi_consumed")[0]
+        self.assertEqual(e.ids, ("b/rim_end",))
+        self.assertEqual(e.expected, 1)
+        self.assertEqual(e.actual, 2)
+
+    def test_inert_consumed(self):
+        a = _tube("a")
+        d = P.Primitive(id="d", kind="disk",
+                        params={"r": 10}, origin=(0, 100, 0))
+        g = P.UGPGraph(primitives=[a, d], open_boundaries=["a/rim_start"])
+        _cast_on(g, "a", "cast_on_1")
+        g.add_op(P.KnitOp(id="bind_off_1", op="bind_off",
+                          consumes=["d/rim"]))
+        g.add_joint(_rim_joint("j1", "d", "a", (10, 100, 0), [],
+                               child_boundary="rim"))
+        r = V.validate(g)
+        kinds = _kinds(r)
+        self.assertIn(("I-SEAL", "inert_consumed"), kinds)
+
+
+class TestJointRules(unittest.TestCase):
+    def test_anchor_feature_mismatch(self):
+        g = _cont_graph()
+        j = g.terminus_continuations[0]
+        g.terminus_continuations[0] = P.Joint(
+            id=j.id, joint="rim_joint", child=j.child,
+            child_boundary=j.child_boundary, parent=j.parent,
+            parent_boundary=j.parent_boundary, construction=j.construction,
+            anchor={"feature": "terminus", "boundary": "rim_end",
+                    "point": j.anchor["point"]},
+            realized_by=j.realized_by)
+        r = V.validate(g)
+        kinds = _kinds(r)
+        self.assertIn(("I-JOINT", "anchor_feature_mismatch"), kinds)
+
+    def test_construction_illegal(self):
+        g = _cont_graph()
+        j = g.terminus_continuations[0]
+        g.terminus_continuations[0] = P.Joint(
+            id=j.id, joint=j.joint, child=j.child,
+            child_boundary=j.child_boundary, parent=j.parent,
+            parent_boundary=j.parent_boundary, construction="selvedge_seam",
+            anchor=j.anchor, realized_by=j.realized_by)
+        r = V.validate(g)
+        kinds = _kinds(r)
+        self.assertIn(("I-JOINT", "construction_illegal"), kinds)
+
+
+class TestAnchor(unittest.TestCase):
+    def test_anchor_off_feature_beyond_T_ANCHOR(self):
+        g = _cont_graph()
+        j = g.terminus_continuations[0]
+        g.terminus_continuations[0] = P.Joint(
+            id=j.id, joint=j.joint, child=j.child,
+            child_boundary=j.child_boundary, parent=j.parent,
+            parent_boundary=j.parent_boundary, construction=j.construction,
+            anchor={"feature": "terminus", "boundary": "rim_end",
+                    "point": (0, 103, 0)},
+            realized_by=j.realized_by)
+        r = V.validate(g)
+        e = _by_kind(r, "anchor_off_feature")[0]
+        self.assertEqual(e.code, "I-ANCHOR")
+        self.assertEqual(e.ids, ("j1",))
+        self.assertAlmostEqual(e.expected, 0.5, places=9)
+        self.assertAlmostEqual(e.actual, 3.0, places=9)
+
+
+class TestToleranceOverride(unittest.TestCase):
+    def test_relaxed_T_RIM_accepts_bigger_step(self):
+        # rim diff 3.14 mm and radius step 0.5 mm both pass at T_RIM=4
+        a = _tube("a")
+        b = _tube("b", r1=10.5, r2=10.5, l=50, origin=(0, 100, 0))
+        g = P.UGPGraph(primitives=[a, b], open_boundaries=["b/rim_end"])
+        _cast_on(g, "a", "cast_on_1")
+        _pick_up(g, "pick_up_1", "a", "b")
+        g.add_joint(_rim_joint("j1", "b", "a", (10, 100, 0), ["pick_up_1"]))
+        g.tolerances["T_RIM"] = 4.0
+        r = V.validate(g)
+        self.assertTrue(r.ok, _kinds(r))
+
+    def test_tightened_T_ANCHOR_rejects_off_arc_point(self):
+        # anchor 0.3 mm off the arc: within default T_ANCHOR=0.5, outside 0.01
+        a = _tube("a")
+        b = _tube("b", l=50, origin=(0, 100, 0))
+        g = P.UGPGraph(primitives=[a, b], open_boundaries=["b/rim_end"])
+        _cast_on(g, "a", "cast_on_1")
+        _pick_up(g, "pick_up_1", "a", "b")
+        g.add_joint(_rim_joint("j1", "b", "a", (10.3, 100, 0),
+                               ["pick_up_1"]))
+        r = V.validate(g)
+        self.assertTrue(r.ok, _kinds(r))     # clean at defaults
+        g.tolerances["T_ANCHOR"] = 0.01
+        r = V.validate(g)
+        self.assertFalse(r.ok)
+        self.assertIn(("I-ANCHOR", "anchor_off_feature"), _kinds(r))
+
+
+class TestCatalogCompleteness(unittest.TestCase):
+    def test_every_engine_fail_maps_to_non_generic_kind(self):
+        # any engine FAIL on a mutated graph must land in a named kind,
+        # never the generic 'engine_finding' fallback
+        import itertools
+        mutations = []
+        base = _cont_graph
+        g = base(); g.get("a").axis = (2.0, 0.0, 0.0); mutations.append(g)
+        g = base(); g.get("a").params["r1"] = 0; mutations.append(g)
+        g = base(); g.get("a").params["l"] = float("nan"); mutations.append(g)
+        g = base()
+        j = g.terminus_continuations[0]
+        g.terminus_continuations[0] = P.Joint(
+            id=j.id, joint="rim_joint", child=j.child,
+            child_boundary=j.child_boundary, parent=j.parent,
+            parent_boundary=j.parent_boundary, construction=j.construction,
+            anchor=j.anchor, realized_by=j.realized_by)
+        mutations.append(g)
+        g = base(); g.get("b").kind = "octahedron"; mutations.append(g)
+        for g in mutations:
+            r = V.validate(g)
+            for e in r.errors:
+                self.assertNotEqual(e.kind, "engine_finding", e.as_tuple())
+
+    def test_validate_strict_raises_with_catalog_in_message(self):
+        g = _cont_graph(child_r2=20)
+        with self.assertRaises(P.GraphValidationError) as ctx:
+            V.validate_strict(g)
+        self.assertIn("I-CONT[j1]", str(ctx.exception))
+        self.assertIn("radius step", str(ctx.exception))
+
+    def test_validate_rejects_non_graph(self):
+        with self.assertRaises(TypeError):
+            V.validate("not a graph")
+
+    def test_result_to_dict_roundtrip_keys(self):
+        r = V.validate(_cont_graph())
+        d = r.to_dict()
+        for key in ("ok", "fatal", "errors", "findings"):
+            self.assertIn(key, d)
+        self.assertTrue(d["ok"])
+
+
 if __name__ == "__main__":
     unittest.main()
+

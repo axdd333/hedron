@@ -371,6 +371,12 @@ def _numbers_from(message):
     m = re.search(r"by (-?\d+\.?\d*) mm \(T_ANCHOR=(-?\d+\.?\d*)\)", message)
     if m:
         return float(m.group(2)), float(m.group(1))
+    m = re.search(r"(?:rim )?consumed by (\d+) ops", message)
+    if m:
+        return 1, int(m.group(1))
+    m = re.search(r"(?:rim )?produced by (\d+) ops", message)
+    if m:
+        return 1, int(m.group(1))
     m = re.search(r"\(axis \. normal = (-?\d+\.?\d*)\)", message)
     if m:
         return 0.0, float(m.group(1))
@@ -425,10 +431,16 @@ def validate(graph):
 
 
 def validate_strict(graph):
-    """validate() + raise GraphValidationError on any cataloged error."""
+    """validate() + raise GraphValidationError carrying the engine findings
+    plus one Finding per cataloged error."""
     result = validate(graph)
     if not result.ok:
-        raise P.GraphValidationError(
-            "; ".join("%s/%s: %s" % (e.code, e.kind, e.message)
-                      for e in result.errors))
+        findings = list(result.findings)
+        for e in result.errors:
+            if not any(f.invariant == e.code and f.subject in (e.ids or ("*",))
+                       for f in findings):
+                findings.append(P.Finding(e.code, "FAIL",
+                                          e.ids[0] if e.ids else "*",
+                                          e.message))
+        raise P.GraphValidationError(findings)
     return result
