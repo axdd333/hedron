@@ -1,0 +1,3609 @@
+{
+  "backends": [
+    "default_knit",
+    "default_sim"
+  ],
+  "families": {
+    "dress": {
+      "backends": {
+        "default_knit": {
+          "buildability": {
+            "backend": "default_knit",
+            "backend_checks": [
+              "I-DEGENERATE",
+              "I-SCHEMA",
+              "I-AXIS",
+              "I-GRAPH",
+              "I-ANCHOR",
+              "I-RIMMATCH",
+              "I-CONT",
+              "I-BRANCHORIENT",
+              "I-LOOP",
+              "I-SEAL",
+              "I-JOINT"
+            ],
+            "backend_unverified": [],
+            "failing_instances": {},
+            "geometric_validity": "PASS",
+            "note": "geometric validity never implies knitability; PASS means the graph is well-formed per DESIGN.md \u00a76/\u00a79, nothing more",
+            "per_class": {
+              "I-ANCHOR": "PASS",
+              "I-AXIS": "PASS",
+              "I-BRANCHORIENT": "PASS",
+              "I-CONT": "PASS",
+              "I-DEGENERATE": "PASS",
+              "I-GRAPH": "PASS",
+              "I-JOINT": "PASS",
+              "I-LOOP": "PASS",
+              "I-RIMMATCH": "PASS",
+              "I-SCHEMA": "PASS",
+              "I-SEAL": "PASS"
+            }
+          },
+          "lowerable": true,
+          "program": {
+            "backend": "default_knit",
+            "machine_op_count": 3,
+            "machine_ops_by_verb": {
+              "CAST_ON": 1,
+              "KNIT": 1,
+              "PICK_UP": 1
+            },
+            "machine_verdict": "SIMULATED",
+            "notes": [],
+            "op_count": 2,
+            "open_boundaries": [
+              "dress_skirt/rim_end"
+            ],
+            "ops": [
+              {
+                "consumes": [],
+                "graph_op": "dress_cast_on",
+                "machine_ops": [
+                  "CAST_ON"
+                ],
+                "op": "cast_on",
+                "produces": "dress_torso/rim_start"
+              },
+              {
+                "consumes": [
+                  "dress_torso/rim_end"
+                ],
+                "graph_op": "dress_skirt_pick_up",
+                "joint": {
+                  "child": "dress_skirt",
+                  "child_boundary": "rim_start",
+                  "construction": "knitted_in",
+                  "parent": "dress_torso"
+                },
+                "machine_ops": [
+                  "PICK_UP",
+                  "KNIT"
+                ],
+                "op": "pick_up",
+                "produces": "dress_skirt/rim_start"
+              }
+            ],
+            "ops_by_kind": {
+              "cast_on": 1,
+              "pick_up": 1
+            }
+          }
+        },
+        "default_sim": {
+          "buildability": {
+            "backend": "default_sim",
+            "backend_checks": [
+              "I-DEGENERATE",
+              "I-SCHEMA",
+              "I-AXIS",
+              "I-GRAPH",
+              "I-ANCHOR",
+              "I-RIMMATCH",
+              "I-CONT",
+              "I-BRANCHORIENT",
+              "I-LOOP",
+              "I-SEAL",
+              "I-JOINT"
+            ],
+            "backend_unverified": [],
+            "failing_instances": {},
+            "geometric_validity": "PASS",
+            "note": "geometric validity never implies knitability; PASS means the graph is well-formed per DESIGN.md \u00a76/\u00a79, nothing more",
+            "per_class": {
+              "I-ANCHOR": "PASS",
+              "I-AXIS": "PASS",
+              "I-BRANCHORIENT": "PASS",
+              "I-CONT": "PASS",
+              "I-DEGENERATE": "PASS",
+              "I-GRAPH": "PASS",
+              "I-JOINT": "PASS",
+              "I-LOOP": "PASS",
+              "I-RIMMATCH": "PASS",
+              "I-SCHEMA": "PASS",
+              "I-SEAL": "PASS"
+            }
+          },
+          "lowerable": true,
+          "program": {
+            "backend": "default_sim",
+            "machine_op_count": 3,
+            "machine_ops_by_verb": {
+              "CAST_ON": 1,
+              "KNIT": 1,
+              "PICK_UP": 1
+            },
+            "machine_verdict": "SIMULATED",
+            "notes": [],
+            "op_count": 2,
+            "open_boundaries": [
+              "dress_skirt/rim_end"
+            ],
+            "ops": [
+              {
+                "consumes": [],
+                "graph_op": "dress_cast_on",
+                "machine_ops": [
+                  "CAST_ON"
+                ],
+                "op": "cast_on",
+                "produces": "dress_torso/rim_start"
+              },
+              {
+                "consumes": [
+                  "dress_torso/rim_end"
+                ],
+                "graph_op": "dress_skirt_pick_up",
+                "joint": {
+                  "child": "dress_skirt",
+                  "child_boundary": "rim_start",
+                  "construction": "knitted_in",
+                  "parent": "dress_torso"
+                },
+                "machine_ops": [
+                  "PICK_UP",
+                  "KNIT"
+                ],
+                "op": "pick_up",
+                "produces": "dress_skirt/rim_start"
+              }
+            ],
+            "ops_by_kind": {
+              "cast_on": 1,
+              "pick_up": 1
+            }
+          }
+        }
+      },
+      "family": "dress",
+      "graph": {
+        "gauge": {
+          "course_mm": 3.0,
+          "wale_mm": 2.5
+        },
+        "joint_count": 1,
+        "joints": [
+          {
+            "anchor": {
+              "boundary": "rim_end",
+              "feature": "terminus",
+              "point": [
+                0.0,
+                350.0,
+                0.0
+              ]
+            },
+            "child": "dress_skirt",
+            "child_boundary": "rim_start",
+            "construction": "knitted_in",
+            "id": "dress_j_skirt",
+            "joint": "terminus_continuation",
+            "parent": "dress_torso",
+            "parent_boundary": "rim_end",
+            "realized_by": [
+              "dress_skirt_pick_up"
+            ]
+          }
+        ],
+        "loop_counts_available": true,
+        "open_boundaries": [
+          "dress_skirt/rim_end"
+        ],
+        "piece_count": 2,
+        "primitives": [
+          {
+            "axis": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "boundaries": [
+              {
+                "boundary": "rim_start",
+                "kind": "rim",
+                "length_mm": 628.3185307179587,
+                "loops": 251.32741228718345
+              },
+              {
+                "boundary": "rim_end",
+                "kind": "rim",
+                "length_mm": 596.9026041820607,
+                "loops": 238.7610416728243
+              }
+            ],
+            "id": "dress_torso",
+            "kind": "tube",
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "params": {
+              "l": 350.0,
+              "r1": 100.0,
+              "r2": 95.0
+            }
+          },
+          {
+            "axis": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "boundaries": [
+              {
+                "boundary": "rim_start",
+                "kind": "rim",
+                "length_mm": 596.9026041820607,
+                "loops": 238.7610416728243
+              },
+              {
+                "boundary": "rim_end",
+                "kind": "rim",
+                "length_mm": 1068.1415022205297,
+                "loops": 427.2566008882119
+              }
+            ],
+            "id": "dress_skirt",
+            "kind": "tube",
+            "origin": [
+              0.0,
+              350.0,
+              0.0
+            ],
+            "params": {
+              "l": 450.0,
+              "r1": 95.0,
+              "r2": 170.0
+            }
+          }
+        ],
+        "validation": {
+          "errors": [],
+          "fatal": false,
+          "findings": [
+            {
+              "invariant": "I-DEGENERATE",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-SCHEMA",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-AXIS",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-GRAPH",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-ANCHOR",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-RIMMATCH",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-CONT",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-BRANCHORIENT",
+              "message": "no surface_branch joints",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-LOOP",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-SEAL",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-JOINT",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            }
+          ],
+          "ok": true
+        }
+      }
+    },
+    "glove": {
+      "backends": {
+        "default_knit": {
+          "buildability": {
+            "backend": "default_knit",
+            "backend_checks": [
+              "I-DEGENERATE",
+              "I-SCHEMA",
+              "I-AXIS",
+              "I-GRAPH",
+              "I-ANCHOR",
+              "I-RIMMATCH",
+              "I-CONT",
+              "I-BRANCHORIENT",
+              "I-LOOP",
+              "I-SEAL",
+              "I-JOINT"
+            ],
+            "backend_unverified": [],
+            "failing_instances": {},
+            "geometric_validity": "PASS",
+            "note": "geometric validity never implies knitability; PASS means the graph is well-formed per DESIGN.md \u00a76/\u00a79, nothing more",
+            "per_class": {
+              "I-ANCHOR": "PASS",
+              "I-AXIS": "PASS",
+              "I-BRANCHORIENT": "PASS",
+              "I-CONT": "PASS",
+              "I-DEGENERATE": "PASS",
+              "I-GRAPH": "PASS",
+              "I-JOINT": "PASS",
+              "I-LOOP": "PASS",
+              "I-RIMMATCH": "PASS",
+              "I-SCHEMA": "PASS",
+              "I-SEAL": "PASS"
+            }
+          },
+          "lowerable": true,
+          "program": {
+            "backend": "default_knit",
+            "machine_op_count": 2,
+            "machine_ops_by_verb": {
+              "CAST_ON": 1,
+              "GRAFT": 1
+            },
+            "machine_verdict": "SIMULATED",
+            "notes": [],
+            "op_count": 2,
+            "open_boundaries": [],
+            "ops": [
+              {
+                "consumes": [],
+                "graph_op": "glove_cast_on",
+                "machine_ops": [
+                  "CAST_ON"
+                ],
+                "op": "cast_on",
+                "produces": "glove_wrist/rim_start"
+              },
+              {
+                "consumes": [
+                  "glove_wrist/rim_end",
+                  "glove_palm/rim"
+                ],
+                "graph_op": "glove_palm_graft",
+                "joint": {
+                  "child": "glove_palm",
+                  "child_boundary": "rim",
+                  "construction": "grafted",
+                  "parent": "glove_wrist"
+                },
+                "machine_ops": [
+                  "GRAFT"
+                ],
+                "op": "graft"
+              }
+            ],
+            "ops_by_kind": {
+              "cast_on": 1,
+              "graft": 1
+            }
+          }
+        },
+        "default_sim": {
+          "buildability": {
+            "backend": "default_sim",
+            "backend_checks": [
+              "I-DEGENERATE",
+              "I-SCHEMA",
+              "I-AXIS",
+              "I-GRAPH",
+              "I-ANCHOR",
+              "I-RIMMATCH",
+              "I-CONT",
+              "I-BRANCHORIENT",
+              "I-LOOP",
+              "I-SEAL",
+              "I-JOINT"
+            ],
+            "backend_unverified": [],
+            "failing_instances": {},
+            "geometric_validity": "PASS",
+            "note": "geometric validity never implies knitability; PASS means the graph is well-formed per DESIGN.md \u00a76/\u00a79, nothing more",
+            "per_class": {
+              "I-ANCHOR": "PASS",
+              "I-AXIS": "PASS",
+              "I-BRANCHORIENT": "PASS",
+              "I-CONT": "PASS",
+              "I-DEGENERATE": "PASS",
+              "I-GRAPH": "PASS",
+              "I-JOINT": "PASS",
+              "I-LOOP": "PASS",
+              "I-RIMMATCH": "PASS",
+              "I-SCHEMA": "PASS",
+              "I-SEAL": "PASS"
+            }
+          },
+          "lowerable": true,
+          "program": {
+            "backend": "default_sim",
+            "machine_op_count": 2,
+            "machine_ops_by_verb": {
+              "CAST_ON": 1,
+              "GRAFT": 1
+            },
+            "machine_verdict": "SIMULATED",
+            "notes": [],
+            "op_count": 2,
+            "open_boundaries": [],
+            "ops": [
+              {
+                "consumes": [],
+                "graph_op": "glove_cast_on",
+                "machine_ops": [
+                  "CAST_ON"
+                ],
+                "op": "cast_on",
+                "produces": "glove_wrist/rim_start"
+              },
+              {
+                "consumes": [
+                  "glove_wrist/rim_end",
+                  "glove_palm/rim"
+                ],
+                "graph_op": "glove_palm_graft",
+                "joint": {
+                  "child": "glove_palm",
+                  "child_boundary": "rim",
+                  "construction": "grafted",
+                  "parent": "glove_wrist"
+                },
+                "machine_ops": [
+                  "GRAFT"
+                ],
+                "op": "graft"
+              }
+            ],
+            "ops_by_kind": {
+              "cast_on": 1,
+              "graft": 1
+            }
+          }
+        }
+      },
+      "family": "glove",
+      "graph": {
+        "gauge": {
+          "course_mm": 3.0,
+          "wale_mm": 2.5
+        },
+        "joint_count": 6,
+        "joints": [
+          {
+            "anchor": {
+              "boundary": "rim_end",
+              "feature": "rim",
+              "point": [
+                55.0,
+                60.0,
+                0.0
+              ]
+            },
+            "child": "glove_palm",
+            "child_boundary": "rim",
+            "construction": "grafted",
+            "id": "glove_j_palm",
+            "joint": "rim_joint",
+            "parent": "glove_wrist",
+            "parent_boundary": "rim_end",
+            "realized_by": [
+              "glove_palm_graft"
+            ]
+          },
+          {
+            "anchor": {
+              "boundary": null,
+              "feature": "surface",
+              "point": [
+                0.0,
+                115.0,
+                0.0
+              ]
+            },
+            "child": "finger_1",
+            "child_boundary": "rim",
+            "construction": "unsupported",
+            "id": "glove_j_finger_1",
+            "joint": "surface_branch",
+            "parent": "glove_palm",
+            "parent_boundary": null,
+            "realized_by": []
+          },
+          {
+            "anchor": {
+              "boundary": null,
+              "feature": "surface",
+              "point": [
+                0.0,
+                109.83,
+                23.265
+              ]
+            },
+            "child": "finger_2",
+            "child_boundary": "rim",
+            "construction": "unsupported",
+            "id": "glove_j_finger_2",
+            "joint": "surface_branch",
+            "parent": "glove_palm",
+            "parent_boundary": null,
+            "realized_by": []
+          },
+          {
+            "anchor": {
+              "boundary": null,
+              "feature": "surface",
+              "point": [
+                0.0,
+                109.83,
+                -23.265
+              ]
+            },
+            "child": "finger_3",
+            "child_boundary": "rim",
+            "construction": "unsupported",
+            "id": "glove_j_finger_3",
+            "joint": "surface_branch",
+            "parent": "glove_palm",
+            "parent_boundary": null,
+            "realized_by": []
+          },
+          {
+            "anchor": {
+              "boundary": null,
+              "feature": "surface",
+              "point": [
+                0.0,
+                105.04499999999999,
+                31.569999999999997
+              ]
+            },
+            "child": "finger_4",
+            "child_boundary": "rim",
+            "construction": "unsupported",
+            "id": "glove_j_finger_4",
+            "joint": "surface_branch",
+            "parent": "glove_palm",
+            "parent_boundary": null,
+            "realized_by": []
+          },
+          {
+            "anchor": {
+              "boundary": null,
+              "feature": "surface",
+              "point": [
+                -51.699999999999996,
+                78.81,
+                0.0
+              ]
+            },
+            "child": "thumb",
+            "child_boundary": "rim",
+            "construction": "unsupported",
+            "id": "glove_j_thumb",
+            "joint": "surface_branch",
+            "parent": "glove_palm",
+            "parent_boundary": null,
+            "realized_by": []
+          }
+        ],
+        "loop_counts_available": true,
+        "open_boundaries": [],
+        "piece_count": 7,
+        "primitives": [
+          {
+            "axis": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "boundaries": [
+              {
+                "boundary": "rim_start",
+                "kind": "rim",
+                "length_mm": 314.1592653589793,
+                "loops": 125.66370614359172
+              },
+              {
+                "boundary": "rim_end",
+                "kind": "rim",
+                "length_mm": 345.57519189487726,
+                "loops": 138.2300767579509
+              }
+            ],
+            "id": "glove_wrist",
+            "kind": "tube",
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "params": {
+              "l": 60.0,
+              "r1": 50.0,
+              "r2": 55.0
+            }
+          },
+          {
+            "axis": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "boundaries": [
+              {
+                "boundary": "rim",
+                "kind": "rim",
+                "length_mm": 345.57519189487726,
+                "loops": 138.2300767579509
+              }
+            ],
+            "id": "glove_palm",
+            "kind": "hemisphere",
+            "origin": [
+              0.0,
+              60.0,
+              0.0
+            ],
+            "params": {
+              "r": 55.0
+            }
+          },
+          {
+            "axis": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "boundaries": [
+              {
+                "boundary": "rim",
+                "kind": "inert",
+                "length_mm": 62.83185307179586,
+                "loops": 25.132741228718345
+              }
+            ],
+            "id": "finger_1",
+            "kind": "disk",
+            "origin": [
+              0.0,
+              115.0,
+              0.0
+            ],
+            "params": {
+              "r": 10.0
+            }
+          },
+          {
+            "axis": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "boundaries": [
+              {
+                "boundary": "rim",
+                "kind": "inert",
+                "length_mm": 62.83185307179586,
+                "loops": 25.132741228718345
+              }
+            ],
+            "id": "finger_2",
+            "kind": "disk",
+            "origin": [
+              0.0,
+              109.83,
+              23.265
+            ],
+            "params": {
+              "r": 10.0
+            }
+          },
+          {
+            "axis": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "boundaries": [
+              {
+                "boundary": "rim",
+                "kind": "inert",
+                "length_mm": 62.83185307179586,
+                "loops": 25.132741228718345
+              }
+            ],
+            "id": "finger_3",
+            "kind": "disk",
+            "origin": [
+              0.0,
+              109.83,
+              -23.265
+            ],
+            "params": {
+              "r": 10.0
+            }
+          },
+          {
+            "axis": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "boundaries": [
+              {
+                "boundary": "rim",
+                "kind": "inert",
+                "length_mm": 62.83185307179586,
+                "loops": 25.132741228718345
+              }
+            ],
+            "id": "finger_4",
+            "kind": "disk",
+            "origin": [
+              0.0,
+              105.04499999999999,
+              31.569999999999997
+            ],
+            "params": {
+              "r": 10.0
+            }
+          },
+          {
+            "axis": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "boundaries": [
+              {
+                "boundary": "rim",
+                "kind": "inert",
+                "length_mm": 75.39822368615503,
+                "loops": 30.159289474462014
+              }
+            ],
+            "id": "thumb",
+            "kind": "disk",
+            "origin": [
+              -51.699999999999996,
+              78.81,
+              0.0
+            ],
+            "params": {
+              "r": 12.0
+            }
+          }
+        ],
+        "validation": {
+          "errors": [],
+          "fatal": false,
+          "findings": [
+            {
+              "invariant": "I-DEGENERATE",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-SCHEMA",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-AXIS",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-GRAPH",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-ANCHOR",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-RIMMATCH",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-CONT",
+              "message": "no terminus_continuation joints",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-BRANCHORIENT",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-LOOP",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-SEAL",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-JOINT",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            }
+          ],
+          "ok": true
+        }
+      }
+    },
+    "hat": {
+      "backends": {
+        "default_knit": {
+          "buildability": {
+            "backend": "default_knit",
+            "backend_checks": [
+              "I-DEGENERATE",
+              "I-SCHEMA",
+              "I-AXIS",
+              "I-GRAPH",
+              "I-ANCHOR",
+              "I-RIMMATCH",
+              "I-CONT",
+              "I-BRANCHORIENT",
+              "I-LOOP",
+              "I-SEAL",
+              "I-JOINT"
+            ],
+            "backend_unverified": [],
+            "failing_instances": {},
+            "geometric_validity": "PASS",
+            "note": "geometric validity never implies knitability; PASS means the graph is well-formed per DESIGN.md \u00a76/\u00a79, nothing more",
+            "per_class": {
+              "I-ANCHOR": "PASS",
+              "I-AXIS": "PASS",
+              "I-BRANCHORIENT": "PASS",
+              "I-CONT": "PASS",
+              "I-DEGENERATE": "PASS",
+              "I-GRAPH": "PASS",
+              "I-JOINT": "PASS",
+              "I-LOOP": "PASS",
+              "I-RIMMATCH": "PASS",
+              "I-SCHEMA": "PASS",
+              "I-SEAL": "PASS"
+            }
+          },
+          "lowerable": true,
+          "program": {
+            "backend": "default_knit",
+            "machine_op_count": 2,
+            "machine_ops_by_verb": {
+              "CAST_ON": 1,
+              "GRAFT": 1
+            },
+            "machine_verdict": "SIMULATED",
+            "notes": [],
+            "op_count": 2,
+            "open_boundaries": [],
+            "ops": [
+              {
+                "consumes": [],
+                "graph_op": "hat_cast_on",
+                "machine_ops": [
+                  "CAST_ON"
+                ],
+                "op": "cast_on",
+                "produces": "hat_crown/rim_start"
+              },
+              {
+                "consumes": [
+                  "hat_crown/rim_end",
+                  "hat_dome/rim"
+                ],
+                "graph_op": "hat_dome_graft",
+                "joint": {
+                  "child": "hat_dome",
+                  "child_boundary": "rim",
+                  "construction": "grafted",
+                  "parent": "hat_crown"
+                },
+                "machine_ops": [
+                  "GRAFT"
+                ],
+                "op": "graft"
+              }
+            ],
+            "ops_by_kind": {
+              "cast_on": 1,
+              "graft": 1
+            }
+          }
+        },
+        "default_sim": {
+          "buildability": {
+            "backend": "default_sim",
+            "backend_checks": [
+              "I-DEGENERATE",
+              "I-SCHEMA",
+              "I-AXIS",
+              "I-GRAPH",
+              "I-ANCHOR",
+              "I-RIMMATCH",
+              "I-CONT",
+              "I-BRANCHORIENT",
+              "I-LOOP",
+              "I-SEAL",
+              "I-JOINT"
+            ],
+            "backend_unverified": [],
+            "failing_instances": {},
+            "geometric_validity": "PASS",
+            "note": "geometric validity never implies knitability; PASS means the graph is well-formed per DESIGN.md \u00a76/\u00a79, nothing more",
+            "per_class": {
+              "I-ANCHOR": "PASS",
+              "I-AXIS": "PASS",
+              "I-BRANCHORIENT": "PASS",
+              "I-CONT": "PASS",
+              "I-DEGENERATE": "PASS",
+              "I-GRAPH": "PASS",
+              "I-JOINT": "PASS",
+              "I-LOOP": "PASS",
+              "I-RIMMATCH": "PASS",
+              "I-SCHEMA": "PASS",
+              "I-SEAL": "PASS"
+            }
+          },
+          "lowerable": true,
+          "program": {
+            "backend": "default_sim",
+            "machine_op_count": 2,
+            "machine_ops_by_verb": {
+              "CAST_ON": 1,
+              "GRAFT": 1
+            },
+            "machine_verdict": "SIMULATED",
+            "notes": [],
+            "op_count": 2,
+            "open_boundaries": [],
+            "ops": [
+              {
+                "consumes": [],
+                "graph_op": "hat_cast_on",
+                "machine_ops": [
+                  "CAST_ON"
+                ],
+                "op": "cast_on",
+                "produces": "hat_crown/rim_start"
+              },
+              {
+                "consumes": [
+                  "hat_crown/rim_end",
+                  "hat_dome/rim"
+                ],
+                "graph_op": "hat_dome_graft",
+                "joint": {
+                  "child": "hat_dome",
+                  "child_boundary": "rim",
+                  "construction": "grafted",
+                  "parent": "hat_crown"
+                },
+                "machine_ops": [
+                  "GRAFT"
+                ],
+                "op": "graft"
+              }
+            ],
+            "ops_by_kind": {
+              "cast_on": 1,
+              "graft": 1
+            }
+          }
+        }
+      },
+      "family": "hat",
+      "graph": {
+        "gauge": {
+          "course_mm": 3.0,
+          "wale_mm": 2.5
+        },
+        "joint_count": 1,
+        "joints": [
+          {
+            "anchor": {
+              "boundary": "rim_end",
+              "feature": "rim",
+              "point": [
+                90.0,
+                110.0,
+                0.0
+              ]
+            },
+            "child": "hat_dome",
+            "child_boundary": "rim",
+            "construction": "grafted",
+            "id": "hat_j_dome",
+            "joint": "rim_joint",
+            "parent": "hat_crown",
+            "parent_boundary": "rim_end",
+            "realized_by": [
+              "hat_dome_graft"
+            ]
+          }
+        ],
+        "loop_counts_available": true,
+        "open_boundaries": [],
+        "piece_count": 2,
+        "primitives": [
+          {
+            "axis": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "boundaries": [
+              {
+                "boundary": "rim_start",
+                "kind": "rim",
+                "length_mm": 596.9026041820607,
+                "loops": 238.7610416728243
+              },
+              {
+                "boundary": "rim_end",
+                "kind": "rim",
+                "length_mm": 565.4866776461628,
+                "loops": 226.1946710584651
+              }
+            ],
+            "id": "hat_crown",
+            "kind": "tube",
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "params": {
+              "l": 110.0,
+              "r1": 95.0,
+              "r2": 90.0
+            }
+          },
+          {
+            "axis": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "boundaries": [
+              {
+                "boundary": "rim",
+                "kind": "rim",
+                "length_mm": 565.4866776461628,
+                "loops": 226.1946710584651
+              }
+            ],
+            "id": "hat_dome",
+            "kind": "hemisphere",
+            "origin": [
+              0.0,
+              110.0,
+              0.0
+            ],
+            "params": {
+              "r": 90.0
+            }
+          }
+        ],
+        "validation": {
+          "errors": [],
+          "fatal": false,
+          "findings": [
+            {
+              "invariant": "I-DEGENERATE",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-SCHEMA",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-AXIS",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-GRAPH",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-ANCHOR",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-RIMMATCH",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-CONT",
+              "message": "no terminus_continuation joints",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-BRANCHORIENT",
+              "message": "no surface_branch joints",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-LOOP",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-SEAL",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-JOINT",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            }
+          ],
+          "ok": true
+        }
+      }
+    },
+    "hoodie": {
+      "backends": {
+        "default_knit": {
+          "buildability": {
+            "backend": "default_knit",
+            "backend_checks": [
+              "I-DEGENERATE",
+              "I-SCHEMA",
+              "I-AXIS",
+              "I-GRAPH",
+              "I-ANCHOR",
+              "I-RIMMATCH",
+              "I-CONT",
+              "I-BRANCHORIENT",
+              "I-LOOP",
+              "I-SEAL",
+              "I-JOINT"
+            ],
+            "backend_unverified": [],
+            "failing_instances": {},
+            "geometric_validity": "PASS",
+            "note": "geometric validity never implies knitability; PASS means the graph is well-formed per DESIGN.md \u00a76/\u00a79, nothing more",
+            "per_class": {
+              "I-ANCHOR": "PASS",
+              "I-AXIS": "PASS",
+              "I-BRANCHORIENT": "PASS",
+              "I-CONT": "PASS",
+              "I-DEGENERATE": "PASS",
+              "I-GRAPH": "PASS",
+              "I-JOINT": "PASS",
+              "I-LOOP": "PASS",
+              "I-RIMMATCH": "PASS",
+              "I-SCHEMA": "PASS",
+              "I-SEAL": "PASS"
+            }
+          },
+          "lowerable": true,
+          "program": {
+            "backend": "default_knit",
+            "machine_op_count": 4,
+            "machine_ops_by_verb": {
+              "CAST_ON": 3,
+              "GRAFT": 1
+            },
+            "machine_verdict": "SIMULATED",
+            "notes": [],
+            "op_count": 4,
+            "open_boundaries": [
+              "shirt_sleeve_l/rim_end",
+              "shirt_sleeve_r/rim_end"
+            ],
+            "ops": [
+              {
+                "consumes": [],
+                "graph_op": "shirt_cast_on",
+                "machine_ops": [
+                  "CAST_ON"
+                ],
+                "op": "cast_on",
+                "produces": "shirt_torso/rim_start"
+              },
+              {
+                "consumes": [
+                  "shirt_torso/rim_end",
+                  "hood/rim"
+                ],
+                "graph_op": "hood_graft",
+                "joint": {
+                  "child": "hood",
+                  "child_boundary": "rim",
+                  "construction": "grafted",
+                  "parent": "shirt_torso"
+                },
+                "machine_ops": [
+                  "GRAFT"
+                ],
+                "op": "graft"
+              },
+              {
+                "consumes": [],
+                "graph_op": "shirt_sleeve_l_cast_on",
+                "machine_ops": [
+                  "CAST_ON"
+                ],
+                "op": "cast_on",
+                "produces": "shirt_sleeve_l/rim_start"
+              },
+              {
+                "consumes": [],
+                "graph_op": "shirt_sleeve_r_cast_on",
+                "machine_ops": [
+                  "CAST_ON"
+                ],
+                "op": "cast_on",
+                "produces": "shirt_sleeve_r/rim_start"
+              }
+            ],
+            "ops_by_kind": {
+              "cast_on": 3,
+              "graft": 1
+            }
+          }
+        },
+        "default_sim": {
+          "buildability": {
+            "backend": "default_sim",
+            "backend_checks": [
+              "I-DEGENERATE",
+              "I-SCHEMA",
+              "I-AXIS",
+              "I-GRAPH",
+              "I-ANCHOR",
+              "I-RIMMATCH",
+              "I-CONT",
+              "I-BRANCHORIENT",
+              "I-LOOP",
+              "I-SEAL",
+              "I-JOINT"
+            ],
+            "backend_unverified": [],
+            "failing_instances": {},
+            "geometric_validity": "PASS",
+            "note": "geometric validity never implies knitability; PASS means the graph is well-formed per DESIGN.md \u00a76/\u00a79, nothing more",
+            "per_class": {
+              "I-ANCHOR": "PASS",
+              "I-AXIS": "PASS",
+              "I-BRANCHORIENT": "PASS",
+              "I-CONT": "PASS",
+              "I-DEGENERATE": "PASS",
+              "I-GRAPH": "PASS",
+              "I-JOINT": "PASS",
+              "I-LOOP": "PASS",
+              "I-RIMMATCH": "PASS",
+              "I-SCHEMA": "PASS",
+              "I-SEAL": "PASS"
+            }
+          },
+          "lowerable": true,
+          "program": {
+            "backend": "default_sim",
+            "machine_op_count": 4,
+            "machine_ops_by_verb": {
+              "CAST_ON": 3,
+              "GRAFT": 1
+            },
+            "machine_verdict": "SIMULATED",
+            "notes": [],
+            "op_count": 4,
+            "open_boundaries": [
+              "shirt_sleeve_l/rim_end",
+              "shirt_sleeve_r/rim_end"
+            ],
+            "ops": [
+              {
+                "consumes": [],
+                "graph_op": "shirt_cast_on",
+                "machine_ops": [
+                  "CAST_ON"
+                ],
+                "op": "cast_on",
+                "produces": "shirt_torso/rim_start"
+              },
+              {
+                "consumes": [
+                  "shirt_torso/rim_end",
+                  "hood/rim"
+                ],
+                "graph_op": "hood_graft",
+                "joint": {
+                  "child": "hood",
+                  "child_boundary": "rim",
+                  "construction": "grafted",
+                  "parent": "shirt_torso"
+                },
+                "machine_ops": [
+                  "GRAFT"
+                ],
+                "op": "graft"
+              },
+              {
+                "consumes": [],
+                "graph_op": "shirt_sleeve_l_cast_on",
+                "machine_ops": [
+                  "CAST_ON"
+                ],
+                "op": "cast_on",
+                "produces": "shirt_sleeve_l/rim_start"
+              },
+              {
+                "consumes": [],
+                "graph_op": "shirt_sleeve_r_cast_on",
+                "machine_ops": [
+                  "CAST_ON"
+                ],
+                "op": "cast_on",
+                "produces": "shirt_sleeve_r/rim_start"
+              }
+            ],
+            "ops_by_kind": {
+              "cast_on": 3,
+              "graft": 1
+            }
+          }
+        }
+      },
+      "family": "hoodie",
+      "graph": {
+        "gauge": {
+          "course_mm": 3.0,
+          "wale_mm": 2.5
+        },
+        "joint_count": 3,
+        "joints": [
+          {
+            "anchor": {
+              "boundary": "rim_end",
+              "feature": "rim",
+              "point": [
+                120.0,
+                300.0,
+                0.0
+              ]
+            },
+            "child": "hood",
+            "child_boundary": "rim",
+            "construction": "grafted",
+            "id": "shirt_j_hood",
+            "joint": "rim_joint",
+            "parent": "shirt_torso",
+            "parent_boundary": "rim_end",
+            "realized_by": [
+              "hood_graft"
+            ]
+          },
+          {
+            "anchor": {
+              "boundary": null,
+              "feature": "surface",
+              "point": [
+                -120.0,
+                300.0,
+                0.0
+              ]
+            },
+            "child": "shirt_sleeve_l",
+            "child_boundary": "rim_start",
+            "construction": "unsupported",
+            "id": "shirt_j_sleeve_l",
+            "joint": "surface_branch",
+            "parent": "shirt_torso",
+            "parent_boundary": null,
+            "realized_by": []
+          },
+          {
+            "anchor": {
+              "boundary": null,
+              "feature": "surface",
+              "point": [
+                120.0,
+                300.0,
+                0.0
+              ]
+            },
+            "child": "shirt_sleeve_r",
+            "child_boundary": "rim_start",
+            "construction": "unsupported",
+            "id": "shirt_j_sleeve_r",
+            "joint": "surface_branch",
+            "parent": "shirt_torso",
+            "parent_boundary": null,
+            "realized_by": []
+          }
+        ],
+        "loop_counts_available": true,
+        "open_boundaries": [
+          "shirt_sleeve_l/rim_end",
+          "shirt_sleeve_r/rim_end"
+        ],
+        "piece_count": 4,
+        "primitives": [
+          {
+            "axis": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "boundaries": [
+              {
+                "boundary": "rim_start",
+                "kind": "rim",
+                "length_mm": 691.1503837897545,
+                "loops": 276.4601535159018
+              },
+              {
+                "boundary": "rim_end",
+                "kind": "rim",
+                "length_mm": 753.9822368615503,
+                "loops": 301.59289474462014
+              }
+            ],
+            "id": "shirt_torso",
+            "kind": "tube",
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "params": {
+              "l": 300.0,
+              "r1": 110.0,
+              "r2": 120.0
+            }
+          },
+          {
+            "axis": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "boundaries": [
+              {
+                "boundary": "rim_start",
+                "kind": "rim",
+                "length_mm": 345.57519189487726,
+                "loops": 138.2300767579509
+              },
+              {
+                "boundary": "rim_end",
+                "kind": "rim",
+                "length_mm": 282.7433388230814,
+                "loops": 113.09733552923255
+              }
+            ],
+            "id": "shirt_sleeve_l",
+            "kind": "tube",
+            "origin": [
+              -120.0,
+              300.0,
+              0.0
+            ],
+            "params": {
+              "l": 250.0,
+              "r1": 55.0,
+              "r2": 45.0
+            }
+          },
+          {
+            "axis": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "boundaries": [
+              {
+                "boundary": "rim_start",
+                "kind": "rim",
+                "length_mm": 345.57519189487726,
+                "loops": 138.2300767579509
+              },
+              {
+                "boundary": "rim_end",
+                "kind": "rim",
+                "length_mm": 282.7433388230814,
+                "loops": 113.09733552923255
+              }
+            ],
+            "id": "shirt_sleeve_r",
+            "kind": "tube",
+            "origin": [
+              120.0,
+              300.0,
+              0.0
+            ],
+            "params": {
+              "l": 250.0,
+              "r1": 55.0,
+              "r2": 45.0
+            }
+          },
+          {
+            "axis": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "boundaries": [
+              {
+                "boundary": "rim",
+                "kind": "rim",
+                "length_mm": 753.9822368615503,
+                "loops": 301.59289474462014
+              }
+            ],
+            "id": "hood",
+            "kind": "hemisphere",
+            "origin": [
+              0.0,
+              300.0,
+              0.0
+            ],
+            "params": {
+              "r": 120.0
+            }
+          }
+        ],
+        "validation": {
+          "errors": [],
+          "fatal": false,
+          "findings": [
+            {
+              "invariant": "I-DEGENERATE",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-SCHEMA",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-AXIS",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-GRAPH",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-ANCHOR",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-RIMMATCH",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-CONT",
+              "message": "no terminus_continuation joints",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-BRANCHORIENT",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-LOOP",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-SEAL",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-JOINT",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            }
+          ],
+          "ok": true
+        }
+      }
+    },
+    "shirt": {
+      "backends": {
+        "default_knit": {
+          "buildability": {
+            "backend": "default_knit",
+            "backend_checks": [
+              "I-DEGENERATE",
+              "I-SCHEMA",
+              "I-AXIS",
+              "I-GRAPH",
+              "I-ANCHOR",
+              "I-RIMMATCH",
+              "I-CONT",
+              "I-BRANCHORIENT",
+              "I-LOOP",
+              "I-SEAL",
+              "I-JOINT"
+            ],
+            "backend_unverified": [],
+            "failing_instances": {},
+            "geometric_validity": "PASS",
+            "note": "geometric validity never implies knitability; PASS means the graph is well-formed per DESIGN.md \u00a76/\u00a79, nothing more",
+            "per_class": {
+              "I-ANCHOR": "PASS",
+              "I-AXIS": "PASS",
+              "I-BRANCHORIENT": "PASS",
+              "I-CONT": "PASS",
+              "I-DEGENERATE": "PASS",
+              "I-GRAPH": "PASS",
+              "I-JOINT": "PASS",
+              "I-LOOP": "PASS",
+              "I-RIMMATCH": "PASS",
+              "I-SCHEMA": "PASS",
+              "I-SEAL": "PASS"
+            }
+          },
+          "lowerable": true,
+          "program": {
+            "backend": "default_knit",
+            "machine_op_count": 3,
+            "machine_ops_by_verb": {
+              "CAST_ON": 3
+            },
+            "machine_verdict": "SIMULATED",
+            "notes": [],
+            "op_count": 3,
+            "open_boundaries": [
+              "shirt_sleeve_l/rim_end",
+              "shirt_sleeve_r/rim_end",
+              "shirt_torso/rim_end"
+            ],
+            "ops": [
+              {
+                "consumes": [],
+                "graph_op": "shirt_cast_on",
+                "machine_ops": [
+                  "CAST_ON"
+                ],
+                "op": "cast_on",
+                "produces": "shirt_torso/rim_start"
+              },
+              {
+                "consumes": [],
+                "graph_op": "shirt_sleeve_l_cast_on",
+                "machine_ops": [
+                  "CAST_ON"
+                ],
+                "op": "cast_on",
+                "produces": "shirt_sleeve_l/rim_start"
+              },
+              {
+                "consumes": [],
+                "graph_op": "shirt_sleeve_r_cast_on",
+                "machine_ops": [
+                  "CAST_ON"
+                ],
+                "op": "cast_on",
+                "produces": "shirt_sleeve_r/rim_start"
+              }
+            ],
+            "ops_by_kind": {
+              "cast_on": 3
+            }
+          }
+        },
+        "default_sim": {
+          "buildability": {
+            "backend": "default_sim",
+            "backend_checks": [
+              "I-DEGENERATE",
+              "I-SCHEMA",
+              "I-AXIS",
+              "I-GRAPH",
+              "I-ANCHOR",
+              "I-RIMMATCH",
+              "I-CONT",
+              "I-BRANCHORIENT",
+              "I-LOOP",
+              "I-SEAL",
+              "I-JOINT"
+            ],
+            "backend_unverified": [],
+            "failing_instances": {},
+            "geometric_validity": "PASS",
+            "note": "geometric validity never implies knitability; PASS means the graph is well-formed per DESIGN.md \u00a76/\u00a79, nothing more",
+            "per_class": {
+              "I-ANCHOR": "PASS",
+              "I-AXIS": "PASS",
+              "I-BRANCHORIENT": "PASS",
+              "I-CONT": "PASS",
+              "I-DEGENERATE": "PASS",
+              "I-GRAPH": "PASS",
+              "I-JOINT": "PASS",
+              "I-LOOP": "PASS",
+              "I-RIMMATCH": "PASS",
+              "I-SCHEMA": "PASS",
+              "I-SEAL": "PASS"
+            }
+          },
+          "lowerable": true,
+          "program": {
+            "backend": "default_sim",
+            "machine_op_count": 3,
+            "machine_ops_by_verb": {
+              "CAST_ON": 3
+            },
+            "machine_verdict": "SIMULATED",
+            "notes": [],
+            "op_count": 3,
+            "open_boundaries": [
+              "shirt_sleeve_l/rim_end",
+              "shirt_sleeve_r/rim_end",
+              "shirt_torso/rim_end"
+            ],
+            "ops": [
+              {
+                "consumes": [],
+                "graph_op": "shirt_cast_on",
+                "machine_ops": [
+                  "CAST_ON"
+                ],
+                "op": "cast_on",
+                "produces": "shirt_torso/rim_start"
+              },
+              {
+                "consumes": [],
+                "graph_op": "shirt_sleeve_l_cast_on",
+                "machine_ops": [
+                  "CAST_ON"
+                ],
+                "op": "cast_on",
+                "produces": "shirt_sleeve_l/rim_start"
+              },
+              {
+                "consumes": [],
+                "graph_op": "shirt_sleeve_r_cast_on",
+                "machine_ops": [
+                  "CAST_ON"
+                ],
+                "op": "cast_on",
+                "produces": "shirt_sleeve_r/rim_start"
+              }
+            ],
+            "ops_by_kind": {
+              "cast_on": 3
+            }
+          }
+        }
+      },
+      "family": "shirt",
+      "graph": {
+        "gauge": {
+          "course_mm": 3.0,
+          "wale_mm": 2.5
+        },
+        "joint_count": 2,
+        "joints": [
+          {
+            "anchor": {
+              "boundary": null,
+              "feature": "surface",
+              "point": [
+                -120.0,
+                300.0,
+                0.0
+              ]
+            },
+            "child": "shirt_sleeve_l",
+            "child_boundary": "rim_start",
+            "construction": "unsupported",
+            "id": "shirt_j_sleeve_l",
+            "joint": "surface_branch",
+            "parent": "shirt_torso",
+            "parent_boundary": null,
+            "realized_by": []
+          },
+          {
+            "anchor": {
+              "boundary": null,
+              "feature": "surface",
+              "point": [
+                120.0,
+                300.0,
+                0.0
+              ]
+            },
+            "child": "shirt_sleeve_r",
+            "child_boundary": "rim_start",
+            "construction": "unsupported",
+            "id": "shirt_j_sleeve_r",
+            "joint": "surface_branch",
+            "parent": "shirt_torso",
+            "parent_boundary": null,
+            "realized_by": []
+          }
+        ],
+        "loop_counts_available": true,
+        "open_boundaries": [
+          "shirt_sleeve_l/rim_end",
+          "shirt_sleeve_r/rim_end",
+          "shirt_torso/rim_end"
+        ],
+        "piece_count": 3,
+        "primitives": [
+          {
+            "axis": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "boundaries": [
+              {
+                "boundary": "rim_start",
+                "kind": "rim",
+                "length_mm": 691.1503837897545,
+                "loops": 276.4601535159018
+              },
+              {
+                "boundary": "rim_end",
+                "kind": "rim",
+                "length_mm": 753.9822368615503,
+                "loops": 301.59289474462014
+              }
+            ],
+            "id": "shirt_torso",
+            "kind": "tube",
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "params": {
+              "l": 300.0,
+              "r1": 110.0,
+              "r2": 120.0
+            }
+          },
+          {
+            "axis": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "boundaries": [
+              {
+                "boundary": "rim_start",
+                "kind": "rim",
+                "length_mm": 345.57519189487726,
+                "loops": 138.2300767579509
+              },
+              {
+                "boundary": "rim_end",
+                "kind": "rim",
+                "length_mm": 282.7433388230814,
+                "loops": 113.09733552923255
+              }
+            ],
+            "id": "shirt_sleeve_l",
+            "kind": "tube",
+            "origin": [
+              -120.0,
+              300.0,
+              0.0
+            ],
+            "params": {
+              "l": 250.0,
+              "r1": 55.0,
+              "r2": 45.0
+            }
+          },
+          {
+            "axis": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "boundaries": [
+              {
+                "boundary": "rim_start",
+                "kind": "rim",
+                "length_mm": 345.57519189487726,
+                "loops": 138.2300767579509
+              },
+              {
+                "boundary": "rim_end",
+                "kind": "rim",
+                "length_mm": 282.7433388230814,
+                "loops": 113.09733552923255
+              }
+            ],
+            "id": "shirt_sleeve_r",
+            "kind": "tube",
+            "origin": [
+              120.0,
+              300.0,
+              0.0
+            ],
+            "params": {
+              "l": 250.0,
+              "r1": 55.0,
+              "r2": 45.0
+            }
+          }
+        ],
+        "validation": {
+          "errors": [],
+          "fatal": false,
+          "findings": [
+            {
+              "invariant": "I-DEGENERATE",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-SCHEMA",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-AXIS",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-GRAPH",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-ANCHOR",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-RIMMATCH",
+              "message": "no rim-mating joints",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-CONT",
+              "message": "no terminus_continuation joints",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-BRANCHORIENT",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-LOOP",
+              "message": "no loop-bearing ops",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-SEAL",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-JOINT",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            }
+          ],
+          "ok": true
+        }
+      }
+    },
+    "shorts": {
+      "backends": {
+        "default_knit": {
+          "buildability": {
+            "backend": "default_knit",
+            "backend_checks": [
+              "I-DEGENERATE",
+              "I-SCHEMA",
+              "I-AXIS",
+              "I-GRAPH",
+              "I-ANCHOR",
+              "I-RIMMATCH",
+              "I-CONT",
+              "I-BRANCHORIENT",
+              "I-LOOP",
+              "I-SEAL",
+              "I-JOINT"
+            ],
+            "backend_unverified": [],
+            "failing_instances": {},
+            "geometric_validity": "PASS",
+            "note": "geometric validity never implies knitability; PASS means the graph is well-formed per DESIGN.md \u00a76/\u00a79, nothing more",
+            "per_class": {
+              "I-ANCHOR": "PASS",
+              "I-AXIS": "PASS",
+              "I-BRANCHORIENT": "PASS",
+              "I-CONT": "PASS",
+              "I-DEGENERATE": "PASS",
+              "I-GRAPH": "PASS",
+              "I-JOINT": "PASS",
+              "I-LOOP": "PASS",
+              "I-RIMMATCH": "PASS",
+              "I-SCHEMA": "PASS",
+              "I-SEAL": "PASS"
+            }
+          },
+          "lowerable": true,
+          "program": {
+            "backend": "default_knit",
+            "machine_op_count": 3,
+            "machine_ops_by_verb": {
+              "CAST_ON": 3
+            },
+            "machine_verdict": "SIMULATED",
+            "notes": [],
+            "op_count": 3,
+            "open_boundaries": [
+              "trousers_hips/rim_end",
+              "trousers_leg_l/rim_end",
+              "trousers_leg_r/rim_end"
+            ],
+            "ops": [
+              {
+                "consumes": [],
+                "graph_op": "trousers_cast_on",
+                "machine_ops": [
+                  "CAST_ON"
+                ],
+                "op": "cast_on",
+                "produces": "trousers_hips/rim_start"
+              },
+              {
+                "consumes": [],
+                "graph_op": "trousers_leg_l_cast_on",
+                "machine_ops": [
+                  "CAST_ON"
+                ],
+                "op": "cast_on",
+                "produces": "trousers_leg_l/rim_start"
+              },
+              {
+                "consumes": [],
+                "graph_op": "trousers_leg_r_cast_on",
+                "machine_ops": [
+                  "CAST_ON"
+                ],
+                "op": "cast_on",
+                "produces": "trousers_leg_r/rim_start"
+              }
+            ],
+            "ops_by_kind": {
+              "cast_on": 3
+            }
+          }
+        },
+        "default_sim": {
+          "buildability": {
+            "backend": "default_sim",
+            "backend_checks": [
+              "I-DEGENERATE",
+              "I-SCHEMA",
+              "I-AXIS",
+              "I-GRAPH",
+              "I-ANCHOR",
+              "I-RIMMATCH",
+              "I-CONT",
+              "I-BRANCHORIENT",
+              "I-LOOP",
+              "I-SEAL",
+              "I-JOINT"
+            ],
+            "backend_unverified": [],
+            "failing_instances": {},
+            "geometric_validity": "PASS",
+            "note": "geometric validity never implies knitability; PASS means the graph is well-formed per DESIGN.md \u00a76/\u00a79, nothing more",
+            "per_class": {
+              "I-ANCHOR": "PASS",
+              "I-AXIS": "PASS",
+              "I-BRANCHORIENT": "PASS",
+              "I-CONT": "PASS",
+              "I-DEGENERATE": "PASS",
+              "I-GRAPH": "PASS",
+              "I-JOINT": "PASS",
+              "I-LOOP": "PASS",
+              "I-RIMMATCH": "PASS",
+              "I-SCHEMA": "PASS",
+              "I-SEAL": "PASS"
+            }
+          },
+          "lowerable": true,
+          "program": {
+            "backend": "default_sim",
+            "machine_op_count": 3,
+            "machine_ops_by_verb": {
+              "CAST_ON": 3
+            },
+            "machine_verdict": "SIMULATED",
+            "notes": [],
+            "op_count": 3,
+            "open_boundaries": [
+              "trousers_hips/rim_end",
+              "trousers_leg_l/rim_end",
+              "trousers_leg_r/rim_end"
+            ],
+            "ops": [
+              {
+                "consumes": [],
+                "graph_op": "trousers_cast_on",
+                "machine_ops": [
+                  "CAST_ON"
+                ],
+                "op": "cast_on",
+                "produces": "trousers_hips/rim_start"
+              },
+              {
+                "consumes": [],
+                "graph_op": "trousers_leg_l_cast_on",
+                "machine_ops": [
+                  "CAST_ON"
+                ],
+                "op": "cast_on",
+                "produces": "trousers_leg_l/rim_start"
+              },
+              {
+                "consumes": [],
+                "graph_op": "trousers_leg_r_cast_on",
+                "machine_ops": [
+                  "CAST_ON"
+                ],
+                "op": "cast_on",
+                "produces": "trousers_leg_r/rim_start"
+              }
+            ],
+            "ops_by_kind": {
+              "cast_on": 3
+            }
+          }
+        }
+      },
+      "family": "shorts",
+      "graph": {
+        "gauge": {
+          "course_mm": 3.0,
+          "wale_mm": 2.5
+        },
+        "joint_count": 2,
+        "joints": [
+          {
+            "anchor": {
+              "boundary": null,
+              "feature": "surface",
+              "point": [
+                -110.0,
+                0.0,
+                0.0
+              ]
+            },
+            "child": "trousers_leg_l",
+            "child_boundary": "rim_start",
+            "construction": "unsupported",
+            "id": "trousers_j_leg_l",
+            "joint": "surface_branch",
+            "parent": "trousers_hips",
+            "parent_boundary": null,
+            "realized_by": []
+          },
+          {
+            "anchor": {
+              "boundary": null,
+              "feature": "surface",
+              "point": [
+                110.0,
+                0.0,
+                0.0
+              ]
+            },
+            "child": "trousers_leg_r",
+            "child_boundary": "rim_start",
+            "construction": "unsupported",
+            "id": "trousers_j_leg_r",
+            "joint": "surface_branch",
+            "parent": "trousers_hips",
+            "parent_boundary": null,
+            "realized_by": []
+          }
+        ],
+        "loop_counts_available": true,
+        "open_boundaries": [
+          "trousers_hips/rim_end",
+          "trousers_leg_l/rim_end",
+          "trousers_leg_r/rim_end"
+        ],
+        "piece_count": 3,
+        "primitives": [
+          {
+            "axis": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "boundaries": [
+              {
+                "boundary": "rim_start",
+                "kind": "rim",
+                "length_mm": 691.1503837897545,
+                "loops": 276.4601535159018
+              },
+              {
+                "boundary": "rim_end",
+                "kind": "rim",
+                "length_mm": 628.3185307179587,
+                "loops": 251.32741228718345
+              }
+            ],
+            "id": "trousers_hips",
+            "kind": "tube",
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "params": {
+              "l": 150.0,
+              "r1": 110.0,
+              "r2": 100.0
+            }
+          },
+          {
+            "axis": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "boundaries": [
+              {
+                "boundary": "rim_start",
+                "kind": "rim",
+                "length_mm": 364.424747816416,
+                "loops": 145.7698991265664
+              },
+              {
+                "boundary": "rim_end",
+                "kind": "rim",
+                "length_mm": 314.1592653589793,
+                "loops": 125.66370614359172
+              }
+            ],
+            "id": "trousers_leg_l",
+            "kind": "tube",
+            "origin": [
+              -110.0,
+              0.0,
+              0.0
+            ],
+            "params": {
+              "l": 150.0,
+              "r1": 58.0,
+              "r2": 50.0
+            }
+          },
+          {
+            "axis": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "boundaries": [
+              {
+                "boundary": "rim_start",
+                "kind": "rim",
+                "length_mm": 364.424747816416,
+                "loops": 145.7698991265664
+              },
+              {
+                "boundary": "rim_end",
+                "kind": "rim",
+                "length_mm": 314.1592653589793,
+                "loops": 125.66370614359172
+              }
+            ],
+            "id": "trousers_leg_r",
+            "kind": "tube",
+            "origin": [
+              110.0,
+              0.0,
+              0.0
+            ],
+            "params": {
+              "l": 150.0,
+              "r1": 58.0,
+              "r2": 50.0
+            }
+          }
+        ],
+        "validation": {
+          "errors": [],
+          "fatal": false,
+          "findings": [
+            {
+              "invariant": "I-DEGENERATE",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-SCHEMA",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-AXIS",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-GRAPH",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-ANCHOR",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-RIMMATCH",
+              "message": "no rim-mating joints",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-CONT",
+              "message": "no terminus_continuation joints",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-BRANCHORIENT",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-LOOP",
+              "message": "no loop-bearing ops",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-SEAL",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-JOINT",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            }
+          ],
+          "ok": true
+        }
+      }
+    },
+    "skirt": {
+      "backends": {
+        "default_knit": {
+          "buildability": {
+            "backend": "default_knit",
+            "backend_checks": [
+              "I-DEGENERATE",
+              "I-SCHEMA",
+              "I-AXIS",
+              "I-GRAPH",
+              "I-ANCHOR",
+              "I-RIMMATCH",
+              "I-CONT",
+              "I-BRANCHORIENT",
+              "I-LOOP",
+              "I-SEAL",
+              "I-JOINT"
+            ],
+            "backend_unverified": [],
+            "failing_instances": {},
+            "geometric_validity": "PASS",
+            "note": "geometric validity never implies knitability; PASS means the graph is well-formed per DESIGN.md \u00a76/\u00a79, nothing more",
+            "per_class": {
+              "I-ANCHOR": "PASS",
+              "I-AXIS": "PASS",
+              "I-BRANCHORIENT": "PASS",
+              "I-CONT": "PASS",
+              "I-DEGENERATE": "PASS",
+              "I-GRAPH": "PASS",
+              "I-JOINT": "PASS",
+              "I-LOOP": "PASS",
+              "I-RIMMATCH": "PASS",
+              "I-SCHEMA": "PASS",
+              "I-SEAL": "PASS"
+            }
+          },
+          "lowerable": true,
+          "program": {
+            "backend": "default_knit",
+            "machine_op_count": 1,
+            "machine_ops_by_verb": {
+              "CAST_ON": 1
+            },
+            "machine_verdict": "SIMULATED",
+            "notes": [],
+            "op_count": 1,
+            "open_boundaries": [
+              "skirt_body/rim_end"
+            ],
+            "ops": [
+              {
+                "consumes": [],
+                "graph_op": "skirt_cast_on",
+                "machine_ops": [
+                  "CAST_ON"
+                ],
+                "op": "cast_on",
+                "produces": "skirt_body/rim_start"
+              }
+            ],
+            "ops_by_kind": {
+              "cast_on": 1
+            }
+          }
+        },
+        "default_sim": {
+          "buildability": {
+            "backend": "default_sim",
+            "backend_checks": [
+              "I-DEGENERATE",
+              "I-SCHEMA",
+              "I-AXIS",
+              "I-GRAPH",
+              "I-ANCHOR",
+              "I-RIMMATCH",
+              "I-CONT",
+              "I-BRANCHORIENT",
+              "I-LOOP",
+              "I-SEAL",
+              "I-JOINT"
+            ],
+            "backend_unverified": [],
+            "failing_instances": {},
+            "geometric_validity": "PASS",
+            "note": "geometric validity never implies knitability; PASS means the graph is well-formed per DESIGN.md \u00a76/\u00a79, nothing more",
+            "per_class": {
+              "I-ANCHOR": "PASS",
+              "I-AXIS": "PASS",
+              "I-BRANCHORIENT": "PASS",
+              "I-CONT": "PASS",
+              "I-DEGENERATE": "PASS",
+              "I-GRAPH": "PASS",
+              "I-JOINT": "PASS",
+              "I-LOOP": "PASS",
+              "I-RIMMATCH": "PASS",
+              "I-SCHEMA": "PASS",
+              "I-SEAL": "PASS"
+            }
+          },
+          "lowerable": true,
+          "program": {
+            "backend": "default_sim",
+            "machine_op_count": 1,
+            "machine_ops_by_verb": {
+              "CAST_ON": 1
+            },
+            "machine_verdict": "SIMULATED",
+            "notes": [],
+            "op_count": 1,
+            "open_boundaries": [
+              "skirt_body/rim_end"
+            ],
+            "ops": [
+              {
+                "consumes": [],
+                "graph_op": "skirt_cast_on",
+                "machine_ops": [
+                  "CAST_ON"
+                ],
+                "op": "cast_on",
+                "produces": "skirt_body/rim_start"
+              }
+            ],
+            "ops_by_kind": {
+              "cast_on": 1
+            }
+          }
+        }
+      },
+      "family": "skirt",
+      "graph": {
+        "gauge": {
+          "course_mm": 3.0,
+          "wale_mm": 2.5
+        },
+        "joint_count": 0,
+        "joints": [],
+        "loop_counts_available": true,
+        "open_boundaries": [
+          "skirt_body/rim_end"
+        ],
+        "piece_count": 1,
+        "primitives": [
+          {
+            "axis": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "boundaries": [
+              {
+                "boundary": "rim_start",
+                "kind": "rim",
+                "length_mm": 565.4866776461628,
+                "loops": 226.1946710584651
+              },
+              {
+                "boundary": "rim_end",
+                "kind": "rim",
+                "length_mm": 1005.3096491487338,
+                "loops": 402.1238596594935
+              }
+            ],
+            "id": "skirt_body",
+            "kind": "tube",
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "params": {
+              "l": 450.0,
+              "r1": 90.0,
+              "r2": 160.0
+            }
+          }
+        ],
+        "validation": {
+          "errors": [],
+          "fatal": false,
+          "findings": [
+            {
+              "invariant": "I-DEGENERATE",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-SCHEMA",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-AXIS",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-GRAPH",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-ANCHOR",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-RIMMATCH",
+              "message": "no rim-mating joints",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-CONT",
+              "message": "no terminus_continuation joints",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-BRANCHORIENT",
+              "message": "no surface_branch joints",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-LOOP",
+              "message": "no loop-bearing ops",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-SEAL",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-JOINT",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            }
+          ],
+          "ok": true
+        }
+      }
+    },
+    "sock": {
+      "backends": {
+        "default_knit": {
+          "buildability": {
+            "backend": "default_knit",
+            "backend_checks": [
+              "I-DEGENERATE",
+              "I-SCHEMA",
+              "I-AXIS",
+              "I-GRAPH",
+              "I-ANCHOR",
+              "I-RIMMATCH",
+              "I-CONT",
+              "I-BRANCHORIENT",
+              "I-LOOP",
+              "I-SEAL",
+              "I-JOINT"
+            ],
+            "backend_unverified": [],
+            "failing_instances": {},
+            "geometric_validity": "PASS",
+            "note": "geometric validity never implies knitability; PASS means the graph is well-formed per DESIGN.md \u00a76/\u00a79, nothing more",
+            "per_class": {
+              "I-ANCHOR": "PASS",
+              "I-AXIS": "PASS",
+              "I-BRANCHORIENT": "PASS",
+              "I-CONT": "PASS",
+              "I-DEGENERATE": "PASS",
+              "I-GRAPH": "PASS",
+              "I-JOINT": "PASS",
+              "I-LOOP": "PASS",
+              "I-RIMMATCH": "PASS",
+              "I-SCHEMA": "PASS",
+              "I-SEAL": "PASS"
+            }
+          },
+          "lowerable": true,
+          "program": {
+            "backend": "default_knit",
+            "machine_op_count": 4,
+            "machine_ops_by_verb": {
+              "CAST_ON": 1,
+              "GRAFT": 1,
+              "KNIT": 1,
+              "PICK_UP": 1
+            },
+            "machine_verdict": "SIMULATED",
+            "notes": [],
+            "op_count": 3,
+            "open_boundaries": [],
+            "ops": [
+              {
+                "consumes": [],
+                "graph_op": "sock_cast_on",
+                "machine_ops": [
+                  "CAST_ON"
+                ],
+                "op": "cast_on",
+                "produces": "sock_leg/rim_start"
+              },
+              {
+                "consumes": [
+                  "sock_leg/rim_end"
+                ],
+                "graph_op": "sock_foot_pick_up",
+                "joint": {
+                  "child": "sock_foot",
+                  "child_boundary": "rim_start",
+                  "construction": "knitted_in",
+                  "parent": "sock_leg"
+                },
+                "machine_ops": [
+                  "PICK_UP",
+                  "KNIT"
+                ],
+                "op": "pick_up",
+                "produces": "sock_foot/rim_start"
+              },
+              {
+                "consumes": [
+                  "sock_foot/rim_end",
+                  "sock_toe/rim"
+                ],
+                "graph_op": "sock_toe_graft",
+                "joint": {
+                  "child": "sock_toe",
+                  "child_boundary": "rim",
+                  "construction": "grafted",
+                  "parent": "sock_foot"
+                },
+                "machine_ops": [
+                  "GRAFT"
+                ],
+                "op": "graft"
+              }
+            ],
+            "ops_by_kind": {
+              "cast_on": 1,
+              "graft": 1,
+              "pick_up": 1
+            }
+          }
+        },
+        "default_sim": {
+          "buildability": {
+            "backend": "default_sim",
+            "backend_checks": [
+              "I-DEGENERATE",
+              "I-SCHEMA",
+              "I-AXIS",
+              "I-GRAPH",
+              "I-ANCHOR",
+              "I-RIMMATCH",
+              "I-CONT",
+              "I-BRANCHORIENT",
+              "I-LOOP",
+              "I-SEAL",
+              "I-JOINT"
+            ],
+            "backend_unverified": [],
+            "failing_instances": {},
+            "geometric_validity": "PASS",
+            "note": "geometric validity never implies knitability; PASS means the graph is well-formed per DESIGN.md \u00a76/\u00a79, nothing more",
+            "per_class": {
+              "I-ANCHOR": "PASS",
+              "I-AXIS": "PASS",
+              "I-BRANCHORIENT": "PASS",
+              "I-CONT": "PASS",
+              "I-DEGENERATE": "PASS",
+              "I-GRAPH": "PASS",
+              "I-JOINT": "PASS",
+              "I-LOOP": "PASS",
+              "I-RIMMATCH": "PASS",
+              "I-SCHEMA": "PASS",
+              "I-SEAL": "PASS"
+            }
+          },
+          "lowerable": true,
+          "program": {
+            "backend": "default_sim",
+            "machine_op_count": 4,
+            "machine_ops_by_verb": {
+              "CAST_ON": 1,
+              "GRAFT": 1,
+              "KNIT": 1,
+              "PICK_UP": 1
+            },
+            "machine_verdict": "SIMULATED",
+            "notes": [],
+            "op_count": 3,
+            "open_boundaries": [],
+            "ops": [
+              {
+                "consumes": [],
+                "graph_op": "sock_cast_on",
+                "machine_ops": [
+                  "CAST_ON"
+                ],
+                "op": "cast_on",
+                "produces": "sock_leg/rim_start"
+              },
+              {
+                "consumes": [
+                  "sock_leg/rim_end"
+                ],
+                "graph_op": "sock_foot_pick_up",
+                "joint": {
+                  "child": "sock_foot",
+                  "child_boundary": "rim_start",
+                  "construction": "knitted_in",
+                  "parent": "sock_leg"
+                },
+                "machine_ops": [
+                  "PICK_UP",
+                  "KNIT"
+                ],
+                "op": "pick_up",
+                "produces": "sock_foot/rim_start"
+              },
+              {
+                "consumes": [
+                  "sock_foot/rim_end",
+                  "sock_toe/rim"
+                ],
+                "graph_op": "sock_toe_graft",
+                "joint": {
+                  "child": "sock_toe",
+                  "child_boundary": "rim",
+                  "construction": "grafted",
+                  "parent": "sock_foot"
+                },
+                "machine_ops": [
+                  "GRAFT"
+                ],
+                "op": "graft"
+              }
+            ],
+            "ops_by_kind": {
+              "cast_on": 1,
+              "graft": 1,
+              "pick_up": 1
+            }
+          }
+        }
+      },
+      "family": "sock",
+      "graph": {
+        "gauge": {
+          "course_mm": 3.0,
+          "wale_mm": 2.5
+        },
+        "joint_count": 2,
+        "joints": [
+          {
+            "anchor": {
+              "boundary": "rim_end",
+              "feature": "terminus",
+              "point": [
+                0.0,
+                250.0,
+                0.0
+              ]
+            },
+            "child": "sock_foot",
+            "child_boundary": "rim_start",
+            "construction": "knitted_in",
+            "id": "sock_j_heel",
+            "joint": "terminus_continuation",
+            "parent": "sock_leg",
+            "parent_boundary": "rim_end",
+            "realized_by": [
+              "sock_foot_pick_up"
+            ]
+          },
+          {
+            "anchor": {
+              "boundary": "rim_end",
+              "feature": "terminus",
+              "point": [
+                180.0,
+                0.0,
+                0.0
+              ]
+            },
+            "child": "sock_toe",
+            "child_boundary": "rim",
+            "construction": "grafted",
+            "id": "sock_j_toe",
+            "joint": "terminus_continuation",
+            "parent": "sock_foot",
+            "parent_boundary": "rim_end",
+            "realized_by": [
+              "sock_toe_graft"
+            ]
+          }
+        ],
+        "loop_counts_available": true,
+        "open_boundaries": [],
+        "piece_count": 3,
+        "primitives": [
+          {
+            "axis": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "boundaries": [
+              {
+                "boundary": "rim_start",
+                "kind": "rim",
+                "length_mm": 345.57519189487726,
+                "loops": 138.2300767579509
+              },
+              {
+                "boundary": "rim_end",
+                "kind": "rim",
+                "length_mm": 314.1592653589793,
+                "loops": 125.66370614359172
+              }
+            ],
+            "id": "sock_leg",
+            "kind": "tube",
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "params": {
+              "l": 250.0,
+              "r1": 55.0,
+              "r2": 50.0
+            }
+          },
+          {
+            "axis": [
+              1.0,
+              0.0,
+              0.0
+            ],
+            "boundaries": [
+              {
+                "boundary": "rim_start",
+                "kind": "rim",
+                "length_mm": 314.1592653589793,
+                "loops": 125.66370614359172
+              },
+              {
+                "boundary": "rim_end",
+                "kind": "rim",
+                "length_mm": 282.7433388230814,
+                "loops": 113.09733552923255
+              }
+            ],
+            "id": "sock_foot",
+            "kind": "tube",
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "params": {
+              "l": 180.0,
+              "r1": 50.0,
+              "r2": 45.0
+            }
+          },
+          {
+            "axis": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "boundaries": [
+              {
+                "boundary": "rim",
+                "kind": "rim",
+                "length_mm": 282.7433388230814,
+                "loops": 113.09733552923255
+              }
+            ],
+            "id": "sock_toe",
+            "kind": "hemisphere",
+            "origin": [
+              180.0,
+              0.0,
+              0.0
+            ],
+            "params": {
+              "r": 45.0
+            }
+          }
+        ],
+        "validation": {
+          "errors": [],
+          "fatal": false,
+          "findings": [
+            {
+              "invariant": "I-DEGENERATE",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-SCHEMA",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-AXIS",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-GRAPH",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-ANCHOR",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-RIMMATCH",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-CONT",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-BRANCHORIENT",
+              "message": "no surface_branch joints",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-LOOP",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-SEAL",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-JOINT",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            }
+          ],
+          "ok": true
+        }
+      }
+    },
+    "trousers": {
+      "backends": {
+        "default_knit": {
+          "buildability": {
+            "backend": "default_knit",
+            "backend_checks": [
+              "I-DEGENERATE",
+              "I-SCHEMA",
+              "I-AXIS",
+              "I-GRAPH",
+              "I-ANCHOR",
+              "I-RIMMATCH",
+              "I-CONT",
+              "I-BRANCHORIENT",
+              "I-LOOP",
+              "I-SEAL",
+              "I-JOINT"
+            ],
+            "backend_unverified": [],
+            "failing_instances": {},
+            "geometric_validity": "PASS",
+            "note": "geometric validity never implies knitability; PASS means the graph is well-formed per DESIGN.md \u00a76/\u00a79, nothing more",
+            "per_class": {
+              "I-ANCHOR": "PASS",
+              "I-AXIS": "PASS",
+              "I-BRANCHORIENT": "PASS",
+              "I-CONT": "PASS",
+              "I-DEGENERATE": "PASS",
+              "I-GRAPH": "PASS",
+              "I-JOINT": "PASS",
+              "I-LOOP": "PASS",
+              "I-RIMMATCH": "PASS",
+              "I-SCHEMA": "PASS",
+              "I-SEAL": "PASS"
+            }
+          },
+          "lowerable": true,
+          "program": {
+            "backend": "default_knit",
+            "machine_op_count": 3,
+            "machine_ops_by_verb": {
+              "CAST_ON": 3
+            },
+            "machine_verdict": "SIMULATED",
+            "notes": [],
+            "op_count": 3,
+            "open_boundaries": [
+              "trousers_hips/rim_end",
+              "trousers_leg_l/rim_end",
+              "trousers_leg_r/rim_end"
+            ],
+            "ops": [
+              {
+                "consumes": [],
+                "graph_op": "trousers_cast_on",
+                "machine_ops": [
+                  "CAST_ON"
+                ],
+                "op": "cast_on",
+                "produces": "trousers_hips/rim_start"
+              },
+              {
+                "consumes": [],
+                "graph_op": "trousers_leg_l_cast_on",
+                "machine_ops": [
+                  "CAST_ON"
+                ],
+                "op": "cast_on",
+                "produces": "trousers_leg_l/rim_start"
+              },
+              {
+                "consumes": [],
+                "graph_op": "trousers_leg_r_cast_on",
+                "machine_ops": [
+                  "CAST_ON"
+                ],
+                "op": "cast_on",
+                "produces": "trousers_leg_r/rim_start"
+              }
+            ],
+            "ops_by_kind": {
+              "cast_on": 3
+            }
+          }
+        },
+        "default_sim": {
+          "buildability": {
+            "backend": "default_sim",
+            "backend_checks": [
+              "I-DEGENERATE",
+              "I-SCHEMA",
+              "I-AXIS",
+              "I-GRAPH",
+              "I-ANCHOR",
+              "I-RIMMATCH",
+              "I-CONT",
+              "I-BRANCHORIENT",
+              "I-LOOP",
+              "I-SEAL",
+              "I-JOINT"
+            ],
+            "backend_unverified": [],
+            "failing_instances": {},
+            "geometric_validity": "PASS",
+            "note": "geometric validity never implies knitability; PASS means the graph is well-formed per DESIGN.md \u00a76/\u00a79, nothing more",
+            "per_class": {
+              "I-ANCHOR": "PASS",
+              "I-AXIS": "PASS",
+              "I-BRANCHORIENT": "PASS",
+              "I-CONT": "PASS",
+              "I-DEGENERATE": "PASS",
+              "I-GRAPH": "PASS",
+              "I-JOINT": "PASS",
+              "I-LOOP": "PASS",
+              "I-RIMMATCH": "PASS",
+              "I-SCHEMA": "PASS",
+              "I-SEAL": "PASS"
+            }
+          },
+          "lowerable": true,
+          "program": {
+            "backend": "default_sim",
+            "machine_op_count": 3,
+            "machine_ops_by_verb": {
+              "CAST_ON": 3
+            },
+            "machine_verdict": "SIMULATED",
+            "notes": [],
+            "op_count": 3,
+            "open_boundaries": [
+              "trousers_hips/rim_end",
+              "trousers_leg_l/rim_end",
+              "trousers_leg_r/rim_end"
+            ],
+            "ops": [
+              {
+                "consumes": [],
+                "graph_op": "trousers_cast_on",
+                "machine_ops": [
+                  "CAST_ON"
+                ],
+                "op": "cast_on",
+                "produces": "trousers_hips/rim_start"
+              },
+              {
+                "consumes": [],
+                "graph_op": "trousers_leg_l_cast_on",
+                "machine_ops": [
+                  "CAST_ON"
+                ],
+                "op": "cast_on",
+                "produces": "trousers_leg_l/rim_start"
+              },
+              {
+                "consumes": [],
+                "graph_op": "trousers_leg_r_cast_on",
+                "machine_ops": [
+                  "CAST_ON"
+                ],
+                "op": "cast_on",
+                "produces": "trousers_leg_r/rim_start"
+              }
+            ],
+            "ops_by_kind": {
+              "cast_on": 3
+            }
+          }
+        }
+      },
+      "family": "trousers",
+      "graph": {
+        "gauge": {
+          "course_mm": 3.0,
+          "wale_mm": 2.5
+        },
+        "joint_count": 2,
+        "joints": [
+          {
+            "anchor": {
+              "boundary": null,
+              "feature": "surface",
+              "point": [
+                -110.0,
+                0.0,
+                0.0
+              ]
+            },
+            "child": "trousers_leg_l",
+            "child_boundary": "rim_start",
+            "construction": "unsupported",
+            "id": "trousers_j_leg_l",
+            "joint": "surface_branch",
+            "parent": "trousers_hips",
+            "parent_boundary": null,
+            "realized_by": []
+          },
+          {
+            "anchor": {
+              "boundary": null,
+              "feature": "surface",
+              "point": [
+                110.0,
+                0.0,
+                0.0
+              ]
+            },
+            "child": "trousers_leg_r",
+            "child_boundary": "rim_start",
+            "construction": "unsupported",
+            "id": "trousers_j_leg_r",
+            "joint": "surface_branch",
+            "parent": "trousers_hips",
+            "parent_boundary": null,
+            "realized_by": []
+          }
+        ],
+        "loop_counts_available": true,
+        "open_boundaries": [
+          "trousers_hips/rim_end",
+          "trousers_leg_l/rim_end",
+          "trousers_leg_r/rim_end"
+        ],
+        "piece_count": 3,
+        "primitives": [
+          {
+            "axis": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "boundaries": [
+              {
+                "boundary": "rim_start",
+                "kind": "rim",
+                "length_mm": 691.1503837897545,
+                "loops": 276.4601535159018
+              },
+              {
+                "boundary": "rim_end",
+                "kind": "rim",
+                "length_mm": 628.3185307179587,
+                "loops": 251.32741228718345
+              }
+            ],
+            "id": "trousers_hips",
+            "kind": "tube",
+            "origin": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "params": {
+              "l": 150.0,
+              "r1": 110.0,
+              "r2": 100.0
+            }
+          },
+          {
+            "axis": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "boundaries": [
+              {
+                "boundary": "rim_start",
+                "kind": "rim",
+                "length_mm": 364.424747816416,
+                "loops": 145.7698991265664
+              },
+              {
+                "boundary": "rim_end",
+                "kind": "rim",
+                "length_mm": 314.1592653589793,
+                "loops": 125.66370614359172
+              }
+            ],
+            "id": "trousers_leg_l",
+            "kind": "tube",
+            "origin": [
+              -110.0,
+              0.0,
+              0.0
+            ],
+            "params": {
+              "l": 450.0,
+              "r1": 58.0,
+              "r2": 50.0
+            }
+          },
+          {
+            "axis": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "boundaries": [
+              {
+                "boundary": "rim_start",
+                "kind": "rim",
+                "length_mm": 364.424747816416,
+                "loops": 145.7698991265664
+              },
+              {
+                "boundary": "rim_end",
+                "kind": "rim",
+                "length_mm": 314.1592653589793,
+                "loops": 125.66370614359172
+              }
+            ],
+            "id": "trousers_leg_r",
+            "kind": "tube",
+            "origin": [
+              110.0,
+              0.0,
+              0.0
+            ],
+            "params": {
+              "l": 450.0,
+              "r1": 58.0,
+              "r2": 50.0
+            }
+          }
+        ],
+        "validation": {
+          "errors": [],
+          "fatal": false,
+          "findings": [
+            {
+              "invariant": "I-DEGENERATE",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-SCHEMA",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-AXIS",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-GRAPH",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-ANCHOR",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-RIMMATCH",
+              "message": "no rim-mating joints",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-CONT",
+              "message": "no terminus_continuation joints",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-BRANCHORIENT",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-LOOP",
+              "message": "no loop-bearing ops",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-SEAL",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            },
+            {
+              "invariant": "I-JOINT",
+              "message": "",
+              "status": "PASS",
+              "subject": "*"
+            }
+          ],
+          "ok": true
+        }
+      }
+    }
+  },
+  "gauge": {
+    "course_mm": 3.0,
+    "wale_mm": 2.5
+  },
+  "kind": "ugc-benchmark",
+  "machine_verdict_counts": {
+    "default_knit": {
+      "SIMULATED": 9
+    },
+    "default_sim": {
+      "SIMULATED": 9
+    }
+  },
+  "schema_version": 1
+}

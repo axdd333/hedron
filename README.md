@@ -96,6 +96,35 @@ python3 -m ugc sock        # versioned envelope: graph + program + stats
 Exit codes: `0` ok, `2` usage error or validation refusal (catalog errors
 on stderr), `1` crash.
 
+## Benchmark
+
+`benchmark/benchmark.py` measures what the engine actually does across
+all nine U-01 families and the canonical backends — every number comes
+from the engine's own surfaces (`buildability_report`, `lower`,
+`garment_stats`, `Boundary.loops_for`), never recomputed:
+
+```python
+import benchmark.benchmark as bench
+bench.write_report("benchmark/report.json")          # no gauge
+bench.write_report("benchmark/report-gauged.json",
+                   gauge={"wale_mm": 2.5, "course_mm": 3.0})
+```
+
+Per family and backend the report carries: graph facts (primitive
+boundary lengths in mm; loop counts only via the engine's own
+conversion when the graph carries a complete gauge), joints with their
+declared construction (`"unsupported"` surfaces verbatim — documented,
+not hidden, §10), declared open boundaries, the full validation
+verdict, buildability per invariant class, and the lowered program.
+Without a gauge, loop counts are null and `machine_verdict` is
+`UNSIMULATED` — the report cannot claim a simulation the engine did
+not run. A graph that fails validation is recorded as a refusal
+(`{"lowerable": false, "refusal": …}` with the exact catalog codes),
+never a crash and never a partial program.
+
+Committed reports: `benchmark/report.json` (ungauged),
+`benchmark/report-gauged.json` (wale 2.5 mm / course 3 mm).
+
 ## Layout
 
 ```
@@ -104,7 +133,8 @@ ugc/validation.py    ValidationResult API over the engine
 ugc/garments.py      U-01 family builders (9 families)
 ugc/backend.py       lowering, stats ledger, JSON envelope
 ugc/__main__.py      CLI
-tests/               220 tests, unittest, no deps
+benchmark/           U-01 benchmark + canonical JSON reports
+tests/               238 tests, unittest, no deps
 DESIGN.md            spec-v2: primitives, joints, ops, invariants, §8
 ```
 
