@@ -588,6 +588,74 @@ class TestCatalogCompleteness(unittest.TestCase):
         self.assertTrue(d["ok"])
 
 
+# ---------------------------------------------------------------------------
+# C3 — branch orientation, canonical ordering, serialization
+# ---------------------------------------------------------------------------
+def _branch_graph(pad_axis):
+    palm = P.Primitive(id="palm", kind="sphere", params={"r": 60},
+                       origin=(0, 0, 0))
+    pad = P.Primitive(id="pad", kind="disk", params={"r": 8},
+                      origin=(0, 60, 0), axis=pad_axis)
+    j = P.Joint(id="j", joint="surface_branch", child="pad",
+                child_boundary="rim", parent="palm", parent_boundary=None,
+                construction="unsupported",
+                anchor={"feature": "surface", "boundary": None,
+                        "point": (0, 60, 0)},
+                realized_by=[])
+    return P.UGPGraph(primitives=[palm, pad], joints=[j])
+
+
+class TestBranchOrient(unittest.TestCase):
+    def test_branch_into_material(self):
+        g = _branch_graph((0.0, -1.0, 0.0))       # points into the sphere
+        r = V.validate(g)
+        e = _by_kind(r, "branch_into_material")[0]
+        self.assertEqual(e.code, "I-BRANCHORIENT")
+        self.assertEqual(e.ids, ("j",))
+        self.assertAlmostEqual(e.expected, 0.0, places=9)
+        self.assertAlmostEqual(e.actual, -1.0, places=9)
+        self.assertFalse(r.ok)
+
+    def test_branch_outward_clean(self):
+        g = _branch_graph((0.0, 1.0, 0.0))
+        r = V.validate(g)
+        bo = [f for f in r.findings if f.invariant == "I-BRANCHORIENT"][0]
+        self.assertEqual(bo.status, "PASS")
+
+
+class TestCanonicalOrdering(unittest.TestCase):
+    def _graph(self, prim_order):
+        a = _tube("a")
+        b = _tube("b", r1=20, r2=20, l=50, origin=(0, 100, 0))
+        prims = {"a": a, "b": b}
+        g = P.UGPGraph(primitives=[prims[pid] for pid in prim_order],
+                       open_boundaries=["b/rim_end"])
+        _cast_on(g, "a", "cast_on_1")
+        _pick_up(g, "pick_up_1", "a", "b")
+        g.add_joint(_cont_joint("j1", "b", "a", (0, 100, 0), ["pick_up_1"]))
+        return g
+
+    def test_insertion_order_independent_errors(self):
+        r1 = V.validate(self._graph(("a", "b")))
+        r2 = V.validate(self._graph(("b", "a")))
+        t1 = [e.as_tuple() for e in r1.errors]
+        t2 = [e.as_tuple() for e in r2.errors]
+        self.assertEqual(t1, t2)
+        self.assertTrue(t1)
+        self.assertEqual(t1, sorted(t1))     # canonical (code, kind, ...) order
+
+    def test_error_to_dict_carries_numerics(self):
+        g = self._graph(("a", "b"))
+        r = V.validate(g)
+        e = _by_kind(r, "radius_step")[0]
+        d = e.to_dict()
+        for key in ("code", "kind", "ids", "message", "expected", "actual"):
+            self.assertIn(key, d)
+        self.assertEqual(d["code"], "I-CONT")
+        self.assertEqual(d["expected"], 1.0)
+        self.assertEqual(d["actual"], 10.0)
+
+
 if __name__ == "__main__":
     unittest.main()
 

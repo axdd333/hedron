@@ -416,7 +416,9 @@ def _map_engine_findings(findings, g):
 # ---------------------------------------------------------------------------
 def validate(graph):
     """Validate a UGPGraph -> ValidationResult (never raises on graph
-    content; only on non-UGPGraph arguments)."""
+    content; only on non-UGPGraph arguments). Errors and findings are
+    ordered canonically: (code, kind, ids, message) resp. (class order,
+    subject, message) -- independent of graph insertion order."""
     if not isinstance(graph, P.UGPGraph):
         raise TypeError("validate() expects a UGPGraph, got %s"
                         % type(graph).__name__)
@@ -424,9 +426,14 @@ def validate(graph):
     fatal = any(e.code in ("I-DEGENERATE", "I-SCHEMA") for e in pre)
     if fatal:
         # §7: hard errors short-circuit; report degenerate/schema only
+        pre.sort(key=lambda e: (e.code, e.kind, e.ids, e.message))
         return ValidationResult([], pre, True)
     findings = P.validate(graph)
     errors = _check_graph(graph) + _map_engine_findings(findings, graph)
+    errors.sort(key=lambda e: (e.code, e.kind, e.ids, e.message))
+    class_order = {name: i for i, name in enumerate(P.INARIANT_CLASSES)}
+    findings.sort(key=lambda f: (class_order.get(f.invariant, 99),
+                                 f.subject, f.message))
     return ValidationResult(findings, errors, False)
 
 
