@@ -1,0 +1,386 @@
+URL: https://www.business.uconn.edu/werth-innovation-to-entrepreneurship-initiative/
+FETCHED_VIA: jina 200
+
+Title: Page not found | School of Business
+
+URL Source: https://www.business.uconn.edu/werth-innovation-to-entrepreneurship-initiative/
+
+Warning: Target URL returned error 404: Not Found
+
+Markdown Content:
+Our websites may use cookies to personalize and enhance your experience. By continuing without changing your cookie settings, you agree to this collection. For more information, please see our [University Websites Privacy Notice](https://privacy.uconn.edu/university-website-notice/).
+
+OK More Information
+
+[Skip to Navigation](https://www.business.uconn.edu/werth-innovation-to-entrepreneurship-initiative/#site-navigation)[Skip to UConn Search](https://www.business.uconn.edu/werth-innovation-to-entrepreneurship-initiative/#uc-search)[Skip to Content](https://www.business.uconn.edu/werth-innovation-to-entrepreneurship-initiative/#content)
+
+# UConn Cookie Information
+
+What are Cookies?Authentication Cookies Analytics Cookies Opt Out
+
+**Web cookies** (also called **HTTP cookies**, **browser cookies**, or simply **cookies**) are small pieces of data that websites store on your device (computer, phone, etc.) through your web browser. They are used to remember information about you and your interactions with the site.
+
+### Purpose of Cookies:
+
+1.   **Session Management**:
+
+    *   Keeping you logged in
+
+    *   Remembering items in a shopping cart
+
+    *   Saving language or theme preferences
+
+2.   **Personalization**:
+
+    *   Tailoring content or ads based on your previous activity
+
+3.   **Tracking & Analytics**:
+
+    *   Monitoring browsing behavior for analytics or marketing purposes
+
+* * *
+
+### Types of Cookies:
+
+1.   **Session Cookies**:
+
+    *   Temporary; deleted when you close your browser
+
+    *   Used for things like keeping you logged in during a single session
+
+2.   **Persistent Cookies**:
+
+    *   Stored on your device until they expire or are manually deleted
+
+    *   Used for remembering login credentials, settings, etc.
+
+3.   **First-Party Cookies**:
+
+    *   Set by the website you're visiting directly
+
+4.   **Third-Party Cookies**:
+
+    *   Set by other domains (usually advertisers) embedded in the website
+
+    *   Commonly used for tracking across multiple sites
+
+**Authentication cookies** are a special type of web cookie used to **identify and verify** a user after they log in to a website or web application.
+
+* * *
+
+### What They Do:
+
+Once you log in to a site, the server creates an authentication cookie and sends it to your browser. This cookie:
+
+*   Proves to the website that you're logged in
+
+*   Prevents you from having to log in again on every page you visit
+
+*   Can persist across sessions if you select "Remember me"
+
+* * *
+
+### What's Inside an Authentication Cookie?
+
+Typically, it contains:
+
+*   A **unique session ID** (not your actual password)
+
+*   Optional metadata (e.g., expiration time, security flags)
+
+**Analytics cookies** are cookies used to **collect data about how visitors interact with a website**. Their primary purpose is to help website owners understand and improve user experience by analyzing things like:
+
+*   How users navigate the site
+
+*   Which pages are most/least visited
+
+*   How long users stay on each page
+
+*   What device, browser, or location the user is from
+
+* * *
+
+### What They Track:
+
+Some examples of data analytics cookies may collect:
+
+*   Page views and time spent on pages
+
+*   Click paths (how users move from page to page)
+
+*   Bounce rate (users who leave without interacting)
+
+*   User demographics (location, language, device)
+
+*   Referring websites (how users arrived at the site)
+
+Here’s how you can disable cookies in common browsers:
+
+### 1. Google Chrome
+
+*   Open Chrome and click the three vertical dots in the top-right corner.
+
+*   Go to **Settings**>**Privacy and security**>**Cookies and other site data**.
+
+*   Choose your preferred option:
+
+    *   **Block all cookies** (not recommended, can break most websites).
+
+    *   **Block third-party cookies** (can block ads and tracking cookies).
+
+### 2. Mozilla Firefox
+
+*   Open Firefox and click the three horizontal lines in the top-right corner.
+
+*   Go to **Settings**>**Privacy & Security**.
+
+*   Under the **Enhanced Tracking Protection** section, choose **Strict** to block most cookies or **Custom** to manually choose which cookies to block.
+
+### 3. Safari
+
+*   Open Safari and click **Safari** in the top-left corner of the screen.
+
+*   Go to **Preferences**>**Privacy**.
+
+*   Check **Block all cookies** to stop all cookies, or select options to block third-party cookies.
+
+### 4. Microsoft Edge
+
+*   Open Edge and click the three horizontal dots in the top-right corner.
+
+*   Go to **Settings**>**Privacy, search, and services**>**Cookies and site permissions**.
+
+*   Select your cookie settings from there, including blocking all cookies or blocking third-party cookies.
+
+### 5. On Mobile (iOS/Android)
+
+*   For Safari on iOS: Go to **Settings**>**Safari**>**Privacy & Security**>**Block All Cookies**.
+
+*   For Chrome on Android: Open the app, tap the three dots, go to **Settings**>**Privacy and security**>**Cookies**.
+
+### Be Aware:
+
+Disabling cookies can make your online experience more difficult. Some websites may not load properly, or you may be logged out frequently. Also, certain features may not work as expected.
+
+[UConn](https://uconn.edu/)[University of Connecticut](https://uconn.edu/)
+
+[Search University of Connecticut](https://uconn.edu/search)
+
+A to Z Index
+
+[Site A-Z](https://www.business.uconn.edu/a-z-index)
+
+* * *
+
+[UConn A-Z](https://uconn.edu/az)
+
+# [School of Business](https://www.business.uconn.edu/)
+
+*   [About](https://www.business.uconn.edu/werth-innovation-to-entrepreneurship-initiative/#)
+    *   #### About the School
+
+        *   [About the School](https://www.business.uconn.edu/about/)
+        *   [Fast Facts](https://www.business.uconn.edu/about/fast-facts/)
+        *   [Rankings: UConn School of Business Top-ranked by US News](https://www.business.uconn.edu/about/rankings/)
+        *   [Accreditation](https://www.business.uconn.edu/about/accreditation/)
+        *   [Dean’s Annual Report 2025](https://www.business.uconn.edu/deansreport/)
+
+    *   #### Campuses
+
+        *   [Storrs Campus](https://www.business.uconn.edu/about/campuses/storrs/)
+        *   [Hartford Campus](https://hartford.uconn.edu/)
+        *   [Hartford Campus – Graduate](https://www.business.uconn.edu/about/campuses/hartford/)
+        *   [Waterbury Campus](https://www.business.uconn.edu/about/campuses/waterbury/)
+        *   [Stamford Campus](https://www.business.uconn.edu/about/campuses/stamford/)
+
+    *   #### News & Events
+
+        *   [Pressroom](https://www.business.uconn.edu/pressroom/)
+        *   [Events](https://www.business.uconn.edu/events/)
+        *   [Featured Stories](https://www.business.uconn.edu/category/feature/)
+        *   [Research](https://www.business.uconn.edu/category/news/research/)
+
+    *   #### Contact
+
+        *   [Office of the Dean](https://www.business.uconn.edu/contact/deans-office/)
+        *   [General Directory](https://www.business.uconn.edu/contact/)
+        *   [Faculty Directory](https://www.business.uconn.edu/contact/directory/)
+        *   [Staff Directory](https://www.business.uconn.edu/contact/staff-directory/)
+
+*   [Programs](https://www.business.uconn.edu/werth-innovation-to-entrepreneurship-initiative/#)
+    *   #### Undergraduate Degree
+
+        *   [Advising](http://undergrad.business.uconn.edu/)
+        *   [Majors](http://undergrad.business.uconn.edu/majors/)
+        *   [Minors](http://undergrad.business.uconn.edu/minors/)
+        *   [Scholarships](http://scholarships.business.uconn.edu/)
+        *   [Accelerated Undergraduate-to-Graduate Programs](https://grad.business.uconn.edu/academics/accelerated-undergraduate-masters/)
+
+    *   #### Graduate Programs
+
+        *   [All Graduate Business Programs](http://grad.business.uconn.edu/)
+        *   [Ph.D. in Business](http://phd.business.uconn.edu/)
+        *   [Graduate Certificates](http://grad.business.uconn.edu/academics/certificates/)
+        *   [STEM Designated Programs](https://grad.business.uconn.edu/stem/)
+
+    *   #### MBA Programs
+
+        *   [MBA Programs Home Page](https://mba.business.uconn.edu/?utm_source=Landing%20Page&utm_medium=Referring%20Link&utm_campaign=Main%20Business%20Site)
+        *   [Compare our MBA Programs](https://mba.business.uconn.edu/mba-programs/?utm_source=Landing%20Page&utm_medium=Referring%20Link&utm_campaign=Main%20Business%20Site)
+        *   [FLEX MBA](https://mba.business.uconn.edu/mba-programs/flex-mba/?utm_source=Landing%20Page&utm_medium=Referring%20Link&utm_campaign=Main%20Business%20Site)
+        *   [Online MBA](https://mba.business.uconn.edu/mba-programs/online-mba/?utm_source=Landing%20Page&utm_medium=Referring%20Link&utm_campaign=Main%20Business%20Site)
+        *   [One-Year MBA](https://mba.business.uconn.edu/mba-programs/one-year-mba/?utm_source=Landing%20Page&utm_medium=Referring%20Link&utm_campaign=Main%20Business%20Site)
+
+    *   #### Specialized Masters
+
+        *   [MS in Accounting](http://msaccounting.business.uconn.edu/)
+        *   [MS in Business Analytics & Project Management](http://msbapm.business.uconn.edu/)
+        *   [MS in Financial and Enterprise Risk Management](https://risk.business.uconn.edu/)
+        *   [MS in Human Resource Management](http://hrm.business.uconn.edu/)
+        *   [MS in Social Responsibility & Impact in Business](https://socialimpact.business.uconn.edu/)
+        *   [MS in Supply Chain Management](https://supplychain.business.uconn.edu/)
+        *   [Accelerated Master’s Degree Programs](https://grad.business.uconn.edu/academics/accelerated-undergraduate-masters)
+
+    *   #### Professional Development
+
+        *   [Digital Frontiers Initiative](https://digitalfrontiers.business.uconn.edu/)
+        *   [Executive Education](https://www.business.uconn.edu/executive/)
+        *   [Graduate Certificate Programs](https://grad.business.uconn.edu/certificates/)
+
+*   [Faculty & Research](https://www.business.uconn.edu/werth-innovation-to-entrepreneurship-initiative/#)
+    *   #### Overview
+
+        *   [Faculty](https://www.business.uconn.edu/contact/faculty/)
+        *   [Research](https://www.business.uconn.edu/research/)
+        *   [Research Stories](http://www.business.uconn.edu/category/news/research/)
+        *   [Job Openings](https://hr.uconn.edu/jobs/)
+
+    *   #### Academic Areas
+
+        *   [Academic Departments](https://www.business.uconn.edu/departments/)
+        *   [Accounting](http://accounting.business.uconn.edu/)
+        *   [Finance](http://finance.business.uconn.edu/)
+            *   [Health Care](http://healthcare.business.uconn.edu/)
+            *   [Real Estate](http://realestate.business.uconn.edu/)
+
+        *   [Management & Entrepreneurship](http://management.business.uconn.edu/)
+        *   [Marketing](http://marketing.business.uconn.edu/)
+            *   [Business Law](http://businesslaw.business.uconn.edu/)
+
+        *   [Operations & Information Management](http://opim.business.uconn.edu/)
+
+    *   #### Faculty & Ph.D.s
+
+        *   [Faculty Directory](https://www.business.uconn.edu/contact/directory/)
+        *   [Ph.D. Students Directory](https://www.business.uconn.edu/contact/phd-students/)
+        *   [Accounting Directory](https://www.business.uconn.edu/contact/accounting/)
+        *   [Business Law Directory](https://www.business.uconn.edu/contact/business-law/)
+        *   [Finance Directory](https://www.business.uconn.edu/contact/finance/)
+        *   [Healthcare Directory](https://www.business.uconn.edu/contact/healthcare/)
+        *   [Management Directory](https://www.business.uconn.edu/contact/management/)
+        *   [Marketing Directory](https://www.business.uconn.edu/contact/marketing/)
+        *   [Real Estate Directory](https://www.business.uconn.edu/contact/real-estate/)
+        *   [Operations and Information Management Directory](https://www.business.uconn.edu/contact/opim/)
+
+    *   #### Research Centers
+
+        *   [Center for Real Estate & Urban Economic Studies](http://realestate.business.uconn.edu/)
+        *   [Connecticut Center for Economic Analysis](http://ccea.uconn.edu/)
+        *   [Connecticut Center for Entrepreneurship and Innovation](http://ccei.business.uconn.edu/)
+        *   [Digital Frontiers Initiative](https://digitalfrontiers.business.uconn.edu/)
+        *   [GE Global Learning Center](http://global.business.uconn.edu/ge-global-learning-center/)
+
+*   [Engagement & Outreach](https://www.business.uconn.edu/werth-innovation-to-entrepreneurship-initiative/#)
+    *   #### Recruit
+
+        *   [Undergraduate Business Career Office](https://undergrad.business.uconn.edu/career/)
+        *   [Graduate Career & Professional Development Office](https://grad.business.uconn.edu/career/)
+        *   [Alumni](http://alumni.business.uconn.edu/)
+
+    *   #### Experiential Learning
+
+        *   [Entrepreneurship Bootcamp for Veterans](https://ccei.uconn.edu/ebv/)
+        *   [Innovation Quest](https://innovationquest.uconn.edu/)
+        *   [International Trips](https://grad.business.uconn.edu/international-trips/)
+        *   [Student Managed Fund](http://smf.business.uconn.edu/)
+
+    *   #### Centers, Institutes, & Initiatives
+
+        *   [Center for Real Estate and Urban Economic Studies](https://realestate.business.uconn.edu/)
+        *   [Connecticut Center for Economic Analysis](http://ccea.uconn.edu/)
+        *   [Connecticut Center for Entrepreneurship & Innovation](https://ccei.uconn.edu/)
+        *   [Connecticut Small Business Development Center](https://ctsbdc.uconn.edu/)
+        *   [Digital Frontiers Initiative](https://digitalfrontiers.business.uconn.edu/ "The Connecticut Information Technology Institute Digital Frontiers Initiative")
+        *   [Diversity Initiatives](http://diversity.business.uconn.edu/)
+        *   [Global Business Programs](http://global.business.uconn.edu/ "Learn more about Global & Sustainability Initiatives in the School of Business")
+        *   [Research Centers](https://www.business.uconn.edu/research/centers/)
+        *   [Wells Fargo Center for Neurodiversity and Inclusive Employment](https://neurodiversity-employment.center.uconn.edu/ "Visit Wells Fargo Center for Neurodiversity and Inclusive Employment")
+
+    *   #### Contact
+
+        *   [Office of External & Alumni Engagement](https://www.business.uconn.edu/engagement/)
+        *   [Make a Gift](https://www.business.uconn.edu/giving/)
+
+*   [Search](https://www.business.uconn.edu/werth-innovation-to-entrepreneurship-initiative/#)
+    *   
+        *   [A-Z Index](https://www.business.uconn.edu/a-z-index/)
+        *   [Faculty Directory](https://www.business.uconn.edu/contact/directory/)
+        *   [General Directory](https://www.business.uconn.edu/contact/)
+
+    *   Search this Site Search in https://www.business.uconn.edu/> Search  
+
+# I'm Sorry...   
+That page can’t be found.
+
+Error 404: Page not found.
+
+It looks like nothing was found at this location. Maybe try one of the links above or a search?
+
+Search this Site Search in https://www.business.uconn.edu/> Search
+
+![Image 3: Photo of a puppy.](https://www.business.uconn.edu/wp-content/themes/cornerstone/img/JonathanStill.jpg)
+
+### Recent News
+
+*   [The World is His Oyster](https://www.business.uconn.edu/2026/10/08/the-world-is-his-oyster/)
+*   [National Badminton Champ Thinh Nguyen Finds Joy in Fast, Strategic Play](https://www.business.uconn.edu/2026/10/06/https-today-uconn-edu-2026-10-national-badminton-champ-thinh-nguyen-finds-joy-in-fast-strategic-play/)
+*   [UConn Scientists’ Startup Seeks to Advance Women’s Reproductive Healthcare](https://www.business.uconn.edu/2026/10/05/uconn-scientists-startup-seeks-to-advance-womens-reproductive-healthcare/)
+*   [UConn Wide Receiver, MBA Candidate Drew Kron: Follow Your Passion, Learn from Others, Put Your Head Down and Work Hard](https://www.business.uconn.edu/2026/10/01/uconn-wide-receiver-mba-candidate-drew-kron-follow-your-passion-learn-from-others-put-your-head-down-and-work-hard/)
+*   [Father-Daughter Entrepreneurs Plan to Introduce Refreshing, Non-Alcoholic Beverage for Life on the Water](https://www.business.uconn.edu/2026/09/28/father-daughter-entrepreneurs-plan-to-introduce-refreshing-non-alcoholic-beverage-for-life-on-the-water/)
+
+[All News »](http://www.business.uconn.edu/pressroom/)
+
+### Upcoming Events
+
+ URL: https://events.uconn.edu/live/json/v2/events/response_fields/location,summary/date_format/%25F%20%25j,%20%25Y/group/School of Business/max/3/  
+ If not explictly stated otherwise, start_date/today and end_date/6 months are implied in the URL.   
+
+*   Oct 13  [STEM Programs Virtual Office Hour](https://events.uconn.edu/school-of-business/event/2251153-stem-programs-virtual-office-hour)  
+*   Oct 13  [MBA Admissions Drop-In](https://events.uconn.edu/school-of-business/event/2247106-mba-admissions-drop-in)  
+*   Oct 13  [Career Tuesday In Person- Target](https://events.uconn.edu/live/events/2253870-career-tuesday-in-person-target)  
+
+### Related Content
+
+*   [Recruiters](http://www.business.uconn.edu/recruiters/ "Recruiters")
+*   [Alumni](http://www.business.uconn.edu/alumni/ "Alumni")
+*   [Make a Gift](http://www.business.uconn.edu/giving/ "Make a Gift")
+
+*   [Pressroom](http://www.business.uconn.edu/pressroom/ "Pressroom")
+*   [Faculty/Staff Resources](http://www.business.uconn.edu/faculty-staff-resources/ "Faculty Staff Resources")
+*   [Student Resources](http://www.business.uconn.edu/student-resources/ "Student Resources")
+
+*   [](http://facebook.com/uconnbusiness)
+*   [](https://www.instagram.com/uconnbusiness/)
+*   [](https://www.linkedin.com/edu/school?id=18035)
+*   [](http://twitter.com/uconnbusiness)
+*   [](https://www.youtube.com/user/uconnbusiness)
+
+*    © [University of Connecticut](http://uconn.edu/)
+*   [Disclaimers, Privacy & Copyright](http://uconn.edu/disclaimers-privacy-copyright/)
+*   [Accessibility](https://accessibility.uconn.edu/)
+*   [Webmaster Login](https://www.business.uconn.edu/wp-admin/)
+*   [Student Consumer Information](http://heoa.uconn.edu/)
+*   [A-Z Index](https://www.business.uconn.edu/a-z-index/)
+*   [General Directory](https://www.business.uconn.edu/contact/)
+
+![Image 4](blob:http://localhost/b9e987a272c686435003c6d00d67a555)![Image 5](blob:http://localhost/a3fe276fe6e4f79d330a3096f4cd719f)Download alternative formats ...

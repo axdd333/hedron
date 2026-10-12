@@ -1,0 +1,376 @@
+URL: https://ccei.uconn.edu/getseeded/
+FETCHED_VIA: jina 200
+
+Title: Get Seeded | Connecticut Center for Entrepreneurship and Innovation | School of Business | University of Connecticut
+
+URL Source: https://ccei.uconn.edu/getseeded/
+
+Published Time: 2018-10-24T11:56:52
+
+Markdown Content:
+Our websites may use cookies to personalize and enhance your experience. By continuing without changing your cookie settings, you agree to this collection. For more information, please see our [University Websites Privacy Notice](https://privacy.uconn.edu/university-website-notice/).
+
+OK More Information
+
+[Skip to Navigation](https://ccei.uconn.edu/getseeded/#nav-wrapper)[Skip to UConn Search](https://ccei.uconn.edu/getseeded/#uconn-search)[Skip to Content](https://ccei.uconn.edu/getseeded/#content)
+
+# UConn Cookie Information
+
+What are Cookies?Authentication Cookies Analytics Cookies Opt Out
+
+**Web cookies** (also called **HTTP cookies**, **browser cookies**, or simply **cookies**) are small pieces of data that websites store on your device (computer, phone, etc.) through your web browser. They are used to remember information about you and your interactions with the site.
+
+### Purpose of Cookies:
+
+1.   **Session Management**:
+
+    *   Keeping you logged in
+
+    *   Remembering items in a shopping cart
+
+    *   Saving language or theme preferences
+
+2.   **Personalization**:
+
+    *   Tailoring content or ads based on your previous activity
+
+3.   **Tracking & Analytics**:
+
+    *   Monitoring browsing behavior for analytics or marketing purposes
+
+* * *
+
+### Types of Cookies:
+
+1.   **Session Cookies**:
+
+    *   Temporary; deleted when you close your browser
+
+    *   Used for things like keeping you logged in during a single session
+
+2.   **Persistent Cookies**:
+
+    *   Stored on your device until they expire or are manually deleted
+
+    *   Used for remembering login credentials, settings, etc.
+
+3.   **First-Party Cookies**:
+
+    *   Set by the website you're visiting directly
+
+4.   **Third-Party Cookies**:
+
+    *   Set by other domains (usually advertisers) embedded in the website
+
+    *   Commonly used for tracking across multiple sites
+
+**Authentication cookies** are a special type of web cookie used to **identify and verify** a user after they log in to a website or web application.
+
+* * *
+
+### What They Do:
+
+Once you log in to a site, the server creates an authentication cookie and sends it to your browser. This cookie:
+
+*   Proves to the website that you're logged in
+
+*   Prevents you from having to log in again on every page you visit
+
+*   Can persist across sessions if you select "Remember me"
+
+* * *
+
+### What's Inside an Authentication Cookie?
+
+Typically, it contains:
+
+*   A **unique session ID** (not your actual password)
+
+*   Optional metadata (e.g., expiration time, security flags)
+
+**Analytics cookies** are cookies used to **collect data about how visitors interact with a website**. Their primary purpose is to help website owners understand and improve user experience by analyzing things like:
+
+*   How users navigate the site
+
+*   Which pages are most/least visited
+
+*   How long users stay on each page
+
+*   What device, browser, or location the user is from
+
+* * *
+
+### What They Track:
+
+Some examples of data analytics cookies may collect:
+
+*   Page views and time spent on pages
+
+*   Click paths (how users move from page to page)
+
+*   Bounce rate (users who leave without interacting)
+
+*   User demographics (location, language, device)
+
+*   Referring websites (how users arrived at the site)
+
+Here’s how you can disable cookies in common browsers:
+
+### 1. Google Chrome
+
+*   Open Chrome and click the three vertical dots in the top-right corner.
+
+*   Go to **Settings**>**Privacy and security**>**Cookies and other site data**.
+
+*   Choose your preferred option:
+
+    *   **Block all cookies** (not recommended, can break most websites).
+
+    *   **Block third-party cookies** (can block ads and tracking cookies).
+
+### 2. Mozilla Firefox
+
+*   Open Firefox and click the three horizontal lines in the top-right corner.
+
+*   Go to **Settings**>**Privacy & Security**.
+
+*   Under the **Enhanced Tracking Protection** section, choose **Strict** to block most cookies or **Custom** to manually choose which cookies to block.
+
+### 3. Safari
+
+*   Open Safari and click **Safari** in the top-left corner of the screen.
+
+*   Go to **Preferences**>**Privacy**.
+
+*   Check **Block all cookies** to stop all cookies, or select options to block third-party cookies.
+
+### 4. Microsoft Edge
+
+*   Open Edge and click the three horizontal dots in the top-right corner.
+
+*   Go to **Settings**>**Privacy, search, and services**>**Cookies and site permissions**.
+
+*   Select your cookie settings from there, including blocking all cookies or blocking third-party cookies.
+
+### 5. On Mobile (iOS/Android)
+
+*   For Safari on iOS: Go to **Settings**>**Safari**>**Privacy & Security**>**Block All Cookies**.
+
+*   For Chrome on Android: Open the app, tap the three dots, go to **Settings**>**Privacy and security**>**Cookies**.
+
+### Be Aware:
+
+Disabling cookies can make your online experience more difficult. Some websites may not load properly, or you may be logged out frequently. Also, certain features may not work as expected.
+
+[UConn](https://uconn.edu/)[University of Connecticut](https://uconn.edu/)
+
+[Search University of Connecticut](https://uconn.edu/search)
+
+A to Z Index
+
+[Site A-Z](https://ccei.uconn.edu/a-z-index)
+
+* * *
+
+[UConn A-Z](https://uconn.edu/az)
+
+[School of Business](https://www.business.uconn.edu/)
+
+[Connecticut Center for Entrepreneurship and Innovation](https://ccei.uconn.edu/)
+
+Search this Site Search in https://ccei.uconn.edu/> Search
+
+[DONATE](https://www.foundation.uconn.edu/fund/ct-center-for-entrepreneurship-innovation/)
+
+[Connecticut Center for Entrepreneurship and Innovation](https://ccei.uconn.edu/)
+
+*   [ABOUT](https://ccei.uconn.edu/getseeded/#)
+    *   [About CCEI](https://ccei.uconn.edu/about/)
+    *   [Meet The Team](https://ccei.uconn.edu/meet-the-team/)
+    *   [Contact Us / Locations](https://ccei.uconn.edu/contact-us/)
+    *   [Our Startups](https://ccei.uconn.edu/startups/)
+    *   [Blog](https://ccei.uconn.edu/blog/)
+    *   [News & Events](https://ccei.uconn.edu/news-and-events/)
+    *   [Advisory Board](https://ccei.uconn.edu/advisory-board/)
+    *   [Support CCEI](https://www.foundation.uconn.edu/fund/ct-center-for-entrepreneurship-innovation/)
+
+*   [PROGRAMS](https://ccei.uconn.edu/getseeded/#)
+    *   [Venture Development](https://ccei.uconn.edu/getseeded/#)
+        *   [Traction Workshops](https://ccei.uconn.edu/traction/)
+        *   [The Founder's Lounge @ CCEI](https://ccei.uconn.edu/founders-lounge/)
+        *   [Get Seeded Pitch Nights](https://ccei.uconn.edu/getseeded/)
+        *   [Accelerate UConn: NSF I-Corps Program](https://ccei.uconn.edu/accelerate-uconn/)
+        *   [Summer Accelerator](https://ccei.uconn.edu/summer-accelerator/)
+        *   [Wolff New Venture Competition](https://ccei.uconn.edu/wolff-new-venture-competition/)
+
+    *   [Entrepreneurial Communication](https://ccei.uconn.edu/getseeded/#)
+        *   [BUILD Hartford Course](https://ccei.uconn.edu/build-hartford/)
+        *   [The Collaboratory @ CCEI](https://ccei.uconn.edu/collaboratory/)
+        *   [Entrepreneurial Leadership Program](https://ccei.uconn.edu/leadership/)
+
+    *   [Additional Initiatives](https://ccei.uconn.edu/getseeded/#)
+        *   [Entrepreneurship Bootcamp for Veterans (EBV)](https://ccei.uconn.edu/ebv/)
+        *   [Student Ambassadors Program](https://ccei.uconn.edu/ccei-student-ambassadors/)
+        *   [Mentor Network](https://ccei.uconn.edu/mentors/)
+        *   [Entrepreneurship Internship Program](https://ccei.uconn.edu/entrepreneurship-internship-program/)
+
+*   [RESOURCES](https://ccei.uconn.edu/getseeded/#)
+    *   #### University Resources
+
+        *   [Classes, Incubators, Maker Spaces](https://ccei.uconn.edu/entrepreneurship-uconn/)
+        *   [Hillside Ventures](https://hillsideventures.uconn.edu/)
+        *   [OPIM Innovate](https://innovatelabs.uconn.edu/)
+        *   [UConn Innovation Portal](https://ip.uconn.edu/)
+        *   [Werth Institute](https://entrepreneurship.uconn.edu/)
+
+    *   #### Connecticut Resources
+
+        *   [Connecticut Innovations](https://ctinnovations.com/)
+        *   [Connecticut Office of Innovation](https://ctnext.com/)
+        *   [CT Small Business Development Center](https://ctsbdc.uconn.edu/)
+        *   [FORGE](https://forgeimpact.org/)
+        *   [Launc[H]](http://launchinhartford.com/)
+        *   [reSET](https://www.resetco.org/)
+
+    *   #### Innovation Tools
+
+        *   [thinkfwd.](http://thinkfwd.co/toolkit)
+
+*   [SEARCH](https://ccei.uconn.edu/getseeded/#)
+    *   
+        *   [A-Z Index](https://ccei.uconn.edu/a-z-index/)
+
+    *   Search this Site Search in https://ccei.uconn.edu/> Search  
+
+# GET SEEDED PITCH NIGHTS
+
+_**Open to: Undergraduate + Graduate Students**_
+
+Got a business idea you’ve been thinking about? Ready to turn it into something real?
+
+Get Seeded Pitch Nights are your chance to bring that idea to life. Open to UConn students of all majors, this live, virtual pitch event puts you in front of an audience who decides which ideas get funded. If selected to pitch, you could earn up to $1,000 in seed funding and connect with fellow students who may want to join your venture and help you build it.
+
+Not quite ready to pitch? No problem. Get Seeded Pitch Nights are open to everyone in our community, making them the perfect place to get inspired, support your peers, and meet others interested in entrepreneurship.
+
+Applications are accepted on a rolling basis — one application makes you eligible for all 2026–27 pitch nights.
+
+### **FALL 2026 PITCH NIGHTS**
+
+**OCTOBER**: Thursday, October 8 @ 6:00-7:30pm
+
+[APPLY TO PITCH](https://ccei.uconn.edu/get-seeded-2026-2027-application/)[RSVP TO WATCH](https://luma.com/psaxmrg7)
+
+**NOVEMBER**: Tuesday, November 10 @ 6:00-7:30pm
+
+[APPLY TO PITCH](https://ccei.uconn.edu/get-seeded-2026-2027-application/)[RSVP TO WATCH](https://luma.com/scjevz5u)
+
+**DECEMBER**: Wednesday, December 9 @ 6:00-7:30pm
+
+[APPLY TO PITCH](https://ccei.uconn.edu/get-seeded-2026-2027-application/)[RSVP TO WATCH](https://luma.com/nkn98esr)
+
+### **SPRING 2027 PITCH NIGHTS**
+
+**JANUARY**: Thursday, January 28 @ 6:00-7:30pm
+
+[APPLY TO PITCH](https://ccei.uconn.edu/get-seeded-2026-2027-application/)[RSVP TO WATCH](https://luma.com/ssnqujkt)
+
+**FEBRUARY**: Wednesday, February 24 @ 6:00-7:30pm
+
+[APPLY TO PITCH](https://ccei.uconn.edu/get-seeded-2026-2027-application/)[RSVP TO WATCH](https://luma.com/a2rz85ux)
+
+**MARCH**: Tuesday, March 23 @ 6:00-7:30pm
+
+[APPLY TO PITCH](https://ccei.uconn.edu/get-seeded-2026-2027-application/)[RSVP TO WATCH](https://luma.com/mflehi4e)
+
+### **2027 DEMO DAY:** April 14, 2027
+
+Demo Day takes place each April, where five teams from the academic year (across all six pitch nights) are chosen to pitch again in front of a virtual audience and alumni judges — with the chance to win up to $5,000 for their startup idea.
+
+_Stay tuned for the RSVP link._
+
+![Image 1: decorative](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2025/09/5-3.png)
+
+#### SUBMIT YOUR APPLICATION
+
+Selected teams will be notified with details about the pitching process. Applications are reviewed on a rolling basis, and you’re welcome to [apply](https://ccei.uconn.edu/get-seeded-application-2025-2026/) for any of the upcoming pitch dates. Applications for the 2025–2026 season are now open!
+
+![Image 2: decorative](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2025/09/4-2.png)
+
+#### PITCH YOUR IDEA
+
+Selected teams are invited to pitch at a virtual pitch night in front of an audience of their peers. Teams are provided with 5 minutes to pitch and 3 minutes of Q&A from the audience to make the case for why they should be funded.
+
+![Image 3: decorative](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2025/09/3-4.png)
+
+#### FUNDING & SUPPORT
+
+The top three pitches of the night will take home $1,000, $750 and $500 (respectively) in seed funding. We recommend all teams then register for upcoming [Traction Workshops](https://ccei.uconn.edu/programs/traction/) or apply to a cohort of [Accelerate UConn](http://ccei.uconn.edu/accelerate-uconn) to further their growth.
+
+![Image 4: decorative](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2025/09/1-2.png)
+
+#### ATTEND & VOTE
+
+Pitch Nights are open to anyone in our community, regardless of UConn affiliation! The audience plays a role in deciding which teams are actually funded through a voting platform. After pitches conclude, each audience member votes for the teams they liked best.
+
+![Image 5: decorative](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2025/09/2-3.png)
+
+#### NETWORK & CONNECT
+
+Although teams are pitching for funding, they are also pitching for potential team members/co-founders. During the event, we leave time for networking and allow audience members and teams to connect.
+
+### FAQs:
+
+**Is there an application deadline for Get Seeded?**  
+ Applications are accepted on a rolling basis. We fill pitch night slots based on the number of applications we receive. So when you're applying, you're not applying for a specific pitch night, but rather the opportunity to pitch at some point that academic year. When a pitch night fills, the applications are rolled to the next pitch night.
+
+**What if I am not selected to pitch?**  
+ If you are not selected to pitch, program mentors will provide teams with feedback on how to improve their application so that they may submit again.
+
+**What if I don't have an idea, can I still attend the event?**  
+ YES! The Get Seeded Pitch Nights are just as much for those who are pitching as they are for audience members to provide feedback and vote. At the end of each event, the audience decides which teams receive seed funding.
+
+**What if my idea is very early, should I still apply?**  
+ YES! The goal of Get Seeded is to support student's ideas and help them move their idea to the next level. As long as you have thought through your idea enough that you can pitch about it for 5 minutes, answer 3 minutes of questions, and have a need for funding, this program is the right fit for your idea.
+
+**What if I pitch and I am not funded?**  
+ If you pitch and are not funded, the program mentors will provide you with feedback and suggestions on ways to improve. You can reapply to pitch at a future pitch night.
+
+**What if I was funded through Get Seeded, can I pitch again?**  
+ Students that have been funded before can pitch again, however, it has to be with a completely new business idea! You cannot pitch for additional funding after being funded already. Get Seeded is intended to move students' ideas to the next level. If you have used your funding and are looking for additional resources, please contact Alycia at alycia.chrosniak@uconn.edu.
+
+**I keep seeing the word "team" ... but there is only one person working on my idea, can I still pitch?**  
+ YES! The word "team" is how we categorize each business idea, so you can certainly be a team of one! Hopefully, after one pitch night, you will make connections and potentially add additional team members if that is what you are looking for!
+
+**I am pitching, can I invite my friends to attend the pitch night?**  
+ YES! We strongly encourage teams to invite friends, mentors and faculty to the event!
+
+**What is the format of the pitches?**  
+ Each team will have 5 minutes to pitch their idea with 3 minutes of Q&A from the audience. Teams will be provided with a template and suggested outline that they can use when building their pitch.
+
+**Can I get help reviewing my pitch deck prior to participating in Get Seeded?**  
+ YES! Feel free to send Alycia an email at alycia.chrosniak@uconn.edu with 'Get Seeded Pitch Deck Review' as the subject line.
+
+**What can the funding be used for?**  
+ Funding can be used for almost anything ... with the exception of any travel not affiliated with customer research or discovery, the purchase, rent, and renovation of office/business space, equipment that is not the core of the business (e.g., cell phones, laptops, etc.), salaries of founding team members, and no illegal substances.
+
+_If you have questions about this program, please contact Outreach & Engagement Coordinator [Michaela Hartl](http://ccei.uconn.edu/michaela-hartl) at [michaela.hartl@uconn.edu](mailto:michaela.hartl@uconn.edu) or Assistant Director of Brand & Venture Development Alycia Chrosniak at [alycia.chrosniak@uconn.edu](mailto:alycia.chrosniak@uconn.edu)._
+
+![Image 6:  ](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/04/CCEI-stacked_blue.png)
+
+**Connecticut Center for Entrepreneurship and Innovation (CCEI)**100 Constitution Plaza, 3rd Floor, Hartford, CT 06103  
+ 2100 Hillside Road, Suite 121, Unit 1041, Storrs, CT 06269
+
+[Maps & Directions](https://maps.uconn.edu/)
+
+[ccei@uconn.edu](mailto:ccei@uconn.edu)
+
+[SUBSCRIBE TO OUR NEWSLETTER](https://lp.constantcontactpages.com/su/ijoDHYe/CCEIemail)
+
+[DONATE TO CCEI](https://www.foundation.uconn.edu/fund/ct-center-for-entrepreneurship-innovation/)
+
+[](https://www.linkedin.com/company/connecticutcenterforentrepreneurshipandinnovation "Connecticut Center for Entrepreneurship and Innovation on Linkedin")[](https://instagram.com/uconnccei "Connecticut Center for Entrepreneurship and Innovation on Instagram")[](https://twitter.com/uconnccei "Connecticut Center for Entrepreneurship and Innovation on X Twitter")[](https://www.tiktok.com/ "https://www.tiktok.com/@uconnccei")[](https://www.youtube.com/@uconnccei1023 "Connecticut Center for Entrepreneurship and Innovation on Youtube")
+
+*    © [University of Connecticut](http://uconn.edu/)
+*   [Disclaimers, Privacy & Copyright](http://uconn.edu/disclaimers-privacy-copyright/)
+*   [Accessibility](https://accessibility.uconn.edu/)
+*   [Webmaster Login](https://ccei.uconn.edu/wp-admin/)

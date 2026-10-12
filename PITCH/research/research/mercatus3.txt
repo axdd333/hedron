@@ -1,0 +1,17 @@
+URL: https://www.mercatus.org/programs/emergent-ventures
+FETCHED_VIA: jina 200
+
+Title: Just a moment...
+
+URL Source: https://www.mercatus.org/programs/emergent-ventures
+
+Warning: This page maybe requiring CAPTCHA, please make sure you are authorized to access this page.
+
+Markdown Content:
+![Image 1: Icon for www.mercatus.org](https://www.mercatus.org/favicon.ico)
+
+## www.mercatus.org
+
+## Performing security verification
+
+This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot.

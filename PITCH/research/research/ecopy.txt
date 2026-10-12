@@ -1,0 +1,944 @@
+URL: https://www.ecopy.com/
+FETCHED_VIA: direct 200
+
+Eliminate document bottlenecks | eCopy | Tungsten Automation 
+ Skip to main content 
+ &lt;style&gt;
+.responsive-heading {
+ font-weight: bold;
+ font-size: clamp(1.2rem, 2vw, 2rem);
+ line-height: 1.2;
+ margin: 1em 0;
+}
+&lt;/style&gt;
+&lt;div class="responsive-heading"&gt;
+ Please Try a Different Browser
+&lt;/div&gt;
+&lt;p&gt;You are using an outdated browser that is not compatible with our website content. For an optimal viewing experience, please upgrade to Microsoft Edge or view our site on a different browser.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;If you choose to continue using this browser, content and functionality will be limited.&lt;/strong&gt;&lt;/p&gt;
+ Close
+ Tungsten Automation 
+ / 
+ Products 
+ / 
+ Tungsten eCopy
+ Empower Productivity With Smart Document Capture
+ Capture and process documents seamlessly so you can digitally transform workflows and increase productivity.
+ Overview 
+ Overview
+ Mobile Workforces Require Smart Document Capture
+ As digitization becomes more critical, the document lifecycle can create operational inefficiencies when distributed employees need to securely capture, share and edit documents. Now, your organization can automate internal and external workflows to drive seamless, electronic transactions and eliminate bottlenecks with Tungsten eCopy®.  
+ Capture documents faster and easier
+ Use your phone or any multifunctional device (MFD) to get fast, error-free documents scanned and converted to formats that help your business run smoothly.
+ Empower your mobile workforce with a multifunctional app
+ Employees can quickly upload documents to the destinations they require with the push of a button.
+ Streamline and secure document-centric business processes
+ Enhance, extract, batch convert, recognize or export documents as Microsoft Word or Excel files.
+ With Tungsten eCopy, Cegeka has been able to streamline current processes and ensure complete document security. It has made our operations more efficient, and it has been widely and cheerfully adopted by our staff.
+ Ludo Kelleneers
+ Support Engineer
+ Benefits 
+ Benefits
+ Why Customers Choose eCopy
+ Converts documents to any format
+ Features the highest accuracy possible when converting documents to Microsoft Word, Excel and PowerPoint.
+ Personalizes workflows
+ Create personalized workflows for scanning to specific folders as they're created, in real time, with no need to involve IT or network administrators.
+ Improves collaboration
+ Upload, save or send files that work with virtually any backend system.
+ Features 
+ Features
+ How eCopy Can Help
+ MFD Client/User Interface
+ Employ an embedded MFD interface with a full-size keyboard and interactive touch screen.
+ Security and Compliance
+ Secure documents with Microsoft Active Directory authentication, SSO support with file encryption, tracking, audit trails and reporting.
+ Integration With Microsoft Office 365
+ Integrated for secure login, converting scanned documents into Microsoft Office formats and connecting directly to Outlook, OneDrive and SharePoint.
+ Document Processing
+ Scalable server-based file conversion, searchable PDF, JPEG, TIFF, enhanced image processing, highlighting, redaction and support for SmartForms.
+ Collaboration Tools
+ Integrate to Microsoft Exchange Email or SMTP with LDAP and support almost any fax solution. Route to a desktop, network folder, or WebDav and print to and from any device or capture point.
+ Customizable Workflows
+ Ensure documents are moved into electronic workflows instantly on platforms such as HPWorkSite, EMC Documentum, SharePoint, OpenText, Salesforce, DocuShare, ACT!, Sage 50 or HP Trim.
+ eCopy Suite of Solutions
+ Tungsten eCopy ShareScan
+ The modular and scalable platform architecture gives you the freedom to build the right solution. Select components or choose from packaged solutions—all of which can be managed within one integrated system.
+ Tungsten eCopy Email and Folder Watching Service
+ Through monitoring of network folders and email addresses, you can extend eCopy capture workflows to electronic documents, files and images from virtually any source.
+ Tungsten eCopy Connectors and Extenders
+ By adding connectors, you can store and organize documents in external repositories. Extenders transform documents and integrate external data.
+ Tungsten eCopy ScanStation
+ A secure kiosk for network scanning applications that demand high security, accelerated index-data entry and enhanced connectivity to copiers, MFDs and scanners that don't support embedded applications.
+ 30-Day Money Back Guarantee
+ Tungsten Automation offers a 30-day money back guarantee for the purchase price on all individual license products purchased on tungstenautomation.com, beginning on date of purchase. Excludes Power PDF Advanced Volume (for Enterprises).
+ More Tungsten Solutions
+ Document Automation and Security
+ Tungsten Capture
+ Our enterprise scanning software processes and integrates content capture directly into your critical business workflows and systems from any location.
+ Learn more
+ Print & Workplace Automation
+ Tungsten ControlSuite
+ Elevate your print and screen capture capabilities with Tungsten Automation intelligence. Meet, ControlSuite™.
+ Learn more
+ View All Products 
+ Fill out the form below
+ (please complete all fields) 
+ First Name* 
+ Last Name* 
+ Business Email Address* 
+ Phone Number* 
+ Country* 
+ United States 
+ Germany 
+ France 
+ Japan 
+ Afghanistan 
+ Aland Islands 
+ Albania 
+ Algeria 
+ American Samoa 
+ Andorra 
+ Angola 
+ Anguilla 
+ Antarctica 
+ Antigua and Barbuda 
+ Argentina 
+ Armenia 
+ Aruba 
+ Australia 
+ Austria 
+ Azerbaijan 
+ Bahamas 
+ Bahrain 
+ Bangladesh 
+ Barbados 
+ Belarus 
+ Belgium 
+ Belize 
+ Benin 
+ Bermuda 
+ Bhutan 
+ Bolivia, Plurinational State of 
+ Bonaire, Sint Eustatius and Saba 
+ Bosnia and Herzegovina 
+ Botswana 
+ Bouvet Island 
+ Brazil 
+ British Indian Ocean Territory 
+ Brunei Darussalam 
+ Bulgaria 
+ Burkina Faso 
+ Burundi 
+ Cambodia 
+ Cameroon 
+ Canada 
+ Cape Verde 
+ Cayman Islands 
+ Central African Republic 
+ Chad 
+ Chile 
+ China 
+ Christmas Island 
+ Cocos (Keeling) Islands 
+ Colombia 
+ Comoros 
+ Congo 
+ Congo, The Democratic Republic of the 
+ Cook Islands 
+ Costa Rica 
+ Cote D'Ivoire 
+ Croatia 
+ Cuba 
+ Curacao 
+ Cyprus 
+ Czech Republic 
+ Denmark 
+ Djibouti 
+ Dominica 
+ Dominican Republic 
+ Ecuador 
+ Egypt 
+ El Salvador 
+ Equatorial Guinea 
+ Eritrea 
+ Estonia 
+ Ethiopia 
+ Falkland Islands (Malvinas) 
+ Faroe Islands 
+ Fiji 
+ Finland 
+ French Guiana 
+ French Polynesia 
+ French Southern Territories 
+ Gabon 
+ Gambia 
+ Georgia 
+ Ghana 
+ Gibraltar 
+ Greece 
+ Greenland 
+ Grenada 
+ Guadeloupe 
+ Guam 
+ Guatemala 
+ Guernsey 
+ Guinea 
+ Guinea-Bissau 
+ Guyana 
+ Haiti 
+ Heard Island and McDonald Islands 
+ Holy See (Vatican City State) 
+ Honduras 
+ Hong Kong 
+ Hungary 
+ Iceland 
+ India 
+ Indonesia 
+ Iran 
+ Iraq 
+ Ireland 
+ Isle of Man 
+ Israel 
+ Italy 
+ Jamaica 
+ Jersey 
+ Jordan 
+ Kazakhstan 
+ Kenya 
+ Kiribati 
+ Korea 
+ Kuwait 
+ Kyrgyzstan 
+ Lao People's Democratic Republic 
+ Latvia 
+ Lebanon 
+ Lesotho 
+ Liberia 
+ Libyan Arab Jamahiriya 
+ Liechtenstein 
+ Lithuania 
+ Luxembourg 
+ Macao 
+ Macedonia 
+ Madagascar 
+ Malawi 
+ Malaysia 
+ Maldives 
+ Mali 
+ Malta 
+ Marshall Islands 
+ Martinique 
+ Mauritania 
+ Mauritius 
+ Mayotte 
+ Mexico 
+ Micronesia 
+ Moldova 
+ Monaco 
+ Mongolia 
+ Montenegro 
+ Montserrat 
+ Morocco 
+ Mozambique 
+ Myanmar 
+ Namibia 
+ Nauru 
+ Nepal 
+ Netherlands 
+ New Caledonia 
+ New Zealand 
+ Nicaragua 
+ Niger 
+ Nigeria 
+ Niue 
+ Norfolk Island 
+ Northern Mariana Islands 
+ Norway 
+ Oman 
+ Pakistan 
+ Palau 
+ Palestinian Territory 
+ Panama 
+ Papua New Guinea 
+ Paraguay 
+ Peru 
+ Philippines 
+ Pitcairn 
+ Poland 
+ Portugal 
+ Puerto Rico 
+ Qatar 
+ Reunion 
+ Romania 
+ Russian Federation 
+ Rwanda 
+ Saint Barthelemy 
+ Saint Helena, Ascension and Tristan Da Cunha 
+ Saint Kitts and Nevis 
+ Saint Lucia 
+ Saint Martin (French Part) 
+ Saint Pierre and Miquelon 
+ Saint Vincent and the Grenadines 
+ Samoa 
+ San Marino 
+ Sao Tome and Principe 
+ Saudi Arabia 
+ Senegal 
+ Serbia 
+ Seychelles 
+ Sierra Leone 
+ Singapore 
+ Sint Maarten (Dutch Part) 
+ Slovakia 
+ Slovenia 
+ Solomon Islands 
+ Somalia 
+ South Africa 
+ South Georgia and The South Sandwich Islands 
+ Spain 
+ Sri Lanka 
+ Sudan 
+ Suriname 
+ Svalbard and Jan Mayen 
+ Swaziland 
+ Sweden 
+ Switzerland 
+ Syrian Arab Republic 
+ Taiwan 
+ Tajikistan 
+ Tanzania 
+ Thailand 
+ Timor-Leste 
+ Togo 
+ Tokelau 
+ Tonga 
+ Trinidad and Tobago 
+ Tunisia 
+ Turkey 
+ Turkmenistan 
+ Turks and Caicos Islands 
+ Tuvalu 
+ Uganda 
+ Ukraine 
+ United Arab Emirates 
+ United Kingdom 
+ United States Minor Outlying Islands 
+ Uruguay 
+ Uzbekistan 
+ Vanuatu 
+ Venezuela 
+ Viet Nam 
+ Virgin Islands, British 
+ Virgin Islands, U.S. 
+ Wallis and Futuna 
+ Western Sahara 
+ Yemen 
+ Zambia 
+ Zimbabwe 
+ State or Province 
+ Alabama 
+ Alaska 
+ Arizona 
+ Arkansas 
+ California 
+ Colorado 
+ Connecticut 
+ Delaware 
+ Florida 
+ Georgia 
+ Hawaii 
+ Idaho 
+ Illinois 
+ Indiana 
+ Iowa 
+ Kansas 
+ Kentucky 
+ Louisiana 
+ Maine 
+ Maryland 
+ Massachusetts 
+ Michigan 
+ Minnesota 
+ Mississippi 
+ Missouri 
+ Montana 
+ Nebraska 
+ Nevada 
+ New Hampshire 
+ New Jersey 
+ New Mexico 
+ New York 
+ North Carolina 
+ North Dakota 
+ Ohio 
+ Oklahoma 
+ Oregon 
+ Pennsylvania 
+ Rhode Island 
+ South Carolina 
+ South Dakota 
+ Tennessee 
+ Texas 
+ Utah 
+ Vermont 
+ Virginia 
+ Washington 
+ West Virginia 
+ Wisconsin 
+ Wyoming 
+ State or Province 
+ Alberta 
+ British Columbia 
+ Manitoba 
+ New Brunswick 
+ Newfoundland 
+ Northwest Territories 
+ Nova Scotia 
+ Nunavut 
+ Ontario 
+ Prince Edward Island 
+ Quebec 
+ Saskatchewan 
+ Yukon Territory 
+ State or Province 
+ Australian Capital Territory 
+ New South Wales 
+ Northern Territory 
+ Queensland 
+ South Australia 
+ Tasmania 
+ Victoria 
+ Western Australia 
+ State or Province 
+ Anhui 
+ Beijing 
+ Chongqing 
+ Fujian 
+ Gansu 
+ Guangdong 
+ Guangxi 
+ Guizhou 
+ Hainan 
+ Hebei 
+ Heilongjiang 
+ Henan 
+ Hubei 
+ Hunan 
+ Inner Mongolia 
+ Jiangsu 
+ Jiangxi 
+ Jilin 
+ Liaoning 
+ Ningxia 
+ Qinghai 
+ Shandong 
+ Shanghai 
+ Shanxi 
+ Sichuan 
+ Tianjin 
+ Tibet 
+ Xinjiang Uygur 
+ Yunnan 
+ Zhejiang 
+ State or Province 
+ Andaman and Nicobar 
+ Andhra Pradesh 
+ Arunachal Pradesh 
+ Assam 
+ Bihar 
+ Chandigarh 
+ Chhattisgarh 
+ Dadra and Nagar Haveli 
+ Daman and Diu 
+ Goa 
+ Gujarat 
+ Haryana 
+ Himachal Pradesh 
+ Jammu Kashmir 
+ Jharkhand 
+ Karnataka 
+ Kerala 
+ Lakshadweep 
+ Madhya Pradesh 
+ Maharashtra 
+ Manipur 
+ Meghalaya 
+ Mizoram 
+ Nagaland 
+ New Delhi 
+ Orissa 
+ Puducherry 
+ Punjab 
+ Rajasthan 
+ Sikkim 
+ Tamil Nadu 
+ Telangana 
+ Tripura 
+ Uttar Pradesh 
+ Uttarakhand 
+ West Bengal 
+ Company* 
+ Job Title* 
+ Job Function* 
+ Accounting/Finance 
+ Administration 
+ Advanced Analytics/Business Intelligence 
+ Agency/Program Management 
+ Business Process Outsourcing/Shared Services 
+ Compliance 
+ Consulting 
+ Customer Service/Call Center 
+ Engineer 
+ Executive/Officer 
+ Human Resources 
+ Information Technology 
+ Legal 
+ Marketing 
+ Operations 
+ Other 
+ Owner/Proprietor 
+ Project Management 
+ Records Management 
+ Research & Development 
+ Sales Operations 
+ Supply Chain 
+ System Integrator 
+ Tungsten Automation may keep me informed with emails about products and services.
+ By submitting this form, you agree to Tungsten Automation terms of use and privacy policy . 
+California residents may review the California Supplemental Privacy Statement here . 
+ By submitting this form, you agree to Tungsten Automation terms of use and privacy policy . 
+California residents may review the California Supplemental Privacy Statement here . 
+ Form Submitting 
+ Back to top 
+ Resources
+ Resources
+ Blogs 
+ Demos 
+ Opens in new window
+ Events 
+ Webinars 
+ About
+ About
+ About us 
+ Leadership 
+ Press Releases 
+ Careers 
+ Support
+ Technical Support 
+ Partner support 
+ Sales support 
+ Knowledge base 
+ Opens in new window
+ Get in touch
+ Get in touch
+ Contact us 
+ View demo 
+ Opens in new window
+ Request demo 
+ Product Inquiry 
+ Business Email Address* 
+ Country* 
+ United States 
+ Germany 
+ France 
+ Japan 
+ Afghanistan 
+ Aland Islands 
+ Albania 
+ Algeria 
+ American Samoa 
+ Andorra 
+ Angola 
+ Anguilla 
+ Antarctica 
+ Antigua and Barbuda 
+ Argentina 
+ Armenia 
+ Aruba 
+ Australia 
+ Austria 
+ Azerbaijan 
+ Bahamas 
+ Bahrain 
+ Bangladesh 
+ Barbados 
+ Belarus 
+ Belgium 
+ Belize 
+ Benin 
+ Bermuda 
+ Bhutan 
+ Bolivia, Plurinational State of 
+ Bonaire, Sint Eustatius and Saba 
+ Bosnia and Herzegovina 
+ Botswana 
+ Bouvet Island 
+ Brazil 
+ British Indian Ocean Territory 
+ Brunei Darussalam 
+ Bulgaria 
+ Burkina Faso 
+ Burundi 
+ Cambodia 
+ Cameroon 
+ Canada 
+ Cape Verde 
+ Cayman Islands 
+ Central African Republic 
+ Chad 
+ Chile 
+ China 
+ Christmas Island 
+ Cocos (Keeling) Islands 
+ Colombia 
+ Comoros 
+ Congo 
+ Congo, The Democratic Republic of the 
+ Cook Islands 
+ Costa Rica 
+ Cote D'Ivoire 
+ Croatia 
+ Cuba 
+ Curacao 
+ Cyprus 
+ Czech Republic 
+ Denmark 
+ Djibouti 
+ Dominica 
+ Dominican Republic 
+ Ecuador 
+ Egypt 
+ El Salvador 
+ Equatorial Guinea 
+ Eritrea 
+ Estonia 
+ Ethiopia 
+ Falkland Islands (Malvinas) 
+ Faroe Islands 
+ Fiji 
+ Finland 
+ French Guiana 
+ French Polynesia 
+ French Southern Territories 
+ Gabon 
+ Gambia 
+ Georgia 
+ Ghana 
+ Gibraltar 
+ Greece 
+ Greenland 
+ Grenada 
+ Guadeloupe 
+ Guam 
+ Guatemala 
+ Guernsey 
+ Guinea 
+ Guinea-Bissau 
+ Guyana 
+ Haiti 
+ Heard Island and McDonald Islands 
+ Holy See (Vatican City State) 
+ Honduras 
+ Hong Kong 
+ Hungary 
+ Iceland 
+ India 
+ Indonesia 
+ Iran 
+ Iraq 
+ Ireland 
+ Isle of Man 
+ Israel 
+ Italy 
+ Jamaica 
+ Jersey 
+ Jordan 
+ Kazakhstan 
+ Kenya 
+ Kiribati 
+ Korea 
+ Kuwait 
+ Kyrgyzstan 
+ Lao People's Democratic Republic 
+ Latvia 
+ Lebanon 
+ Lesotho 
+ Liberia 
+ Libyan Arab Jamahiriya 
+ Liechtenstein 
+ Lithuania 
+ Luxembourg 
+ Macao 
+ Macedonia 
+ Madagascar 
+ Malawi 
+ Malaysia 
+ Maldives 
+ Mali 
+ Malta 
+ Marshall Islands 
+ Martinique 
+ Mauritania 
+ Mauritius 
+ Mayotte 
+ Mexico 
+ Micronesia 
+ Moldova 
+ Monaco 
+ Mongolia 
+ Montenegro 
+ Montserrat 
+ Morocco 
+ Mozambique 
+ Myanmar 
+ Namibia 
+ Nauru 
+ Nepal 
+ Netherlands 
+ New Caledonia 
+ New Zealand 
+ Nicaragua 
+ Niger 
+ Nigeria 
+ Niue 
+ Norfolk Island 
+ Northern Mariana Islands 
+ Norway 
+ Oman 
+ Pakistan 
+ Palau 
+ Palestinian Territory 
+ Panama 
+ Papua New Guinea 
+ Paraguay 
+ Peru 
+ Philippines 
+ Pitcairn 
+ Poland 
+ Portugal 
+ Puerto Rico 
+ Qatar 
+ Reunion 
+ Romania 
+ Russian Federation 
+ Rwanda 
+ Saint Barthelemy 
+ Saint Helena, Ascension and Tristan Da Cunha 
+ Saint Kitts and Nevis 
+ Saint Lucia 
+ Saint Martin (French Part) 
+ Saint Pierre and Miquelon 
+ Saint Vincent and the Grenadines 
+ Samoa 
+ San Marino 
+ Sao Tome and Principe 
+ Saudi Arabia 
+ Senegal 
+ Serbia 
+ Seychelles 
+ Sierra Leone 
+ Singapore 
+ Sint Maarten (Dutch Part) 
+ Slovakia 
+ Slovenia 
+ Solomon Islands 
+ Somalia 
+ South Africa 
+ South Georgia and The South Sandwich Islands 
+ Spain 
+ Sri Lanka 
+ Sudan 
+ Suriname 
+ Svalbard and Jan Mayen 
+ Swaziland 
+ Sweden 
+ Switzerland 
+ Syrian Arab Republic 
+ Taiwan 
+ Tajikistan 
+ Tanzania 
+ Thailand 
+ Timor-Leste 
+ Togo 
+ Tokelau 
+ Tonga 
+ Trinidad and Tobago 
+ Tunisia 
+ Turkey 
+ Turkmenistan 
+ Turks and Caicos Islands 
+ Tuvalu 
+ Uganda 
+ Ukraine 
+ United Arab Emirates 
+ United Kingdom 
+ United States Minor Outlying Islands 
+ Uruguay 
+ Uzbekistan 
+ Vanuatu 
+ Venezuela 
+ Viet Nam 
+ Virgin Islands, British 
+ Virgin Islands, U.S. 
+ Wallis and Futuna 
+ Western Sahara 
+ Yemen 
+ Zambia 
+ Zimbabwe 
+ State or Province 
+ State or Province 
+ Alabama 
+ Alaska 
+ Arizona 
+ Arkansas 
+ California 
+ Colorado 
+ Connecticut 
+ Delaware 
+ Florida 
+ Georgia 
+ Hawaii 
+ Idaho 
+ Illinois 
+ Indiana 
+ Iowa 
+ Kansas 
+ Kentucky 
+ Louisiana 
+ Maine 
+ Maryland 
+ Massachusetts 
+ Michigan 
+ Minnesota 
+ Mississippi 
+ Missouri 
+ Montana 
+ Nebraska 
+ Nevada 
+ New Hampshire 
+ New Jersey 
+ New Mexico 
+ New York 
+ North Carolina 
+ North Dakota 
+ Ohio 
+ Oklahoma 
+ Oregon 
+ Pennsylvania 
+ Rhode Island 
+ South Carolina 
+ South Dakota 
+ Tennessee 
+ Texas 
+ Utah 
+ Vermont 
+ Virginia 
+ Washington 
+ West Virginia 
+ Wisconsin 
+ Wyoming 
+ State or Province 
+ Alberta 
+ British Columbia 
+ Manitoba 
+ New Brunswick 
+ Newfoundland 
+ Northwest Territories 
+ Nova Scotia 
+ Nunavut 
+ Ontario 
+ Prince Edward Island 
+ Quebec 
+ Saskatchewan 
+ Yukon Territory 
+ State or Province 
+ Australian Capital Territory 
+ New South Wales 
+ Northern Territory 
+ Queensland 
+ South Australia 
+ Tasmania 
+ Victoria 
+ Western Australia 
+ State or Province 
+ Anhui 
+ Beijing 
+ Chongqing 
+ Fujian 
+ Gansu 
+ Guangdong 
+ Guangxi 
+ Guizhou 
+ Hainan 
+ Hebei 
+ Heilongjiang 
+ Henan 
+ Hubei 
+ Hunan 
+ Inner Mongolia 
+ Jiangsu 
+ Jiangxi 
+ Jilin 
+ Liaoning 
+ Ningxia 
+ Qinghai 
+ Shandong 
+ Shanghai 
+ Shanxi 
+ Sichuan 
+ Tianjin 
+ Tibet 
+ Xinjiang Uygur 
+ Yunnan 
+ Zhejiang 
+ State or Province 
+ Andaman and Nicobar 
+ Andhra Pradesh 
+ Arunachal Pradesh 
+ Assam 
+ Bihar 
+ Chandigarh 
+ Chhattisgarh 
+ Dadra and Nagar Haveli 
+ Daman and Diu 
+ Goa 
+ Gujarat 
+ Haryana 
+ Himachal Pradesh 
+ Jammu Kashmir 
+ Jharkhand 
+ Karnataka 
+ Kerala 
+ Lakshadweep 
+ Madhya Pradesh 
+ Maharashtra 
+ Manipur 
+ Meghalaya 
+ Mizoram 
+ Nagaland 
+ New Delhi 
+ Orissa 
+ Puducherry 
+ Punjab 
+ Rajasthan 
+ Sikkim 
+ Tamil Nadu 
+ Telangana 
+ Tripura 
+ Uttar Pradesh 
+ Uttarakhand 
+ West Bengal 
+ Tungsten Automation may keep me informed with emails about products and services.
+ By submitting this form, you agree to Tungsten Automation terms of use and privacy policy . 
+California residents may review the California Supplemental Privacy Statement here . 
+ By submitting this form, you agree to Tungsten Automation terms of use and privacy policy . 
+California residents may review the California Supplemental Privacy Statement here . 
+ Form Submitting 
+ Trust/Security 
+ Impressum 
+ Privacy 
+ Terms of use 
+ Subscribe 
+ &copy; 
+ 2026 Tungsten Automation Corporation

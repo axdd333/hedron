@@ -1,0 +1,251 @@
+URL: https://www.ccei.uconn.edu/
+FETCHED_VIA: direct 200
+
+Homepage | Connecticut Center for Entrepreneurship and Innovation | School of Business | University of Connecticut 
+ Skip to Navigation 
+ Skip to UConn Search 
+ Skip to Content 
+ Our websites may use cookies to personalize and enhance your experience. By continuing without changing your cookie settings, you agree to this collection. For more information, please see our University Websites Privacy Notice .
+ UConn Cookie Information
+ What are Cookies? 
+ Authentication Cookies 
+ Analytics Cookies 
+ Opt Out 
+ Web cookies (also called HTTP cookies , browser cookies , or simply cookies ) are small pieces of data that websites store on your device (computer, phone, etc.) through your web browser. They are used to remember information about you and your interactions with the site.
+ Purpose of Cookies:
+ Session Management :
+ Keeping you logged in
+ Remembering items in a shopping cart
+ Saving language or theme preferences
+ Personalization :
+ Tailoring content or ads based on your previous activity
+ Tracking & Analytics :
+ Monitoring browsing behavior for analytics or marketing purposes
+ Types of Cookies:
+ Session Cookies :
+ Temporary; deleted when you close your browser
+ Used for things like keeping you logged in during a single session
+ Persistent Cookies :
+ Stored on your device until they expire or are manually deleted
+ Used for remembering login credentials, settings, etc.
+ First-Party Cookies :
+ Set by the website you're visiting directly
+ Third-Party Cookies :
+ Set by other domains (usually advertisers) embedded in the website
+ Commonly used for tracking across multiple sites
+ Authentication cookies are a special type of web cookie used to identify and verify a user after they log in to a website or web application.
+ What They Do:
+ Once you log in to a site, the server creates an authentication cookie and sends it to your browser. This cookie:
+ Proves to the website that you're logged in
+ Prevents you from having to log in again on every page you visit
+ Can persist across sessions if you select "Remember me"
+ What's Inside an Authentication Cookie?
+ Typically, it contains:
+ A unique session ID (not your actual password)
+ Optional metadata (e.g., expiration time, security flags)
+ Analytics cookies are cookies used to collect data about how visitors interact with a website . Their primary purpose is to help website owners understand and improve user experience by analyzing things like:
+ How users navigate the site
+ Which pages are most/least visited
+ How long users stay on each page
+ What device, browser, or location the user is from
+ What They Track:
+ Some examples of data analytics cookies may collect:
+ Page views and time spent on pages
+ Click paths (how users move from page to page)
+ Bounce rate (users who leave without interacting)
+ User demographics (location, language, device)
+ Referring websites (how users arrived at the site)
+ Here’s how you can disable cookies in common browsers:
+ 1. Google Chrome
+ Open Chrome and click the three vertical dots in the top-right corner.
+ Go to Settings &gt; Privacy and security &gt; Cookies and other site data .
+ Choose your preferred option:
+ Block all cookies (not recommended, can break most websites).
+ Block third-party cookies (can block ads and tracking cookies).
+ 2. Mozilla Firefox
+ Open Firefox and click the three horizontal lines in the top-right corner.
+ Go to Settings &gt; Privacy & Security .
+ Under the Enhanced Tracking Protection section, choose Strict to block most cookies or Custom to manually choose which cookies to block.
+ 3. Safari
+ Open Safari and click Safari in the top-left corner of the screen.
+ Go to Preferences &gt; Privacy .
+ Check Block all cookies to stop all cookies, or select options to block third-party cookies.
+ 4. Microsoft Edge
+ Open Edge and click the three horizontal dots in the top-right corner.
+ Go to Settings &gt; Privacy, search, and services &gt; Cookies and site permissions .
+ Select your cookie settings from there, including blocking all cookies or blocking third-party cookies.
+ 5. On Mobile (iOS/Android)
+ For Safari on iOS: Go to Settings &gt; Safari &gt; Privacy & Security &gt; Block All Cookies .
+ For Chrome on Android: Open the app, tap the three dots, go to Settings &gt; Privacy and security &gt; Cookies .
+ Be Aware:
+ Disabling cookies can make your online experience more difficult. Some websites may not load properly, or you may be logged out frequently. Also, certain features may not work as expected.
+ UConn 
+ University of Connecticut 
+ Search University of Connecticut 
+ Search UConn 
+ A to Z Index 
+ UConn A to Z Index 
+ Site A-Z 
+ UConn A-Z 
+ School of Business 
+ Connecticut Center for Entrepreneurship and Innovation 
+ Search this Site Search in https://ccei.uconn.edu/> Search 
+ DONATE 
+ Connecticut Center for Entrepreneurship and Innovation 
+ ABOUT 
+ About CCEI 
+ Meet The Team 
+ Contact Us / Locations 
+ Our Startups 
+ Blog 
+ News & Events 
+ Advisory Board 
+ Support CCEI 
+ PROGRAMS 
+ Venture Development 
+ Traction Workshops 
+ The Founder's Lounge @ CCEI 
+ Get Seeded Pitch Nights 
+ Accelerate UConn: NSF I-Corps Program 
+ Summer Accelerator 
+ Wolff New Venture Competition 
+ Entrepreneurial Communication 
+ BUILD Hartford Course 
+ The Collaboratory @ CCEI 
+ Entrepreneurial Leadership Program 
+ Additional Initiatives 
+ Entrepreneurship Bootcamp for Veterans (EBV) 
+ Student Ambassadors Program 
+ Mentor Network 
+ Entrepreneurship Internship Program 
+ RESOURCES 
+ University Resources
+ Classes, Incubators, Maker Spaces 
+ Hillside Ventures 
+ OPIM Innovate 
+ UConn Innovation Portal 
+ Werth Institute 
+ Connecticut Resources
+ Connecticut Innovations 
+ Connecticut Office of Innovation 
+ CT Small Business Development Center 
+ FORGE 
+ Launc[H] 
+ reSET 
+ Innovation Tools
+ thinkfwd. 
+ SEARCH 
+ A-Z Index 
+ Search this Site Search in https://ccei.uconn.edu/> Search 
+ Homepage
+ Entrepreneurship. Starts. Here. 
+ From students to faculty to alumni, we’re here to help innovators and creators bring their ideas to life. Discover how you fit into our entrepreneurial ecosystem. 
+ ABOUT US     OUR STARTUPS 
+ Inspiring innovative impact. 
+ Welcome to the Connecticut Center for Entrepreneurship and Innovation (CCEI) – where ideas come to life! Since 2007, we’ve been leading the charge as UConn’s hub for all things entrepreneurial, building on the groundbreaking efforts started by the Wolff Family back in the mid-1980s. 
+ We’ve come a long way since then, evolving our programs to spark bold ideas, nurture new ventures, and fuel innovative thinking. At CCEI, it’s all about the people — our vibrant community, our knack for effective collaboration, and our shared passion for growth and learning. 
+ Together, we’re creating a culture of entrepreneurship that resonates across UConn, Connecticut, and beyond. 
+ Ready to make an impact? Whether you’re brimming with a game-changing idea or want to help champion the next wave of innovators, we’re here for you. Let’s shape the future of entrepreneurship and innovation together! 
+ READ OUR 2025-26 IMPACT REPORT 
+ I'm a student. 
+ Whether you’re dreaming of launching your own business, developing a cutting-edge product, or exploring what it means to think like an entrepreneur, we’ve got the tools and support you need. 
+ Dive into pitch competitions like Get Seeded to fast-track funding for your startup idea, or register for our BUILD Hartford course to collaborate with local businesses and shape impactful stories. From pitch competitions to workshops we’re here to help you unlock your entrepreneurial potential. 
+ I'm a staff/faculty member. 
+ As we always tell participants: entrepreneurship spans all walks of life, and we’re here to offer a space for faculty and staff to engage with innovation at every level. Looking to bring entrepreneurial thinking into your classroom? Want to connect your research and academia to potential market opportunities? Excited to mentor the next generation of innovators? We’re in! 
+ Let’s work together to find out how you can truly inspire creativity and foster innovation across the UConn community you're already a part of. 
+ I'm an alumni. 
+ As a UConn alum, your entrepreneurial journey doesn’t end at graduation — in fact, we’re here and ready to support you in your next (ad)venture. Tap into our vast network of resources, including our flagship summer accelerator, mentorship and in-person/virtual workshop opportunities, and connections to other fellow Huskies in the innovation space. 
+ Whether you’re launching a venture or looking to give back, we invite you to continue your impact on UConn and our larger Connecticut ecosystem. 
+ Contact CCEI
+ " * " indicates required fields
+ Facebook 
+ This field is for validation purposes and should be left unchanged.
+ This field is hidden when viewing the form 
+ Name * 
+ First 
+ Last 
+ Email * 
+ UConn Status * Undergraduate Student Graduate Student Pd.D. Candidate PostDoc Faculty Staff Alumni 
+ School/College * College of Agriculture, Health and Natural Resources School of Business Continuing Education School of Engineering School of Fine Arts College of Liberal Arts and Sciences Neag School of Education School of Nursing School of Pharmacy School of Social Work Ratcliffe Hicks School of Agriculture 
+ Program Interest * 
+ Get Seeded Pitch Nights 
+ Traction Workshops 
+ NSF: Accelerate UConn 
+ Summer Accelerator 
+ Wolff New Venture Competition 
+ BUILD Hartford Course 
+ Entrepreneurship Bootcamp for Veterans (EBV) 
+ The Founder's Lounge @ CCEI 
+ Student Ambassador Program 
+ Submit 
+ URL: https://events.uconn.edu/live/json/v2/events/response_fields/location,summary/date_format/%25F%20%25j,%20%25Y/group/connecticut center for entrepreneurship and innovation/max/5/
+ If not explictly stated otherwise, start_date/today and end_date/6 months are implied in the URL. 
+ Oct 
+ 13
+ The Wolff New Venture Competition 
+ Pratt and Whitney Stadium at Rentschler Field 
+ 5:00 PM 
+ The annual Wolff New Venture Competition , hosted by UConn’s Connecticut Center for Entrepreneurship and Innovation, features live pitches by the top startups coming out of the university, and gives away over $150,000 in non-dilutive funding to the startups each year.
+ Oct 
+ 21
+ Experience Innovation Expo 2026 
+ Student Union 
+ 12:00 PM 
+ Oct 
+ 21
+ Traction Workshop: Concept to Commercialization with Scott Longley 
+ 6:30 PM 
+ This workshop will walk through the critical steps of moving from prototype development into full-scale manufacturing. FORGE — a leading resource for startups navigating the complex path from concept to commercialization — will guide participants through each stage, from market research and product validation to scaling up manufacturing operations.
+ Nov 
+ 5
+ Traction Workshop: Legal Basics for Startups with Casey Faucon 
+ 6:30 PM 
+ Explore the legal essentials every entrepreneur should know. From choosing the right business entity and understanding governance responsibilities to conducting a legal audit. Learn how to identify potential legal and contractual issues and gain practical tools to protect and strengthen your business.
+ Nov 
+ 10
+ November Get Seeded Pitch Night 
+ 6:00 PM 
+ Join us for November’s Get Seeded Pitch Night, hosted by the UConn Connecticut Center for Entrepreneurship and Innovation (CCEI). These virtual pitch nights showcase student entrepreneurs presenting their innovative ideas and competing for seed funding, with the chance to turn their concepts into reality.
+ IN THE NEWS 
+ The World is His Oyster October 8, 2026 UConn Today – Graduate student Keegan Jalbert ’23 (CLAS) ’27 MS has always been interested in agriculture, food, and innovation. Today he is finding new ways to grow oysters and share his love of seafood with customers who live far from the ocean. Jalbert is the founder of AccessFlora, a sustainable aquaculture company with a...  [&hellip;]
+ Claire Hall 
+ UConn Scientists’ Startup Seeks to Advance Women’s Reproductive Healthcare October 5, 2026 UConn Today – As a scientist, researcher, and now an entrepreneur, Xingyu Wang Ph.D. ‘22 strongly believes that advanced technology should be used primarily to improve the health and happiness of humankind. Wang, a post-doctoral researcher, and two of his professors from the College of Engineering, are striving to do that with their newest invention....  [&hellip;]
+ Claire Hall 
+ Father-Daughter Entrepreneurs Plan to Introduce Refreshing, Non-Alcoholic Beverage for Life on the Water September 28, 2026 UConn Today – Father-daughter entrepreneurs Bill Smith ’78 (BUS) and Lindsay Smith are both experienced boaters who love a day of adventure on Long Island Sound or cruising on the ocean. But an exhilarating day on the water can leave boating enthusiasts dehydrated because of a combination of heat, sun, and wind. To combat it,...  [&hellip;]
+ Claire Hall 
+ QUICK LINKS 
+ MEET THE TEAM 
+ DONATE TO CCEI 
+ RECENT BLOG POSTS 
+ SIGN UP FOR NEWSLETTERS 
+ "To gain the advice of expert mentors who are in the consumer products industry was incredible. Some of the best advice I received is that people connect with people , not things. Although a product should be great, people are largely influenced by the story behind it as well. I am still working on incorporating storytelling into the brand, but I’ve realized the importance of this through CCEI's Summer Accelerator." 
+ RAINA JAIN 
+ Founder, Queen Bee + HiveGuard 
+ Wolff New Venture Competition Finalist '21 
+ “The EBV program really was life changing. I came into it knowing just enough about starting a business to be dangerous. The EBV program helped me to connect the pieces of what I’d learned. The average person who has a great business idea doesn’t think about the cash-flow analysis and attracting the right stream of customers through a targeted marketing plan. I felt like I earned a mini MBA.” 
+ JASON OTRIN 
+ Founder, On Course Drones 
+ Entrepreneurship Bootcamp for Veterans '17 
+ "I encourage and recommend anyone looking at starting a business to apply to CCEI’s offerings. T he programs were rigorous and really challenged our company to ‘pressure test’ our business model, which is not always comfortable. By the time we left the accelerator, we had regulatory consultants, legal counsel, accounting services, and a structure on how to make a really solid grant." 
+ NICOLE WAGNER PH.D. 
+ Co-Founder, LambdaVision 
+ CCEI Summer Accelerator ‘16 
+ “ [EBV] dips your toes into the water in every area of business, ensuring that we all have a solid foundation in which to start, and reference back to as needed. From patents, accounting, bookkeeping, how to present our business, mental health, sales, marketing and IT; the course is comprehensive, well-choreographed and well-executed. In just a week, we were confident we had gained the footing every entrepreneur is desperately searching for.”   
+ TONY AUDETTE 
+ Founder, Audette Motorcycles 
+ Entrepreneurship Bootcamp for Veterans 
+ “The EMP results gave me a clear picture of my current mindset, and helped me identify what my strengths and weaknesses are as an entrepreneur. I have become more self-aware and realistic with my capabilities, which helped me work to improve certain skills. Also, this assessment helped me identify the ke y characteristics needed in potential team members that would complement my skillset within my business.” 
+ CHRISTINA PHILLIPS 
+ Founder, Puure 
+ Wolff New Venture Competition Finalist '23 
+ Connecticut Center for Entrepreneurship and Innovation (CCEI)
+ 100 Constitution Plaza, 3rd Floor, Hartford, CT 06103
+2100 Hillside Road, Suite 121, Unit 1041, Storrs, CT 06269
+ Maps & Directions 
+ ccei@uconn.edu 
+ SUBSCRIBE TO OUR NEWSLETTER 
+ DONATE TO CCEI 
+ &copy; University of Connecticut 
+ Disclaimers, Privacy & Copyright 
+ Accessibility 
+ Webmaster Login

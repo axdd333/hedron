@@ -1,0 +1,179 @@
+URL: https://werth.institute.uconn.edu/
+FETCHED_VIA: direct 200
+
+Home | Werth Institute for Entrepreneurship and Innovation | University of Connecticut 
+ Skip to Navigation 
+ Skip to UConn Search 
+ Skip to Content 
+ Our websites may use cookies to personalize and enhance your experience. By continuing without changing your cookie settings, you agree to this collection. For more information, please see our University Websites Privacy Notice .
+ UConn Cookie Information
+ What are Cookies? 
+ Authentication Cookies 
+ Analytics Cookies 
+ Opt Out 
+ Web cookies (also called HTTP cookies , browser cookies , or simply cookies ) are small pieces of data that websites store on your device (computer, phone, etc.) through your web browser. They are used to remember information about you and your interactions with the site.
+ Purpose of Cookies:
+ Session Management :
+ Keeping you logged in
+ Remembering items in a shopping cart
+ Saving language or theme preferences
+ Personalization :
+ Tailoring content or ads based on your previous activity
+ Tracking & Analytics :
+ Monitoring browsing behavior for analytics or marketing purposes
+ Types of Cookies:
+ Session Cookies :
+ Temporary; deleted when you close your browser
+ Used for things like keeping you logged in during a single session
+ Persistent Cookies :
+ Stored on your device until they expire or are manually deleted
+ Used for remembering login credentials, settings, etc.
+ First-Party Cookies :
+ Set by the website you're visiting directly
+ Third-Party Cookies :
+ Set by other domains (usually advertisers) embedded in the website
+ Commonly used for tracking across multiple sites
+ Authentication cookies are a special type of web cookie used to identify and verify a user after they log in to a website or web application.
+ What They Do:
+ Once you log in to a site, the server creates an authentication cookie and sends it to your browser. This cookie:
+ Proves to the website that you're logged in
+ Prevents you from having to log in again on every page you visit
+ Can persist across sessions if you select "Remember me"
+ What's Inside an Authentication Cookie?
+ Typically, it contains:
+ A unique session ID (not your actual password)
+ Optional metadata (e.g., expiration time, security flags)
+ Analytics cookies are cookies used to collect data about how visitors interact with a website . Their primary purpose is to help website owners understand and improve user experience by analyzing things like:
+ How users navigate the site
+ Which pages are most/least visited
+ How long users stay on each page
+ What device, browser, or location the user is from
+ What They Track:
+ Some examples of data analytics cookies may collect:
+ Page views and time spent on pages
+ Click paths (how users move from page to page)
+ Bounce rate (users who leave without interacting)
+ User demographics (location, language, device)
+ Referring websites (how users arrived at the site)
+ Here’s how you can disable cookies in common browsers:
+ 1. Google Chrome
+ Open Chrome and click the three vertical dots in the top-right corner.
+ Go to Settings &gt; Privacy and security &gt; Cookies and other site data .
+ Choose your preferred option:
+ Block all cookies (not recommended, can break most websites).
+ Block third-party cookies (can block ads and tracking cookies).
+ 2. Mozilla Firefox
+ Open Firefox and click the three horizontal lines in the top-right corner.
+ Go to Settings &gt; Privacy & Security .
+ Under the Enhanced Tracking Protection section, choose Strict to block most cookies or Custom to manually choose which cookies to block.
+ 3. Safari
+ Open Safari and click Safari in the top-left corner of the screen.
+ Go to Preferences &gt; Privacy .
+ Check Block all cookies to stop all cookies, or select options to block third-party cookies.
+ 4. Microsoft Edge
+ Open Edge and click the three horizontal dots in the top-right corner.
+ Go to Settings &gt; Privacy, search, and services &gt; Cookies and site permissions .
+ Select your cookie settings from there, including blocking all cookies or blocking third-party cookies.
+ 5. On Mobile (iOS/Android)
+ For Safari on iOS: Go to Settings &gt; Safari &gt; Privacy & Security &gt; Block All Cookies .
+ For Chrome on Android: Open the app, tap the three dots, go to Settings &gt; Privacy and security &gt; Cookies .
+ Be Aware:
+ Disabling cookies can make your online experience more difficult. Some websites may not load properly, or you may be logged out frequently. Also, certain features may not work as expected.
+ UConn 
+ University of Connecticut 
+ Search University of Connecticut 
+ Search UConn 
+ A to Z Index 
+ UConn A to Z Index 
+ Site A-Z 
+ UConn A-Z 
+ Werth Institute for Entrepreneurship and Innovation 
+ Search this Site Search in https://werth.institute.uconn.edu/> Search 
+ Toggle navigation 
+ Menu 
+ Werth Institute for Entrepreneurship and Innovation 
+ Skip to content 
+ Home 
+ About 
+ About the Werth Institute 
+ Our Team 
+ Contact 
+ Resources 
+ Academics 
+ Networking Opportunities 
+ Innovation Spaces and Programs 
+ Startup Resources and Internships 
+ Signature Programs 
+ NetWerx 
+ Werth Innovators 
+ Events 
+ HackUConn 
+ Experience Innovation Expo 2026 
+ Innovation Conversations 
+ Werth Institute Event Management Team 
+ Day of Discovery 
+ Under Incubation 
+ All Incubations 
+ Wells Fargo Center for Neurodiversity and Inclusive Employment 
+ Alumni 
+ Donate 
+ Search this Site Search in https://werth.institute.uconn.edu/> Search 
+ Creativity meets Innovation.
+ At UConn, entrepreneurship is a way of thinking, unrestrained by school, college, or program. Our students, faculty, and staff seek to continually improve the world around them through innovation, meeting societal needs with novel solutions for products, services, and processes. 
+ The Peter J. Werth Institute for Entrepreneurship & Innovation links the multitude of ways students can learn and practice entrepreneurship at the University, unlocking an innovative mindset in every student and instilling an inquisitive approach to rejecting the status quo.
+ Start Anywhere.
+ study entrepreneurship 
+ Through both classroom-based learning and experiential programs, opportunities abound for students to learn everything needed to succeed as entrepreneurs.
+ Find a Mentor or Club 
+ Meet people that share your interests and build a robust network through student clubs, discussion and lecture events, and networking activities.
+ make something 
+ Makerspaces, grant programs, and events like HackUConn support students in transforming initial ideas into actions.
+ start a business 
+ Learn more about resources available to further support business development, find funding, and gain additional experience.
+ Signature Programs. 
+ Werth Innovators
+ Werth Innovators are student ambassadors for entrepreneurship and innovation who play a central role in building interest and increasing student involvement in UConn’s wide range of entrepreneurial programs. Students are selected through an application process that highlights their innovative projects and entrepreneurial mindset along with their drive and resiliency to create something new with a lasting impact on UConn or society as a whole. Join the Werth Innovators. 
+ Netwerx
+ The Werth Institute NetWerx Program builds bridges between current students and UConn alumni through multiple mentorship engagement opportunities that center around the entrepreneurial mindset and career exploration within entrepreneurship, finance, technology, innovation, and related fields. Various time commitment levels range from a single afternoon session with students to multiple student meetings over a longer period. Get involved with NetWerx. 
+ By the Numbers. 
+ 60+ 
+ Member programs 
+ $30M 
+ Commitment from Peter J. Werth for UConn Entrepreneurship programs 
+ 100 
+ Teams have participated in accelerate UConn Entrepreneurship training since 2015 
+ 650+ 
+ Patents issued for UConn innovations 
+ Weekly Werth
+ Subscribe to Our Newsletter 
+ Many Talents. One Venture for Mothers in Ghana.
+ Do you want to see what happens when color, culture, and entrepreneurship come together?
+ Jenevera Abena Addai Mensah ‘29 (ACES) has spent the past year building a new venture with expecting mothers in Ghana in mind.
+ She did it with the Werth Innovators Program, which has helped first-year women find their entrepreneurial footing for six years.
+ &gt; Read more student success stories 
+ Werth Institute for Entrepreneurship and Innovation
+ Wilbur Cross Building, Suite 203
+233 Glenbrook Road, Unit 4201
+Storrs, CT 06269
+ Maps & Directions 
+ Phone: +1 (860) 486-5258
+Email: werth.institute@uconn.edu 
+ Subscribe to Our Newsletter 
+ Instagram 
+ LinkedIn 
+ Donate 
+ About 
+ Get Started 
+ Academic Opportunities 
+ Networking Opportunities 
+ Innovation Spaces and Programs 
+ Resources, Funding, and Internships 
+ Events 
+ Blog 
+ Related Links
+ Office of the Vice President for Research 
+ Tech Park 
+ Technology Incubation Program 
+ &copy; University of Connecticut 
+ Disclaimers, Privacy & Copyright 
+ Webmaster Login

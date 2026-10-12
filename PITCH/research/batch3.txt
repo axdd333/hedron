@@ -1,0 +1,5 @@
+getseeded2|https://ccei.uconn.edu/getseeded/
+acceluconn|https://www.ccei.uconn.edu/programs/accelerate-uconn/
+werth4|https://www.business.uconn.edu/tag/werth/
+werth5|https://werthinitiative.uconn.edu/
+thiel2|https://thielfellowship.org/

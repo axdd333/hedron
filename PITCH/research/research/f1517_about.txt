@@ -1,0 +1,57 @@
+URL: https://www.1517fund.com/about
+FETCHED_VIA: jina 200
+
+Title: Not Found
+
+URL Source: https://www.1517fund.com/about
+
+Warning: Target URL returned error 404: Not Found
+
+Markdown Content:
+} 
+
+[![Image 1: 1517](https://cdn.prod.website-files.com/6266933945767bcd8e5ec8f2/62669b389793adfc55526495_nav%20logo.svg)](https://www.1517fund.com/)[![Image 2](https://cdn.prod.website-files.com/6266933945767bcd8e5ec8f2/62669f3376dd5b818938901c_nav%20cta%20icon.svg) Get in Touch](https://www.1517fund.com/about#)
+
+We'd love to hear from you! Please _briefly_**tell us about who you are and what you're up to.**
+
+![Image 3](https://cdn.prod.website-files.com/6266933945767bcd8e5ec8f2/626fbc169bc2547cc1dc7ae3_Vector.svg)
+
+![Image 4](https://cdn.prod.website-files.com/6266933945767bcd8e5ec8f2/626fbc169bc2547cc1dc7ae3_Vector.svg)
+
+![Image 5](https://cdn.prod.website-files.com/6266933945767bcd8e5ec8f2/626fbc16e1365d09434ef0b1_Vector-1.svg)
+
+![Image 6](https://cdn.prod.website-files.com/6266933945767bcd8e5ec8f2/626fbc1609a45970fb97d99c_Vector-2.svg)
+
+Which best describes you?*
+
+- [x] I **DO NOT** have an undergraduate degree - [x] I am **CURRENTLY** in High School or Undergrad studies - [x] I am a deep tech scientist - [x] I'd like to have 1517 participate in our event. 
+
+**I'm working on... (Short and sweet, please!)**
+
+![Image 7](https://cdn.prod.website-files.com/6266933945767bcd8e5ec8f2/626fbc169bc2547cc1dc7ae3_Vector.svg)
+
+![Image 8](https://cdn.prod.website-files.com/6266933945767bcd8e5ec8f2/626fbc169bc2547cc1dc7ae3_Vector.svg)
+
+![Image 9](https://cdn.prod.website-files.com/6266933945767bcd8e5ec8f2/626fbc169bc2547cc1dc7ae3_Vector.svg)
+
+![Image 10](https://cdn.prod.website-files.com/6266933945767bcd8e5ec8f2/626fbc169bc2547cc1dc7ae3_Vector.svg)
+
+![Image 11](https://cdn.prod.website-files.com/6266933945767bcd8e5ec8f2/626fbc169bc2547cc1dc7ae3_Vector.svg)
+
+Thank you! Your submission has been received!  
+  
+If you're in-thesis (a dropout, student, or deep tech scientist), a team member will review your submission and be in touch within two weeks.
+
+Oops! Something went wrong while submitting the form.  
+  
+If you continue to receive this error, please email info@1517fund.com 
+
+[](https://www.1517fund.com/about#)
+
+# Page not found!
+
+The page you are looking for doesn't exist or has been moved.  
+  
+If you can't find what you're looking for, send us a [message](mailto:info@1517fund.com?subject=404%20Error) and we'll see if we can help.
+
+![Image 12](https://cdn.prod.website-files.com/6266933945767bcd8e5ec8f2/627ab731c8296a299a5f8f4e_5e271bfd9db6c910fd30f9bb_giphy-6.gif)

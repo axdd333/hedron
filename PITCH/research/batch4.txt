@@ -1,0 +1,4 @@
+iq|https://innovationquest.uconn.edu/
+ctnext2|https://ctnext.com/programs/
+entrep|https://entrepreneurship.uconn.edu/
+werthwb|https://web.archive.org/web/2026/https://werth.uconn.edu/

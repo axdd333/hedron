@@ -1,0 +1,274 @@
+URL: https://www.ccei.uconn.edu/programs/get-seeded-pitch-nights/
+FETCHED_VIA: jina 200
+
+Title: Page not found | Connecticut Center for Entrepreneurship and Innovation | School of Business
+
+URL Source: https://www.ccei.uconn.edu/programs/get-seeded-pitch-nights/
+
+Warning: Target URL returned error 404: Not Found
+
+Markdown Content:
+Our websites may use cookies to personalize and enhance your experience. By continuing without changing your cookie settings, you agree to this collection. For more information, please see our [University Websites Privacy Notice](https://privacy.uconn.edu/university-website-notice/).
+
+OK More Information
+
+[Skip to Navigation](https://www.ccei.uconn.edu/programs/get-seeded-pitch-nights/#nav-wrapper)[Skip to UConn Search](https://www.ccei.uconn.edu/programs/get-seeded-pitch-nights/#uconn-search)[Skip to Content](https://www.ccei.uconn.edu/programs/get-seeded-pitch-nights/#content)
+
+# UConn Cookie Information
+
+What are Cookies?Authentication Cookies Analytics Cookies Opt Out
+
+**Web cookies** (also called **HTTP cookies**, **browser cookies**, or simply **cookies**) are small pieces of data that websites store on your device (computer, phone, etc.) through your web browser. They are used to remember information about you and your interactions with the site.
+
+### Purpose of Cookies:
+
+1.   **Session Management**:
+
+    *   Keeping you logged in
+
+    *   Remembering items in a shopping cart
+
+    *   Saving language or theme preferences
+
+2.   **Personalization**:
+
+    *   Tailoring content or ads based on your previous activity
+
+3.   **Tracking & Analytics**:
+
+    *   Monitoring browsing behavior for analytics or marketing purposes
+
+* * *
+
+### Types of Cookies:
+
+1.   **Session Cookies**:
+
+    *   Temporary; deleted when you close your browser
+
+    *   Used for things like keeping you logged in during a single session
+
+2.   **Persistent Cookies**:
+
+    *   Stored on your device until they expire or are manually deleted
+
+    *   Used for remembering login credentials, settings, etc.
+
+3.   **First-Party Cookies**:
+
+    *   Set by the website you're visiting directly
+
+4.   **Third-Party Cookies**:
+
+    *   Set by other domains (usually advertisers) embedded in the website
+
+    *   Commonly used for tracking across multiple sites
+
+**Authentication cookies** are a special type of web cookie used to **identify and verify** a user after they log in to a website or web application.
+
+* * *
+
+### What They Do:
+
+Once you log in to a site, the server creates an authentication cookie and sends it to your browser. This cookie:
+
+*   Proves to the website that you're logged in
+
+*   Prevents you from having to log in again on every page you visit
+
+*   Can persist across sessions if you select "Remember me"
+
+* * *
+
+### What's Inside an Authentication Cookie?
+
+Typically, it contains:
+
+*   A **unique session ID** (not your actual password)
+
+*   Optional metadata (e.g., expiration time, security flags)
+
+**Analytics cookies** are cookies used to **collect data about how visitors interact with a website**. Their primary purpose is to help website owners understand and improve user experience by analyzing things like:
+
+*   How users navigate the site
+
+*   Which pages are most/least visited
+
+*   How long users stay on each page
+
+*   What device, browser, or location the user is from
+
+* * *
+
+### What They Track:
+
+Some examples of data analytics cookies may collect:
+
+*   Page views and time spent on pages
+
+*   Click paths (how users move from page to page)
+
+*   Bounce rate (users who leave without interacting)
+
+*   User demographics (location, language, device)
+
+*   Referring websites (how users arrived at the site)
+
+Here’s how you can disable cookies in common browsers:
+
+### 1. Google Chrome
+
+*   Open Chrome and click the three vertical dots in the top-right corner.
+
+*   Go to **Settings**>**Privacy and security**>**Cookies and other site data**.
+
+*   Choose your preferred option:
+
+    *   **Block all cookies** (not recommended, can break most websites).
+
+    *   **Block third-party cookies** (can block ads and tracking cookies).
+
+### 2. Mozilla Firefox
+
+*   Open Firefox and click the three horizontal lines in the top-right corner.
+
+*   Go to **Settings**>**Privacy & Security**.
+
+*   Under the **Enhanced Tracking Protection** section, choose **Strict** to block most cookies or **Custom** to manually choose which cookies to block.
+
+### 3. Safari
+
+*   Open Safari and click **Safari** in the top-left corner of the screen.
+
+*   Go to **Preferences**>**Privacy**.
+
+*   Check **Block all cookies** to stop all cookies, or select options to block third-party cookies.
+
+### 4. Microsoft Edge
+
+*   Open Edge and click the three horizontal dots in the top-right corner.
+
+*   Go to **Settings**>**Privacy, search, and services**>**Cookies and site permissions**.
+
+*   Select your cookie settings from there, including blocking all cookies or blocking third-party cookies.
+
+### 5. On Mobile (iOS/Android)
+
+*   For Safari on iOS: Go to **Settings**>**Safari**>**Privacy & Security**>**Block All Cookies**.
+
+*   For Chrome on Android: Open the app, tap the three dots, go to **Settings**>**Privacy and security**>**Cookies**.
+
+### Be Aware:
+
+Disabling cookies can make your online experience more difficult. Some websites may not load properly, or you may be logged out frequently. Also, certain features may not work as expected.
+
+[UConn](https://uconn.edu/)[University of Connecticut](https://uconn.edu/)
+
+[Search University of Connecticut](https://uconn.edu/search)
+
+A to Z Index
+
+[Site A-Z](https://ccei.uconn.edu/a-z-index)
+
+* * *
+
+[UConn A-Z](https://uconn.edu/az)
+
+[School of Business](https://www.business.uconn.edu/)
+
+[Connecticut Center for Entrepreneurship and Innovation](https://ccei.uconn.edu/)
+
+Search this Site Search in https://ccei.uconn.edu/> Search
+
+[DONATE](https://www.foundation.uconn.edu/fund/ct-center-for-entrepreneurship-innovation/)
+
+[Connecticut Center for Entrepreneurship and Innovation](https://ccei.uconn.edu/)
+
+*   [ABOUT](https://www.ccei.uconn.edu/programs/get-seeded-pitch-nights/#)
+    *   [About CCEI](https://ccei.uconn.edu/about/)
+    *   [Meet The Team](https://ccei.uconn.edu/meet-the-team/)
+    *   [Contact Us / Locations](https://ccei.uconn.edu/contact-us/)
+    *   [Our Startups](https://ccei.uconn.edu/startups/)
+    *   [Blog](https://ccei.uconn.edu/blog/)
+    *   [News & Events](https://ccei.uconn.edu/news-and-events/)
+    *   [Advisory Board](https://ccei.uconn.edu/advisory-board/)
+    *   [Support CCEI](https://www.foundation.uconn.edu/fund/ct-center-for-entrepreneurship-innovation/)
+
+*   [PROGRAMS](https://www.ccei.uconn.edu/programs/get-seeded-pitch-nights/#)
+    *   [Venture Development](https://www.ccei.uconn.edu/programs/get-seeded-pitch-nights/#)
+        *   [Traction Workshops](https://ccei.uconn.edu/traction/)
+        *   [The Founder's Lounge @ CCEI](https://ccei.uconn.edu/founders-lounge/)
+        *   [Get Seeded Pitch Nights](https://ccei.uconn.edu/getseeded/)
+        *   [Accelerate UConn: NSF I-Corps Program](https://ccei.uconn.edu/accelerate-uconn/)
+        *   [Summer Accelerator](https://ccei.uconn.edu/summer-accelerator/)
+        *   [Wolff New Venture Competition](https://ccei.uconn.edu/wolff-new-venture-competition/)
+
+    *   [Entrepreneurial Communication](https://www.ccei.uconn.edu/programs/get-seeded-pitch-nights/#)
+        *   [BUILD Hartford Course](https://ccei.uconn.edu/build-hartford/)
+        *   [The Collaboratory @ CCEI](https://ccei.uconn.edu/collaboratory/)
+        *   [Entrepreneurial Leadership Program](https://ccei.uconn.edu/leadership/)
+
+    *   [Additional Initiatives](https://www.ccei.uconn.edu/programs/get-seeded-pitch-nights/#)
+        *   [Entrepreneurship Bootcamp for Veterans (EBV)](https://ccei.uconn.edu/ebv/)
+        *   [Student Ambassadors Program](https://ccei.uconn.edu/ccei-student-ambassadors/)
+        *   [Mentor Network](https://ccei.uconn.edu/mentors/)
+        *   [Entrepreneurship Internship Program](https://ccei.uconn.edu/entrepreneurship-internship-program/)
+
+*   [RESOURCES](https://www.ccei.uconn.edu/programs/get-seeded-pitch-nights/#)
+    *   #### University Resources
+
+        *   [Classes, Incubators, Maker Spaces](https://ccei.uconn.edu/entrepreneurship-uconn/)
+        *   [Hillside Ventures](https://hillsideventures.uconn.edu/)
+        *   [OPIM Innovate](https://innovatelabs.uconn.edu/)
+        *   [UConn Innovation Portal](https://ip.uconn.edu/)
+        *   [Werth Institute](https://entrepreneurship.uconn.edu/)
+
+    *   #### Connecticut Resources
+
+        *   [Connecticut Innovations](https://ctinnovations.com/)
+        *   [Connecticut Office of Innovation](https://ctnext.com/)
+        *   [CT Small Business Development Center](https://ctsbdc.uconn.edu/)
+        *   [FORGE](https://forgeimpact.org/)
+        *   [Launc[H]](http://launchinhartford.com/)
+        *   [reSET](https://www.resetco.org/)
+
+    *   #### Innovation Tools
+
+        *   [thinkfwd.](http://thinkfwd.co/toolkit)
+
+*   [SEARCH](https://www.ccei.uconn.edu/programs/get-seeded-pitch-nights/#)
+    *   
+        *   [A-Z Index](https://ccei.uconn.edu/a-z-index/)
+
+    *   Search this Site Search in https://ccei.uconn.edu/> Search  
+
+# I'm Sorry...   
+That page can’t be found.
+
+Error 404: Page not found.
+
+It looks like nothing was found at this location. Maybe try one of the links above or a search?
+
+Search this Site Search in https://ccei.uconn.edu/> Search
+
+![Image 1: Photo of a puppy.](https://ccei.uconn.edu/wp-content/themes/cornerstone/img/JonathanStill.jpg)
+
+![Image 2:  ](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/04/CCEI-stacked_blue.png)
+
+**Connecticut Center for Entrepreneurship and Innovation (CCEI)**100 Constitution Plaza, 3rd Floor, Hartford, CT 06103  
+ 2100 Hillside Road, Suite 121, Unit 1041, Storrs, CT 06269
+
+[Maps & Directions](https://maps.uconn.edu/)
+
+[ccei@uconn.edu](mailto:ccei@uconn.edu)
+
+[SUBSCRIBE TO OUR NEWSLETTER](https://lp.constantcontactpages.com/su/ijoDHYe/CCEIemail)
+
+[DONATE TO CCEI](https://www.foundation.uconn.edu/fund/ct-center-for-entrepreneurship-innovation/)
+
+[](https://www.linkedin.com/company/connecticutcenterforentrepreneurshipandinnovation "Connecticut Center for Entrepreneurship and Innovation on Linkedin")[](https://instagram.com/uconnccei "Connecticut Center for Entrepreneurship and Innovation on Instagram")[](https://twitter.com/uconnccei "Connecticut Center for Entrepreneurship and Innovation on X Twitter")[](https://www.tiktok.com/ "https://www.tiktok.com/@uconnccei")[](https://www.youtube.com/@uconnccei1023 "Connecticut Center for Entrepreneurship and Innovation on Youtube")
+
+*    © [University of Connecticut](http://uconn.edu/)
+*   [Disclaimers, Privacy & Copyright](http://uconn.edu/disclaimers-privacy-copyright/)
+*   [Accessibility](https://accessibility.uconn.edu/)
+*   [Webmaster Login](https://ccei.uconn.edu/wp-admin/)

@@ -1,0 +1,40 @@
+URL: https://ctnext.com/entrepreneur-innovation-award/
+FETCHED_VIA: jina 200
+
+Title: Page not found - Connecticut Office of Innovation
+
+URL Source: https://ctnext.com/entrepreneur-innovation-award/
+
+Warning: Target URL returned error 404: Not Found
+
+Markdown Content:
+[Skip to content](https://ctnext.com/entrepreneur-innovation-award/#content)
+
+[![Image 1: logo](https://ctnext.com/wp-content/uploads/2024/08/CT-Logo-Horiz-White.png)](https://ctnext.com/)
+
+*   [SBIR STTR commercialization](https://ctnext.com/sbir-sttr-commercialization/)
+*   [Talent Bridge](https://ctnext.com/talent-bridge/)
+*   [Innovation Spotlight](https://ctnext.com/innovation-spotlight/)
+*   [Public-Private Partnerships](https://ctnext.com/rfps-and-rfis/)
+*   [Engage With Us](https://ctnext.com/engage-with-us/)
+*   [Work With Us](https://ctnext.com/work-with-us/)
+
+Menu
+
+*   [SBIR STTR commercialization](https://ctnext.com/sbir-sttr-commercialization/)
+*   [Talent Bridge](https://ctnext.com/talent-bridge/)
+*   [Innovation Spotlight](https://ctnext.com/innovation-spotlight/)
+*   [Public-Private Partnerships](https://ctnext.com/rfps-and-rfis/)
+*   [Engage With Us](https://ctnext.com/engage-with-us/)
+*   [Work With Us](https://ctnext.com/work-with-us/)
+
+# The page can’t be found.
+
+It looks like nothing was found at this location.
+
+[![Image 2: logo](https://ctnext.com/wp-content/uploads/2024/08/CT-Logo-Horiz-White.png)](https://ctnext.com/)
+
+*   [CT DECD LinkedIn](https://www.linkedin.com/company/ctdecd/)
+*   [CT.gov](https://portal.ct.gov/)
+
+All rights reserved

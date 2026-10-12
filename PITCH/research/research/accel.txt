@@ -1,0 +1,578 @@
+URL: https://www.ccei.uconn.edu/programs/summer-accelerator/
+FETCHED_VIA: jina 200
+
+Title: Summer Accelerator | Connecticut Center for Entrepreneurship and Innovation | School of Business | University of Connecticut
+
+URL Source: https://www.ccei.uconn.edu/programs/summer-accelerator/
+
+Published Time: 2017-05-30T14:21:07
+
+Markdown Content:
+Our websites may use cookies to personalize and enhance your experience. By continuing without changing your cookie settings, you agree to this collection. For more information, please see our [University Websites Privacy Notice](https://privacy.uconn.edu/university-website-notice/).
+
+OK More Information
+
+[Skip to Navigation](https://www.ccei.uconn.edu/programs/summer-accelerator/#nav-wrapper)[Skip to UConn Search](https://www.ccei.uconn.edu/programs/summer-accelerator/#uconn-search)[Skip to Content](https://www.ccei.uconn.edu/programs/summer-accelerator/#content)
+
+# UConn Cookie Information
+
+What are Cookies?Authentication Cookies Analytics Cookies Opt Out
+
+**Web cookies** (also called **HTTP cookies**, **browser cookies**, or simply **cookies**) are small pieces of data that websites store on your device (computer, phone, etc.) through your web browser. They are used to remember information about you and your interactions with the site.
+
+### Purpose of Cookies:
+
+1.   **Session Management**:
+
+    *   Keeping you logged in
+
+    *   Remembering items in a shopping cart
+
+    *   Saving language or theme preferences
+
+2.   **Personalization**:
+
+    *   Tailoring content or ads based on your previous activity
+
+3.   **Tracking & Analytics**:
+
+    *   Monitoring browsing behavior for analytics or marketing purposes
+
+* * *
+
+### Types of Cookies:
+
+1.   **Session Cookies**:
+
+    *   Temporary; deleted when you close your browser
+
+    *   Used for things like keeping you logged in during a single session
+
+2.   **Persistent Cookies**:
+
+    *   Stored on your device until they expire or are manually deleted
+
+    *   Used for remembering login credentials, settings, etc.
+
+3.   **First-Party Cookies**:
+
+    *   Set by the website you're visiting directly
+
+4.   **Third-Party Cookies**:
+
+    *   Set by other domains (usually advertisers) embedded in the website
+
+    *   Commonly used for tracking across multiple sites
+
+**Authentication cookies** are a special type of web cookie used to **identify and verify** a user after they log in to a website or web application.
+
+* * *
+
+### What They Do:
+
+Once you log in to a site, the server creates an authentication cookie and sends it to your browser. This cookie:
+
+*   Proves to the website that you're logged in
+
+*   Prevents you from having to log in again on every page you visit
+
+*   Can persist across sessions if you select "Remember me"
+
+* * *
+
+### What's Inside an Authentication Cookie?
+
+Typically, it contains:
+
+*   A **unique session ID** (not your actual password)
+
+*   Optional metadata (e.g., expiration time, security flags)
+
+**Analytics cookies** are cookies used to **collect data about how visitors interact with a website**. Their primary purpose is to help website owners understand and improve user experience by analyzing things like:
+
+*   How users navigate the site
+
+*   Which pages are most/least visited
+
+*   How long users stay on each page
+
+*   What device, browser, or location the user is from
+
+* * *
+
+### What They Track:
+
+Some examples of data analytics cookies may collect:
+
+*   Page views and time spent on pages
+
+*   Click paths (how users move from page to page)
+
+*   Bounce rate (users who leave without interacting)
+
+*   User demographics (location, language, device)
+
+*   Referring websites (how users arrived at the site)
+
+Here’s how you can disable cookies in common browsers:
+
+### 1. Google Chrome
+
+*   Open Chrome and click the three vertical dots in the top-right corner.
+
+*   Go to **Settings**>**Privacy and security**>**Cookies and other site data**.
+
+*   Choose your preferred option:
+
+    *   **Block all cookies** (not recommended, can break most websites).
+
+    *   **Block third-party cookies** (can block ads and tracking cookies).
+
+### 2. Mozilla Firefox
+
+*   Open Firefox and click the three horizontal lines in the top-right corner.
+
+*   Go to **Settings**>**Privacy & Security**.
+
+*   Under the **Enhanced Tracking Protection** section, choose **Strict** to block most cookies or **Custom** to manually choose which cookies to block.
+
+### 3. Safari
+
+*   Open Safari and click **Safari** in the top-left corner of the screen.
+
+*   Go to **Preferences**>**Privacy**.
+
+*   Check **Block all cookies** to stop all cookies, or select options to block third-party cookies.
+
+### 4. Microsoft Edge
+
+*   Open Edge and click the three horizontal dots in the top-right corner.
+
+*   Go to **Settings**>**Privacy, search, and services**>**Cookies and site permissions**.
+
+*   Select your cookie settings from there, including blocking all cookies or blocking third-party cookies.
+
+### 5. On Mobile (iOS/Android)
+
+*   For Safari on iOS: Go to **Settings**>**Safari**>**Privacy & Security**>**Block All Cookies**.
+
+*   For Chrome on Android: Open the app, tap the three dots, go to **Settings**>**Privacy and security**>**Cookies**.
+
+### Be Aware:
+
+Disabling cookies can make your online experience more difficult. Some websites may not load properly, or you may be logged out frequently. Also, certain features may not work as expected.
+
+[UConn](https://uconn.edu/)[University of Connecticut](https://uconn.edu/)
+
+[Search University of Connecticut](https://uconn.edu/search)
+
+A to Z Index
+
+[Site A-Z](https://ccei.uconn.edu/a-z-index)
+
+* * *
+
+[UConn A-Z](https://uconn.edu/az)
+
+[School of Business](https://www.business.uconn.edu/)
+
+[Connecticut Center for Entrepreneurship and Innovation](https://ccei.uconn.edu/)
+
+Search this Site Search in https://ccei.uconn.edu/> Search
+
+[DONATE](https://www.foundation.uconn.edu/fund/ct-center-for-entrepreneurship-innovation/)
+
+[Connecticut Center for Entrepreneurship and Innovation](https://ccei.uconn.edu/)
+
+*   [ABOUT](https://www.ccei.uconn.edu/programs/summer-accelerator/#)
+    *   [About CCEI](https://ccei.uconn.edu/about/)
+    *   [Meet The Team](https://ccei.uconn.edu/meet-the-team/)
+    *   [Contact Us / Locations](https://ccei.uconn.edu/contact-us/)
+    *   [Our Startups](https://ccei.uconn.edu/startups/)
+    *   [Blog](https://ccei.uconn.edu/blog/)
+    *   [News & Events](https://ccei.uconn.edu/news-and-events/)
+    *   [Advisory Board](https://ccei.uconn.edu/advisory-board/)
+    *   [Support CCEI](https://www.foundation.uconn.edu/fund/ct-center-for-entrepreneurship-innovation/)
+
+*   [PROGRAMS](https://www.ccei.uconn.edu/programs/summer-accelerator/#)
+    *   [Venture Development](https://www.ccei.uconn.edu/programs/summer-accelerator/#)
+        *   [Traction Workshops](https://ccei.uconn.edu/traction/)
+        *   [The Founder's Lounge @ CCEI](https://ccei.uconn.edu/founders-lounge/)
+        *   [Get Seeded Pitch Nights](https://ccei.uconn.edu/getseeded/)
+        *   [Accelerate UConn: NSF I-Corps Program](https://ccei.uconn.edu/accelerate-uconn/)
+        *   [Summer Accelerator](https://ccei.uconn.edu/summer-accelerator/)
+        *   [Wolff New Venture Competition](https://ccei.uconn.edu/wolff-new-venture-competition/)
+
+    *   [Entrepreneurial Communication](https://www.ccei.uconn.edu/programs/summer-accelerator/#)
+        *   [BUILD Hartford Course](https://ccei.uconn.edu/build-hartford/)
+        *   [The Collaboratory @ CCEI](https://ccei.uconn.edu/collaboratory/)
+        *   [Entrepreneurial Leadership Program](https://ccei.uconn.edu/leadership/)
+
+    *   [Additional Initiatives](https://www.ccei.uconn.edu/programs/summer-accelerator/#)
+        *   [Entrepreneurship Bootcamp for Veterans (EBV)](https://ccei.uconn.edu/ebv/)
+        *   [Student Ambassadors Program](https://ccei.uconn.edu/ccei-student-ambassadors/)
+        *   [Mentor Network](https://ccei.uconn.edu/mentors/)
+        *   [Entrepreneurship Internship Program](https://ccei.uconn.edu/entrepreneurship-internship-program/)
+
+*   [RESOURCES](https://www.ccei.uconn.edu/programs/summer-accelerator/#)
+    *   #### University Resources
+
+        *   [Classes, Incubators, Maker Spaces](https://ccei.uconn.edu/entrepreneurship-uconn/)
+        *   [Hillside Ventures](https://hillsideventures.uconn.edu/)
+        *   [OPIM Innovate](https://innovatelabs.uconn.edu/)
+        *   [UConn Innovation Portal](https://ip.uconn.edu/)
+        *   [Werth Institute](https://entrepreneurship.uconn.edu/)
+
+    *   #### Connecticut Resources
+
+        *   [Connecticut Innovations](https://ctinnovations.com/)
+        *   [Connecticut Office of Innovation](https://ctnext.com/)
+        *   [CT Small Business Development Center](https://ctsbdc.uconn.edu/)
+        *   [FORGE](https://forgeimpact.org/)
+        *   [Launc[H]](http://launchinhartford.com/)
+        *   [reSET](https://www.resetco.org/)
+
+    *   #### Innovation Tools
+
+        *   [thinkfwd.](http://thinkfwd.co/toolkit)
+
+*   [SEARCH](https://www.ccei.uconn.edu/programs/summer-accelerator/#)
+    *   
+        *   [A-Z Index](https://ccei.uconn.edu/a-z-index/)
+
+    *   Search this Site Search in https://ccei.uconn.edu/> Search  
+
+*   Search this Site Search in this site Search    
+
+# SUMMER ACCELERATOR
+
+**_Open to: Students, Faculty, Staff, Alumni_**
+
+CCEI's Summer Accelerator is an immersive, eight-week entrepreneurial experience designed to help UConn-affiliated startups launch and grow their ventures. As our flagship program, it has prepared founders to take their companies to the next level — whether that means generating revenue, raising funding, or being accepted into national incubators and accelerators.
+
+Each summer, the top ten startups from across the university are selected to participate in this intensive program, which meets three days a week across eight weeks. Participants gain the skills needed to bring new products, services, and technologies to market through one-on-one coaching, expert mentorship, and hands-on support. Startups also receive pro bono legal, accounting, branding, banking, and product development services to help with early business setup and growth.
+
+Founders pursuing high-potential ventures that have emerged through other UConn entrepreneurship programs are encouraged to learn more.
+
+![Image 1: three participants posing at the finale](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2025/01/3-1.png)
+
+**COHORT MODEL**
+
+An 8-week long, intensive accelerator designed to support emerging entrepreneurs as they plan to launch their business.
+
+![Image 2: entrepreneur with light altering sunglasses at the finale](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2025/01/6-1.png)
+
+**SUPPORT SERVICES**
+
+Startups receive pro-bono legal, accounting, banking, branding, and product development services from our program partners.
+
+![Image 3: Laron Burrows pitching to an audience](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2025/01/4-1.png)
+
+**MENTORING**
+
+One-on-one mentoring and guidance provided by seasoned industry experts and experienced entrepreneurs to foster venture growth.
+
+![Image 4: the 2022 Summer Fellowship cohort](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2025/01/1-1.png)
+
+**FUNDING**
+
+$15,000 in non-dilutive funding for business development; up to $5,000 (per student) can be used to pay a member of the team (current UConn student or 2025 UConn graduate).
+
+![Image 5: WheelPrice founders posing at the finale](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2025/01/2-1.png)
+
+**WORKSHOPS + MASTERCLASSES**
+
+Expert led sessions covering all scaling fundamentals – go to market strategy, pitch compilation, sales and fundraising, to name a few.
+
+![Image 6: three winners of the 2024 Finale posing](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2025/01/5-1.png)
+
+**NEXT-STEP OPPORTUNITIES**
+
+At the end of the program, a committee will choose five startups to advance to the [Wolff New Venture Competition](https://ccei.uconn.edu/wolff-new-venture-competition/) to compete for $150,000+ in funding, including a $30,000 grand prize.
+
+### ACCELERATOR TIMELINE
+
+#### Info Session
+
+*   _February 3, 2027 from 12-1pm, Virtual_  
+ Learn about the application process and the accelerator from the instructors and past participants.
+
+[INFO SESSION](https://luma.com/pa8amav1)
+
+#### Application Deadline
+
+*   _February 17, 2027 at 11:59pm_  
+ Online application is due.
+
+#### Pitch Selection Notification
+
+*   _February 25, 2027_  
+ Applications are assessed for suitable startups.
+
+#### Summer Accelerator Pitch Days
+
+*   _March 1 and 2, 2027, Virtual_  
+ 20 startups are chosen to pitch to our selection committee made up of instructors, mentors and industry experts.
+
+#### Interview Selection Notification
+
+*   _March 3, 2027_  
+ A selection of startups are chosen to interview with our selection committee.
+
+#### Interviews
+
+*   _March 8 and 10, 2027, Virtual_  
+ A selection of startups are chosen to interview with our selection committee.
+
+#### Acceptance Notification
+
+*   _March 16, 2027_  
+ 10 startups are accepted into the accelerator.
+
+#### Accelerator Orientation
+
+*   _April 23, 2027 from 11:30am-1:30pm, In-Person_  
+ The accepted startups meet with the instructional team and get started on their pre-program assignments.
+
+#### Summer Accelerator
+
+*   _June 7, 2027 - August 5, 2027, In-Person_  
+ Startups participate in the eight-week long accelerator (three days a week), with a mid-program break the week of the 4th of July.
+
+#### Summer Accelerator Finale
+
+*   _August 5, 2027, In-Person_  
+ Startups present their final pitches to a crowd of mentors, investors and industry experts. Five startups are chosen to move on to the annual Wolff New Venture Competition in the weeks following the finale.
+
+### ACCELERATOR DETAILS
+
+#### APPLY
+
+[APPLY FOR SUMMER 2027](https://ccei.uconn.edu/ccei-summer-accelerator-2027-application/)
+
+#### ELIGIBILITY
+
+To be eligible to apply, your startup must:
+
+*   Have at least one founding member affiliated with UConn (undergraduate or graduate student, faculty, staff, or alumni).
+*   Have at least one founding member available to participate in **ALL** scheduled program dates, including commuting to our Hartford center 3 days per week.
+*   Be incorporated (LLC, S-Corp, C-Corp etc.) by June of the current year.
+
+#### WHAT WE'RE LOOKING FOR
+
+Startups should have the potential to be highly scalable and differentiated. Beyond that, we look for ventures that:
+
+*   Have a validated initial target customer segment via customer discovery/experiments.
+*   Are solving a meaningful problem: the problem you’re solving has the potential to bring substantive, scalable, and tangible value to customers and other beneficiaries with potential to scale to a large market in the future.
+*   Have strong awareness of the competition and evidence that your venture is differentiated.
+*   Have a proof of concept/prototype: prototypes can take many forms (a website, Figma prototype, sketch, MVP, demonstration project, or white paper) depending on the nature of your business. 
+
+#### TIMING + COMMITMENT
+
+Participants spend three days per week over eight weeks in the summer developing skills needed to bring new products and technologies to market and receiving one-on-one coaching from industry experts. Sessions are held from 9am-3pm on Mondays, Tuesdays, and Thursdays; and some early-evening networking events or other activities may be scheduled.
+
+_*The Summer 2027 cohort will be fully in-person, with all three days per week located at our center in Hartford. Startups should expect to spend additional time outside of program hours working on their business._
+
+#### SUMMER 2027 SCHEDULE
+
+**Week 1:** 6/7 , 6/8, 6/10, 9am-3pm  
+**Week 2:** 6/14, 6/15, 6/17, 9am-3pm  
+**Week 3:** 6/21, 6/22, 6/24, 9am-3pm  
+**Week 4:** 6/28, 6/29, 7/1, 9am-3pm  
+**_4th of July Break_  
+ Week 5:** 7/12, 7/13, 7/15, 9am-3pm  
+**Week 6:** 7/19, 7/20, 7/22, 9am-3pm  
+**Week 7:** 7/26, 7/27, 7/29, 9am-3pm  
+**Week 8:** 8/2, 8/3, 8/5, 9am-3pm
+
+#### FUNDING
+
+Each startup is awarded $15,000 (non-equity, non-diluting) in funding to aid in business development. Of which, up to $5,000 (per student) can be used to pay a member of the team to participate in the program. This team member must be a current UConn student or recent UConn graduate (May 2026), and it will be paid as fellowship – half at the start of the program, and half at completion.
+
+[Video 2](https://www.youtube.com/watch?v=FeWaViwio34)
+
+### ACCELERATOR ALUMNI
+
+Since 2016, Summer Accelerator has supported dozens of promising startups led by UConn students, faculty, staff, and alumni. These ventures have gone on to launch innovative products, secure funding, and make meaningful impact across industries. We invite you to explore their journeys — click on each logo below to learn more about our accelerator alumni and the companies they’re building.
+
+[](https://www.ccei.uconn.edu/programs/summer-accelerator/# "Previous")
+
+[![Image 7: sedmed logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/15-400x400.png)](https://www.sed-med.com/)
+
+[![Image 8: mud rat logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/29-400x400.png)](https://www.mudratsurf.com/)
+
+[![Image 9: nami therapeutics logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/28-400x400.png)](https://www.namitherapeutics.com/)
+
+[![Image 10: onewithswim logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/9-400x400.png)](http://onewithswim.com/)
+
+[![Image 11: queen bee logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/8-400x400.png)](https://www.the-queenbee.com/)
+
+[![Image 12: veradermics logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/16-400x400.png)](http://veradermics.com/)
+
+[![Image 13: wheelprice logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/23-400x400.png)](http://wheelprice.com/)
+
+[![Image 14: vamos logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/24-400x400.png)](http://govamos.io/)
+
+[![Image 15: happy dinosaur logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/4-400x400.png)](https://happydinostore.com/)
+
+[![Image 16: feel your best self logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/20-400x400.png)](https://www.feelyourbestself.org/)
+
+[![Image 17: lambdavision logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/30-400x400.png)](https://www.lambdavision.com/)
+
+[![Image 18: bastion logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/22-400x400.png)](https://www.getbastion.com/)
+
+[![Image 19: phoenix tailings logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/14-400x400.png)](https://phoenixtailings.com/)
+
+[![Image 20: levo international logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/17-400x400.png)](https://levointernational.org/)
+
+[![Image 21: growler power logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/3-400x400.png)](https://www.growlerpower.com/)
+
+[![Image 22: Kona brand logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/2-400x400.png)](https://www.thekonabrand.com/)
+
+[![Image 23: swipestorm logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/6-400x400.png)](https://restoreapp.com/)
+
+[![Image 24: luma hydration logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/7-400x400.png)](https://drinkluma.xyz/)
+
+[![Image 25: andros innovation logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/5-400x400.png)](https://www.androsinnovations.com/)
+
+[![Image 26: provelocity bat logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/19-400x400.png)](https://provelocitybat.com/)
+
+[![Image 27: puure brand logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/31-400x400.png)](https://www.shoppuure.com/)
+
+[![Image 28: therapeutic bandage products logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/25-400x400.png)](https://therabandage.com/)
+
+[![Image 29: encapsulate logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/18-400x400.png)](https://encapsulate.bio/)
+
+[![Image 30: sourcery logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/26-400x400.png)](https://sourceryapp.org/)
+
+[![Image 31: stemify logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/32-400x400.png)](https://stemify.ai/)
+
+[![Image 32: particle n logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/27-400x400.png)](https://particle-n.com/?i=1)
+
+[![Image 33: pisces Atlantic logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/21-400x400.png)](https://www.piscesatlantic.com/)
+
+[![Image 34: patentplusAI logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/10-400x400.png)](https://www.patentplus.ai/)
+
+![Image 35](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2025/02/Summer-Fellowship-Webpage-Startup-Logos-400x400.png)
+
+[![Image 36: appoint logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/13-400x400.png)](https://appointgrp.com/)
+
+[![Image 37: aqualumos logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/12-400x400.png)](https://www.geyser-remediation.com/)
+
+[![Image 38: sedmed logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/15-400x400.png)](https://www.sed-med.com/)
+
+[![Image 39: mud rat logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/29-400x400.png)](https://www.mudratsurf.com/)
+
+[![Image 40: nami therapeutics logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/28-400x400.png)](https://www.namitherapeutics.com/)
+
+[![Image 41: onewithswim logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/9-400x400.png)](http://onewithswim.com/)
+
+[![Image 42: queen bee logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/8-400x400.png)](https://www.the-queenbee.com/)
+
+[![Image 43: veradermics logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/16-400x400.png)](http://veradermics.com/)
+
+[![Image 44: wheelprice logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/23-400x400.png)](http://wheelprice.com/)
+
+[![Image 45: vamos logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/24-400x400.png)](http://govamos.io/)
+
+[![Image 46: happy dinosaur logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/4-400x400.png)](https://happydinostore.com/)
+
+[![Image 47: feel your best self logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/20-400x400.png)](https://www.feelyourbestself.org/)
+
+[![Image 48: lambdavision logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/30-400x400.png)](https://www.lambdavision.com/)
+
+[![Image 49: bastion logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/22-400x400.png)](https://www.getbastion.com/)
+
+[![Image 50: phoenix tailings logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/14-400x400.png)](https://phoenixtailings.com/)
+
+[![Image 51: levo international logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/17-400x400.png)](https://levointernational.org/)
+
+[![Image 52: growler power logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/3-400x400.png)](https://www.growlerpower.com/)
+
+[![Image 53: Kona brand logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/2-400x400.png)](https://www.thekonabrand.com/)
+
+[![Image 54: swipestorm logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/6-400x400.png)](https://restoreapp.com/)
+
+[![Image 55: luma hydration logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/7-400x400.png)](https://drinkluma.xyz/)
+
+[![Image 56: andros innovation logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/5-400x400.png)](https://www.androsinnovations.com/)
+
+[![Image 57: provelocity bat logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/19-400x400.png)](https://provelocitybat.com/)
+
+[![Image 58: puure brand logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/31-400x400.png)](https://www.shoppuure.com/)
+
+[![Image 59: therapeutic bandage products logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/25-400x400.png)](https://therabandage.com/)
+
+[![Image 60: encapsulate logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/18-400x400.png)](https://encapsulate.bio/)
+
+[![Image 61: sourcery logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/26-400x400.png)](https://sourceryapp.org/)
+
+[![Image 62: stemify logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/32-400x400.png)](https://stemify.ai/)
+
+[![Image 63: particle n logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/27-400x400.png)](https://particle-n.com/?i=1)
+
+[![Image 64: pisces Atlantic logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/21-400x400.png)](https://www.piscesatlantic.com/)
+
+[![Image 65: patentplusAI logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/10-400x400.png)](https://www.patentplus.ai/)
+
+![Image 66](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2025/02/Summer-Fellowship-Webpage-Startup-Logos-400x400.png)
+
+[![Image 67: appoint logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/13-400x400.png)](https://appointgrp.com/)
+
+[![Image 68: aqualumos logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/12-400x400.png)](https://www.geyser-remediation.com/)
+
+[![Image 69: sedmed logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/15-400x400.png)](https://www.sed-med.com/)
+
+[![Image 70: mud rat logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/29-400x400.png)](https://www.mudratsurf.com/)
+
+[![Image 71: nami therapeutics logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/28-400x400.png)](https://www.namitherapeutics.com/)
+
+[![Image 72: onewithswim logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/9-400x400.png)](http://onewithswim.com/)
+
+[![Image 73: queen bee logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/8-400x400.png)](https://www.the-queenbee.com/)
+
+[![Image 74: veradermics logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/11/16-400x400.png)](http://veradermics.com/)
+
+[](https://www.ccei.uconn.edu/programs/summer-accelerator/# "Next")
+
+### ACCELERATOR SPONSORS
+
+Summer Accelerator provides a unique opportunity for sponsors and partners to directly support UConn’s top emerging startups as they work to launch and scale their ventures. Sponsors play a critical role in helping entrepreneurs access resources, mentorship, and pro bono support they need to grow. If you're interested in becoming a sponsor/partner and making a meaningful impact, contact [alycia.chrosniak@uconn.edu](mailto:alycia.chrosniak@uconn.edu).
+
+![Image 75: big bang logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2025/05/2-scaled.png)
+
+![Image 76: Canva logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2025/05/8-scaled.png)
+
+![Image 77: Carta logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2025/05/9-scaled.png)
+
+![Image 78: FML CPAs logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2025/05/3-scaled.png)
+
+![Image 79: cashmankatz logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2026/04/Summer-Accelerator-Logos-and-Sponsors.png)
+
+![Image 80: Webster Bank logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2025/05/6-scaled.png)
+
+![Image 81: wiggin(x) logo](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2025/05/7-scaled.png)
+
+_If you have questions about this program, please contact Assistant Director of Brand & Venture Development Alycia Chrosniak at [alycia.chrosniak@uconn.edu](mailto:alycia.chrosniak@uconn.edu)._
+
+![Image 82:  ](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/04/CCEI-stacked_blue.png)
+
+**Connecticut Center for Entrepreneurship and Innovation (CCEI)**100 Constitution Plaza, 3rd Floor, Hartford, CT 06103  
+ 2100 Hillside Road, Suite 121, Unit 1041, Storrs, CT 06269
+
+[Maps & Directions](https://maps.uconn.edu/)
+
+[ccei@uconn.edu](mailto:ccei@uconn.edu)
+
+[SUBSCRIBE TO OUR NEWSLETTER](https://lp.constantcontactpages.com/su/ijoDHYe/CCEIemail)
+
+[DONATE TO CCEI](https://www.foundation.uconn.edu/fund/ct-center-for-entrepreneurship-innovation/)
+
+[](https://www.linkedin.com/company/connecticutcenterforentrepreneurshipandinnovation "Connecticut Center for Entrepreneurship and Innovation on Linkedin")[](https://instagram.com/uconnccei "Connecticut Center for Entrepreneurship and Innovation on Instagram")[](https://twitter.com/uconnccei "Connecticut Center for Entrepreneurship and Innovation on X Twitter")[](https://www.tiktok.com/ "https://www.tiktok.com/@uconnccei")[](https://www.youtube.com/@uconnccei1023 "Connecticut Center for Entrepreneurship and Innovation on Youtube")
+
+*    © [University of Connecticut](http://uconn.edu/)
+*   [Disclaimers, Privacy & Copyright](http://uconn.edu/disclaimers-privacy-copyright/)
+*   [Accessibility](https://accessibility.uconn.edu/)
+*   [Webmaster Login](https://ccei.uconn.edu/wp-admin/)
+
+![Image 83](blob:http://localhost/b9e987a272c686435003c6d00d67a555)![Image 84](blob:http://localhost/a3fe276fe6e4f79d330a3096f4cd719f)Download alternative formats ...

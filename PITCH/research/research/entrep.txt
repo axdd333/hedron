@@ -1,0 +1,346 @@
+URL: https://entrepreneurship.uconn.edu/
+FETCHED_VIA: jina 200
+
+Title: Aurora WordPress using the Block Editor | Aurora | Information Technology Services | University of Connecticut
+
+URL Source: https://entrepreneurship.uconn.edu/
+
+Markdown Content:
+Our websites may use cookies to personalize and enhance your experience. By continuing without changing your cookie settings, you agree to this collection. For more information, please see our [University Websites Privacy Notice](https://privacy.uconn.edu/university-website-notice/).
+
+OK More Information
+
+[Skip to Navigation](https://entrepreneurship.uconn.edu/#nav-wrapper)[Skip to UConn Search](https://entrepreneurship.uconn.edu/#uconn-search)[Skip to Content](https://entrepreneurship.uconn.edu/#content)
+
+# UConn Cookie Information
+
+What are Cookies?Authentication Cookies Analytics Cookies Opt Out
+
+**Web cookies** (also called **HTTP cookies**, **browser cookies**, or simply **cookies**) are small pieces of data that websites store on your device (computer, phone, etc.) through your web browser. They are used to remember information about you and your interactions with the site.
+
+### Purpose of Cookies:
+
+1.   **Session Management**:
+
+    *   Keeping you logged in
+
+    *   Remembering items in a shopping cart
+
+    *   Saving language or theme preferences
+
+2.   **Personalization**:
+
+    *   Tailoring content or ads based on your previous activity
+
+3.   **Tracking & Analytics**:
+
+    *   Monitoring browsing behavior for analytics or marketing purposes
+
+* * *
+
+### Types of Cookies:
+
+1.   **Session Cookies**:
+
+    *   Temporary; deleted when you close your browser
+
+    *   Used for things like keeping you logged in during a single session
+
+2.   **Persistent Cookies**:
+
+    *   Stored on your device until they expire or are manually deleted
+
+    *   Used for remembering login credentials, settings, etc.
+
+3.   **First-Party Cookies**:
+
+    *   Set by the website you're visiting directly
+
+4.   **Third-Party Cookies**:
+
+    *   Set by other domains (usually advertisers) embedded in the website
+
+    *   Commonly used for tracking across multiple sites
+
+**Authentication cookies** are a special type of web cookie used to **identify and verify** a user after they log in to a website or web application.
+
+* * *
+
+### What They Do:
+
+Once you log in to a site, the server creates an authentication cookie and sends it to your browser. This cookie:
+
+*   Proves to the website that you're logged in
+
+*   Prevents you from having to log in again on every page you visit
+
+*   Can persist across sessions if you select "Remember me"
+
+* * *
+
+### What's Inside an Authentication Cookie?
+
+Typically, it contains:
+
+*   A **unique session ID** (not your actual password)
+
+*   Optional metadata (e.g., expiration time, security flags)
+
+**Analytics cookies** are cookies used to **collect data about how visitors interact with a website**. Their primary purpose is to help website owners understand and improve user experience by analyzing things like:
+
+*   How users navigate the site
+
+*   Which pages are most/least visited
+
+*   How long users stay on each page
+
+*   What device, browser, or location the user is from
+
+* * *
+
+### What They Track:
+
+Some examples of data analytics cookies may collect:
+
+*   Page views and time spent on pages
+
+*   Click paths (how users move from page to page)
+
+*   Bounce rate (users who leave without interacting)
+
+*   User demographics (location, language, device)
+
+*   Referring websites (how users arrived at the site)
+
+Here’s how you can disable cookies in common browsers:
+
+### 1. Google Chrome
+
+*   Open Chrome and click the three vertical dots in the top-right corner.
+
+*   Go to **Settings**>**Privacy and security**>**Cookies and other site data**.
+
+*   Choose your preferred option:
+
+    *   **Block all cookies** (not recommended, can break most websites).
+
+    *   **Block third-party cookies** (can block ads and tracking cookies).
+
+### 2. Mozilla Firefox
+
+*   Open Firefox and click the three horizontal lines in the top-right corner.
+
+*   Go to **Settings**>**Privacy & Security**.
+
+*   Under the **Enhanced Tracking Protection** section, choose **Strict** to block most cookies or **Custom** to manually choose which cookies to block.
+
+### 3. Safari
+
+*   Open Safari and click **Safari** in the top-left corner of the screen.
+
+*   Go to **Preferences**>**Privacy**.
+
+*   Check **Block all cookies** to stop all cookies, or select options to block third-party cookies.
+
+### 4. Microsoft Edge
+
+*   Open Edge and click the three horizontal dots in the top-right corner.
+
+*   Go to **Settings**>**Privacy, search, and services**>**Cookies and site permissions**.
+
+*   Select your cookie settings from there, including blocking all cookies or blocking third-party cookies.
+
+### 5. On Mobile (iOS/Android)
+
+*   For Safari on iOS: Go to **Settings**>**Safari**>**Privacy & Security**>**Block All Cookies**.
+
+*   For Chrome on Android: Open the app, tap the three dots, go to **Settings**>**Privacy and security**>**Cookies**.
+
+### Be Aware:
+
+Disabling cookies can make your online experience more difficult. Some websites may not load properly, or you may be logged out frequently. Also, certain features may not work as expected.
+
+[UConn](https://uconn.edu/)[University of Connecticut](https://uconn.edu/)
+
+[Search University of Connecticut](https://uconn.edu/search)
+
+A to Z Index
+
+[Site A-Z](https://aurora.uconn.edu/a-z-index)
+
+* * *
+
+[UConn A-Z](https://uconn.edu/az)
+
+[Information Technology Services](http://its.uconn.edu/)
+
+[Aurora](https://aurora.uconn.edu/)
+
+Search this site 
+
+search Search
+
+[![Image 6: web-dev-logo](https://aurora.media.uconn.edu/wp-content/uploads/sites/6/2025/09/wordpress-logo.png)](https://wordpress.org/)
+
+Search this site 
+
+search Search
+
+[Aurora](https://aurora.uconn.edu/)
+
+[Skip to content](https://entrepreneurship.uconn.edu/#content)
+
+*   [Home](https://aurora.uconn.edu/)
+*   [About](https://entrepreneurship.uconn.edu/#)
+    *   [About](https://aurora.uconn.edu/about/)
+    *   
+[Live Sites](https://entrepreneurship.uconn.edu/#)
+        *   [Live Sites using Central Themes](https://aurora.uconn.edu/about/live-sites-using-central-themes/)
+        *   [Live Sites with Custom/Child Themes](https://aurora.uconn.edu/about/live-sites-with-custom-child-themes/)
+
+    *   [Specifications and Storage](https://aurora.uconn.edu/about/specifications-and-storage/)
+    *   
+[Development](https://entrepreneurship.uconn.edu/#)
+        *   [Development](https://aurora.uconn.edu/about/development/)
+        *   [Developers Group](https://aurora.uconn.edu/about/development/developers-group/)
+        *   [Governance](https://aurora.uconn.edu/about/development/governance/)
+        *   [Code Audit](https://aurora.uconn.edu/about/development/code-audit/)
+
+    *   [Our Team](https://aurora.uconn.edu/team/)
+
+*   [Requests](https://entrepreneurship.uconn.edu/#)
+    *   [Account Request Form](https://aurora.uconn.edu/requests/account-request-form/)
+    *   [Site Review and Go Live](https://aurora.uconn.edu/requests/site-review-go-live/)
+    *   [Site Search and Replace](https://aurora.uconn.edu/requests/site-search-and-replace/)
+
+*   [Classic Editor](https://entrepreneurship.uconn.edu/#)
+    *   [Training](https://aurora.uconn.edu/classic-editor/training/)
+    *   [Guides](https://aurora.uconn.edu/classic-editor/guides/)
+
+*   [Block Editor](https://entrepreneurship.uconn.edu/#)
+    *   [Block Editor](https://aurora.uconn.edu/block-editor/)
+    *   [Training](https://aurora.uconn.edu/block-editor/training/)
+    *   [Guides](https://aurora.uconn.edu/block-editor/guides/)
+    *   [Cynder and Block Changes](https://aurora.uconn.edu/cynder-and-block-changes-2/)
+
+*   [Themes](https://aurora.uconn.edu/themes/)
+*   [News](https://aurora.uconn.edu/news/)
+*   [Support](https://aurora.uconn.edu/support/)
+
+Search this site 
+
+search Search
+
+# Aurora WordPress using the Block Editor
+
+![Image 7](https://aurora.media.uconn.edu/wp-content/uploads/sites/6/2025/09/aurora-logo-1.png)
+
+[**ACCOUNT REQUEST**](https://aurora.uconn.edu/requests/account-request-form/)
+
+[**SITE REVIEW & GO LIVE**](https://aurora.uconn.edu/requests/site-review-go-live/)
+
+# Aurora using the Block Editor
+
+In late March 2025, the University of Connecticut started offering new sites with the WordPress Block Editor. The Block Editor lets you build custom layouts per page using predefined block types.
+
+Current sites can continue using the Classic Editor, if you are interested in using the Block Editor you will need to submit an [**Aurora WordPress Account request**](https://aurora.uconn.edu/requests/account-request-form/). You can choose to manually migrate the site or use a clone of your current site. We will run a conversion tool on the cloned site that will convert most of the site. You will need to review the site and make changes as needed.
+
+At first, the Block Editor may seem confusing especially if you have used the old classic editor. Like anything, it will become easier as you use the Block Editor.   
+  
+Please watch the videos on the Block Editor and if you have questions, please send an email to [**webdev@uconn.edu**](mailto:webdev@uconn.edu)
+
+[**BLOCK EDITOR VIDEO**](https://www.youtube.com/watch?v=DaaCThv_NNM)
+
+![Image 8: Classic Editor Workspace](https://aurora.media.uconn.edu/wp-content/uploads/sites/6/2025/01/classiceditorinterface-2.png)
+## Classic Editor
+
+The Classic Editor will have the Publish column and Tool Bar as shown above. The Dashboard column is on the left.
+
+The Classic Editor will hopefully be decommissioned in 2027, we need your help to convert current sites using the Classic Editor to the Block Editor.
+
+[**TRAINING**](https://aurora.uconn.edu/classic-editor/training/)
+
+[**GUIDES**](https://aurora.uconn.edu/classic-editor/guides/)
+
+![Image 9: Block Editor Workspace](https://production-wordpress.media.uconn.edu/wp-content/uploads/sites/3946/2025/01/blockeditor.webp)
+## Block Editor
+
+The Block Editor has 3 key areas: An inserter panel for adding blocks, a content editor that holds the blocks, and a sidebar panel for configuring block settings.
+
+To exit full screen editor, click on the W logo in the upper left. This brings you back to the Dashboard view.
+
+[**TRAINING**](https://aurora.uconn.edu/block-editor/training/)
+
+[**GUIDES**](https://aurora.uconn.edu/block-editor/guides/)
+
+## By the Numbers
+
+**1572**
+
+Sites Live on Aurora
+
+**1261**
+
+Central Theme Sites
+
+**110**
+
+Custom Theme Sites
+
+**42k**
+
+Users
+
+## Examples of Live Sites Using
+
+[**CENTRAL THEMES**](https://aurora.uconn.edu/about/live-sites-using-central-themes/)
+
+[**CUSTOM/CHILD THEMES**](https://aurora.uconn.edu/about/live-sites-with-custom-child-themes/)
+
+[](https://aurora.uconn.edu/)
+
+## About
+
+Aurora is a multisite WordPress service provided by ITS to the university community. It offers:
+
+**Mobile**friendly web templates.
+
+**Tools** to quickly make forms, slideshows, or page layouts.
+
+**Centrally Managed**security, updates, and maintenance.
+
+![Image 10: phone icon](https://production-wordpress.media.uconn.edu/wp-content/uploads/sites/3946/2025/01/phone-icon-wh.png)**Phone:** 860-486-0654
+
+![Image 11: email icon](https://production-wordpress.media.uconn.edu/wp-content/uploads/sites/3946/2025/01/email-wh.png)**Email:**[webdev@uconn.edu](mailto:webdev@uconn.edu)
+
+## Recent Updates
+
+*   #### [WordPress 7 Release](https://aurora.uconn.edu/2026/06/16/wordpress-7-release/)
+
+June 16, 2026 
+*   #### [Aurora Update 18](https://aurora.uconn.edu/2025/03/27/aurora-update-18/)
+
+March 27, 2025 
+*   #### [Aurora Update 17.7](https://aurora.uconn.edu/2024/12/19/aurora-update-17-7/)
+
+December 19, 2024 
+*   #### [Aurora Update 17.6](https://aurora.uconn.edu/2024/08/15/aurora-update-17-6/)
+
+August 15, 2024 
+*   #### [Aurora Update 17.5](https://aurora.uconn.edu/2024/06/20/aurora-update-17-5/)
+
+June 20, 2024 
+*   #### [Aurora Update 17.4](https://aurora.uconn.edu/2024/03/21/aurora-update-17-4/)
+
+March 21, 2024 
+
+[**MORE UPDATES**](https://aurora.uconn.edu/news/)
+
+*    © [University of Connecticut](http://uconn.edu/)
+*   [Disclaimers, Privacy & Copyright](http://uconn.edu/disclaimers-privacy-copyright/)
+*   [Accessibility](https://accessibility.uconn.edu/)
+*   [Webmaster Login](https://aurora.uconn.edu/wp-admin/)
+
+Notifications
+
+![Image 12](blob:http://localhost/b9e987a272c686435003c6d00d67a555)![Image 13](blob:http://localhost/a3fe276fe6e4f79d330a3096f4cd719f)Download alternative formats ...

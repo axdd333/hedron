@@ -1,0 +1,6 @@
+iqprizes|https://innovationquest.uconn.edu/prizes-eligibility/
+ctnext_sbir|https://ctnext.com/sbir-sttr-commercialization/
+ctnext_spot|https://ctnext.com/innovation-spotlight/
+f1517_about|https://www.1517fund.com/about
+zf_app|https://www.zfellows.com/apply
+mercatus2|https://web.archive.org/web/2026/https://www.mercatus.org/emergent-ventures

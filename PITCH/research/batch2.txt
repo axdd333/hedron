@@ -1,0 +1,9 @@
+werth2|https://werth.business.uconn.edu/
+werth3|https://www.werth.uconn.edu/
+accel|https://www.ccei.uconn.edu/programs/summer-accelerator/
+wolff|https://www.ccei.uconn.edu/programs/wolff-new-venture-competition/
+icorps|https://www.ccei.uconn.edu/programs/accelerate-uconn-nsf-i-corps-program/
+getseeded|https://www.ccei.uconn.edu/programs/get-seeded-pitch-nights/
+mercatus|https://www.mercatus.org/emergent-ventures
+ctinnov|https://ctinnovations.com/
+nsficorps|https://www.nsf.gov/programs/i-corps/

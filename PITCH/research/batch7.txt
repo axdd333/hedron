@@ -1,0 +1,4 @@
+icorps_nat|https://www.nsf.gov/funding/initiatives/i-corps/national-teams-applicants
+icorps_lemma|https://www.nsf.gov/funding/initiatives/i-corps/lemma-applicants
+ctnext_award|https://portal.ct.gov/decd/allowable-entities/office-of-innovation/entrepreneur-innovation-award
+ctinnov_future|https://ctinnovations.com/what-we-offer/future-fund/

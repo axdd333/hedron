@@ -1,0 +1,589 @@
+URL: https://www.ccei.uconn.edu/programs/wolff-new-venture-competition/
+FETCHED_VIA: jina 200
+
+Title: Wolff New Venture Competition | Connecticut Center for Entrepreneurship and Innovation | School of Business | University of Connecticut
+
+URL Source: https://www.ccei.uconn.edu/programs/wolff-new-venture-competition/
+
+Published Time: 2017-08-14T14:25:19
+
+Markdown Content:
+Our websites may use cookies to personalize and enhance your experience. By continuing without changing your cookie settings, you agree to this collection. For more information, please see our [University Websites Privacy Notice](https://privacy.uconn.edu/university-website-notice/).
+
+OK More Information
+
+[Skip to Navigation](https://www.ccei.uconn.edu/programs/wolff-new-venture-competition/#nav-wrapper)[Skip to UConn Search](https://www.ccei.uconn.edu/programs/wolff-new-venture-competition/#uconn-search)[Skip to Content](https://www.ccei.uconn.edu/programs/wolff-new-venture-competition/#content)
+
+# UConn Cookie Information
+
+What are Cookies?Authentication Cookies Analytics Cookies Opt Out
+
+**Web cookies** (also called **HTTP cookies**, **browser cookies**, or simply **cookies**) are small pieces of data that websites store on your device (computer, phone, etc.) through your web browser. They are used to remember information about you and your interactions with the site.
+
+### Purpose of Cookies:
+
+1.   **Session Management**:
+
+    *   Keeping you logged in
+
+    *   Remembering items in a shopping cart
+
+    *   Saving language or theme preferences
+
+2.   **Personalization**:
+
+    *   Tailoring content or ads based on your previous activity
+
+3.   **Tracking & Analytics**:
+
+    *   Monitoring browsing behavior for analytics or marketing purposes
+
+* * *
+
+### Types of Cookies:
+
+1.   **Session Cookies**:
+
+    *   Temporary; deleted when you close your browser
+
+    *   Used for things like keeping you logged in during a single session
+
+2.   **Persistent Cookies**:
+
+    *   Stored on your device until they expire or are manually deleted
+
+    *   Used for remembering login credentials, settings, etc.
+
+3.   **First-Party Cookies**:
+
+    *   Set by the website you're visiting directly
+
+4.   **Third-Party Cookies**:
+
+    *   Set by other domains (usually advertisers) embedded in the website
+
+    *   Commonly used for tracking across multiple sites
+
+**Authentication cookies** are a special type of web cookie used to **identify and verify** a user after they log in to a website or web application.
+
+* * *
+
+### What They Do:
+
+Once you log in to a site, the server creates an authentication cookie and sends it to your browser. This cookie:
+
+*   Proves to the website that you're logged in
+
+*   Prevents you from having to log in again on every page you visit
+
+*   Can persist across sessions if you select "Remember me"
+
+* * *
+
+### What's Inside an Authentication Cookie?
+
+Typically, it contains:
+
+*   A **unique session ID** (not your actual password)
+
+*   Optional metadata (e.g., expiration time, security flags)
+
+**Analytics cookies** are cookies used to **collect data about how visitors interact with a website**. Their primary purpose is to help website owners understand and improve user experience by analyzing things like:
+
+*   How users navigate the site
+
+*   Which pages are most/least visited
+
+*   How long users stay on each page
+
+*   What device, browser, or location the user is from
+
+* * *
+
+### What They Track:
+
+Some examples of data analytics cookies may collect:
+
+*   Page views and time spent on pages
+
+*   Click paths (how users move from page to page)
+
+*   Bounce rate (users who leave without interacting)
+
+*   User demographics (location, language, device)
+
+*   Referring websites (how users arrived at the site)
+
+Here’s how you can disable cookies in common browsers:
+
+### 1. Google Chrome
+
+*   Open Chrome and click the three vertical dots in the top-right corner.
+
+*   Go to **Settings**>**Privacy and security**>**Cookies and other site data**.
+
+*   Choose your preferred option:
+
+    *   **Block all cookies** (not recommended, can break most websites).
+
+    *   **Block third-party cookies** (can block ads and tracking cookies).
+
+### 2. Mozilla Firefox
+
+*   Open Firefox and click the three horizontal lines in the top-right corner.
+
+*   Go to **Settings**>**Privacy & Security**.
+
+*   Under the **Enhanced Tracking Protection** section, choose **Strict** to block most cookies or **Custom** to manually choose which cookies to block.
+
+### 3. Safari
+
+*   Open Safari and click **Safari** in the top-left corner of the screen.
+
+*   Go to **Preferences**>**Privacy**.
+
+*   Check **Block all cookies** to stop all cookies, or select options to block third-party cookies.
+
+### 4. Microsoft Edge
+
+*   Open Edge and click the three horizontal dots in the top-right corner.
+
+*   Go to **Settings**>**Privacy, search, and services**>**Cookies and site permissions**.
+
+*   Select your cookie settings from there, including blocking all cookies or blocking third-party cookies.
+
+### 5. On Mobile (iOS/Android)
+
+*   For Safari on iOS: Go to **Settings**>**Safari**>**Privacy & Security**>**Block All Cookies**.
+
+*   For Chrome on Android: Open the app, tap the three dots, go to **Settings**>**Privacy and security**>**Cookies**.
+
+### Be Aware:
+
+Disabling cookies can make your online experience more difficult. Some websites may not load properly, or you may be logged out frequently. Also, certain features may not work as expected.
+
+[UConn](https://uconn.edu/)[University of Connecticut](https://uconn.edu/)
+
+[Search University of Connecticut](https://uconn.edu/search)
+
+A to Z Index
+
+[Site A-Z](https://ccei.uconn.edu/a-z-index)
+
+* * *
+
+[UConn A-Z](https://uconn.edu/az)
+
+[School of Business](https://www.business.uconn.edu/)
+
+[Connecticut Center for Entrepreneurship and Innovation](https://ccei.uconn.edu/)
+
+Search this Site Search in https://ccei.uconn.edu/> Search
+
+[DONATE](https://www.foundation.uconn.edu/fund/ct-center-for-entrepreneurship-innovation/)
+
+[Connecticut Center for Entrepreneurship and Innovation](https://ccei.uconn.edu/)
+
+*   [ABOUT](https://www.ccei.uconn.edu/programs/wolff-new-venture-competition/#)
+    *   [About CCEI](https://ccei.uconn.edu/about/)
+    *   [Meet The Team](https://ccei.uconn.edu/meet-the-team/)
+    *   [Contact Us / Locations](https://ccei.uconn.edu/contact-us/)
+    *   [Our Startups](https://ccei.uconn.edu/startups/)
+    *   [Blog](https://ccei.uconn.edu/blog/)
+    *   [News & Events](https://ccei.uconn.edu/news-and-events/)
+    *   [Advisory Board](https://ccei.uconn.edu/advisory-board/)
+    *   [Support CCEI](https://www.foundation.uconn.edu/fund/ct-center-for-entrepreneurship-innovation/)
+
+*   [PROGRAMS](https://www.ccei.uconn.edu/programs/wolff-new-venture-competition/#)
+    *   [Venture Development](https://www.ccei.uconn.edu/programs/wolff-new-venture-competition/#)
+        *   [Traction Workshops](https://ccei.uconn.edu/traction/)
+        *   [The Founder's Lounge @ CCEI](https://ccei.uconn.edu/founders-lounge/)
+        *   [Get Seeded Pitch Nights](https://ccei.uconn.edu/getseeded/)
+        *   [Accelerate UConn: NSF I-Corps Program](https://ccei.uconn.edu/accelerate-uconn/)
+        *   [Summer Accelerator](https://ccei.uconn.edu/summer-accelerator/)
+        *   [Wolff New Venture Competition](https://ccei.uconn.edu/wolff-new-venture-competition/)
+
+    *   [Entrepreneurial Communication](https://www.ccei.uconn.edu/programs/wolff-new-venture-competition/#)
+        *   [BUILD Hartford Course](https://ccei.uconn.edu/build-hartford/)
+        *   [The Collaboratory @ CCEI](https://ccei.uconn.edu/collaboratory/)
+        *   [Entrepreneurial Leadership Program](https://ccei.uconn.edu/leadership/)
+
+    *   [Additional Initiatives](https://www.ccei.uconn.edu/programs/wolff-new-venture-competition/#)
+        *   [Entrepreneurship Bootcamp for Veterans (EBV)](https://ccei.uconn.edu/ebv/)
+        *   [Student Ambassadors Program](https://ccei.uconn.edu/ccei-student-ambassadors/)
+        *   [Mentor Network](https://ccei.uconn.edu/mentors/)
+        *   [Entrepreneurship Internship Program](https://ccei.uconn.edu/entrepreneurship-internship-program/)
+
+*   [RESOURCES](https://www.ccei.uconn.edu/programs/wolff-new-venture-competition/#)
+    *   #### University Resources
+
+        *   [Classes, Incubators, Maker Spaces](https://ccei.uconn.edu/entrepreneurship-uconn/)
+        *   [Hillside Ventures](https://hillsideventures.uconn.edu/)
+        *   [OPIM Innovate](https://innovatelabs.uconn.edu/)
+        *   [UConn Innovation Portal](https://ip.uconn.edu/)
+        *   [Werth Institute](https://entrepreneurship.uconn.edu/)
+
+    *   #### Connecticut Resources
+
+        *   [Connecticut Innovations](https://ctinnovations.com/)
+        *   [Connecticut Office of Innovation](https://ctnext.com/)
+        *   [CT Small Business Development Center](https://ctsbdc.uconn.edu/)
+        *   [FORGE](https://forgeimpact.org/)
+        *   [Launc[H]](http://launchinhartford.com/)
+        *   [reSET](https://www.resetco.org/)
+
+    *   #### Innovation Tools
+
+        *   [thinkfwd.](http://thinkfwd.co/toolkit)
+
+*   [SEARCH](https://www.ccei.uconn.edu/programs/wolff-new-venture-competition/#)
+    *   
+        *   [A-Z Index](https://ccei.uconn.edu/a-z-index/)
+
+    *   Search this Site Search in https://ccei.uconn.edu/> Search  
+
+*   Search this Site Search in this site Search    
+
+# WOLFF NEW VENTURE COMPETITION
+
+Our annual Wolff New Venture Competition is the premier event of UConn’s innovation ecosystem, bringing together its most elite startups and the largest, most energized audience of founders, investors, alumni, and supporters. It’s where the university’s top ventures take the stage — and where big ideas meet big opportunities.
+
+The journey begins in March, when ten startups are selected by an independent panel to join CCEI’s Summer Accelerator. Over eight intensive weeks in June and July, these ventures refine their business models, validate their markets, and build real traction. By the end of the program, only the most promising ventures advance to compete in the Wolff New Venture Competition, chosen for their viability and potential to create meaningful impact.
+
+At the main event each October, finalists pitch live to a panel of expert judges for a share of $150,000+ in non-dilutive funding, including a $30,000 grand prize. But it’s more than just a competition — it’s a celebration of innovation. The event also features a dynamic startup showcase, where Summer Accelerator alumni return to demo products, connect with the community, and compete for additional prizes.
+
+[RESERVE YOUR SEAT FOR THE 2026 COMPETITION](https://luma.com/i2690pqa)
+
+![Image 1: Company representatives from Soleia Biosciences posing with Greg Wolff](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2025/10/1.png)
+
+### Congratulations to the 2025 Wolff New Venture Competition Winner: SeaSolTec!
+
+Led by Yidan Zhang (PhD Candidate, CAHNR), Mingyu Qiao Ph.D. (Faculty, CAHNR), and Jonathan McGee, SeaSolTec is c onverting seaweed into a functional coating that makes food packaging compostable and high-performance at an affordable cost, using our proprietary one-step process.
+
+[READ ABOUT SEASOLTEC](https://today.uconn.edu/2025/10/startup-seasol-seeks-to-convert-seaweed-into-compostable-food-packaging-replacing-plastic/)[VISIT THEIR WEBSITE](https://seasoltec.com/)
+
+### PREVIOUS WOLFF NEW VENTURE COMPETITION WINNERS:
+
+[](https://www.ccei.uconn.edu/programs/wolff-new-venture-competition/# "Previous")
+
+#### 2018 Winner: Bastion Health
+
+![Image 2: Portrait of Bastion Health founders Reza Amin and Stephanie Knowlton](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2022/09/Bastion-Health.jpeg)
+
+Led by Reza Amin and Stephanie Knowlton, graduate students in the School of Engineering, [Bastion Health](https://www.getbastion.com/) is an at home, affordable and easy to use test for male fertility.
+
+Read more about[Bastion Health.](https://today.uconn.edu/2018/10/male-fertility-test-developers-win-venture-competition/)
+
+#### 2017 Winner: Simvize
+
+![Image 3: Portrait of Simvize founders Kostyantyn Partola and Dr. George Lykotrafitis](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2022/09/SimVIze-1200x800.jpeg)
+
+Led by Kostyantyn Partola, a graduate student in Engineering, and Dr. George Lykotrafitis, Simvize developed a device designed to help physicians measure patients’ blood viscosity, a traditionally un-used, but promising indicator of cardiac risk, and health for patients on dialysis and certain types of cancers.
+
+Read more about[Simvize.](https://www.business.uconn.edu/2017/10/19/sticky-blood-test-cardiac-risk/?utm_source=fb&utm_medium=txt&utm_term&utm_content&utm_campaign=news)
+
+#### 2016 Winner: LamdaVision
+
+![Image 4: Headshot of Nicole Wagner, LamdaVision](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/04/untitled-39-400x267.jpg)
+
+Led by Nicole Wagner, LamdaVision uses a protein, grown in a laboratory and implanted procedurally behind the retina, to help patients with age-related macular degeneration (AMD) and other retinal diseases.
+
+Read more about[LambdaVision.](https://today.uconn.edu/2017/05/farmington-startup-sets-sights-curing-retinal-disease-blindness/#/)
+
+#### 2024 Winner: Soleia Biosciences
+
+![Image 5: Lakshmi Nair, PhD and Yusuf Khan, PhD of Soleia Biosciences pose with Greg Wolff](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2025/10/Untitled-design-2-400x267.png)
+
+Led by Lakshmi Nair, Ph.D. (Faculty, UConn Health) and Yusuf Khan, Ph.D. (Faculty, UConn Health), [Soleia Biosciences](https://soleiabio.com/) is a pharmaceutical company that has developed a long-acting medication to manage pain related to surgery, injury, or chronic disease to improve a patient’s quality of life without the need for opioids.
+
+Read more about [Soleia Biosciences.](https://today.uconn.edu/2024/09/medical-startup-soleia-biosciences-aims-to-eliminate-severe-pain-without-the-opioids/?utm_source=faculty-staff-daily-digest&utm_medium=email&utm_campaign=daily)
+
+#### 2023 Winner: Feel Your Best Self
+
+![Image 6: Sandy Chafouleas, PhD and Emily Wicks of Feel Your Best Self pose with Greg Wolff](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/08/wolff-winners-2023-1500x1000-1-400x267.jpg)
+
+Led by Sandy Chafouleas PhD (Faculty, NEAG) and Emily Wicks (Staff, SFA), [Feel Your Best Self](https://feelyourbestself.collaboration.uconn.edu/) offers caregivers fun, easy-to-use products to help kids build emotion-focused coping skills to calm themselves, catch their feelings, and connect with others.
+
+Read more about[Feel Your Best Self.](https://today.uconn.edu/2023/10/wolff-entrepreneurship-competition-crowns-startup-that-brings-emotional-coping-skills-to-elementary-age-kids/)
+
+#### 2022 Winner: Lactation Innovations
+
+![Image 7: Group photo of representatives from Lactation Innovations](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2023/08/Wolff-1500x1000-1-400x267.jpg)
+
+Led by Jayme Coates and Brittany Molkenthin, [Lactation Innovations](https://www.lactationinnovations.com/)provides critical insights of how much breastmilk an infant has ingested, helping to prevent dehydration and hyperbilirubinemia in the infant, while increasing the mother's confidence in breastfeeding.
+
+Read more about[Lactation Innovations.](https://today.uconn.edu/2022/10/school-of-business-honors-entrepreneurs-who-are-going-to-change-the-world/)
+
+#### 2021 Winner: ProVelocity Bat
+
+![Image 8: Elijah Taitel, '22 poses with the ProVelocity Bat](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2022/09/ProVelocity-Bat-1200x801.png)
+
+Led by Elijah Taitel, '22 (ENG) and (BUS), [ProVelocity Bat](https://provelocitybat.com/) is an innovative baseball and softball training tool that has a sliding “power barrel” that releases to the impact position when a batter achieves the desired speed.
+
+Read more about[ProVelocity Bat.](https://today.uconn.edu/2021/10/uconn-seniors-baseball-training-device-scores-a-grand-slam-wins-wolff-prize-for-entrepreneurship/)
+
+#### 2020 Winner: Pisces Atlantic
+
+![Image 9: Portrait of Peter Goggins '21](https://ccei.uconn.edu/wp-content/uploads/sites/2149/2022/09/Pisces-Atlantic-1200x801.jpeg)
+
+Led by Peter Goggins, '21 (CAHNR), [Pisces Atlantic](https://www.piscesatlantic.com/)aims to render fishmeal-based formulations obsolete by providing species- and application- specific feed formulations that are economical, effective, and generally superior to conventional feed solutions.
+
+Read more about [Pisces Atlantic.](https://today.uconn.edu/2020/10/fish-food-entrepreneur-wins-uconns-wolff-startup-competition/?utm_source=faculty-staff-daily-digest&utm_medium=email&utm_campaign=daily)
+
+#### 2019 Winner: Phoenix Tailings
+
+![Image 10: Representatives from Phoenix Tailings pose at the Wolff New Venture Competition](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2022/09/Phoenix-Tailings-1200x798.jpeg)
+
+Led by Nicholas Myers and Michael Martin '17 (ENG) '19 MS, [Phoenix Tailings](https://www.phoenixtailings.com/) recycles industrial mining waste that produces usable material for other industries.
+
+Read more about [Phoenix Tailings.](https://today.uconn.edu/2019/10/startup-recycles-toxic-sludge-wins-uconns-wolff-new-venture-competition/)
+
+#### 2018 Winner: Bastion Health
+
+![Image 11: Portrait of Bastion Health founders Reza Amin and Stephanie Knowlton](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2022/09/Bastion-Health.jpeg)
+
+Led by Reza Amin and Stephanie Knowlton, graduate students in the School of Engineering, [Bastion Health](https://www.getbastion.com/) is an at home, affordable and easy to use test for male fertility.
+
+Read more about[Bastion Health.](https://today.uconn.edu/2018/10/male-fertility-test-developers-win-venture-competition/)
+
+#### 2017 Winner: Simvize
+
+![Image 12: Portrait of Simvize founders Kostyantyn Partola and Dr. George Lykotrafitis](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2022/09/SimVIze-1200x800.jpeg)
+
+Led by Kostyantyn Partola, a graduate student in Engineering, and Dr. George Lykotrafitis, Simvize developed a device designed to help physicians measure patients’ blood viscosity, a traditionally un-used, but promising indicator of cardiac risk, and health for patients on dialysis and certain types of cancers.
+
+Read more about[Simvize.](https://www.business.uconn.edu/2017/10/19/sticky-blood-test-cardiac-risk/?utm_source=fb&utm_medium=txt&utm_term&utm_content&utm_campaign=news)
+
+#### 2016 Winner: LamdaVision
+
+![Image 13: Headshot of Nicole Wagner, LamdaVision](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/04/untitled-39-400x267.jpg)
+
+Led by Nicole Wagner, LamdaVision uses a protein, grown in a laboratory and implanted procedurally behind the retina, to help patients with age-related macular degeneration (AMD) and other retinal diseases.
+
+Read more about[LambdaVision.](https://today.uconn.edu/2017/05/farmington-startup-sets-sights-curing-retinal-disease-blindness/#/)
+
+#### 2024 Winner: Soleia Biosciences
+
+![Image 14: Lakshmi Nair, PhD and Yusuf Khan, PhD of Soleia Biosciences pose with Greg Wolff](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2025/10/Untitled-design-2-400x267.png)
+
+Led by Lakshmi Nair, Ph.D. (Faculty, UConn Health) and Yusuf Khan, Ph.D. (Faculty, UConn Health), [Soleia Biosciences](https://soleiabio.com/) is a pharmaceutical company that has developed a long-acting medication to manage pain related to surgery, injury, or chronic disease to improve a patient’s quality of life without the need for opioids.
+
+Read more about [Soleia Biosciences.](https://today.uconn.edu/2024/09/medical-startup-soleia-biosciences-aims-to-eliminate-severe-pain-without-the-opioids/?utm_source=faculty-staff-daily-digest&utm_medium=email&utm_campaign=daily)
+
+#### 2023 Winner: Feel Your Best Self
+
+![Image 15: Sandy Chafouleas, PhD and Emily Wicks of Feel Your Best Self pose with Greg Wolff](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/08/wolff-winners-2023-1500x1000-1-400x267.jpg)
+
+Led by Sandy Chafouleas PhD (Faculty, NEAG) and Emily Wicks (Staff, SFA), [Feel Your Best Self](https://feelyourbestself.collaboration.uconn.edu/) offers caregivers fun, easy-to-use products to help kids build emotion-focused coping skills to calm themselves, catch their feelings, and connect with others.
+
+Read more about[Feel Your Best Self.](https://today.uconn.edu/2023/10/wolff-entrepreneurship-competition-crowns-startup-that-brings-emotional-coping-skills-to-elementary-age-kids/)
+
+#### 2022 Winner: Lactation Innovations
+
+![Image 16: Group photo of representatives from Lactation Innovations](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2023/08/Wolff-1500x1000-1-400x267.jpg)
+
+Led by Jayme Coates and Brittany Molkenthin, [Lactation Innovations](https://www.lactationinnovations.com/)provides critical insights of how much breastmilk an infant has ingested, helping to prevent dehydration and hyperbilirubinemia in the infant, while increasing the mother's confidence in breastfeeding.
+
+Read more about[Lactation Innovations.](https://today.uconn.edu/2022/10/school-of-business-honors-entrepreneurs-who-are-going-to-change-the-world/)
+
+#### 2021 Winner: ProVelocity Bat
+
+![Image 17: Elijah Taitel, '22 poses with the ProVelocity Bat](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2022/09/ProVelocity-Bat-1200x801.png)
+
+Led by Elijah Taitel, '22 (ENG) and (BUS), [ProVelocity Bat](https://provelocitybat.com/) is an innovative baseball and softball training tool that has a sliding “power barrel” that releases to the impact position when a batter achieves the desired speed.
+
+Read more about[ProVelocity Bat.](https://today.uconn.edu/2021/10/uconn-seniors-baseball-training-device-scores-a-grand-slam-wins-wolff-prize-for-entrepreneurship/)
+
+#### 2020 Winner: Pisces Atlantic
+
+![Image 18: Portrait of Peter Goggins '21](https://ccei.uconn.edu/wp-content/uploads/sites/2149/2022/09/Pisces-Atlantic-1200x801.jpeg)
+
+Led by Peter Goggins, '21 (CAHNR), [Pisces Atlantic](https://www.piscesatlantic.com/)aims to render fishmeal-based formulations obsolete by providing species- and application- specific feed formulations that are economical, effective, and generally superior to conventional feed solutions.
+
+Read more about [Pisces Atlantic.](https://today.uconn.edu/2020/10/fish-food-entrepreneur-wins-uconns-wolff-startup-competition/?utm_source=faculty-staff-daily-digest&utm_medium=email&utm_campaign=daily)
+
+#### 2019 Winner: Phoenix Tailings
+
+![Image 19: Representatives from Phoenix Tailings pose at the Wolff New Venture Competition](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2022/09/Phoenix-Tailings-1200x798.jpeg)
+
+Led by Nicholas Myers and Michael Martin '17 (ENG) '19 MS, [Phoenix Tailings](https://www.phoenixtailings.com/) recycles industrial mining waste that produces usable material for other industries.
+
+Read more about [Phoenix Tailings.](https://today.uconn.edu/2019/10/startup-recycles-toxic-sludge-wins-uconns-wolff-new-venture-competition/)
+
+#### 2018 Winner: Bastion Health
+
+![Image 20: Portrait of Bastion Health founders Reza Amin and Stephanie Knowlton](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2022/09/Bastion-Health.jpeg)
+
+Led by Reza Amin and Stephanie Knowlton, graduate students in the School of Engineering, [Bastion Health](https://www.getbastion.com/) is an at home, affordable and easy to use test for male fertility.
+
+Read more about[Bastion Health.](https://today.uconn.edu/2018/10/male-fertility-test-developers-win-venture-competition/)
+
+#### 2017 Winner: Simvize
+
+![Image 21: Portrait of Simvize founders Kostyantyn Partola and Dr. George Lykotrafitis](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2022/09/SimVIze-1200x800.jpeg)
+
+Led by Kostyantyn Partola, a graduate student in Engineering, and Dr. George Lykotrafitis, Simvize developed a device designed to help physicians measure patients’ blood viscosity, a traditionally un-used, but promising indicator of cardiac risk, and health for patients on dialysis and certain types of cancers.
+
+Read more about[Simvize.](https://www.business.uconn.edu/2017/10/19/sticky-blood-test-cardiac-risk/?utm_source=fb&utm_medium=txt&utm_term&utm_content&utm_campaign=news)
+
+#### 2016 Winner: LamdaVision
+
+![Image 22: Headshot of Nicole Wagner, LamdaVision](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/04/untitled-39-400x267.jpg)
+
+Led by Nicole Wagner, LamdaVision uses a protein, grown in a laboratory and implanted procedurally behind the retina, to help patients with age-related macular degeneration (AMD) and other retinal diseases.
+
+Read more about[LambdaVision.](https://today.uconn.edu/2017/05/farmington-startup-sets-sights-curing-retinal-disease-blindness/#/)
+
+[](https://www.ccei.uconn.edu/programs/wolff-new-venture-competition/# "Next")
+
+#### [PREVIOUS FINALISTS](https://www.ccei.uconn.edu/programs/wolff-new-venture-competition/#collapsepanel-766-4-0-00)
+
+## 2025
+
+**404 Inc.:**_Reinventing medical imaging with safe, plant-based contrast agents that eliminate toxic metals without compromising clarity._[Learn More.](https://today.uconn.edu/2025/10/uconn-chemists-developing-safer-all-natural-contrast-dye-for-medical-imaging/ "Original URL: https://r20.rs6.net/tn.jsp?f=0013EcavGnh9_cgO9fkXNCW2iJASjUzvGlfx5NJtd3J9yjXYd5qXt-22uMGRt_djUpns-VC0WsVDBoknGv7bcoSKsHE2to5Sd2H0E-BUgouX3xFwLO4oJUySOp8MVRG9XU-_BqEi_w5TJI8S3zUZv9SV_ws_-w4e0hUL6VInrqFEc0Vjk9HqWsS10GpE_fzCnFoK_u0V85uR74AQ_97QONGbbs1xXc0RR7Tx-AQ8Lszwb4qUslkrqfcfmTjOYkq-_IzKXDmjVkWRs0TmW564nl0rA==&c=-dWroe7uJ5dztW9ie_3PS8KEZZUJ0kBAmSK6TrJ5-7CH-UpzIgk9LA==&ch=rDEU0uvQa-mzFS28D29BXm5Fnja5wKwMgNaVM240Cwl3rColVVSh6Q== Click to follow link.")
+
+**Cena Health (formerly MLC Nutrition):**_The first clinic that prescribes healthy meals and whole-person care to improve health outcomes and stay out of the hospital._[Learn More.](https://today.uconn.edu/2025/09/nutritional-startup-provides-healthy-meals-to-keep-vulnerable-people-out-of-the-hospital/ "https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fr20.rs6.net%2Ftn.jsp%3Ff%3D0013EcavGnh9_cgO9fkXNCW2iJASjUzvGlfx5NJtd3J9yjXYd5qXt-22mRCYAJjobsUiRNYYn3XD7nH8aMbAsiWMtZy_16m57Yb3VQfwk9wB9Ggb0bO6qywZCJHudn6-agc3F5gTdwKGhDiEGb6_zU9STADNjYqPVR6Xs9MC9tNXB8BbdZjFQ0sxi0vXKALpor1VPh_M4V5wCWtZ_4w13PJZNHiBoQWT1uq7CKhzDUTU_IX3Cu7GNuLdSdCzIKKsVfVtwN6e_DpejlkrLpQ0MdkFwX6tnto5cjOFR0coRuOUPSI0uEyRlv1mm3pTa9xvJ3gohpV-VvHJE27TolwXuA9iR3WSTil6wFs8c61Lhw3zxLLUN679Iifoo0Qddm_Oskg%26c%3D-dWroe7uJ5dztW9ie_3PS8KEZZUJ0kBAmSK6TrJ5-7CH-UpzIgk9LA%3D%3D%26ch%3DrDEU0uvQa-mzFS28D29BXm5Fnja5wKwMgNaVM240Cwl3rColVVSh6Q%3D%3D&data=05%7C01%7Ckate.savinelli%40uconn.edu%7Cc16c93109d274ba4d66508dbce628732%7C17f1a87e2a254eaab9df9d439034b080%7C0%7C0%7C638330694806849773%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=Cuw8ubpZitTd0KFqF0aPfOVU5Jr9dV0bvFv3fhN7Cwc%3D&reserved=0")
+
+**Orbit Crates:**_An AI-powered toy rental subscription company that helps parents reduce clutter, save money, and increase intentional, novel play by renting toys instead of owning them._[Learn More.](https://today.uconn.edu/2025/09/wolff-finalist-startup-orbit-crates-offers-subscription-toy-rentals-for-kids/?utm_source=faculty-staff-daily-digest&utm_medium=email&utm_campaign=daily "Original URL: https://r20.rs6.net/tn.jsp?f=0013EcavGnh9_cgO9fkXNCW2iJASjUzvGlfx5NJtd3J9yjXYd5qXt-22vqqkAsXnkhrLBiRXvWdWSa7F3i5S8tijXMWbda1ol-X2VRjNlLF8mCVJCvIZEKAljbq_DsHBtWDAkOpcT3qUIic-FTDhlE8nXmvl8TXDpOR7A_vV7u-i9FvgJ21CiDphArhfpvNe-MP4EGpTEBilI5dMmxHoS3hFrgBNqwmdsOKDnyk9D2LNnJ4yOwCuMUpiE9ObHh_h9-abTk0hN8QU_cIZVfYgwSY_H1K10x9P1fCpj1V89IV0pnpnGGpq_U7lAELkh9MaOXY0K9ZJNvbpWK0IbpSqvc1RXEvYHuzJ8B92GBFV5CQI0zFVjZ7yqhHjTJU6Xi9dTQB&c=-dWroe7uJ5dztW9ie_3PS8KEZZUJ0kBAmSK6TrJ5-7CH-UpzIgk9LA==&ch=rDEU0uvQa-mzFS28D29BXm5Fnja5wKwMgNaVM240Cwl3rColVVSh6Q== Click to follow link.")
+
+**SeaSolTec:**_Converting seaweed into a functional coating that makes food packaging compostable and high-performance at an affordable cost, using our proprietary one-step process._[Learn More.](https://today.uconn.edu/2025/10/startup-seasol-seeks-to-convert-seaweed-into-compostable-food-packaging-replacing-plastic/?utm_source=faculty-staff-daily-digest&utm_medium=email&utm_campaign=daily "Original URL: https://r20.rs6.net/tn.jsp?f=0013EcavGnh9_cgO9fkXNCW2iJASjUzvGlfx5NJtd3J9yjXYd5qXt-22jg2gbqw44U7FGgsoTD_7nAu14CIQBqE8ma6XuFWXZtdPIx_By-JyY5kPlLFBelELHEiFAQoGH0SukAx1VzLr-h079F7lMQt5nB25QLdWYLA-0Ebq915KZsib1Zd5ua1Utrcfu31wE3A49-ppp1HpTgZv_bgPKTvnqy4QJ1-5Jpnwarg32CzCSnEqAC9LblUtjjxUuxZf2AZhhld-3IDFJ3KzcmebOgTiD565fQ-z9PB&c=-dWroe7uJ5dztW9ie_3PS8KEZZUJ0kBAmSK6TrJ5-7CH-UpzIgk9LA==&ch=rDEU0uvQa-mzFS28D29BXm5Fnja5wKwMgNaVM240Cwl3rColVVSh6Q== Click to follow link.")
+
+**Varda 5:**_OBLS is Varda 5's simulation-based training program that prepares healthcare teams to respond effectively to maternal medical and delivery emergencies._[Learn More.](https://today.uconn.edu/2025/10/new-startups-mission-safer-deliveries-for-moms-and-babies/ "Original URL: https://r20.rs6.net/tn.jsp?f=0013EcavGnh9_cgO9fkXNCW2iJASjUzvGlfx5NJtd3J9yjXYd5qXt-22qgsdDgOanYhGTo_9cm-qPp-xitJhoxb5dM9xBDfgu4Cv_TacZ9LErQwiqTvLyZdgEa3FCduo4k6SvHnVyjoioWXMPyU45qgGLcnul3AX87P9c-nxTxuXarTq8uqaqzNSwbssX4yxWsEET8Q9wDpxNfAx58lOdsIn_0XvN9HOzsQo4pWLqZ-YVMn5usx7AjXVNhZVjKVs_wmaO_zOrBWG4TUv5IOSLXujALsAmPVljts_Uqym4jsCiElN3qD23O4RQ==&c=-dWroe7uJ5dztW9ie_3PS8KEZZUJ0kBAmSK6TrJ5-7CH-UpzIgk9LA==&ch=rDEU0uvQa-mzFS28D29BXm5Fnja5wKwMgNaVM240Cwl3rColVVSh6Q== Click to follow link.")
+
+## 2024
+
+**Atlas:**_An all-natural edible coating from sustainably-farmed seaweed that reduces food loss and spoilage in the supply chains of highly perishable commodities._[Learn More.](https://today.uconn.edu/2024/09/a-marriage-of-land-sea-uconn-agricultural-startup-seeks-to-slow-food-spoilage/ "Original URL: https://r20.rs6.net/tn.jsp?f=0013EcavGnh9_cgO9fkXNCW2iJASjUzvGlfx5NJtd3J9yjXYd5qXt-22uMGRt_djUpns-VC0WsVDBoknGv7bcoSKsHE2to5Sd2H0E-BUgouX3xFwLO4oJUySOp8MVRG9XU-_BqEi_w5TJI8S3zUZv9SV_ws_-w4e0hUL6VInrqFEc0Vjk9HqWsS10GpE_fzCnFoK_u0V85uR74AQ_97QONGbbs1xXc0RR7Tx-AQ8Lszwb4qUslkrqfcfmTjOYkq-_IzKXDmjVkWRs0TmW564nl0rA==&c=-dWroe7uJ5dztW9ie_3PS8KEZZUJ0kBAmSK6TrJ5-7CH-UpzIgk9LA==&ch=rDEU0uvQa-mzFS28D29BXm5Fnja5wKwMgNaVM240Cwl3rColVVSh6Q== Click to follow link.")
+
+**Happy Dinosaur:**_A licensable character franchise that combines the spirit of adventure and creativity through children's storytelling._[Learn More.](https://today.uconn.edu/2024/09/alum-roars-into-childrens-toy-market-with-colorful-plush-dinosaurs-plans-for-complementary-books/ "https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fr20.rs6.net%2Ftn.jsp%3Ff%3D0013EcavGnh9_cgO9fkXNCW2iJASjUzvGlfx5NJtd3J9yjXYd5qXt-22mRCYAJjobsUiRNYYn3XD7nH8aMbAsiWMtZy_16m57Yb3VQfwk9wB9Ggb0bO6qywZCJHudn6-agc3F5gTdwKGhDiEGb6_zU9STADNjYqPVR6Xs9MC9tNXB8BbdZjFQ0sxi0vXKALpor1VPh_M4V5wCWtZ_4w13PJZNHiBoQWT1uq7CKhzDUTU_IX3Cu7GNuLdSdCzIKKsVfVtwN6e_DpejlkrLpQ0MdkFwX6tnto5cjOFR0coRuOUPSI0uEyRlv1mm3pTa9xvJ3gohpV-VvHJE27TolwXuA9iR3WSTil6wFs8c61Lhw3zxLLUN679Iifoo0Qddm_Oskg%26c%3D-dWroe7uJ5dztW9ie_3PS8KEZZUJ0kBAmSK6TrJ5-7CH-UpzIgk9LA%3D%3D%26ch%3DrDEU0uvQa-mzFS28D29BXm5Fnja5wKwMgNaVM240Cwl3rColVVSh6Q%3D%3D&data=05%7C01%7Ckate.savinelli%40uconn.edu%7Cc16c93109d274ba4d66508dbce628732%7C17f1a87e2a254eaab9df9d439034b080%7C0%7C0%7C638330694806849773%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=Cuw8ubpZitTd0KFqF0aPfOVU5Jr9dV0bvFv3fhN7Cwc%3D&reserved=0")
+
+**Soleia Biosciences:**_A pharmaceutical company that has developed a long-acting medication to manage pain related to surgery, injury, or chronic disease to improve a patient’s quality of life without the need for opioids._[Learn More.](https://today.uconn.edu/2024/09/medical-startup-soleia-biosciences-aims-to-eliminate-severe-pain-without-the-opioids/ "Original URL: https://r20.rs6.net/tn.jsp?f=0013EcavGnh9_cgO9fkXNCW2iJASjUzvGlfx5NJtd3J9yjXYd5qXt-22vqqkAsXnkhrLBiRXvWdWSa7F3i5S8tijXMWbda1ol-X2VRjNlLF8mCVJCvIZEKAljbq_DsHBtWDAkOpcT3qUIic-FTDhlE8nXmvl8TXDpOR7A_vV7u-i9FvgJ21CiDphArhfpvNe-MP4EGpTEBilI5dMmxHoS3hFrgBNqwmdsOKDnyk9D2LNnJ4yOwCuMUpiE9ObHh_h9-abTk0hN8QU_cIZVfYgwSY_H1K10x9P1fCpj1V89IV0pnpnGGpq_U7lAELkh9MaOXY0K9ZJNvbpWK0IbpSqvc1RXEvYHuzJ8B92GBFV5CQI0zFVjZ7yqhHjTJU6Xi9dTQB&c=-dWroe7uJ5dztW9ie_3PS8KEZZUJ0kBAmSK6TrJ5-7CH-UpzIgk9LA==&ch=rDEU0uvQa-mzFS28D29BXm5Fnja5wKwMgNaVM240Cwl3rColVVSh6Q== Click to follow link.")
+
+**Vamos:**_A travel platform designed for remote teams to simplify the complexities of group travel._[Learn More.](https://today.uconn.edu/2024/09/startup-vamos-seeks-to-help-companies-thrive-even-when-their-employees-live-thousands-of-miles-apart/ "Original URL: https://r20.rs6.net/tn.jsp?f=0013EcavGnh9_cgO9fkXNCW2iJASjUzvGlfx5NJtd3J9yjXYd5qXt-22jg2gbqw44U7FGgsoTD_7nAu14CIQBqE8ma6XuFWXZtdPIx_By-JyY5kPlLFBelELHEiFAQoGH0SukAx1VzLr-h079F7lMQt5nB25QLdWYLA-0Ebq915KZsib1Zd5ua1Utrcfu31wE3A49-ppp1HpTgZv_bgPKTvnqy4QJ1-5Jpnwarg32CzCSnEqAC9LblUtjjxUuxZf2AZhhld-3IDFJ3KzcmebOgTiD565fQ-z9PB&c=-dWroe7uJ5dztW9ie_3PS8KEZZUJ0kBAmSK6TrJ5-7CH-UpzIgk9LA==&ch=rDEU0uvQa-mzFS28D29BXm5Fnja5wKwMgNaVM240Cwl3rColVVSh6Q== Click to follow link.")
+
+**WheelPrice:**_A two-sided marketplace for car enthusiasts to buy and sell automotive parts on the second-hand market._[Learn More.](https://today.uconn.edu/2024/09/uconn-alumni-car-fanatics-creating-marketplace-for-second-hand-auto-parts/ "Original URL: https://r20.rs6.net/tn.jsp?f=0013EcavGnh9_cgO9fkXNCW2iJASjUzvGlfx5NJtd3J9yjXYd5qXt-22qgsdDgOanYhGTo_9cm-qPp-xitJhoxb5dM9xBDfgu4Cv_TacZ9LErQwiqTvLyZdgEa3FCduo4k6SvHnVyjoioWXMPyU45qgGLcnul3AX87P9c-nxTxuXarTq8uqaqzNSwbssX4yxWsEET8Q9wDpxNfAx58lOdsIn_0XvN9HOzsQo4pWLqZ-YVMn5usx7AjXVNhZVjKVs_wmaO_zOrBWG4TUv5IOSLXujALsAmPVljts_Uqym4jsCiElN3qD23O4RQ==&c=-dWroe7uJ5dztW9ie_3PS8KEZZUJ0kBAmSK6TrJ5-7CH-UpzIgk9LA==&ch=rDEU0uvQa-mzFS28D29BXm5Fnja5wKwMgNaVM240Cwl3rColVVSh6Q== Click to follow link.")
+
+## 2023
+
+**Andros:**_Ammonia synthesis reactors that are cheaper, safer, and more energy efficient than the traditional reactor._[Learn More.](https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fr20.rs6.net%2Ftn.jsp%3Ff%3D0013EcavGnh9_cgO9fkXNCW2iJASjUzvGlfx5NJtd3J9yjXYd5qXt-22uMGRt_djUpns-VC0WsVDBoknGv7bcoSKsHE2to5Sd2H0E-BUgouX3xFwLO4oJUySOp8MVRG9XU-_BqEi_w5TJI8S3zUZv9SV_ws_-w4e0hUL6VInrqFEc0Vjk9HqWsS10GpE_fzCnFoK_u0V85uR74AQ_97QONGbbs1xXc0RR7Tx-AQ8Lszwb4qUslkrqfcfmTjOYkq-_IzKXDmjVkWRs0TmW564nl0rA%3D%3D%26c%3D-dWroe7uJ5dztW9ie_3PS8KEZZUJ0kBAmSK6TrJ5-7CH-UpzIgk9LA%3D%3D%26ch%3DrDEU0uvQa-mzFS28D29BXm5Fnja5wKwMgNaVM240Cwl3rColVVSh6Q%3D%3D&data=05%7C01%7Ckate.savinelli%40uconn.edu%7Cc16c93109d274ba4d66508dbce628732%7C17f1a87e2a254eaab9df9d439034b080%7C0%7C0%7C638330694806849773%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=ErKSCJQME4TxiMRuLGHhnBzXj4js6oXpWRnL3wWxu%2Bg%3D&reserved=0 "Original URL: https://r20.rs6.net/tn.jsp?f=0013EcavGnh9_cgO9fkXNCW2iJASjUzvGlfx5NJtd3J9yjXYd5qXt-22uMGRt_djUpns-VC0WsVDBoknGv7bcoSKsHE2to5Sd2H0E-BUgouX3xFwLO4oJUySOp8MVRG9XU-_BqEi_w5TJI8S3zUZv9SV_ws_-w4e0hUL6VInrqFEc0Vjk9HqWsS10GpE_fzCnFoK_u0V85uR74AQ_97QONGbbs1xXc0RR7Tx-AQ8Lszwb4qUslkrqfcfmTjOYkq-_IzKXDmjVkWRs0TmW564nl0rA==&c=-dWroe7uJ5dztW9ie_3PS8KEZZUJ0kBAmSK6TrJ5-7CH-UpzIgk9LA==&ch=rDEU0uvQa-mzFS28D29BXm5Fnja5wKwMgNaVM240Cwl3rColVVSh6Q== Click to follow link.")
+
+**Feel Your Best Self:**_Offering caregivers fun, easy-to-use products to help kids build emotion-focused coping skills to calm themselves, catch their feelings, and connect with others._[Learn More.](https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fr20.rs6.net%2Ftn.jsp%3Ff%3D0013EcavGnh9_cgO9fkXNCW2iJASjUzvGlfx5NJtd3J9yjXYd5qXt-22mRCYAJjobsUiRNYYn3XD7nH8aMbAsiWMtZy_16m57Yb3VQfwk9wB9Ggb0bO6qywZCJHudn6-agc3F5gTdwKGhDiEGb6_zU9STADNjYqPVR6Xs9MC9tNXB8BbdZjFQ0sxi0vXKALpor1VPh_M4V5wCWtZ_4w13PJZNHiBoQWT1uq7CKhzDUTU_IX3Cu7GNuLdSdCzIKKsVfVtwN6e_DpejlkrLpQ0MdkFwX6tnto5cjOFR0coRuOUPSI0uEyRlv1mm3pTa9xvJ3gohpV-VvHJE27TolwXuA9iR3WSTil6wFs8c61Lhw3zxLLUN679Iifoo0Qddm_Oskg%26c%3D-dWroe7uJ5dztW9ie_3PS8KEZZUJ0kBAmSK6TrJ5-7CH-UpzIgk9LA%3D%3D%26ch%3DrDEU0uvQa-mzFS28D29BXm5Fnja5wKwMgNaVM240Cwl3rColVVSh6Q%3D%3D&data=05%7C01%7Ckate.savinelli%40uconn.edu%7Cc16c93109d274ba4d66508dbce628732%7C17f1a87e2a254eaab9df9d439034b080%7C0%7C0%7C638330694806849773%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=Cuw8ubpZitTd0KFqF0aPfOVU5Jr9dV0bvFv3fhN7Cwc%3D&reserved=0 "https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fr20.rs6.net%2Ftn.jsp%3Ff%3D0013EcavGnh9_cgO9fkXNCW2iJASjUzvGlfx5NJtd3J9yjXYd5qXt-22mRCYAJjobsUiRNYYn3XD7nH8aMbAsiWMtZy_16m57Yb3VQfwk9wB9Ggb0bO6qywZCJHudn6-agc3F5gTdwKGhDiEGb6_zU9STADNjYqPVR6Xs9MC9tNXB8BbdZjFQ0sxi0vXKALpor1VPh_M4V5wCWtZ_4w13PJZNHiBoQWT1uq7CKhzDUTU_IX3Cu7GNuLdSdCzIKKsVfVtwN6e_DpejlkrLpQ0MdkFwX6tnto5cjOFR0coRuOUPSI0uEyRlv1mm3pTa9xvJ3gohpV-VvHJE27TolwXuA9iR3WSTil6wFs8c61Lhw3zxLLUN679Iifoo0Qddm_Oskg%26c%3D-dWroe7uJ5dztW9ie_3PS8KEZZUJ0kBAmSK6TrJ5-7CH-UpzIgk9LA%3D%3D%26ch%3DrDEU0uvQa-mzFS28D29BXm5Fnja5wKwMgNaVM240Cwl3rColVVSh6Q%3D%3D&data=05%7C01%7Ckate.savinelli%40uconn.edu%7Cc16c93109d274ba4d66508dbce628732%7C17f1a87e2a254eaab9df9d439034b080%7C0%7C0%7C638330694806849773%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=Cuw8ubpZitTd0KFqF0aPfOVU5Jr9dV0bvFv3fhN7Cwc%3D&reserved=0")
+
+**Mud Rat:**_The world’s first eco-friendly surfboard core._[Learn More.](https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fr20.rs6.net%2Ftn.jsp%3Ff%3D0013EcavGnh9_cgO9fkXNCW2iJASjUzvGlfx5NJtd3J9yjXYd5qXt-22vqqkAsXnkhrLBiRXvWdWSa7F3i5S8tijXMWbda1ol-X2VRjNlLF8mCVJCvIZEKAljbq_DsHBtWDAkOpcT3qUIic-FTDhlE8nXmvl8TXDpOR7A_vV7u-i9FvgJ21CiDphArhfpvNe-MP4EGpTEBilI5dMmxHoS3hFrgBNqwmdsOKDnyk9D2LNnJ4yOwCuMUpiE9ObHh_h9-abTk0hN8QU_cIZVfYgwSY_H1K10x9P1fCpj1V89IV0pnpnGGpq_U7lAELkh9MaOXY0K9ZJNvbpWK0IbpSqvc1RXEvYHuzJ8B92GBFV5CQI0zFVjZ7yqhHjTJU6Xi9dTQB%26c%3D-dWroe7uJ5dztW9ie_3PS8KEZZUJ0kBAmSK6TrJ5-7CH-UpzIgk9LA%3D%3D%26ch%3DrDEU0uvQa-mzFS28D29BXm5Fnja5wKwMgNaVM240Cwl3rColVVSh6Q%3D%3D&data=05%7C01%7Ckate.savinelli%40uconn.edu%7Cc16c93109d274ba4d66508dbce628732%7C17f1a87e2a254eaab9df9d439034b080%7C0%7C0%7C638330694807005999%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=%2BjmiOi635fjEcexLf1TWLXzz5bo0ag5b%2Bep9ez5YRT4%3D&reserved=0 "Original URL: https://r20.rs6.net/tn.jsp?f=0013EcavGnh9_cgO9fkXNCW2iJASjUzvGlfx5NJtd3J9yjXYd5qXt-22vqqkAsXnkhrLBiRXvWdWSa7F3i5S8tijXMWbda1ol-X2VRjNlLF8mCVJCvIZEKAljbq_DsHBtWDAkOpcT3qUIic-FTDhlE8nXmvl8TXDpOR7A_vV7u-i9FvgJ21CiDphArhfpvNe-MP4EGpTEBilI5dMmxHoS3hFrgBNqwmdsOKDnyk9D2LNnJ4yOwCuMUpiE9ObHh_h9-abTk0hN8QU_cIZVfYgwSY_H1K10x9P1fCpj1V89IV0pnpnGGpq_U7lAELkh9MaOXY0K9ZJNvbpWK0IbpSqvc1RXEvYHuzJ8B92GBFV5CQI0zFVjZ7yqhHjTJU6Xi9dTQB&c=-dWroe7uJ5dztW9ie_3PS8KEZZUJ0kBAmSK6TrJ5-7CH-UpzIgk9LA==&ch=rDEU0uvQa-mzFS28D29BXm5Fnja5wKwMgNaVM240Cwl3rColVVSh6Q== Click to follow link.")
+
+**Particle N:**_A cost-effective way to use precious metals in catalysts and similar mechanisms._[Learn More.](https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fr20.rs6.net%2Ftn.jsp%3Ff%3D0013EcavGnh9_cgO9fkXNCW2iJASjUzvGlfx5NJtd3J9yjXYd5qXt-22jg2gbqw44U7FGgsoTD_7nAu14CIQBqE8ma6XuFWXZtdPIx_By-JyY5kPlLFBelELHEiFAQoGH0SukAx1VzLr-h079F7lMQt5nB25QLdWYLA-0Ebq915KZsib1Zd5ua1Utrcfu31wE3A49-ppp1HpTgZv_bgPKTvnqy4QJ1-5Jpnwarg32CzCSnEqAC9LblUtjjxUuxZf2AZhhld-3IDFJ3KzcmebOgTiD565fQ-z9PB%26c%3D-dWroe7uJ5dztW9ie_3PS8KEZZUJ0kBAmSK6TrJ5-7CH-UpzIgk9LA%3D%3D%26ch%3DrDEU0uvQa-mzFS28D29BXm5Fnja5wKwMgNaVM240Cwl3rColVVSh6Q%3D%3D&data=05%7C01%7Ckate.savinelli%40uconn.edu%7Cc16c93109d274ba4d66508dbce628732%7C17f1a87e2a254eaab9df9d439034b080%7C0%7C0%7C638330694807005999%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=Regz0d8tu1oX948A40CdXKCvQ8pxoSX7yK7sTyvMHk8%3D&reserved=0 "Original URL: https://r20.rs6.net/tn.jsp?f=0013EcavGnh9_cgO9fkXNCW2iJASjUzvGlfx5NJtd3J9yjXYd5qXt-22jg2gbqw44U7FGgsoTD_7nAu14CIQBqE8ma6XuFWXZtdPIx_By-JyY5kPlLFBelELHEiFAQoGH0SukAx1VzLr-h079F7lMQt5nB25QLdWYLA-0Ebq915KZsib1Zd5ua1Utrcfu31wE3A49-ppp1HpTgZv_bgPKTvnqy4QJ1-5Jpnwarg32CzCSnEqAC9LblUtjjxUuxZf2AZhhld-3IDFJ3KzcmebOgTiD565fQ-z9PB&c=-dWroe7uJ5dztW9ie_3PS8KEZZUJ0kBAmSK6TrJ5-7CH-UpzIgk9LA==&ch=rDEU0uvQa-mzFS28D29BXm5Fnja5wKwMgNaVM240Cwl3rColVVSh6Q== Click to follow link.")
+
+**PUURE:**_An intimate apparel brand creating underwear made of organic and nontoxic materials that promote feminine wellness._[Learn More.](https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fr20.rs6.net%2Ftn.jsp%3Ff%3D0013EcavGnh9_cgO9fkXNCW2iJASjUzvGlfx5NJtd3J9yjXYd5qXt-22qgsdDgOanYhGTo_9cm-qPp-xitJhoxb5dM9xBDfgu4Cv_TacZ9LErQwiqTvLyZdgEa3FCduo4k6SvHnVyjoioWXMPyU45qgGLcnul3AX87P9c-nxTxuXarTq8uqaqzNSwbssX4yxWsEET8Q9wDpxNfAx58lOdsIn_0XvN9HOzsQo4pWLqZ-YVMn5usx7AjXVNhZVjKVs_wmaO_zOrBWG4TUv5IOSLXujALsAmPVljts_Uqym4jsCiElN3qD23O4RQ%3D%3D%26c%3D-dWroe7uJ5dztW9ie_3PS8KEZZUJ0kBAmSK6TrJ5-7CH-UpzIgk9LA%3D%3D%26ch%3DrDEU0uvQa-mzFS28D29BXm5Fnja5wKwMgNaVM240Cwl3rColVVSh6Q%3D%3D&data=05%7C01%7Ckate.savinelli%40uconn.edu%7Cc16c93109d274ba4d66508dbce628732%7C17f1a87e2a254eaab9df9d439034b080%7C0%7C0%7C638330694807005999%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=MVrjCRElFlV4iK31QcKDjwMWwvIceIFcO8c4jfOixfE%3D&reserved=0 "Original URL: https://r20.rs6.net/tn.jsp?f=0013EcavGnh9_cgO9fkXNCW2iJASjUzvGlfx5NJtd3J9yjXYd5qXt-22qgsdDgOanYhGTo_9cm-qPp-xitJhoxb5dM9xBDfgu4Cv_TacZ9LErQwiqTvLyZdgEa3FCduo4k6SvHnVyjoioWXMPyU45qgGLcnul3AX87P9c-nxTxuXarTq8uqaqzNSwbssX4yxWsEET8Q9wDpxNfAx58lOdsIn_0XvN9HOzsQo4pWLqZ-YVMn5usx7AjXVNhZVjKVs_wmaO_zOrBWG4TUv5IOSLXujALsAmPVljts_Uqym4jsCiElN3qD23O4RQ==&c=-dWroe7uJ5dztW9ie_3PS8KEZZUJ0kBAmSK6TrJ5-7CH-UpzIgk9LA==&ch=rDEU0uvQa-mzFS28D29BXm5Fnja5wKwMgNaVM240Cwl3rColVVSh6Q== Click to follow link.")
+
+**Swipestorm:**_Offering digital solutions for restaurant management, specifically tailored to quick-service restaurants. Their software suite replaces paper-based systems and generic software, and provides valuable insights for owners and managers._[Learn More.](https://nam10.safelinks.protection.outlook.com/?url=https%3A%2F%2Fr20.rs6.net%2Ftn.jsp%3Ff%3D0013EcavGnh9_cgO9fkXNCW2iJASjUzvGlfx5NJtd3J9yjXYd5qXt-22skosEiH3dF--JE3-mBBQsyGSWfoXo4xqWvsKADafWfRQZE7R0dmrfQXG471jwF_KV2hf0OuPiFyj8DawqTXT5Zbr1Re9s0hCWUo6cqk7qp2Ff3Amierz6604G_EqfiswEVx0toa0nzKttwlfN51f-OUxeP5rd0VzZJ8zcPAK1at8iu4xrFtoaPQ0uQP6sadOoGybE3mu-jvV_eEIXrsyGc06ZMM_i-ImXT16ZXYlJTqbgqy27oh7HIEDDRQXzrYeGkcFfAPuC2VJcTFy-GxTkaKjtlj2EVGS7r7Vdgo85iCSWx4-j0lij80auKfYXafF-MNgZa4DTdK4ZAn3y-bos0%3D%26c%3D-dWroe7uJ5dztW9ie_3PS8KEZZUJ0kBAmSK6TrJ5-7CH-UpzIgk9LA%3D%3D%26ch%3DrDEU0uvQa-mzFS28D29BXm5Fnja5wKwMgNaVM240Cwl3rColVVSh6Q%3D%3D&data=05%7C01%7Ckate.savinelli%40uconn.edu%7Cc16c93109d274ba4d66508dbce628732%7C17f1a87e2a254eaab9df9d439034b080%7C0%7C0%7C638330694807005999%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=1c256yDXBNdL2KJILALovjMR1zbN1ZtVzS%2Bx1Nlktlk%3D&reserved=0 "Original URL: https://r20.rs6.net/tn.jsp?f=0013EcavGnh9_cgO9fkXNCW2iJASjUzvGlfx5NJtd3J9yjXYd5qXt-22skosEiH3dF--JE3-mBBQsyGSWfoXo4xqWvsKADafWfRQZE7R0dmrfQXG471jwF_KV2hf0OuPiFyj8DawqTXT5Zbr1Re9s0hCWUo6cqk7qp2Ff3Amierz6604G_EqfiswEVx0toa0nzKttwlfN51f-OUxeP5rd0VzZJ8zcPAK1at8iu4xrFtoaPQ0uQP6sadOoGybE3mu-jvV_eEIXrsyGc06ZMM_i-ImXT16ZXYlJTqbgqy27oh7HIEDDRQXzrYeGkcFfAPuC2VJcTFy-GxTkaKjtlj2EVGS7r7Vdgo85iCSWx4-j0lij80auKfYXafF-MNgZa4DTdK4ZAn3y-bos0=&c=-dWroe7uJ5dztW9ie_3PS8KEZZUJ0kBAmSK6TrJ5-7CH-UpzIgk9LA==&ch=rDEU0uvQa-mzFS28D29BXm5Fnja5wKwMgNaVM240Cwl3rColVVSh6Q== Click to follow link.")
+
+## 2022
+
+****Appoint**:**_Software that removes the burdens of overly complicated nursing clinical schedules and the stress of creating them._[Learn More.](https://today.uconn.edu/2022/09/it-shouldnt-have-to-be-so-hard-uconn-team-creates-software-to-revolutionize-nursing-clinical-scheduling/)
+
+**Genesist:**_An RNA-based reagent that can make the healthy tissue surrounding a tumor in patients' body more resistive against breast cancer metastasis._
+
+**Lactation Innovations:**_Providing critical insights of how much breastmilk an infant has ingested, while increasing the mother's confidence in breastfeeding._[L](https://today.uconn.edu/2021/09/the-next-inning-students-company-prepares-to-sell-new-iteration-of-baseball-training-invention/)[earn](https://today.uconn.edu/2022/10/school-of-business-honors-entrepreneurs-who-are-going-to-change-the-world/)[M](https://today.uconn.edu/2021/09/the-next-inning-students-company-prepares-to-sell-new-iteration-of-baseball-training-invention/)[ore.](https://today.uconn.edu/2021/09/the-next-inning-students-company-prepares-to-sell-new-iteration-of-baseball-training-invention/)
+
+**RiboDynamics**: _Aiming to develop technology for the detection of pathogens in biological material based on the presence of specific RNA biomarkers._[Learn More.](https://today.uconn.edu/2022/09/startups-new-technology-could-create-faster-less-expensive-and-better-way-to-identify-disease/)
+
+**ShadeSnap:**_Giving prescription glasses the ability to tint and un-tint on demand._[Learn More.](https://today.uconn.edu/2022/09/undergrads-eyewear-startup-could-take-students-from-cool-to-school-in-mere-seconds/?utm_source=faculty-staff-daily-digest&utm_medium=email&utm_campaign=daily)
+
+## 2021
+
+****Queen Bee**:**_An all-natural beverage made by mixing royal jelly from beehives with ginger and turmeric._[Learn More.](https://today.uconn.edu/2021/09/uconn-student-entrepreneur-sells-her-queenbee-supplement-at-newest-ct-whole-foods-market/)
+
+****ELEA (Engagement Solutions):****_**Offering a lifeline to families trying to access special education services.**_[Learn More.](https://today.uconn.edu/2021/09/startup-offering-lifeline-to-families-trying-to-access-special-education-services/)
+
+**ProVelocityBat:**_A new iteration and invention in baseball training._[L](https://today.uconn.edu/2021/09/the-next-inning-students-company-prepares-to-sell-new-iteration-of-baseball-training-invention/)[earn](https://today.uconn.edu/2021/09/the-next-inning-students-company-prepares-to-sell-new-iteration-of-baseball-training-invention/)[M](https://today.uconn.edu/2021/09/the-next-inning-students-company-prepares-to-sell-new-iteration-of-baseball-training-invention/)[ore.](https://today.uconn.edu/2021/09/the-next-inning-students-company-prepares-to-sell-new-iteration-of-baseball-training-invention/)
+
+**InPrint Bio:**_Offering a reconstructive breakthrough after breast surgery._[Learn More.](https://today.uconn.edu/2021/10/startup-inprint-bio-offers-reconstructive-breakthrough-after-breast-surgery/?utm_source=faculty-staff-daily-digest&utm_medium=email&utm_campaign=daily)
+
+**Reactomol**: _Striving to simplify pharmaceutical manufacturing and reduce toxic waste._[Learn More](https://today.uconn.edu/2021/10/startup-strives-to-simplify-pharmaceutical-manufacturing-reduce-toxic-waste/)
+
+## 2020
+
+****Junity**:**_A nonprofit that aims to be a connection point between underprivileged youth and guidance counselors with educational, employment and mentorship programs._[Learn More.](https://www.business.uconn.edu/2020/09/09/wolff-2020-junity/)
+
+****SedMed**:**_Creating a toilet lift assist device to help the elderly and disabled get on and off the toilet._[Learn More.](https://news.engr.uconn.edu/new-invention-from-uconn-alumni-gives-elderly-a-boost.php)
+
+****onewith**:**_A bathing suit brand that provides a smoothing, second-skin fit with the feel of seamless undergarments._[Learn More.](https://www.business.uconn.edu/2020/09/22/alumna-entrepreneur-hopes-to-make-a-splash-with-revamped-flattering-womens-swimwear/)
+
+****Pisces Atlantic**:** F _ish food based on the belief that the fish people consume should be fed healthy ingredients._[Learn More.](https://news.engr.uconn.edu/new-invention-from-uconn-alumni-gives-elderly-a-boost.php)
+
+****Veradermics:****_A revolutionary treatment that eliminates warts by delivering precise wart-busting medication via a micro-needle patch similar to a bandage._[Learn More.](https://news.engr.uconn.edu/new-invention-from-uconn-alumni-gives-elderly-a-boost.php)
+
+## 2019
+
+**Aqualumos (formerly Geyser Remediation):**_A remediation system that breaks down PFAS in drinking water._[Learn More](https://ccei.uconn.edu/2019/07/09/summer-fellowship-feature-geyser-remediation/).
+
+**Land Maverick:**_A soil-sampling rover that can test soil moisture, pH, and overall nutrient level creating precise and organized measurements to maintain soil quality._[Learn More.](https://today.uconn.edu/2019/10/better-turf-management-root-student-innovation/)
+
+**Levo International:**_Sustainable produce for suburban families and using the proceeds to increase food stability in other countries through a self-contained growing system._[Learn More](https://today.uconn.edu/2020/11/one-pond-time-uconn-affiliated-startup-looking-revolutionize-mining-industry/).
+
+**Nami Therapeutics****:**_Providing advanced cancer treatments to fulfill the unmet needs of patients, partnering with pharmaceutical companies to minimize product-toxicity while maximizing effectiveness._[Learn More](https://news.engr.uconn.edu/new-invention-from-uconn-alumni-gives-elderly-a-boost.php).
+
+**Phoenix Tailings****:**_Recycling industrial mining waste, producing usable material for other industries._[Learn More](https://today.uconn.edu/2020/11/one-pond-time-uconn-affiliated-startup-looking-revolutionize-mining-industry/).
+
+## 2018
+
+**Encapsulate:**_A diagnosis device to determine personalized treatment for cancer._[Learn More.](https://encapsulate.bio/)
+
+**MycoZap:**_A plant-derived antimicrobial treatment for illness in cattle caused by microplasma bovis._
+
+**Bastion Health (formerly QRFertile):**_An in-home device to measure male fertility._[Learn More](https://today.uconn.edu/2018/10/male-fertility-test-developers-win-venture-competition/).
+
+**Stemify.AI (formerly Savkar.AI):**_A predictive analytics platform for student retention in STEM fields._
+
+**WellTech:**_Tablet application to assist healthcare providers in collecting patient information to improve quality measurement._
+
+## 2017
+
+**Eir Medical Devices:**_Developing a device designed to help physicians measure patients’ blood viscosity, a traditionally un-used, but promising indicator of cardiac risk, and health for patients on dialysis and certain types of cancers._
+
+**Hans Health:**_Developing a new way to provide doctors with information about the specific type of mutations causing an individual patient’s form of cancer._[Learn More](https://today.uconn.edu/2018/01/removing-immunotherapy-blindfold-using-individual-immune-response-guide-cancer-treatment/).
+
+**NataSure:**_Developing a device that will replace in the treatment of cervical insufficiency, a condition that causes prevent premature birth due and miscarriage._
+
+**Potentiometric Probes:**_Creating a voltage-sensitive dye that can help medical researchers and pharmaceutical companies study electrical conductivity in cells, and test for dangerous cardiac side effects while new prescription drugs are in development._[Learn More.](https://today.uconn.edu/2018/11/uconn-startup-wins-rd-grant-voltage-sensitive-dyes/)
+
+**Quantum Purification:**_Developing a filtration process to help producers of biogas – a renewable natural gas – remove damaging and toxic byproducts more cost efficiently than current solutions that limit its production and adoption as a reliable form of alternative energy._
+
+## 2016
+
+**Eleframes:**_Free-form, interlocking, easy-to-mount and remove photograph displays that makes story-telling beautiful._
+
+**EVA Systems:**_Measuring contaminant levels in water using a process called “passive sampling” that provides a better picture of the overall health of the body of water and with faster, more consistent results._
+
+**LambdaVision:**_Developing a protein-based retinal implant for the treatment of blinding degenerative diseases._[Learn More.](https://www.lambdavision.com/)
+
+**Oral Fluid Dynamics:**_Developed to solve the medical problem of dry mouth through the use of an artificial salivary gland that is implanted in the mouth of the patient._
+
+**Protectiscope:**_Improving stethoscope hygiene in healthcare settings using a wall-mounted dispenser that houses a film roll applied via hands-free application._
+
+### **The Wolff New Venture Competition is proudly supported by:**
+
+The Wolff Prize is made possible through the generosity of the Wolff Family and their longstanding commitment to UConn, the School of Business, and the entrepreneurs of tomorrow. That commitment began with Thomas John Wolff (1928–2008) and Bette Wolff (1929–2026), whose belief in entrepreneurship and education established a lasting legacy at UConn. Today, their children, Greg Wolff, Gary Wolff, and Deb Davis, and grandchildren, Keith Wolff and Kristina Singh, remain actively involved in supporting the Prize and creating opportunities for the next generation of entrepreneurs.
+
+If you are a company/organization interested in partnering or sponsoring this annual event, or are a UConn-affiliated startup interested in tabling during the showcase, please email [alycia.chrosniak@uconn.edu](mailto:alycia.chrosniak@uconn.edu).
+
+![Image 23:  ](https://ccei.media.uconn.edu/wp-content/uploads/sites/2149/2024/04/CCEI-stacked_blue.png)
+
+**Connecticut Center for Entrepreneurship and Innovation (CCEI)**100 Constitution Plaza, 3rd Floor, Hartford, CT 06103  
+ 2100 Hillside Road, Suite 121, Unit 1041, Storrs, CT 06269
+
+[Maps & Directions](https://maps.uconn.edu/)
+
+[ccei@uconn.edu](mailto:ccei@uconn.edu)
+
+[SUBSCRIBE TO OUR NEWSLETTER](https://lp.constantcontactpages.com/su/ijoDHYe/CCEIemail)
+
+[DONATE TO CCEI](https://www.foundation.uconn.edu/fund/ct-center-for-entrepreneurship-innovation/)
+
+[](https://www.linkedin.com/company/connecticutcenterforentrepreneurshipandinnovation "Connecticut Center for Entrepreneurship and Innovation on Linkedin")[](https://instagram.com/uconnccei "Connecticut Center for Entrepreneurship and Innovation on Instagram")[](https://twitter.com/uconnccei "Connecticut Center for Entrepreneurship and Innovation on X Twitter")[](https://www.tiktok.com/ "https://www.tiktok.com/@uconnccei")[](https://www.youtube.com/@uconnccei1023 "Connecticut Center for Entrepreneurship and Innovation on Youtube")
+
+*    © [University of Connecticut](http://uconn.edu/)
+*   [Disclaimers, Privacy & Copyright](http://uconn.edu/disclaimers-privacy-copyright/)
+*   [Accessibility](https://accessibility.uconn.edu/)
+*   [Webmaster Login](https://ccei.uconn.edu/wp-admin/)
+
+![Image 24](blob:http://localhost/b9e987a272c686435003c6d00d67a555)![Image 25](blob:http://localhost/a3fe276fe6e4f79d330a3096f4cd719f)Download alternative formats ...

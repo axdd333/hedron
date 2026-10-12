@@ -1,0 +1,269 @@
+URL: https://www.nsf.gov/funding/initiatives/i-corps/lemma-applicants
+FETCHED_VIA: jina 200
+
+Title: Page Not Found
+
+URL Source: https://www.nsf.gov/funding/initiatives/i-corps/lemma-applicants
+
+Warning: Target URL returned error 404: Not Found
+
+Markdown Content:
+[Skip to main content](https://www.nsf.gov/funding/initiatives/i-corps/lemma-applicants#content-wrap)[Skip to feedback form](https://www.nsf.gov/funding/initiatives/i-corps/lemma-applicants#fba-button)
+
+![Image 1](https://nsf-gov-resources.nsf.gov/unified-nav/us_flag_small.png)
+
+An official website of the United States government
+
+Here's how you know
+
+Here's how you know
+
+![Image 2](https://nsf-gov-resources.nsf.gov/unified-nav/icon-dot-gov.svg)
+
+**Official websites use .gov**  
+ A **.gov** website belongs to an official government organization in the United States.
+
+![Image 3](https://nsf-gov-resources.nsf.gov/unified-nav/icon-https.svg)
+
+**Secure .gov websites use HTTPS.**  
+ A **lock** () or **https://** means you've safely connected to the .gov website. Share sensitive information only on official, secure websites.
+
+NSF has implemented several system changes. [Learn about impacts](https://www.research.gov/research-web/content/codeupdate "https://www.research.gov/research-web/content/codeupdate") to NSF Award Search and Research.gov.
+
+[![Image 4: NSF - U.S. National Science Foundation - Home](https://nsf-gov-resources.nsf.gov/unified-nav/logo-desktop.png)![Image 5](https://nsf-gov-resources.nsf.gov/unified-nav/logo-wordmark.svg)](https://www.nsf.gov/)
+
+ Search Menu
+
+![Image 6: Close navigation](https://nsf-gov-resources.nsf.gov/unified-nav/close-base-darkest.svg)
+
+Search search  
+  
+
+*   Find Funding
+
+    *           *   [Funding Search](https://www.nsf.gov/funding/opportunities)
+        *   [Award Search](https://www.nsf.gov/awardsearch/)
+        *   [NSF-wide Initiatives](https://www.nsf.gov/funding/initiatives)
+        *   [Research Experiences for Undergraduates](https://www.nsf.gov/funding/initiatives/reu)
+
+    *   Where to Start
+        *   [For Everyone](https://www.nsf.gov/funding/getting-started)
+        *   [For Early-Career Researchers](https://www.nsf.gov/funding/early-career-researchers)
+        *   [For Postdoctoral Fellows](https://www.nsf.gov/funding/postdocs)
+        *   [For Graduate Students](https://www.nsf.gov/funding/graduate-students)
+        *   [For Undergraduates](https://www.nsf.gov/funding/undergraduates)
+        *   [For Industry](https://www.nsf.gov/funding/industry)
+        *   [For Entrepreneurs](https://www.nsf.gov/funding/entrepreneurs)
+
+*   How to Apply
+
+    *           *   [Preparing Your Proposal](https://www.nsf.gov/funding/preparing-proposal)
+        *   [Submitting Your Proposal](https://www.nsf.gov/funding/submitting-proposal)
+        *   [Proposal & Award Policies & Procedures Guide (PAPPG)](https://www.nsf.gov/policies/pappg)
+
+    *   Additional Resources
+        *   [Research.gov](https://www.research.gov/research-web/)
+        *   [Grants.gov](https://www.grants.gov/)
+        *   [How We Make Funding Decisions](https://www.nsf.gov/funding/merit-review)
+
+*   Manage Your Award
+
+    *           *   [Getting Started](https://www.nsf.gov/awards)
+        *   [Request a Change to Your Award](https://www.nsf.gov/awards/request-a-change)
+        *   [Report Your Outcomes](https://www.nsf.gov/awards/report-your-outcomes)
+        *   [Proposal & Award Policies & Procedures Guide (PAPPG)](https://www.nsf.gov/policies/pappg)
+
+    *   Additional Resources
+        *   [Research.gov](https://www.research.gov/research-web/)
+        *   [NSF Public Access Repository](https://par.nsf.gov/)
+        *   [Who to Contact With Questions](https://www.nsf.gov/awards/who-to-contact)
+
+*   Focus Areas
+
+    *   Major Initiatives
+        *   [Super Intelligence](https://www.nsf.gov/focus-areas/si)
+        *   [Biotechnology](https://www.nsf.gov/focus-areas/biotechnology)
+        *   [Quantum](https://www.nsf.gov/focus-areas/quantum)
+        *   [STEM Workforce](https://www.nsf.gov/focus-areas/workforce)
+
+    *   Focus Areas
+
+        *   [Explore All Focus Areas](https://www.nsf.gov/focus-areas)
+        *   [Arctic and Antarctic](https://www.nsf.gov/focus-areas/arctic-antarctic)
+        *   [Astronomy and Space](https://www.nsf.gov/focus-areas/astronomy-space)
+        *   [Biology](https://www.nsf.gov/focus-areas/biology)
+        *   [Chemistry](https://www.nsf.gov/focus-areas/chemistry)
+        *   [Computing](https://www.nsf.gov/focus-areas/computing)
+        *   [Earth and Environment](https://www.nsf.gov/focus-areas/earth-environment)
+        *   [Education and Training](https://www.nsf.gov/focus-areas/education)
+
+        *   [Engineering](https://www.nsf.gov/focus-areas/engineering)
+        *   [Facilities and Infrastructure](https://www.nsf.gov/focus-areas/infrastructure)
+        *   [Materials Research](https://www.nsf.gov/focus-areas/materials)
+        *   [Mathematics](https://www.nsf.gov/focus-areas/mathematics)
+        *   [People and Society](https://www.nsf.gov/focus-areas/people-society)
+        *   [Physics](https://www.nsf.gov/focus-areas/physics)
+        *   [Research Partnerships](https://www.nsf.gov/focus-areas/research-partnerships)
+        *   [Technology](https://www.nsf.gov/focus-areas/technology)
+
+*   News & Events
+
+    *           *   [News & Announcements](https://www.nsf.gov/news)
+        *   [NSF Impacts](https://www.nsf.gov/impacts)
+        *   [Science Matters Blog](https://www.nsf.gov/science-matters)
+        *   [For the Press](https://www.nsf.gov/news/media-toolkits)
+
+    *           *   [Upcoming Events](https://www.nsf.gov/events)
+
+*   About
+
+    *   [About NSF](https://www.nsf.gov/about)
+        *   [Careers at NSF](https://www.nsf.gov/careers)
+        *   [Updates on NSF Priorities](https://www.nsf.gov/updates-on-priorities)
+        *   [Contact Us](https://www.nsf.gov/about/contact-us)
+
+    *   Our Directorates & Offices
+
+        *   [How NSF Is Organized](https://www.nsf.gov/about/directorates-offices)
+        *   [Biological Sciences (BIO)](https://www.nsf.gov/bio)
+        *   [Computer & Information Science & Engineering (CISE)](https://www.nsf.gov/cise)
+        *   [Engineering (ENG)](https://www.nsf.gov/eng)
+        *   [Geosciences (GEO)](https://www.nsf.gov/geo)
+        *   [Integrative Activities (OIA)](https://www.nsf.gov/od/oia)
+        *   [International Science & Engineering (OISE)](https://www.nsf.gov/od/oise)
+
+        *   [Mathematical & Physical Sciences (MPS)](https://www.nsf.gov/mps)
+        *   [Social, Behavioral & Economic Sciences (SBE)](https://www.nsf.gov/sbe)
+        *   [STEM Education (EDU)](https://www.nsf.gov/edu)
+        *   [Technology, Innovation & Partnerships (TIP)](https://www.nsf.gov/tip/latest)
+        *   [National Center for Science & Engineering Statistics (NCSES)](https://ncses.nsf.gov/)
+        *   [National Science Board (NSB)](https://www.nsf.gov/nsb/)
+
+1.   [Home](https://www.nsf.gov/)
+2.   Page Not Found
+
+[](https://www.nsf.gov/funding/initiatives/i-corps/lemma-applicants)
+
+# Page Not Found
+
+We can't find the page you're looking for. It might have been removed, had its name changed, or might be temporarily unavailable.
+
+To help you find what you are looking for, please try one or more of the following:
+
+*   If you typed the page address in the address bar, make sure that you spelled it correctly.
+*   Use the search box in the upper right corner of this page to search our website.
+*   Use the site menu at the top of the page to navigate the website.
+
+To report problems with our website or to suggest improvements, please use the blue "Feedback" button found on the right edge of the page.
+
+![Image 7: Stylized illustration of a researcher looking through a pair of binoculars.](https://nsf-gov-resources.nsf.gov/styles/mobile_full_width/s3/media_hub/Field_research_1_color.png?itok=JOPxCpYB)
+
+[Top](https://www.nsf.gov/funding/initiatives/i-corps/lemma-applicants#)
+
+[![Image 8: NSF - U.S. National Science Foundation - Home](https://nsf-gov-resources.nsf.gov/unified-nav/logo-desktop.png)![Image 9](https://nsf-gov-resources.nsf.gov/unified-nav/logo-wordmark--white.svg)](https://www.nsf.gov/)
+
+Randolph Building  
+401 Dulany Street  
+Alexandria, VA 22314
+
+[(703) 292-5111](tel:(703)292-5111)
+
+[Sign up for email updates](https://service.govdelivery.com/accounts/USNSF/subscriber/new?qsp=823)
+
+*   [![Image 10: Facebook](https://nsf-gov-resources.nsf.gov/unified-nav/facebook-icon_square_32x32.png)](https://www.facebook.com/US.NSF)
+*   [![Image 11: X (formerly known as Twitter)](https://nsf-gov-resources.nsf.gov/unified-nav/x-twitter-icon_square_32x32.png)](https://x.com/NSF "X (formerly known as Twitter)")
+*   [![Image 12: Instagram](https://nsf-gov-resources.nsf.gov/unified-nav/instagram-icon_square_32x32.png)](https://www.instagram.com/nsfgov)
+*   [![Image 13: YouTube](https://nsf-gov-resources.nsf.gov/unified-nav/youtube-icon_square_32x32.png)](https://www.youtube.com/user/VideosatNSF)
+*   [![Image 14: LinkedIn](https://nsf-gov-resources.nsf.gov/unified-nav/linkedin-icon_square_32x32.png)](https://www.linkedin.com/company/national-science-foundation)
+*   [![Image 15: RSS](https://nsf-gov-resources.nsf.gov/unified-nav/nsfrss-icon_square_32x32.png)](https://nsf.gov/rss)
+
+## Footer
+
+*   ### About Us
+
+    *   [About NSF](https://www.nsf.gov/about)
+    *   [Careers](https://www.nsf.gov/careers)
+    *   [Our Directorates & Offices](https://www.nsf.gov/about/directorates-offices)
+    *   [National Science Board](https://www.nsf.gov/nsb)
+    *   [Contact Us](https://www.nsf.gov/about/contact-us)
+
+*   ### What's New
+
+    *   [News & Announcements](https://www.nsf.gov/news)
+    *   [Events](https://www.nsf.gov/events)
+    *   [Science Matters Blog](https://www.nsf.gov/science-matters)
+
+*   ### Information For
+
+    *   [Funding Seekers](https://www.nsf.gov/funding)
+    *   [NSF Awardees](https://www.nsf.gov/awards)
+    *   [Congress](https://www.nsf.gov/about/congress)
+    *   [Media](https://www.nsf.gov/news/media-toolkits)
+    *   [Educators](https://www.nsf.gov/focus-areas/education#educational-resources)
+    *   [Panelists](https://www.nsf.gov/about/meetings)
+
+*   ### Resources
+
+    *   [Documents & Reports](https://www.nsf.gov/documents-reports)
+    *   [Budget, Performance & Financial Reporting](https://www.nsf.gov/about/budget)
+    *   [Public Access](https://www.nsf.gov/public-access)
+    *   [Stopping Harassment](https://www.nsf.gov/stopping-harassment)
+    *   [Research Security](https://www.nsf.gov/research-security)
+    *   [Scientific Integrity](https://www.nsf.gov/policies/scientific-integrity)
+    *   [Research.gov](https://www.research.gov/research-web/)
+
+## Required Policy Links
+
+*   [Vulnerability disclosure](https://www.nsf.gov/policies/digital/vulnerability-disclosure)
+*   [Inspector General](https://oig.nsf.gov/home/)
+*   [Privacy](https://www.nsf.gov/policies/privacy)
+*   [FOIA](https://www.nsf.gov/policies/foia)
+*   [No FEAR Act](https://www.nsf.gov/od/ocr/no-fear-act)
+*   [USA.gov](https://www.usa.gov/)
+*   [Accessibility](https://www.nsf.gov/policies/accessibility)
+*   [Plain language](https://www.nsf.gov/policies/nsf_plain_language.jsp)
+
+Feedback
+
+![Image 16: National Science Foundation logo](https://cg-1b082c1b-3db7-477f-9ca5-bd51a786b41e.s3-us-gov-west-1.amazonaws.com/uploads/form/logo/2586/logo_square_NSF_Official_logo_High_Res_1200ppi.png)
+
+## NSF website feedback
+
+ Let us know how we're doing, and how we can make NSF.gov better for you.
+This survey is for feedback on the **NSF website experience only**. If you have questions or comments about NSF's programs, offices, staff or publications, please [visit our Contact Us page](https://www.nsf.gov/about/contact-us).
+
+A red asterisk (*) indicates a required field.
+
+### Success
+
+ Thank you for your valuable feedback. 
+
+### Error
+
+alert message
+
+ Was this page helpful to you? * 
+
+ How can we improve this page?   2500 characters allowed 
+
+ I'm a...  
+
+ The NSF website design team may want to learn more about your experience. If it is okay for us to contact you, please provide your email. 
+
+ Your email address is used solely to communicate with you about your feedback in order to improve the NSF website. NSF does not use it for any other purpose or provide it to any third parties. 
+
+ 
+
+Submit
+
+FBA Directive 
+
+* * *
+
+_A federal agency may not conduct or sponsor a collection of information unless it displays a currently valid OMB control number; the number for this is 3145-0215._
+[Privacy Act Statement for Design Research](https://www.gsa.gov/reference/gsa-privacy-program/privacy-act-statement-for-design-research)
+
+![Image 17: U.S. flag](https://touchpoints.app.cloud.gov/img/us_flag_small.png)
+
+An official form of the United States government. Provided by [Touchpoints](https://touchpoints.digital.gov/)  
+ OMB Approval #3145-0215 · Expiration Date 08/31/2026
