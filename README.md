@@ -96,6 +96,44 @@ python3 -m ugc sock        # versioned envelope: graph + program + stats
 Exit codes: `0` ok, `2` usage error or validation refusal (catalog errors
 on stderr), `1` crash.
 
+## Pipeline CLI
+
+`python3 -m ugc.cli` is the pipeline front door: the same build / validate
+/ lower / report flow as the API, one subcommand each. Every JSON payload
+is the library's own `to_dict()` shape — no renames, no re-shapes.
+
+```bash
+python3 -m ugc.cli families                          # the nine U-01 families
+python3 -m ugc.cli build sock --scale 1.5 --json     # graph (family + scale + graph.to_dict())
+python3 -m ugc.cli validate --graph my_graph.json    # full invariant catalog
+python3 -m ugc.cli plan sock --json                  # versioned lowering envelope
+python3 -m ugc.cli report sock                       # per-class buildability (§8)
+```
+
+Graph input for validate/plan/report is `--graph PATH` or
+`--graph-json JSON` (mutually exclusive); plan/report also accept a FAMILY
+argument (`sock`) built at scale 1.0. Family names are case-insensitive.
+`--json` prints machine-readable JSON on stdout; human text otherwise.
+
+Exit codes:
+
+- `0` — success;
+- `1` — the graph failed the invariant catalog: build/plan/report refuse
+  with a JSON payload carrying the exact `ValidationResult` (`errors` +
+  `findings`) and the refused slot (`"plan"` / `"report"`) set to `null`;
+- `2` — usage error: unknown family or backend, non-positive or
+  non-numeric `--scale`, missing/unreadable graph file, malformed JSON,
+  wrong graph version, malformed graph entities, bad subcommand. (Schema
+  refusals from `UGPGraph.from_dict` are input-shape problems, so a
+  negative-radius graph is `2`, while a constructible-but-disconnected
+  graph is `1` — the catalog owns graph-content verdicts.)
+- `3` — the library raised an unexpected exception (programmer bug):
+  traceback on stderr, nothing partial on stdout.
+
+Determinism holds at the CLI boundary too: same input bytes, same stdout
+bytes (`sort_keys` everywhere; nothing sourced from wall clock or dict
+order).
+
 ## Benchmark
 
 `benchmark/benchmark.py` measures what the engine actually does across
