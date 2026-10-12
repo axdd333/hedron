@@ -5,7 +5,9 @@ Reproduce every number in this file:
 ```bash
 python3 -m unittest discover            # 287 tests, all green
 python3 -c "from benchmark.loc_accounting import repo_counts, negative_path_tests as n; import pprint; pprint.pprint(repo_counts('.')); print(n('.'))"
-python3 benchmark/benchmark.py          # regenerates both reports, byte-identical to committed
+python3 -m benchmark.benchmark benchmark/report.json
+# -> ungauged report regenerated, byte-identical to the committed one
+#    (the gauged report: the two-line write_report call below)
 ```
 
 Measured at commit `ac4326a` + this results commit. No hand-typed numbers:
