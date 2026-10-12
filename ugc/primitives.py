@@ -16,7 +16,8 @@ __all__ = [
     "Primitive", "UGPGraph", "Boundary", "KnitOp", "Joint",
     "PRIMITIVE_KINDS", "JOINT_TYPES", "CONSTRUCTIONS", "ANCHOR_FEATURES",
     "OP_SET_DEFAULT_KNIT", "INARIANT_CLASSES", "TOLERANCES", "DEFAULTS",
-    "CONSUMING_OPS", "PRODUCING_OPS",
+    "CONSUMING_OPS", "PRODUCING_OPS", "RegistryError", "get_backend",
+    "add_backend", "backend_ids", "buildability_report",
 ]
 
 # --- spec v2 vocabulary (DESIGN.md §2, §4.3, §5, §6) ----------------------
@@ -1339,3 +1340,118 @@ def validate_strict(graph):
     if any(f.status == "FAIL" for f in findings):
         raise GraphValidationError(findings)
     return findings
+
+
+# ===========================================================================
+# §8 backend contract — per-class CHECKS / UNVERIFIED declarations
+# ===========================================================================
+
+class RegistryError(_BaseError, ValueError):
+    """A backend declaration does not satisfy the §8 contract."""
+
+
+class Registry(object):
+    """Backend registry. Canonical defaults are pre-seeded and cannot be
+    replaced: add_backend with an existing id creates '<id>__custom'."""
+
+    def __init__(self):
+        self._entries = {}
+        for default_id in ("default_knit", "default_sim"):
+            self._entries[default_id] = {
+                "id": default_id,
+                "checks": list(INARIANT_CLASSES),
+                "unverified": [],
+            }
+
+    def add(self, backend_id, checks, unverified):
+        checks = list(checks or [])
+        unverified = list(unverified or [])
+        declared = checks + unverified
+        if sorted(declared) != sorted(INARIANT_CLASSES):
+            raise RegistryError(
+                "backend %r must declare every invariant class exactly "
+                "once across CHECKS+UNVERIFIED (§8)" % (backend_id,))
+        overlap = set(checks) & set(unverified)
+        if overlap:
+            raise RegistryError(
+                "backend %r declares %s in both CHECKS and UNVERIFIED"
+                % (backend_id, ", ".join(sorted(overlap))))
+        final_id = (backend_id if backend_id not in self._entries
+                    else backend_id + "__custom")
+        self._entries[final_id] = {"id": final_id, "checks": checks,
+                                   "unverified": unverified}
+        return final_id
+
+    def get(self, backend_id):
+        try:
+            return self._entries[backend_id]
+        except KeyError:
+            raise RegistryError("unknown backend: %r (known: %s)"
+                                % (backend_id, ", ".join(self.ids())))
+
+    def ids(self):
+        return sorted(self._entries)
+
+
+_BACKEND_REGISTRY = Registry()
+
+
+def add_backend(backend_id, checks, unverified):
+    """Register a backend declaration (additive; see Registry)."""
+    return _BACKEND_REGISTRY.add(backend_id, checks, unverified)
+
+
+def get_backend(backend_id):
+    return _BACKEND_REGISTRY.get(backend_id)
+
+
+def backend_ids():
+    return _BACKEND_REGISTRY.ids()
+
+
+def _reset_backends():
+    """Test hook: restore the pristine pre-seeded registry."""
+    global _BACKEND_REGISTRY
+    _BACKEND_REGISTRY = Registry()
+
+
+def buildability_report(graph, backend_id):
+    """Per-invariant-class status for one backend (§8).
+
+    The core validator always runs the full set first; backend
+    declarations only say whether the backend re-verifies each class
+    during lowering (CHECKS) or trusts the upstream result (UNVERIFIED).
+    Geometric validity NEVER implies knitability (§9).
+    """
+    be = get_backend(backend_id)
+    findings = validate(graph)
+    per_class = {}
+    failing_instances = {}
+    for inv in INARIANT_CLASSES:
+        class_findings = [f for f in findings if f.invariant == inv]
+        failed = [f for f in class_findings if f.status == "FAIL"]
+        if failed:
+            per_class[inv] = "FAIL"
+            subjects = []
+            for f in failed:
+                if f.subject not in subjects:
+                    subjects.append(f.subject)
+            failing_instances[inv] = subjects
+        elif any(f.status == "UNVERIFIED" for f in class_findings):
+            per_class[inv] = "UNVERIFIED"
+        else:
+            per_class[inv] = "PASS"
+    geometric_validity = ("PASS" if all(v != "FAIL"
+                                        for v in per_class.values())
+                          else "FAIL")
+    return {
+        "backend": be["id"],
+        "geometric_validity": geometric_validity,
+        "per_class": per_class,
+        "failing_instances": failing_instances,
+        "backend_checks": list(be["checks"]),
+        "backend_unverified": list(be["unverified"]),
+        "note": ("geometric validity never implies knitability; PASS "
+                 "means the graph is well-formed per DESIGN.md §6/§9, "
+                 "nothing more"),
+    }
