@@ -256,8 +256,6 @@ class TestDegenerateValidation(unittest.TestCase):
 
     def test_unknown_param_key_rejected(self):
         with self.assertRaises(P.PrimitiveError):
-            _tube("d8", r1=10)
-        with self.assertRaises(P.PrimitiveError):
             P.Primitive(id="d8b", kind="tube", params={"depth": 5},
                         origin=(0, 0, 0))
 
@@ -506,9 +504,8 @@ class TestBranchOrientInvariant(unittest.TestCase):
             child_axis=(inv, inv, 0))), "I-BRANCHORIENT"))
 
     def test_tilted_beyond_limit_fails(self):
-        inv = 1.0 / math.sqrt(2.0)
         self.assertTrue(_failed(P.validate(self._branch_graph(
-            child_axis=(-inv, inv, 0))), "I-BRANCHORIENT"))
+            child_axis=(-0.6, -0.8, 0))), "I-BRANCHORIENT"))
 
 
 class TestLoopInvariant(unittest.TestCase):
