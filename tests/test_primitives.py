@@ -806,5 +806,78 @@ class TestGraphJsonSchema(unittest.TestCase):
         self.assertEqual(_status(P.validate(rt), "I-SEAL"), ["PASS"])
 
 
+class TestBackendContract(unittest.TestCase):
+    """§8: per-class CHECKS/UNVERIFIED declarations + registry semantics."""
+
+    def test_default_knit_backend_preseeded(self):
+        be = P.get_backend("default_knit")
+        self.assertEqual(be["id"], "default_knit")
+
+    def test_default_sim_backend_preseeded(self):
+        self.assertEqual(P.get_backend("default_sim")["id"], "default_sim")
+
+    def test_declaration_covers_exactly_the_invariant_classes(self):
+        for bid in ("default_knit", "default_sim"):
+            be = P.get_backend(bid)
+            declared = set(be["checks"]) | set(be["unverified"])
+            self.assertEqual(declared, set(P.INARIANT_CLASSES), bid)
+            overlap = set(be["checks"]) & set(be["unverified"])
+            self.assertEqual(overlap, set(), bid)
+
+    def test_default_knit_rechecks_everything(self):
+        be = P.get_backend("default_knit")
+        self.assertEqual(set(be["checks"]), set(P.INARIANT_CLASSES))
+        self.assertEqual(be["unverified"], [])
+
+    def test_add_backend_is_additive_not_replacing(self):
+        P.add_backend("default_knit", checks=[], unverified=[
+            "I-DEGENERATE", "I-SCHEMA", "I-AXIS", "I-GRAPH", "I-ANCHOR",
+            "I-RIMMATCH", "I-CONT", "I-BRANCHORIENT", "I-LOOP", "I-SEAL",
+            "I-JOINT"])
+        try:
+            self.assertEqual(P.get_backend("default_knit")["id"],
+                             "default_knit")
+            self.assertEqual(set(P.get_backend("default_knit")["checks"]),
+                             set(P.INARIANT_CLASSES))
+            custom = P.get_backend("default_knit__custom")
+            self.assertEqual(custom["checks"], [])
+        finally:
+            P._reset_backends()
+
+    def test_incomplete_declaration_is_registry_error(self):
+        with self.assertRaises(P.RegistryError):
+            P.add_backend("lazy", checks=["I-SEAL"], unverified=[])
+
+    def test_class_in_both_lists_is_registry_error(self):
+        with self.assertRaises(P.RegistryError):
+            P.add_backend("greedy", checks=["I-SEAL"],
+                          unverified=["I-SEAL", "I-GRAPH", "I-SCHEMA",
+                                      "I-AXIS", "I-DEGENERATE", "I-ANCHOR",
+                                      "I-RIMMATCH", "I-CONT",
+                                      "I-BRANCHORIENT", "I-LOOP",
+                                      "I-JOINT"])
+
+    def test_unknown_class_in_declaration_is_registry_error(self):
+        classes = list(P.INARIANT_CLASSES)
+        with self.assertRaises(P.RegistryError):
+            P.add_backend("sloppy", checks=classes[:-1] + ["I-VIBES"],
+                          unverified=[])
+
+    def test_buildability_report_per_class(self):
+        g = _sealed_graph()
+        g.add_op(P.KnitOp(id="op_bo2", op="bind_off",
+                          consumes=["t1/rim_start"]))
+        report = P.buildability_report(g, "default_knit")
+        self.assertEqual(report["backend"], "default_knit")
+        self.assertEqual(report["geometric_validity"], "FAIL")
+        self.assertEqual(report["per_class"]["I-SEAL"], "FAIL")
+        self.assertEqual(report["failing_instances"]["I-SEAL"],
+                         ["t1/rim_start"])
+        self.assertEqual(
+            set(report["per_class"].keys()), set(P.INARIANT_CLASSES))
+        # geometric validity never implies knitability (§9)
+        self.assertIn("knitability", report["note"])
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
