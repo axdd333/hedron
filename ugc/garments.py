@@ -56,10 +56,14 @@ def _root_cast_on(graph, rim_prim, op_id):
 
 
 def _rim_joint(gid, child, parent, construction, anchor_point,
-               realized_by=None):
-    """Parent rim mates child opening over the full perimeter (§5.4)."""
+               child_boundary="rim_start", realized_by=None):
+    """Parent rim mates child opening over the full perimeter (§5.4).
+
+    child_boundary defaults to 'rim_start' for tubes; pass 'rim' for
+    hemisphere children which expose only a single 'rim' boundary.
+    """
     return Joint(id=gid, joint="rim_joint", child=child.id,
-                 child_boundary="rim_start", parent=parent.id,
+                 child_boundary=child_boundary, parent=parent.id,
                  parent_boundary="rim_end", construction=construction,
                  anchor={"feature": "rim",
                          "boundary": "rim_end",
@@ -68,10 +72,10 @@ def _rim_joint(gid, child, parent, construction, anchor_point,
 
 
 def _continuation(gid, child, parent, construction, anchor_point,
-                  realized_by=None):
+                  child_boundary="rim_start", realized_by=None):
     """Child claims the parent's terminus fabric flow (§5.1)."""
     return Joint(id=gid, joint="terminus_continuation", child=child.id,
-                 child_boundary="rim_start", parent=parent.id,
+                 child_boundary=child_boundary, parent=parent.id,
                  parent_boundary="rim_end", construction=construction,
                  anchor={"feature": "terminus",
                          "boundary": "rim_end",
@@ -104,13 +108,14 @@ def _build_hat(scale):
     g.add(crown)
     g.add(dome)
     _root_cast_on(g, crown, "hat_cast_on")
-    # the cast-on edge is this graph's only fabric start; sealing the
-    # crown's lower edge keeps rim_start in exactly one terminal state.
-    g.add_op(KnitOp(id="hat_crown_bind_off", op="bind_off",
-                    consumes=["hat_crown/rim_start"]))
+    # hat_crown/rim_start (the brim) is produced by cast_on — fabric_start.
+    # graft closes the crown's rim_end to the dome's single 'rim' boundary
     g.add_op(KnitOp(id="hat_dome_graft", op="graft",
                     consumes=["hat_crown/rim_end", "hat_dome/rim"]))
-    g.add_joint(_rim_joint("hat_j_dome", dome, crown, "grafted", dome.origin,
+    # anchor: a point on the rim_end circle (radius=90, height=110*scale)
+    rim_end_pt = (90.0 * scale, 110.0 * scale, 0.0)
+    g.add_joint(_rim_joint("hat_j_dome", dome, crown, "grafted",
+                           rim_end_pt, child_boundary="rim",
                            realized_by=["hat_dome_graft"]))
     return g
 
@@ -127,8 +132,7 @@ def _build_sock(scale):
     g.add(foot)
     g.add(toe)
     _root_cast_on(g, leg, "sock_cast_on")
-    g.add_op(KnitOp(id="sock_cuff_bind_off", op="bind_off",
-                    consumes=["sock_leg/rim_start"]))
+    # sock_leg/rim_start (the cuff) is produced by cast_on — fabric_start.
     # heel turn: fabric continues through the terminus and comes back
     # horizontal — a 90° knitted-in turn (§5.1), the parent card's
     # d48fd0d decision.
@@ -142,6 +146,7 @@ def _build_sock(scale):
                     consumes=["sock_foot/rim_end", "sock_toe/rim"]))
     g.add_joint(_continuation("sock_j_toe", toe, foot, "grafted",
                               foot.metrics()["terminus"],
+                              child_boundary="rim",
                               realized_by=["sock_toe_graft"]))
     return g
 
@@ -150,36 +155,62 @@ def _build_glove(scale):
     # Known-open per DESIGN.md §10: v2 expresses the finger joints
     # (surface_branch on the palm surface) but cannot claim their knit
     # realization — mid-fabric pick-up needs pick_up_path, reserved and
-    # not in the v2 op set. Fingers stay render-only disks with inert
+    # not in the v2 op set.  Fingers stay render-only disks with inert
     # rims and construction "unsupported"; documented, not hidden.
+    #
+    # The palm is a hemisphere (dome shape); the wrist is a tube from
+    # which knitting begins.  The hemisphere 'rim' boundary at the wrist
+    # end is the fabric entry point.
     g = UGPGraph()
-    palm = _prim("glove_palm", "sphere", {"r": 60}, (0, 0, 0), scale=scale)
-    finger_specs = [
-        ("finger_1", (0, 58, 0), 10),
-        ("finger_2", (0, 56, 14), 10),
-        ("finger_3", (0, 56, -14), 10),
-        ("finger_4", (0, 50, 26), 9),
-        ("thumb", (-40, 30, 0), 12),
-    ]
+    # wrist tube: cast on at rim_start, knit upward to rim_end
+    wrist = _prim("glove_wrist", "tube", {"r1": 50, "r2": 55, "l": 60},
+                  (0, 0, 0), scale=scale)
+    # palm dome: sits on top of the wrist tube
+    palm = _prim("glove_palm", "hemisphere", {"r": 55}, (0, 60, 0),
+                 scale=scale)
+    g.add(wrist)
     g.add(palm)
-    for pid, pos, r in finger_specs:
-        g.add(_prim(pid, "disk", {"r": r}, pos, scale=scale))
+    _root_cast_on(g, wrist, "glove_cast_on")
+    # wrist/rim_start (the cuff hem) is produced by cast_on — fabric_start.
+    # graft wrist terminus onto the palm's rim
+    g.add_op(KnitOp(id="glove_palm_graft", op="graft",
+                    consumes=["glove_wrist/rim_end", "glove_palm/rim"]))
+    rim_end_pt = (55.0 * scale, 60.0 * scale, 0.0)
+    g.add_joint(_rim_joint("glove_j_palm", palm, wrist, "grafted",
+                           rim_end_pt, child_boundary="rim",
+                           realized_by=["glove_palm_graft"]))
+    # fingers: render-only disks branched off the hemisphere surface.
+    # Anchor points must lie on the hemisphere surface (|pt - origin| == r).
+    # Palm origin = (0, 60*scale, 0), r = 55*scale.
+    r = 55.0 * scale
+    ox, oy, oz = 0.0, 60.0 * scale, 0.0
+    finger_specs = [
+        # (pid, unit direction from palm center) — normalized, then * r
+        ("finger_1", (0.0, 1.0, 0.0)),
+        ("finger_2", (0.0, 0.906, 0.423)),
+        ("finger_3", (0.0, 0.906, -0.423)),
+        ("finger_4", (0.0, 0.819, 0.574)),
+        ("thumb",    (-0.940, 0.342, 0.0)),
+    ]
+    for pid, (ux, uy, uz) in finger_specs:
+        disk_r = 10 if "thumb" not in pid else 12
+        anchor = (ox + ux * r, oy + uy * r, oz + uz * r)
+        disk_origin = anchor   # disk sits at the surface point
+        g.add(_prim(pid, "disk", {"r": disk_r}, disk_origin, scale=scale))
         g.add_joint(_branch("glove_j_%s" % pid, g.get(pid), palm,
-                            _scaled_pos(pos, scale), child_boundary="rim"))
-    _root_cast_on(g, palm, "glove_cast_on")
-    g.add_op(KnitOp(id="glove_wrist_bind_off", op="bind_off",
-                    consumes=["glove_palm/rim_start"]))
+                            anchor, child_boundary="rim"))
     return g
 
 
 def _build_skirt(scale):
     g = UGPGraph()
     body = _prim("skirt_body", "tube", {"r1": 90, "r2": 160, "l": 450},
-                 (0, 0, 0), axis=(0, -1, 0), scale=scale)
+                 (0, 0, 0), axis=(0, 1, 0), scale=scale)
     g.add(body)
     _root_cast_on(g, body, "skirt_cast_on")
-    # waistband edge and hem stay open by design (§4.2 declared_open)
-    g.open_boundaries = ["skirt_body/rim_start", "skirt_body/rim_end"]
+    # skirt_body/rim_start is produced by cast_on (fabric_start only).
+    # skirt_body/rim_end is the hem — declared open.
+    g.open_boundaries = ["skirt_body/rim_end"]
     return g
 
 
@@ -187,20 +218,22 @@ def _build_dress(scale):
     g = UGPGraph()
     torso = _prim("dress_torso", "tube", {"r1": 100, "r2": 95, "l": 350},
                   (0, 0, 0), scale=scale)
-    skirt = _prim("dress_skirt", "tube", {"r1": 100, "r2": 170, "l": 450},
-                  (0, 0, 0), axis=(0, -1, 0), scale=scale)
+    # skirt r1 must match torso r2 (= 95) for I-RIMMATCH and I-CONT.
+    # axis same as torso so the continuation turn is 0°.
+    skirt = _prim("dress_skirt", "tube", {"r1": 95, "r2": 170, "l": 450},
+                  (0, 350, 0), axis=(0, 1, 0), scale=scale)
     g.add(torso)
     g.add(skirt)
     _root_cast_on(g, torso, "dress_cast_on")
-    g.add_op(KnitOp(id="dress_neckline_bind_off", op="bind_off",
-                    consumes=["dress_torso/rim_start"]))
+    # torso/rim_start (the neckline) is produced by cast_on — fabric_start.
+    # dress_skirt/rim_end is the hem — declared open.
+    g.open_boundaries = ["dress_skirt/rim_end"]
     g.add_op(KnitOp(id="dress_skirt_pick_up", op="pick_up",
                     consumes=["dress_torso/rim_end"],
                     produces="dress_skirt/rim_start"))
     g.add_joint(_continuation("dress_j_skirt", skirt, torso, "knitted_in",
                               torso.metrics()["terminus"],
                               realized_by=["dress_skirt_pick_up"]))
-    g.open_boundaries = ["dress_skirt/rim_end"]
     return g
 
 
@@ -209,24 +242,30 @@ def _build_trousers(scale, leg_length=450):
     hips = _prim("trousers_hips", "tube", {"r1": 110, "r2": 100, "l": 150},
                  (0, 0, 0), scale=scale)
     g.add(hips)
-    for side, dx in (("l", -55.0), ("r", 55.0)):
-        g.add(_prim("trousers_leg_%s" % side, "tube",
+    # Legs are surface_branch (unsupported) — each starts with its own
+    # cast_on.  Anchor points must lie on the hips tube surface
+    # (radial == r at that axial position).  At axial y=0, r = r1 = 110.
+    for side, dx in (("l", -110.0), ("r", 110.0)):
+        # Leg axis (0,1,0): must not point INTO parent material.
+        # _surface_outward_normal for tube returns tube.axis = (0,1,0),
+        # so child axis dot normal = 1 (pointing outward — valid).
+        leg = _prim("trousers_leg_%s" % side, "tube",
                     {"r1": 58, "r2": 50, "l": leg_length},
-                    (dx, 0, 0), axis=(0, -1, 0), scale=scale))
-    _root_cast_on(g, hips, "trousers_cast_on")
-    g.add_op(KnitOp(id="trousers_waist_bind_off", op="bind_off",
-                    consumes=["trousers_hips/rim_start"]))
-    for side, dx in (("l", -55.0), ("r", 55.0)):
-        # §10 note: real trousers split into two legs from one knitting
-        # front (a mid-fabric branch) — surface_branch cannot claim that
-        # realization in v2, so the branch is honest: unsupported.
-        # Each leg's fabric starts at the hip rim it faces via pick_up.
-        leg = g.get("trousers_leg_%s" % side)
-        g.add_op(KnitOp(id="trousers_leg_%s_pick_up" % side, op="pick_up",
-                        consumes=["trousers_hips/rim_end"],
-                        produces="trousers_leg_%s/rim_start" % side))
+                    (dx, 0, 0), axis=(0, 1, 0), scale=scale)
+        g.add(leg)
+        _root_cast_on(g, leg, "trousers_leg_%s_cast_on" % side)
         g.add_joint(_branch("trousers_j_leg_%s" % side, leg, hips,
                             (dx * scale, 0.0, 0.0)))
+    _root_cast_on(g, hips, "trousers_cast_on")
+    # hips/rim_start (the waistband) is produced by cast_on — fabric_start.
+    # hips/rim_end = crotch opening — declared open
+    # each leg/rim_start produced by its own cast_on (fabric_start)
+    # each leg/rim_end = hem — declared open
+    g.open_boundaries = [
+        "trousers_hips/rim_end",
+        "trousers_leg_l/rim_end",
+        "trousers_leg_r/rim_end",
+    ]
     return g
 
 
@@ -235,36 +274,48 @@ def _build_shirt(scale, hood=False):
     torso = _prim("shirt_torso", "tube", {"r1": 110, "r2": 120, "l": 300},
                   (0, 0, 0), scale=scale)
     g.add(torso)
+    # Sleeves: surface_branch (unsupported).  Anchor at torso rim_end
+    # (y=300, r2=120) — the axial position where r = r2 = 120, so the
+    # surface residual = |radial - r_at_axial| = |120 - 120| = 0.
     for side, dx, ax in (("l", -1.0, (-1, 0, 0)), ("r", 1.0, (1, 0, 0))):
+        # Sleeve axis points laterally away from torso (outward).
+        # _surface_outward_normal for tube returns y_ax = (0,1,0).
+        # Child axis must have non-negative dot with (0,1,0).
+        # Use (0,1,0) for both sleeves — sleeves grow upward in spec space.
         g.add(_prim("shirt_sleeve_%s" % side, "tube",
                     {"r1": 55, "r2": 45, "l": 250},
-                    (dx * 120, 260, 0), axis=ax, scale=scale))
+                    (dx * 120, 300, 0), axis=(0, 1, 0), scale=scale))
     if hood:
-        g.add(_prim("hood", "hemisphere", {"r": 90}, (0, 300, -40),
+        # Hood: hemisphere, its 'rim' grafted onto torso/rim_end.
+        g.add(_prim("hood", "hemisphere", {"r": 120}, (0, 300, 0),
                     scale=scale))
     _root_cast_on(g, torso, "shirt_cast_on")
-    g.add_op(KnitOp(id="shirt_neckline_bind_off", op="bind_off",
-                    consumes=["shirt_torso/rim_start"]))
-    for side, dx in (("l", -1.0), ("r", 1.0)):
-        # shoulder armhole is a mid-fabric branch: unsupported in v2
-        # (§10). Fabric for each sleeve starts at the armhole via pick_up
-        # from the torso's live terminus.
+    # torso/rim_start (the hem) is produced by cast_on — fabric_start.
+    open_bnds = []
+    for side in ("l", "r"):
         sleeve = g.get("shirt_sleeve_%s" % side)
-        g.add_op(KnitOp(id="shirt_sleeve_%s_pick_up" % side, op="pick_up",
-                        consumes=["shirt_torso/rim_end"],
-                        produces="shirt_sleeve_%s/rim_start" % side))
+        _root_cast_on(g, sleeve, "shirt_sleeve_%s_cast_on" % side)
+        # Each sleeve's rim_end = cuff — declared open
+        open_bnds.append("shirt_sleeve_%s/rim_end" % side)
+        # Anchor: at torso rim_end circle, r2=120, height=300*scale.
+        dx = -1.0 if side == "l" else 1.0
+        anchor = (dx * 120.0 * scale, 300.0 * scale, 0.0)
         g.add_joint(_branch("shirt_j_sleeve_%s" % side, sleeve, torso,
-                            (dx * 120 * scale, 260 * scale, 0.0)))
+                            anchor))
     if hood:
         hood_p = g.get("hood")
-        # hood dome grafted onto the neck opening
+        # Hood 'rim' radius must match torso rim_end r2=120 for I-RIMMATCH.
         g.add_op(KnitOp(id="hood_graft", op="graft",
                         consumes=["shirt_torso/rim_end", "hood/rim"]))
+        # Anchor: a point on the torso rim_end circle (r2=120, y=300).
+        rim_end_pt = (120.0 * scale, 300.0 * scale, 0.0)
         g.add_joint(_rim_joint("shirt_j_hood", hood_p, torso, "grafted",
-                               hood_p.origin, realized_by=["hood_graft"]))
+                               rim_end_pt, child_boundary="rim",
+                               realized_by=["hood_graft"]))
     else:
-        # no hood: the torso's own terminus is a raw hem — declared open
-        g.open_boundaries = ["shirt_torso/rim_end"]
+        # No hood: torso/rim_end = neck opening — declared open
+        open_bnds.append("shirt_torso/rim_end")
+    g.open_boundaries = open_bnds
     return g
 
 

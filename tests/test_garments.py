@@ -70,5 +70,83 @@ class TestJSONRoundtrip(unittest.TestCase):
             self.assertEqual(g2.to_dict()["version"], 2, fam)
 
 
+class TestKnitStructure(unittest.TestCase):
+    """C2: v2 knit structure per family.
+
+    Each family runs an explicit default_knit op program (cast_on roots,
+    pick_up/graft closures) and declares joints of the expected type.
+    I-SEAL demands exactly one disposition per knit-bearing rim: produced
+    by an op (fabric_start) XOR consumed by an op XOR declared open.
+    """
+    STRUCTURE = {
+        # family: (op verbs, joint types)
+        "hat":      ({"cast_on", "graft"}, {"rim_joint"}),
+        "sock":     ({"cast_on", "pick_up", "graft"},
+                     {"terminus_continuation"}),
+        "glove":    ({"cast_on", "graft"},
+                     {"rim_joint", "surface_branch"}),
+        "skirt":    ({"cast_on"}, set()),
+        "dress":    ({"cast_on", "pick_up"}, {"terminus_continuation"}),
+        "trousers": ({"cast_on"}, {"surface_branch"}),
+        "shorts":   ({"cast_on"}, {"surface_branch"}),
+        "shirt":    ({"cast_on"}, {"surface_branch"}),
+        "hoodie":   ({"cast_on", "graft"},
+                     {"rim_joint", "surface_branch"}),
+    }
+
+    def test_family_op_programs_and_joints(self):
+        for fam, (verbs, joints) in self.STRUCTURE.items():
+            g = build_garment(fam)
+            self.assertEqual({o.op for o in g.ops}, verbs, fam)
+            self.assertEqual({j.joint for j in g.joints()}, joints, fam)
+
+    def test_every_joint_realized_or_documented_unsupported(self):
+        # §5.4: a joint claims realization via ops, or is construction
+        # "unsupported" (documented, not hidden — realized_by empty).
+        for fam in FAMILIES:
+            g = build_garment(fam)
+            op_ids = {o.id for o in g.ops}
+            for j in g.joints():
+                if j.construction == "unsupported":
+                    self.assertFalse(j.realized_by, (fam, j.id))
+                else:
+                    self.assertTrue(j.realized_by, (fam, j.id))
+                    for rid in j.realized_by:
+                        self.assertIn(rid, op_ids, (fam, j.id, rid))
+
+    def test_one_state_per_rim(self):
+        # I-SEAL: a rim in open_boundaries must not also be produced or
+        # consumed by any op.
+        for fam in FAMILIES:
+            g = build_garment(fam)
+            produced = {o.produces for o in g.ops if o.produces}
+            consumed = {c for o in g.ops for c in o.consumes}
+            for ref in g.open_boundaries:
+                self.assertNotIn(ref, produced, (fam, ref))
+                self.assertNotIn(ref, consumed, (fam, ref))
+
+    def test_every_rim_disposed(self):
+        # I-SEAL: every knit-bearing rim has exactly one disposition.
+        for fam in FAMILIES:
+            g = build_garment(fam)
+            produced = {o.produces for o in g.ops if o.produces}
+            consumed = {c for o in g.ops for c in o.consumes}
+            for p in g:
+                for b in p.boundaries:
+                    if b.kind != "rim":
+                        continue
+                    ref = "%s/%s" % (p.id, b.boundary)
+                    states = (ref in produced, ref in consumed,
+                              ref in g.open_boundaries)
+                    self.assertEqual(sum(states), 1, (fam, ref))
+
+    def test_all_families_validate_strict_clean(self):
+        from ugc.primitives import validate_strict
+        for fam in FAMILIES:
+            findings = validate_strict(build_garment(fam))
+            self.assertEqual(
+                [f for f in findings if f.status == "FAIL"], [], fam)
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
