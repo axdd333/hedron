@@ -1282,14 +1282,16 @@ def _check_joint(g, tols):
                          "child rim")
                     ok = False
             elif j.construction == "grafted":
-                pair = set((j.parent_boundary, j.child_boundary)) - {None}
+                pair = set((parent_ref,
+                            "%s/%s" % (j.child, j.child_boundary)))
                 if (len(rops) != 1 or rops[0].op != "graft"
                         or set(rops[0].consumes) != pair):
                     fail("grafted requires exactly one graft consuming "
                          "both rims")
                     ok = False
             elif j.construction == "selvedge_seam":
-                pair = set((j.parent_boundary, j.child_boundary)) - {None}
+                pair = set((parent_ref,
+                            "%s/%s" % (j.child, j.child_boundary)))
                 if (len(rops) != 1 or rops[0].op != "selvedge_seam"
                         or set(rops[0].consumes) != pair):
                     fail("selvedge_seam requires exactly one selvedge_seam "
