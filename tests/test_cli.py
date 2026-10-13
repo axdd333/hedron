@@ -159,7 +159,8 @@ class TestValidateSubcommand(unittest.TestCase):
             self.assertTrue(payload["ok"])
             self.assertFalse(payload["fatal"])
             self.assertEqual(payload["errors"], [])
-            self.assertEqual(len(payload["findings"]), 11)
+            # 11 v2 classes + 4 v3 topological classes = 15
+            self.assertEqual(len(payload["findings"]), 15)
         finally:
             os.unlink(path)
 
@@ -334,7 +335,8 @@ class TestReportSubcommand(unittest.TestCase):
         self.assertEqual(rc, 0, err)
         self.assertEqual(payload["geometric_validity"], "PASS")
         self.assertIsNone(payload["report"])   # no lowering requested
-        self.assertEqual(len(payload["findings"]), 11)
+        # 11 v2 classes + 4 v3 topological classes = 15
+        self.assertEqual(len(payload["findings"]), 15)
 
     def test_report_exit_1_payload_mirrors_validate(self):
         with tempfile.NamedTemporaryFile("w", suffix=".json",

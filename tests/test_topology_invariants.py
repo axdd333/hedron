@@ -35,8 +35,10 @@ def _pair_junction(jid, a, b, ca="cw", cb="ccw"):
 
 
 def _shirt(gauge=None, chi=None, mangle=None):
-    """k=4 torso + two k=2 sleeves, armholes junctioned. chi = 0 with
-    2 free rims (neck, cuffs) — a valid v3 shirt body."""
+    """k=4 torso + two k=2 sleeves, armholes junctioned.
+
+    Free rims: hem, neck, cuff_l, cuff_r (n=4) -> closed-surface chi
+    2 - 0 - 4 = -2, and sum(2-k) = (2-4) + (2-2) + (2-2) = -2."""
     g = UGPGraph(gauge=gauge)
     g.add_patch(Patch("torso", [_rim("hem", 700), _rim("neck", 660),
                                 _rim("armhole_l", 330),
@@ -47,8 +49,7 @@ def _shirt(gauge=None, chi=None, mangle=None):
                                   ("sleeve_l", "armhole")))
     g.add_junction(_pair_junction("j_r", ("torso", "armhole_r"),
                                   ("sleeve_r", "armhole")))
-    if chi is not None:
-        g.declared_chi = chi
+    g.declared_chi = 2 - 4 if chi is None else chi
     if mangle:
         mangle(g)
     return g
@@ -76,7 +77,7 @@ class TestIChi(unittest.TestCase):
         f = [x for x in validate(g) if x.invariant == "I-CHI"]
         self.assertEqual(f[0].status, "FAIL")
         self.assertIn("expected 3", f[0].message)
-        self.assertIn("actual 0", f[0].message)
+        self.assertIn("actual -2", f[0].message)
 
     def test_mutation_breaking_chi_is_caught(self):
         # sneaky post-construction edit: a span deleted from a patch
@@ -88,20 +89,59 @@ class TestIChi(unittest.TestCase):
         self.assertEqual(f["I-CHI"], "FAIL")
 
     def test_genus_gt_zero_is_reserved(self):
-        # pair-of-pants: chi = -1 -> g=1 territory; v3 reserves g>0
+        # two k=1 caps junctioned into a closed ball: sum(2-k) = 2,
+        # free rims 0. Declaring chi = 0 claims a torus (g = 1) —
+        # v3 refuses handles.
         g = UGPGraph()
-        g.add_patch(Patch("hips", [_rim("waist", 700), _rim("leg_l", 365),
-                                   _rim("leg_r", 365)]))
-        g.declared_chi = -1
+        g.add_patch(Patch("c1", [_rim("r1", 100)]))
+        g.add_patch(Patch("c2", [_rim("r2", 100)]))
+        g.add_junction(Junction("j12", [("c1", "r1", "cw"),
+                                        ("c2", "r2", "ccw")]))
+        g.declared_chi = 0
         f = [x for x in validate(g) if x.invariant == "I-CHI"]
         self.assertEqual(f[0].status, "FAIL")
         self.assertIn("reserved", f[0].message)
 
-    def test_default_declared_chi_matches_open_v2_style_graphs(self):
-        # declared_chi defaults to 2 - n_free (genus 0): the shirt's
-        # 2 free rims -> 0, consistent with its actual sum.
+    def test_declared_chi_is_required_not_inferred(self):
+        # chi is a claim about the closed surface; an inferred default
+        # would self-adjust under mutation and let tampered graphs pass
         g = _shirt()
-        self.assertEqual(g.declared_chi, 0)
+        del g.declared_chi
+        f = [x for x in validate(g) if x.invariant == "I-CHI"]
+        self.assertEqual(f[0].status, "FAIL")
+        self.assertIn("declared_chi", f[0].message)
+
+    def test_pair_of_pants_is_valid_genus_zero(self):
+        # k=3 web patch + two k=2 legs: sum(2-k) = -1+0+0 = -1 =
+        # 2 - 2*0 - 3 free rims -> valid genus-0 v3 graph
+        g = UGPGraph()
+        g.add_patch(Patch("hips", [_rim("waist", 700), _rim("leg_l", 365),
+                                   _rim("leg_r", 365)]))
+        g.add_patch(Patch("leg_l", [_rim("leg", 365), _rim("ankle_l", 250)]))
+        g.add_patch(Patch("leg_r", [_rim("leg", 365), _rim("ankle_r", 250)]))
+        g.add_junction(Junction("j_l", [("hips", "leg_l", "cw"),
+                                        ("leg_l", "leg", "ccw")]))
+        g.add_junction(Junction("j_r", [("hips", "leg_r", "cw"),
+                                        ("leg_r", "leg", "ccw")]))
+        g.declared_chi = -1
+        f = {x.invariant: x.status for x in validate(g)}
+        self.assertEqual(f["I-CHI"], "PASS")
+        self.assertEqual(f["I-REACH"], "PASS")
+
+    def test_no_default_declared_chi_and_none_is_undeclared(self):
+        # chi is a claim about the closed surface; an inferred default
+        # would self-adjust under mutation and let tampered graphs pass.
+        # Unset declared_chi (None) => FAIL with guidance.
+        g = _shirt()
+        g.declared_chi = None
+        f = [x for x in validate(g) if x.invariant == "I-CHI"]
+        self.assertEqual(f[0].status, "FAIL")
+        self.assertIn("declared_chi", f[0].message)
+
+    def test_declared_chi_survives_serialization(self):
+        g = _shirt()
+        g2 = UGPGraph.from_dict(g.to_dict())
+        self.assertEqual(g2.declared_chi, -2)
 
 
 class TestIOrient(unittest.TestCase):
@@ -179,9 +219,9 @@ class TestIGaugeClosure(unittest.TestCase):
 
     def test_mismatched_loops_fail_beyond_t_loops(self):
         def mangle(g):
-            # widen the left cuff: 300 mm vs 330 mm armhole —
-            # delta 30 loops at wale 2.5 exceeds T_LOOPS=2
-            g.patch("sleeve_l").span("cuff_l").length_mm = 400.0
+            # widen sleeve_l's armhole rim (a j_l MEMBER): 400 mm vs
+            # 300 mm cuff — 40 loops apart at wale 2.5 > T_LOOPS=2
+            g.patch("sleeve_l").span("armhole").length_mm = 400.0
         g = _shirt(gauge={"wale_mm": 2.5, "course_mm": 1.6},
                    mangle=mangle)
         f = [x for x in validate(g) if x.invariant == "I-GAUGE-CLOSURE"]

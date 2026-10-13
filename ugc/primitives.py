@@ -31,7 +31,9 @@ OP_SET_DEFAULT_KNIT = ("cast_on", "bind_off", "short_row_close", "graft",
                        "pick_up", "selvedge_seam")
 INARIANT_CLASSES = ("I-DEGENERATE", "I-SCHEMA", "I-AXIS", "I-GRAPH",
                     "I-ANCHOR", "I-RIMMATCH", "I-CONT", "I-BRANCHORIENT",
-                    "I-LOOP", "I-SEAL", "I-JOINT")
+                    "I-LOOP", "I-SEAL", "I-JOINT",
+                    # spec v3 (DESIGN_V3_TOPOLOGY.md): topological basis
+                    "I-CHI", "I-ORIENT", "I-REACH", "I-GAUGE-CLOSURE")
 TOLERANCES = {
     "T_ANCHOR": 0.5,       # mm
     "T_RIM": 1.0,          # mm
@@ -689,6 +691,9 @@ class UGPGraph:
         self._patches = []
         self._junctions = []
         self._rim_claim = {}     # (patch_id, boundary_id) -> junction id
+        # the closed-surface Euler characteristic is a DECLARED claim
+        # (2 - 2g - n_free), never inferred; None until patches exist
+        self.declared_chi = None
         self.gauge = gauge
         self.tolerances = dict(TOLERANCES)
         if tolerances:
@@ -819,6 +824,8 @@ class UGPGraph:
             d["patches"] = [p.to_dict() for p in self.patches()]
         if self._junctions:
             d["junctions"] = [j.to_dict() for j in self.junctions()]
+        if self._patches and self.declared_chi is not None:
+            d["declared_chi"] = self.declared_chi
         return d
 
     @classmethod
@@ -847,6 +854,7 @@ class UGPGraph:
             g.add_patch(Patch.from_dict(pd))
         for jd in data.get("junctions", []):
             g.add_junction(Junction.from_dict(jd))
+        g.declared_chi = data.get("declared_chi")
         return g
 
 
@@ -1579,16 +1587,21 @@ _CHECKS = (
 
 
 def validate(graph):
-    """Run every invariant class (§6); return findings, never raises.
+    """Run every invariant class (§6 + v3); return findings, never raises.
 
     Every class in INARIANT_CLASSES appears exactly once with status
     PASS, FAIL or UNVERIFIED. FAIL is a hard error for the caller —
-    §7: hard errors, never warnings.
+    §7: hard errors, never warnings. The four v3 classes (I-CHI,
+    I-ORIENT, I-REACH, I-GAUGE-CLOSURE) run over the graph's patch/
+    junction layer; on v2-only graphs they pass vacuously (or sit
+    UNVERIFIED for I-GAUGE-CLOSURE without a gauge, like v2 I-LOOP).
     """
     tols = graph.tolerances if graph.tolerances else dict(TOLERANCES)
     findings = []
     for _, check in _CHECKS:
         findings.extend(check(graph, tols))
+    import ugc.topology as T3
+    findings.extend(T3.validate_v3(graph))
     return findings
 
 

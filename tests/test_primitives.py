@@ -833,7 +833,9 @@ class TestBackendContract(unittest.TestCase):
         P.add_backend("default_knit", checks=[], unverified=[
             "I-DEGENERATE", "I-SCHEMA", "I-AXIS", "I-GRAPH", "I-ANCHOR",
             "I-RIMMATCH", "I-CONT", "I-BRANCHORIENT", "I-LOOP", "I-SEAL",
-            "I-JOINT"])
+            "I-JOINT",
+            # spec v3 topological basis
+            "I-CHI", "I-ORIENT", "I-REACH", "I-GAUGE-CLOSURE"])
         try:
             self.assertEqual(P.get_backend("default_knit")["id"],
                              "default_knit")
@@ -855,7 +857,9 @@ class TestBackendContract(unittest.TestCase):
                                       "I-AXIS", "I-DEGENERATE", "I-ANCHOR",
                                       "I-RIMMATCH", "I-CONT",
                                       "I-BRANCHORIENT", "I-LOOP",
-                                      "I-JOINT"])
+                                      "I-JOINT",
+                                      "I-CHI", "I-ORIENT", "I-REACH",
+                                      "I-GAUGE-CLOSURE"])
 
     def test_unknown_class_in_declaration_is_registry_error(self):
         classes = list(P.INARIANT_CLASSES)
