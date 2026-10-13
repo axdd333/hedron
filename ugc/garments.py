@@ -10,7 +10,8 @@ Construction choices follow DESIGN.md §5.4 and real whole-garment practice:
   live rim (sleeve-side pick-ups, legs off the hips, skirt off the torso,
   sock foot off the leg across a knitted heel turn);
 - grafted for separately-shaped closures mated to a live rim (dome tops,
-  toe caps, hood);
+  toe caps; the hood is separately shaped too — cast on at the face
+  opening, then grafted to the torso neck);
 - short_row_close for shaped terminations knit within one piece;
 - unsupported (documented, not hidden) where v2's op set cannot claim the
   realization — glove fingers need mid-fabric pick_up_path (§10).
@@ -381,9 +382,15 @@ def _build_shirt(scale, hood=False):
                     {"r1": 55, "r2": 45, "l": 250},
                     (dx * 120, 300, 0), axis=(0, 1, 0), scale=scale))
     if hood:
-        # Hood: hemisphere, its 'rim' grafted onto torso/rim_end.
-        g.add(_prim("hood", "hemisphere", {"r": 120}, (0, 300, 0),
-                    scale=scale))
+        # AUDIT_HOODIE_CHI.md: a hood is a tube (annulus), not a
+        # hemisphere cap. The knitter casts on at the face opening
+        # (rim_start — the free boundary the wearer's head passes
+        # through), knits a closed tube, and grafts the far rim
+        # (rim_end, r2 = 120 = torso rim_end for I-RIMMATCH) to the
+        # torso neck. Child of the torso keeps I-GRAPH's single root;
+        # the cast_on-on-child pattern is the sleeves'.
+        g.add(_prim("hood", "tube", {"r1": 110, "r2": 120, "l": 160},
+                    (0, 460, 0), axis=(0, -1, 0), scale=scale))
     _root_cast_on(g, torso, "shirt_cast_on")
     # torso/rim_start (the hem) is produced by cast_on — fabric_start.
     open_bnds = []
@@ -399,13 +406,18 @@ def _build_shirt(scale, hood=False):
                             anchor))
     if hood:
         hood_p = g.get("hood")
-        # Hood 'rim' radius must match torso rim_end r2=120 for I-RIMMATCH.
+        # Hood far rim (rim_end, r2=120) is grafted to the torso
+        # rim_end (r2=120) — equal lengths keep I-RIMMATCH quiet.
+        g.add_op(KnitOp(id="hood_cast_on", op="cast_on",
+                        consumes=[], produces="hood/rim_start"))
+        # the face opening (hood/rim_start) is produced by cast_on —
+        # fabric_start; the graft closes the tube's far rim to the neck
         g.add_op(KnitOp(id="hood_graft", op="graft",
-                        consumes=["shirt_torso/rim_end", "hood/rim"]))
+                        consumes=["shirt_torso/rim_end", "hood/rim_end"]))
         # Anchor: a point on the torso rim_end circle (r2=120, y=300).
         rim_end_pt = (120.0 * scale, 300.0 * scale, 0.0)
         g.add_joint(_rim_joint("shirt_j_hood", hood_p, torso, "grafted",
-                               rim_end_pt, child_boundary="rim",
+                               rim_end_pt, child_boundary="rim_end",
                                realized_by=["hood_graft"]))
     else:
         # No hood: torso/rim_end = neck opening — declared open
@@ -424,12 +436,10 @@ def _build_shirt(scale, hood=False):
                    Boundary("armhole_l", "rim", armhole),
                    Boundary("armhole_r", "rim", armhole)]
     if hood:
-        # the hood junction curve IS the torso's closed rim_end, re-id'd
-        # as the neck opening (same length: torso r2 = 120 = hood rim r)
-        neck_b = g.get("shirt_torso").boundary("rim_end")
-        torso_spans[1] = Boundary("neck", neck_b.kind, neck_b.length_mm,
-                                  frame=(neck_b.frame["center"],
-                                         neck_b.frame["normal"]))
+        # the neck span keeps the v2 boundary id: it IS the torso's
+        # rim_end curve, grafted to the hood (verbatim ref match in
+        # lower_junctions). Hoodless shirts keep the synthetic "neck".
+        torso_spans[1] = Boundary("rim_end", "rim", 2.0 * math.pi * 120.0)
     g.add_patch(Patch("shirt_torso", torso_spans))
     for side in ("l", "r"):
         g.add_patch(Patch("shirt_sleeve_%s" % side,
@@ -439,11 +449,17 @@ def _build_shirt(scale, hood=False):
                              "shirt_torso/armhole_%s" % side,
                              "shirt_sleeve_%s/rim_start" % side))
     if hood:
-        g.add_patch(Patch("hood", [_span("hood/rim", g)]))
-        g.add_junction(_pair("shirt_j_hood_v3", "shirt_torso/neck",
-                             "hood/rim", construction="grafted"))
-        # free rims: hem + two cuffs -> chi = -2 + 0 + 1 = 2 - 3
-        g.declared_chi = -1
+        # the hood is an annulus (k=2): far rim grafted to the torso
+        # neck, the face opening (rim_start) stays a free boundary.
+        # Span ids are the v2 boundary ids so lower_junctions' verbatim
+        # ref match marks shirt_j_hood_v3 REALIZED by hood_graft (the
+        # graft consumes shirt_torso/rim_end + hood/rim_end).
+        g.add_patch(Patch("hood", [_span("hood/rim_start", g),
+                                   _span("hood/rim_end", g)]))
+        g.add_junction(_pair("shirt_j_hood_v3", "shirt_torso/rim_end",
+                             "hood/rim_end", construction="grafted"))
+        # free rims: hem + face opening + two cuffs -> chi = -2 = 2 - 4
+        g.declared_chi = -2
     else:
         # free rims: hem + neck + two cuffs -> chi = -2 = 2 - 4
         g.declared_chi = -2

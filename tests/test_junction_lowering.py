@@ -40,6 +40,12 @@ PLAN = {
     "shirt":    (2, 0, 2),
     "hoodie":   (3, 0, 3),
 }
+# AUDIT_HOODIE_CHI.md: the hood junction is now REALIZED — the v2
+# program casts the hood on at the face opening and grafts hood/rim to
+# the torso neck by exact ref names.
+PLAN_OVERRIDE = {
+    "hoodie":   (1, 2),
+}
 
 
 class TestJunctionPlan(unittest.TestCase):
@@ -66,12 +72,14 @@ class TestJunctionPlan(unittest.TestCase):
     def test_every_family_plans_its_junctions(self):
         for fam, (n, realized, unrealized) in PLAN.items():
             plan = B.lower_junctions(build_garment(fam))
+            n_realized, n_unrealized = PLAN_OVERRIDE.get(
+                fam, (realized, unrealized))
             self.assertEqual(len(plan), n, fam)
             self.assertEqual(
-                sum(1 for e in plan if e.status == "REALIZED"), realized,
+                sum(1 for e in plan if e.status == "REALIZED"), n_realized,
                 fam)
             self.assertEqual(
-                sum(1 for e in plan if e.status == "UNREALIZED"), unrealized,
+                sum(1 for e in plan if e.status == "UNREALIZED"), n_unrealized,
                 fam)
 
     def test_construction_to_pattern_rules(self):
@@ -144,6 +152,22 @@ class TestJunctionPlan(unittest.TestCase):
             self.assertEqual(plan[jid].machine_ops, ("PICK_UP", "KNIT"))
             self.assertEqual(plan[jid].realized_by, ())
             self.assertTrue(plan[jid].notes, jid)
+
+    def test_hoodie_neck_junction_is_realized_by_the_hood_graft(self):
+        # AUDIT_HOODIE_CHI.md fix: the hood is cast on at the face
+        # opening and its far rim is grafted to the torso neck — both
+        # member curves are named by the v2 hood_graft op verbatim, so
+        # the junction plan must mark it REALIZED (unlike the synthetic
+        # armholes, which stay UNREALIZED).
+        plan = {e.graph_junction: e
+                for e in B.lower_junctions(build_garment("hoodie"))}
+        neck = plan["shirt_j_hood_v3"]
+        self.assertEqual(neck.status, "REALIZED")
+        self.assertEqual(neck.construction, "grafted")
+        self.assertEqual(neck.machine_ops, ("GRAFT",))
+        self.assertEqual(neck.realized_by, ("hood_graft",))
+        for jid in ("shirt_j_sleeve_l_v3", "shirt_j_sleeve_r_v3"):
+            self.assertEqual(plan[jid].status, "UNREALIZED", jid)
 
     def test_invalid_graph_is_refused_not_planned(self):
         g = build_garment("sock")

@@ -18,7 +18,10 @@ Per-family topology (hardcoded expectations — genus 0, chi = sum(2-k)):
                                              artifact, v3 drops it
   shorts     3        2          3         -1    same shape, short legs
   shirt      3        2          4         -2    torso k=4 web + sleeves
-  hoodie     4        3          3         -1    shirt + hood k=1
+  hoodie     4        3          4         -2    shirt + hood k=2 (annulus:
+                                             cast on at the face opening,
+                                             far rim grafted to the neck
+                                             — AUDIT_HOODIE_CHI.md)
 
 The v3 layer is additive: v2 payloads (primitives/joints/ops/
 open_boundaries) are untouched, version stays 2.
@@ -38,7 +41,7 @@ TOPO = {
     "trousers": (3, 2, 3, -1),
     "shorts":   (3, 2, 3, -1),
     "shirt":    (3, 2, 4, -2),
-    "hoodie":   (4, 3, 3, -1),
+    "hoodie":   (4, 3, 4, -2),
 }
 
 
@@ -150,6 +153,24 @@ class TestFamilyTopology(unittest.TestCase):
         g = build_garment("glove")
         self.assertEqual({p.id for p in g.patches()},
                          {"glove_wrist", "glove_palm"})
+
+    def test_hoodie_hood_is_an_annulus_with_free_face_opening(self):
+        # AUDIT_HOODIE_CHI.md: a hood is a tube (annulus, k=2), not a
+        # hemisphere cap — the knitter casts on at the face opening
+        # (hood/rim_start), knits a closed tube, and grafts the far rim
+        # (hood/rim_end) to the torso neck. The face opening is a real
+        # boundary component of the finished garment: 4 free rims,
+        # chi = -2 = 2 - 4. Span ids stay the v2 boundary ids so the
+        # junction realization check names them verbatim.
+        g = build_garment("hoodie")
+        hood = g.patch("hood")
+        self.assertEqual(hood.k, 2)
+        self.assertEqual({b.boundary for b in hood.spans},
+                         {"rim_start", "rim_end"})
+        claimed = {(p, b) for j in g.junctions() for p, b, _ in j.members}
+        self.assertIn(("hood", "rim_end"), claimed)      # grafted to neck
+        self.assertNotIn(("hood", "rim_start"), claimed)  # face opening: free
+        self.assertEqual(g.declared_chi, -2)
 
 
 if __name__ == "__main__":

@@ -135,7 +135,9 @@ FAMILY_MACHINE = {
     "trousers": ["CAST_ON", "CAST_ON", "CAST_ON"],
     "shorts": ["CAST_ON", "CAST_ON", "CAST_ON"],
     "shirt": ["CAST_ON", "CAST_ON", "CAST_ON"],
-    "hoodie": ["CAST_ON", "GRAFT", "CAST_ON", "CAST_ON"],
+    # hood is a root annulus: cast on at the face opening, graft the
+    # far rim to the torso neck (AUDIT_HOODIE_CHI.md)
+    "hoodie": ["CAST_ON", "CAST_ON", "GRAFT", "CAST_ON", "CAST_ON"],
 }
 
 
@@ -172,12 +174,14 @@ class TestLowerAllFamilies(unittest.TestCase):
              ("sock_toe_graft", "graft", ("GRAFT",),
               ("sock_foot/rim_end", "sock_toe/rim"), None)])
 
-    def test_hoodie_order_cast_on_graft_then_sleeves(self):
-        # hood graft acts on bfs index 1 (torso 0, hood 1); op-id tiebreak
-        # puts hood_graft before the sleeve cast_ons in the same group.
+    def test_hoodie_order_hood_cast_on_graft_then_sleeves(self):
+        # hood is a root annulus cast on at the face opening; its far
+        # rim is grafted to the torso neck. bfs index 1 (torso 0, hood
+        # 1); op-id tiebreak puts hood_graft before the sleeve cast_ons
+        # in the same group.
         res = lower(build_garment("hoodie"))
         self.assertEqual([lo.graph_op for lo in res.ops],
-                         ["shirt_cast_on", "hood_graft",
+                         ["shirt_cast_on", "hood_cast_on", "hood_graft",
                           "shirt_sleeve_l_cast_on", "shirt_sleeve_r_cast_on"])
 
     def test_all_six_ops_lowered_somewhere(self):
