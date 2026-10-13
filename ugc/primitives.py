@@ -11,6 +11,7 @@ A disk is a render cap, NOT a knit closure.
 """
 import json
 import math
+import re
 
 __all__ = [
     "Primitive", "UGPGraph", "Boundary", "KnitOp", "Joint",
@@ -328,6 +329,201 @@ class Boundary:
                                               self.length_mm)
 
 
+# ===========================================================================
+# spec v3 — topological basis: Patch + Junction (DESIGN_V3_TOPOLOGY.md)
+# ===========================================================================
+# A garment is a compact orientable 2-manifold with boundary: boundary
+# curves (rims) are the primary data, surfaces are filler between them.
+# A Patch is one surface spanned between k >= 1 boundary curves (k=2 is
+# the v2 tube, k=1 the v2 hemisphere/disk cap); a Junction identifies
+# boundary curves pairwise (even arity, alternating traversal
+# directions) and never changes the Euler characteristic. Bookkeeping:
+# patch chi contribution = 2 - k, so a closed garment must satisfy
+# sum(2 - k) == 2 - 2g - n_free (closed g=0 -> 2). Prior art for this
+# representation: Knitting Skeletons (ICCS 2019), knitout, Stoll's
+# difficult-to-knit detection — not a novel IR design.
+
+# punctuation kept out of ids so 'patch/boundary' refs stay unambiguous
+_ID_OK = re.compile(r"^[A-Za-z0-9_][A-Za-z0-9_.-]*$")
+_JUNCTION_CONSTRUCTIONS = ("unsupported", "knitted_in", "grafted",
+                           "selvedge_seam")
+
+
+class PatchError(_BaseError, ValueError):
+    """A patch/junction declaration violates the v3 topological contract."""
+
+
+class Patch(object):
+    """One surface spanned between k boundary curves (v3 §2)."""
+
+    def __init__(self, id, spans):
+        if not isinstance(id, str) or not _ID_OK.match(id):
+            raise PatchError("patch id must match %r, got %r"
+                             % (_ID_OK.pattern, id))
+        spans = list(spans or [])
+        if not spans:
+            raise PatchError("patch %r must span at least one boundary "
+                             "curve" % (id,))
+        rims = 0
+        seen = set()
+        for b in spans:
+            if not isinstance(b, Boundary):
+                raise PatchError("patch %r spans must be Boundary "
+                                 "instances, got %r" % (id, type(b).__name__))
+            if b.boundary in seen:
+                raise PatchError("patch %r has duplicate span id %r"
+                                 % (id, b.boundary))
+            seen.add(b.boundary)
+            if b.length_mm <= 0:
+                raise PatchError("patch %r span %r must have length > 0 mm"
+                                 % (id, b.boundary))
+            if b.kind == "rim":
+                rims += 1
+        if rims < 1:
+            raise PatchError("patch %r must carry at least one knit-bearing "
+                             "rim (v3 §2)" % (id,))
+        self.id = id
+        self.spans = tuple(spans)
+
+    @property
+    def boundaries(self):
+        """v2-compat alias: the patch's boundary curves in span order."""
+        return list(self.spans)
+
+    @property
+    def k(self):
+        return len(self.spans)
+
+    @property
+    def chi_contribution(self):
+        """2 - k: a k=2 tube contributes 0, a cap 1, a k=4 web -2."""
+        return 2 - self.k
+
+    def span(self, boundary_id):
+        for b in self.spans:
+            if b.boundary == boundary_id:
+                return b
+        raise KeyError("unknown span %r on patch %r" % (boundary_id, self.id))
+
+    def to_dict(self):
+        return {"id": self.id,
+                "spans": [{"boundary": b.boundary, "kind": b.kind,
+                           "length_mm": b.length_mm,
+                           "loops": b.loops,
+                           "frame": {"center": list(b.frame["center"]),
+                                     "normal": list(b.frame["normal"])}}
+                          for b in self.spans]}
+
+    @classmethod
+    def from_dict(cls, d):
+        return cls(id=d["id"],
+                   spans=[Boundary(s["boundary"], s["kind"], s["length_mm"],
+                                   loops=s.get("loops"),
+                                   frame=s.get("frame") or
+                                   (s["frame"]["center"],
+                                    s["frame"]["normal"]))
+                          for s in d.get("spans", [])])
+
+    def __eq__(self, other):
+        return (isinstance(other, Patch) and self.id == other.id
+                and list(self.spans) == list(other.spans))
+
+    def __repr__(self):  # pragma: no cover
+        return "Patch(%r, k=%d)" % (self.id, self.k)
+
+
+class Junction(object):
+    """Identification of boundary curves, pairwise and
+    orientation-consistent (v3 §3).
+
+    Members are (patch_id, boundary_id, direction) triples; direction is
+    the traversal direction of that boundary curve entering the seam
+    ('cw' | 'ccw'). An m-member junction identifies m/2 curve pairs: the
+    list is consumed two at a time and each pair must alternate
+    directions — a pair traversed the same way would seam the fabric
+    inside-out (I-ORIENT, construction level).
+    """
+
+    def __init__(self, id, members, construction="unsupported"):
+        if not isinstance(id, str) or not _ID_OK.match(id):
+            raise PatchError("junction id must match %r, got %r"
+                             % (_ID_OK.pattern, id))
+        members = list(members or [])
+        if len(members) < 2:
+            raise PatchError("junction %r must identify at least two "
+                             "boundary curves" % (id,))
+        if len(members) % 2 != 0:
+            raise PatchError(
+                "junction %r must have even arity (identification is "
+                "pairwise); a %d-curve site is a k>=3 web patch joined by "
+                "pairwise junctions" % (id, len(members)))
+        norm = []
+        seen = set()
+        for i, m in enumerate(members):
+            try:
+                patch_id, boundary_id, direction = m
+            except (TypeError, ValueError):
+                raise PatchError(
+                    "junction %r members must be (patch, boundary, "
+                    "direction) triples, got %r" % (id, m))
+            if direction not in ("cw", "ccw"):
+                raise PatchError(
+                    "junction %r member %d: direction must be 'cw' or "
+                    "'ccw', got %r" % (id, i, direction))
+            if (patch_id, boundary_id) in seen:
+                raise PatchError(
+                    "junction %r names boundary %r of patch %r twice"
+                    % (id, boundary_id, patch_id))
+            seen.add((patch_id, boundary_id))
+            norm.append((str(patch_id), str(boundary_id), direction))
+        # pairwise alternating-orientation check (v3 §3: even arity,
+        # alternating traversal directions per identified pair)
+        for i in range(0, len(norm), 2):
+            a, b = norm[i], norm[i + 1]
+            if a[2] == b[2]:
+                raise PatchError(
+                    "junction %r pair %d traverses both curves in "
+                    "direction %r — identification must alternate "
+                    "(cw/ccw) or the seam folds the fabric inside-out"
+                    % (id, i // 2, a[2]))
+        if construction not in _JUNCTION_CONSTRUCTIONS:
+            raise PatchError(
+                "junction %r construction %r not in %s"
+                % (id, construction, ", ".join(_JUNCTION_CONSTRUCTIONS)))
+        self.id = id
+        self.members = tuple(norm)
+        self.construction = construction
+
+    @property
+    def arity(self):
+        return len(self.members)
+
+    @property
+    def member_refs(self):
+        return tuple("%s/%s" % (m[0], m[1]) for m in self.members)
+
+    def to_dict(self):
+        return {"id": self.id,
+                "members": [{"patch": p, "boundary": b, "direction": d}
+                            for p, b, d in self.members],
+                "construction": self.construction}
+
+    @classmethod
+    def from_dict(cls, d):
+        return cls(id=d["id"],
+                   members=[(m["patch"], m["boundary"], m["direction"])
+                            for m in d.get("members", [])],
+                   construction=d.get("construction", "unsupported"))
+
+    def __eq__(self, other):
+        return (isinstance(other, Junction) and self.id == other.id
+                and self.members == other.members
+                and self.construction == other.construction)
+
+    def __repr__(self):  # pragma: no cover
+        return "Junction(%r, arity=%d)" % (self.id, self.arity)
+
+
 class KnitOp:
     """One op instance of the default_knit set (§4.3)."""
 
@@ -488,6 +684,11 @@ class UGPGraph:
         self.surface_branches = []
         self.terminus_continuations = []
         self.ops = []
+        # spec v3 topology layer (additive; v2 graphs simply leave these
+        # empty — see DESIGN_V3_TOPOLOGY.md)
+        self._patches = []
+        self._junctions = []
+        self._rim_claim = {}     # (patch_id, boundary_id) -> junction id
         self.gauge = gauge
         self.tolerances = dict(TOLERANCES)
         if tolerances:
@@ -556,18 +757,69 @@ class UGPGraph:
         self.ops.append(op)
         return op
 
+    # -- patches + junctions (spec v3) ------------------------------------------
+    def add_patch(self, patch):
+        if any(p.id == patch.id for p in self._patches):
+            raise SchemaError("duplicate patch id: %r" % (patch.id,))
+        self._patches.append(patch)
+        return patch
+
+    def patches(self):
+        return sorted(self._patches, key=lambda p: p.id)
+
+    def patch(self, patch_id):
+        for p in self._patches:
+            if p.id == patch_id:
+                return p
+        raise KeyError(patch_id)
+
+    def add_junction(self, junction):
+        if any(j.id == junction.id for j in self._junctions):
+            raise SchemaError("duplicate junction id: %r" % (junction.id,))
+        for patch_id, boundary_id, _ in junction.members:
+            if patch_id not in {p.id for p in self._patches}:
+                raise SchemaError(
+                    "junction %r references unknown patch %r"
+                    % (junction.id, patch_id))
+            if (patch_id, boundary_id) not in {
+                    (p.id, b.boundary)
+                    for p in self._patches for b in p.spans}:
+                raise SchemaError(
+                    "junction %r references unknown boundary %r on patch %r"
+                    % (junction.id, boundary_id, patch_id))
+            claim = self._rim_claim.get((patch_id, boundary_id))
+            if claim is not None:
+                raise SchemaError(
+                    "boundary %r of patch %r already claimed by junction "
+                    "%r; a rim may sit in at most one junction"
+                    % (boundary_id, patch_id, claim))
+        for patch_id, boundary_id, _ in junction.members:
+            self._rim_claim[(patch_id, boundary_id)] = junction.id
+        self._junctions.append(junction)
+        return junction
+
+    def junctions(self):
+        return sorted(self._junctions, key=lambda j: j.id)
+
     # -- serialization ---------------------------------------------------------------
     def to_json(self):
         return json.dumps(self.to_dict(), indent=2)
 
     def to_dict(self):
-        return {"version": 2, "gauge": self.gauge,
-                "tolerances": self.tolerances,
-                "open_boundaries": list(self.open_boundaries),
-                "primitives": [p.to_dict() for p in self._prims],
-                "joints": {k: [j.to_dict() for j in v]
-                           for k, v in self.joint_plurals().items()},
-                "ops": [op.to_dict() for op in self.ops]}
+        d = {"version": 2, "gauge": self.gauge,
+             "tolerances": self.tolerances,
+             "open_boundaries": list(self.open_boundaries),
+             "primitives": [p.to_dict() for p in self._prims],
+             "joints": {k: [j.to_dict() for j in v]
+                        for k, v in self.joint_plurals().items()},
+             "ops": [op.to_dict() for op in self.ops]}
+        # v3 additive keys — only present when patches/junctions exist, so
+        # v2 payloads stay byte-stable
+        if self._patches:
+            d["patches"] = [p.to_dict() for p in self.patches()]
+        if self._junctions:
+            d["junctions"] = [j.to_dict() for j in self.junctions()]
+        return d
 
     @classmethod
     def from_json(cls, blob):
@@ -591,6 +843,10 @@ class UGPGraph:
                 g.add_joint(Joint.from_dict(jd))
         for od in data.get("ops", []):
             g.add_op(KnitOp.from_dict(od))
+        for pd in data.get("patches", []):
+            g.add_patch(Patch.from_dict(pd))
+        for jd in data.get("junctions", []):
+            g.add_junction(Junction.from_dict(jd))
         return g
 
 

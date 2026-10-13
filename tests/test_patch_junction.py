@@ -13,7 +13,7 @@ Topology bookkeeping (the invariant I-chi will close in C2):
 import unittest
 
 from ugc.primitives import (Boundary, Junction, Patch, PatchError,
-                            SchemaError, UGPGraph)
+                            PrimitiveError, SchemaError, UGPGraph)
 
 
 def _rim(bid, length_mm, center=(0.0, 0.0, 0.0), normal=(0.0, 1.0, 0.0)):
@@ -44,9 +44,17 @@ class TestPatchConstruction(unittest.TestCase):
         with self.assertRaises(PatchError):
             Patch("empty", [])
 
-    def test_negative_length_span_rejected(self):
-        with self.assertRaises(PatchError):
+    def test_nonpositive_length_span_rejected(self):
+        # a non-positive Boundary cannot even be constructed (its own ctor
+        # raises first). Patch still guards the length itself because
+        # Boundary.length_mm is mutable after construction (defense in
+        # depth for mutated boundaries).
+        with self.assertRaises(PrimitiveError):
             Patch("bad", [Boundary("r", "rim", -1.0)])
+        b = Boundary("r", "rim", 10.0)
+        b.length_mm = 0.0
+        with self.assertRaises(PatchError):
+            Patch("bad", [b])
 
     def test_inert_span_allowed_but_patch_must_carry_one_rim(self):
         with self.assertRaises(PatchError):
