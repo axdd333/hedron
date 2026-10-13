@@ -21,7 +21,7 @@ instances, then joints (add_joint resolves both endpoints immediately).
 import math
 
 from ugc.primitives import (Primitive, UGPGraph, KnitOp, Joint,
-                            PrimitiveError)
+                            PrimitiveError, Boundary, Junction, Patch)
 
 __all__ = ["build_garment", "GARMENT_FAMILIES"]
 
@@ -96,6 +96,35 @@ def _branch(gid, child, parent, anchor_point, child_boundary="rim_start"):
                          "point": anchor_point})
 
 
+# --- spec v3 additive layer (t_8ea48971 C3) ----------------------------------
+#
+# Every builder declares, next to its v2 primitives/joints/ops, the TRUE
+# surface topology as patches + junctions (DESIGN_V3_TOPOLOGY.md). Rules:
+# - spans are cloned from the v2 primitives' Boundary descriptors (same mm
+#   lengths -> the v3 layer inherits I-RIMMATCH/I-LOOP-clean loop counts),
+#   except synthetic curves (shirt armholes, trousers leg tops) which are
+#   cut to the mating child rim so junction loop closure holds at gauge;
+# - junction members alternate cw/ccw (parent traversal -> child traversal);
+# - junction construction carries over the v2 joint's construction;
+# - declared_chi = 2 - 2g - n_free with g = 0 always (v3 reserves handles).
+
+
+def _span(ref, graph):
+    """Clone a v2 boundary descriptor as a v3 span: 'prim/bnd' -> Boundary."""
+    pid, bid = ref.split("/")
+    b = graph.get(pid).boundary(bid)
+    return Boundary(b.boundary, b.kind, b.length_mm, frame=(b.frame["center"],
+                                                            b.frame["normal"]))
+
+
+def _pair(gid, parent_ref, child_ref, construction="knitted_in"):
+    """A pairwise junction: parent rim traversed cw mates child rim ccw."""
+    pp, pb = parent_ref.split("/")
+    cp, cb = child_ref.split("/")
+    return Junction(gid, [(pp, pb, "cw"), (cp, cb, "ccw")],
+                    construction=construction)
+
+
 # --- builders ----------------------------------------------------------------
 
 
@@ -117,6 +146,14 @@ def _build_hat(scale):
     g.add_joint(_rim_joint("hat_j_dome", dome, crown, "grafted",
                            rim_end_pt, child_boundary="rim",
                            realized_by=["hat_dome_graft"]))
+    # v3 topology: dome cap (k=1) + body shell (k=2), graft junction.
+    # free rim: the brim (crown/rim_start) -> chi = 1 + 0 = 2 - 1
+    g.add_patch(Patch("hat_dome", [_span("hat_dome/rim", g)]))
+    g.add_patch(Patch("hat_crown", [_span("hat_crown/rim_start", g),
+                                    _span("hat_crown/rim_end", g)]))
+    g.add_junction(_pair("hat_j_dome_v3", "hat_crown/rim_end",
+                         "hat_dome/rim", construction="grafted"))
+    g.declared_chi = 1
     return g
 
 
@@ -148,6 +185,18 @@ def _build_sock(scale):
                               foot.metrics()["terminus"],
                               child_boundary="rim",
                               realized_by=["sock_toe_graft"]))
+    # v3 topology: leg + foot shells (k=2) with the knitted heel turn, toe
+    # cap (k=1). free rim: the cuff -> chi = 0 + 0 + 1 = 2 - 1
+    g.add_patch(Patch("sock_leg", [_span("sock_leg/rim_start", g),
+                                   _span("sock_leg/rim_end", g)]))
+    g.add_patch(Patch("sock_foot", [_span("sock_foot/rim_start", g),
+                                    _span("sock_foot/rim_end", g)]))
+    g.add_patch(Patch("sock_toe", [_span("sock_toe/rim", g)]))
+    g.add_junction(_pair("sock_j_heel_v3", "sock_leg/rim_end",
+                         "sock_foot/rim_start", construction="knitted_in"))
+    g.add_junction(_pair("sock_j_toe_v3", "sock_foot/rim_end",
+                         "sock_toe/rim", construction="grafted"))
+    g.declared_chi = 1
     return g
 
 
@@ -199,6 +248,15 @@ def _build_glove(scale):
         g.add(_prim(pid, "disk", {"r": disk_r}, disk_origin, scale=scale))
         g.add_joint(_branch("glove_j_%s" % pid, g.get(pid), palm,
                             anchor, child_boundary="rim"))
+    # v3 topology: wrist shell (k=2) + palm cap (k=1), graft junction.
+    # fingers stay render-only v2 disks — not surfaces between rims.
+    # free rim: the cuff -> chi = 0 + 1 = 2 - 1
+    g.add_patch(Patch("glove_wrist", [_span("glove_wrist/rim_start", g),
+                                      _span("glove_wrist/rim_end", g)]))
+    g.add_patch(Patch("glove_palm", [_span("glove_palm/rim", g)]))
+    g.add_junction(_pair("glove_j_palm_v3", "glove_wrist/rim_end",
+                         "glove_palm/rim", construction="grafted"))
+    g.declared_chi = 1
     return g
 
 
@@ -211,6 +269,11 @@ def _build_skirt(scale):
     # skirt_body/rim_start is produced by cast_on (fabric_start only).
     # skirt_body/rim_end is the hem — declared open.
     g.open_boundaries = ["skirt_body/rim_end"]
+    # v3 topology: one open shell (k=2). free rims: waistband + hem
+    # -> chi = 0 = 2 - 2
+    g.add_patch(Patch("skirt_body", [_span("skirt_body/rim_start", g),
+                                     _span("skirt_body/rim_end", g)]))
+    g.declared_chi = 0
     return g
 
 
@@ -234,6 +297,15 @@ def _build_dress(scale):
     g.add_joint(_continuation("dress_j_skirt", skirt, torso, "knitted_in",
                               torso.metrics()["terminus"],
                               realized_by=["dress_skirt_pick_up"]))
+    # v3 topology: two open shells (k=2) joined at the waist.
+    # free rims: neckline + hem -> chi = 0 = 2 - 2
+    g.add_patch(Patch("dress_torso", [_span("dress_torso/rim_start", g),
+                                      _span("dress_torso/rim_end", g)]))
+    g.add_patch(Patch("dress_skirt", [_span("dress_skirt/rim_start", g),
+                                      _span("dress_skirt/rim_end", g)]))
+    g.add_junction(_pair("dress_j_skirt_v3", "dress_torso/rim_end",
+                         "dress_skirt/rim_start", construction="knitted_in"))
+    g.declared_chi = 0
     return g
 
 
@@ -266,6 +338,29 @@ def _build_trousers(scale, leg_length=450):
         "trousers_leg_l/rim_end",
         "trousers_leg_r/rim_end",
     ]
+    # v3 topology — the real re-expression: the pair-of-pants surface has
+    # exactly three boundary curves (waist + two leg openings). The v2
+    # "crotch opening" (hips/rim_end declared open) was an artifact of
+    # expressing the legs as side branches; the true surface joins the
+    # hips WEB (k=3, chi -1) to each leg shell (k=2) across a junction,
+    # and the junction curves are synthetic cuts at the leg pick-up
+    # radius so junction loop closure holds at gauge. The v2 payload
+    # (incl. the deprecated open crotch) stays untouched for v2 clients.
+    leg_top = 2.0 * math.pi * 58.0     # mating rim: leg r1 = 58
+    waist = _span("trousers_hips/rim_start", g)
+    g.add_patch(Patch("trousers_hips", [waist,
+                                        Boundary("leg_l_top", "rim", leg_top),
+                                        Boundary("leg_r_top", "rim", leg_top)]))
+    g.add_patch(Patch("trousers_leg_l", [_span("trousers_leg_l/rim_start", g),
+                                         _span("trousers_leg_l/rim_end", g)]))
+    g.add_patch(Patch("trousers_leg_r", [_span("trousers_leg_r/rim_start", g),
+                                         _span("trousers_leg_r/rim_end", g)]))
+    g.add_junction(_pair("trousers_j_leg_l_v3", "trousers_hips/leg_l_top",
+                         "trousers_leg_l/rim_start"))
+    g.add_junction(_pair("trousers_j_leg_r_v3", "trousers_hips/leg_r_top",
+                         "trousers_leg_r/rim_start"))
+    # free rims: waistband + two leg hems -> chi = -1 + 0 + 0 = 2 - 3
+    g.declared_chi = -1
     return g
 
 
@@ -316,6 +411,42 @@ def _build_shirt(scale, hood=False):
         # No hood: torso/rim_end = neck opening — declared open
         open_bnds.append("shirt_torso/rim_end")
     g.open_boundaries = open_bnds
+    # v3 topology — second re-expression: the shirt torso is a k=4 web
+    # (hem, neck, two synthetic armhole curves at the sleeve pick-up
+    # radius 55), joined pairwise to each sleeve shell (k=2). The v2
+    # payload (side-branch sleeves, open neck when hoodless) stays
+    # untouched for v2 clients.
+    armhole = 2.0 * math.pi * 55.0     # mating rim: sleeve r1 = 55
+    hem_b = g.get("shirt_torso").boundary("rim_start")
+    hem = Boundary("hem", hem_b.kind, hem_b.length_mm,
+                   frame=(hem_b.frame["center"], hem_b.frame["normal"]))
+    torso_spans = [hem, Boundary("neck", "rim", 2.0 * math.pi * 120.0),
+                   Boundary("armhole_l", "rim", armhole),
+                   Boundary("armhole_r", "rim", armhole)]
+    if hood:
+        # the hood junction curve IS the torso's closed rim_end, re-id'd
+        # as the neck opening (same length: torso r2 = 120 = hood rim r)
+        neck_b = g.get("shirt_torso").boundary("rim_end")
+        torso_spans[1] = Boundary("neck", neck_b.kind, neck_b.length_mm,
+                                  frame=(neck_b.frame["center"],
+                                         neck_b.frame["normal"]))
+    g.add_patch(Patch("shirt_torso", torso_spans))
+    for side in ("l", "r"):
+        g.add_patch(Patch("shirt_sleeve_%s" % side,
+                          [_span("shirt_sleeve_%s/rim_start" % side, g),
+                           _span("shirt_sleeve_%s/rim_end" % side, g)]))
+        g.add_junction(_pair("shirt_j_sleeve_%s_v3" % side,
+                             "shirt_torso/armhole_%s" % side,
+                             "shirt_sleeve_%s/rim_start" % side))
+    if hood:
+        g.add_patch(Patch("hood", [_span("hood/rim", g)]))
+        g.add_junction(_pair("shirt_j_hood_v3", "shirt_torso/neck",
+                             "hood/rim", construction="grafted"))
+        # free rims: hem + two cuffs -> chi = -2 + 0 + 1 = 2 - 3
+        g.declared_chi = -1
+    else:
+        # free rims: hem + neck + two cuffs -> chi = -2 = 2 - 4
+        g.declared_chi = -2
     return g
 
 
