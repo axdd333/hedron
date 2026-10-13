@@ -1,0 +1,46 @@
+#!/bin/sh
+# tools/agy — one-shot Antigravity (Gemini) CLI via the language_server agentapi.
+# Requires the Antigravity IDE desktop app to be RUNNING (it hosts the LS).
+#
+# Self-config: discovers the standalone language_server's ports/csrf token from
+# `ps`, sets ANTIGRAVITY_* env, and execs the bundled agentapi shim.
+#
+# Usage:
+#   tools/agy -p "one-shot prompt"          # new conversation, print reply id
+#   tools/agy <command> [args...]           # passthrough to agentapi
+set -eu
+
+LS=/Applications/Antigravity.app/Contents/Resources/bin/language_server
+SHIM="$HOME/.gemini/antigravity/bin/agentapi"
+
+[ -x "$LS" ] || { echo "error: Antigravity.app not installed" >&2; exit 2; }
+[ -x "$SHIM" ] || { echo "error: $SHIM missing" >&2; exit 2; }
+
+# If app is running, adopt its live standalone LS endpoint; else spawn our own.
+PIDS=$(pgrep -f 'language_server --standalone' || true)
+if [ -n "$PIDS" ]; then
+  PID=$(echo "$PIDS" | head -1)
+  CSRF=$(ps -p "$PID" -o command= | sed -n 's/.*--csrf_token \([0-9a-f-]*\).*/\1/p')
+  # https_server_port 0 => dynamic ports; find its listening TCP ports
+  PORTS=$(lsof -nP -p "$PID" 2>/dev/null | awk '/LISTEN/ {gsub(".*:","",$9); print $9}' | sort -u)
+  # pick the last port (agentapi listener is bound after the bridge)
+  ADDR=$(echo "$PORTS" | tail -1)
+  export ANTIGRAVITY_LS_ADDRESS="127.0.0.1:$ADDR"
+  export ANTIGRAVITY_CSRF_TOKEN="$CSRF"
+  export ANTIGRAVITY_PROJECT_ID="${ANTIGRAVITY_PROJECT_ID:-outside-of-project}"
+else
+  # Offline fallback: run LS standalone on a fixed port
+  export ANTIGRAVITY_LS_ADDRESS="${ANTIGRAVITY_LS_ADDRESS:-127.0.0.1:5387}"
+fi
+
+if [ "${1:-}" = "-p" ]; then
+  shift
+  PROMPT="$*"
+  RESP=$("$SHIM" new-conversation --model="${AGY_MODEL:-flash}" "$PROMPT")
+  CONV=$(printf '%s' "$RESP" | sed -n 's/.*"conversationId": *"\([^"]*\)".*/\1/p')
+  echo "$RESP"
+  echo "conversation: $CONV"
+  exit 0
+fi
+
+exec "$SHIM" "$@"
