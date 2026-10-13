@@ -26,7 +26,7 @@ import unittest
 
 from ugc import backend as B
 from ugc.garments import build_garment
-from ugc.primitives import (Boundary, Junction, Patch, UGPGraph)
+from ugc.primitives import (Boundary, Junction, Patch, Primitive, UGPGraph)
 
 # family: (n_junction_plan_entries, n_realized, n_unrealized)
 PLAN = {
@@ -43,6 +43,26 @@ PLAN = {
 
 
 class TestJunctionPlan(unittest.TestCase):
+    @staticmethod
+    def _graph():
+        # v2-valid substrate: exactly one root primitive (I-GRAPH); its
+        # rims are declared open (bare fixture fabric)
+        g = UGPGraph(gauge={"wale_mm": 2.5, "course_mm": 1.6})
+        g.add(Primitive("root", "tube",
+                        {"r1": 20.0, "r2": 20.0, "l": 100.0}, (0, 0, 0)))
+        g.open_boundaries = ["root/rim_start", "root/rim_end"]
+        return g
+
+    @staticmethod
+    def _closed_pair(g, cap_rim="r1", construction="grafted", jid="j1"):
+        """Two k=1 caps glued across one junction = closed sphere, chi 2."""
+        g.add_patch(Patch("a", [Boundary(cap_rim, "rim", 100)]))
+        g.add_patch(Patch("b", [Boundary(cap_rim, "rim", 100)]))
+        g.add_junction(Junction(jid, [("a", cap_rim, "cw"),
+                                      ("b", cap_rim, "ccw")],
+                                construction=construction))
+        g.declared_chi = 2
+
     def test_every_family_plans_its_junctions(self):
         for fam, (n, realized, unrealized) in PLAN.items():
             plan = B.lower_junctions(build_garment(fam))
@@ -55,32 +75,32 @@ class TestJunctionPlan(unittest.TestCase):
                 fam)
 
     def test_construction_to_pattern_rules(self):
-        g = UGPGraph(gauge={"wale_mm": 2.5, "course_mm": 1.6})
-        g.add_patch(Patch("a", [Boundary("r1", "rim", 100),
-                                Boundary("r2", "rim", 100)]))
-        g.add_patch(Patch("b", [Boundary("r1", "rim", 100),
-                                Boundary("r2", "rim", 100)]))
-        g.declared_chi = 0
-        g.add_junction(Junction("j_knit", [("a", "r1", "cw"),
-                                           ("b", "r1", "ccw")],
+        g = self._graph()
+        # star: one k=3 web + one cap per construction, all glued into a
+        # single closed component (connected for I-REACH, chi = 2)
+        g.add_patch(Patch("web", [Boundary("ra", "rim", 100),
+                                  Boundary("rb", "rim", 100),
+                                  Boundary("rc", "rim", 100)]))
+        g.add_patch(Patch("cap_a", [Boundary("r1", "rim", 100)]))
+        g.add_patch(Patch("cap_b", [Boundary("r2", "rim", 100)]))
+        g.add_patch(Patch("cap_c", [Boundary("r3", "rim", 100)]))
+        g.add_junction(Junction("j_knit", [("web", "ra", "cw"),
+                                           ("cap_a", "r1", "ccw")],
                                 construction="knitted_in"))
-        g.add_junction(Junction("j_seam", [("a", "r2", "cw"),
-                                           ("b", "r2", "ccw")],
+        g.add_junction(Junction("j_seam", [("web", "rb", "cw"),
+                                           ("cap_b", "r2", "ccw")],
                                 construction="selvedge_seam"))
+        g.add_junction(Junction("j_graft", [("web", "rc", "cw"),
+                                            ("cap_c", "r3", "ccw")],
+                                construction="grafted"))
+        g.declared_chi = 2   # (2-3) + 1 + 1 + 1, closed, g=0
         plan = {e.graph_junction: e for e in B.lower_junctions(g)}
         self.assertEqual(plan["j_knit"].machine_ops, ("PICK_UP", "KNIT"))
         self.assertEqual(plan["j_seam"].machine_ops, ("SELVEDGE_SEAM",))
 
     def test_unsupported_construction_gets_no_pattern(self):
-        g = UGPGraph(gauge={"wale_mm": 2.5, "course_mm": 1.6})
-        g.add_patch(Patch("a", [Boundary("r1", "rim", 100),
-                                Boundary("r2", "rim", 100)]))
-        g.add_patch(Patch("b", [Boundary("r1", "rim", 100),
-                                Boundary("r2", "rim", 100)]))
-        g.declared_chi = 0
-        g.add_junction(Junction("j_u", [("a", "r1", "cw"),
-                                        ("b", "r1", "ccw")],
-                                construction="unsupported"))
+        g = self._graph()
+        self._closed_pair(g, jid="j_u", construction="unsupported")
         plan = B.lower_junctions(g)
         self.assertEqual(len(plan), 1)
         self.assertEqual(plan[0].status, "NO_PATTERN")
@@ -88,19 +108,20 @@ class TestJunctionPlan(unittest.TestCase):
         self.assertIn("unsupported", plan[0].notes[0])
 
     def test_arity4_graft_emits_two_grafts(self):
-        g = UGPGraph(gauge={"wale_mm": 2.5, "course_mm": 1.6})
+        g = self._graph()
         g.add_patch(Patch("web", [Boundary("w1", "rim", 100),
                                   Boundary("w2", "rim", 100)]))
         g.add_patch(Patch("p2", [Boundary("a", "rim", 100),
                                  Boundary("b", "rim", 100)]))
         g.add_patch(Patch("p3", [Boundary("a", "rim", 100),
                                  Boundary("b", "rim", 100)]))
-        g.declared_chi = 0
         g.add_junction(Junction("j4", [("web", "w1", "cw"),
                                        ("p2", "a", "ccw"),
                                        ("web", "w2", "cw"),
                                        ("p3", "a", "ccw")],
                                 construction="grafted"))
+        # free rims: web none, p2.b, p3.b -> chi = (0)+(1)+(1) - 2 = 0
+        g.declared_chi = 0
         plan = B.lower_junctions(g)
         self.assertEqual(len(plan), 1)
         self.assertEqual(plan[0].machine_ops, ("GRAFT", "GRAFT"))
@@ -131,7 +152,8 @@ class TestJunctionPlan(unittest.TestCase):
             B.lower_junctions(g)
 
     def test_v2_only_graph_plans_nothing(self):
-        from ugc.primitives import validate
+        # bare v2 graph: no patches, plan is empty — I-GRAPH errors from
+        # having no root prim are irrelevant when there is nothing to plan
         self.assertEqual(B.lower_junctions(UGPGraph()), ())
 
     def test_plan_is_byte_deterministic(self):

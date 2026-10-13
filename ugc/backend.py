@@ -169,6 +169,131 @@ def _joint_records(g):
 # ---------------------------------------------------------------------------
 # lowering
 # ---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
+# junction-graph lowering (spec v3, t_8ea48971 C4)
+# ---------------------------------------------------------------------------
+class JunctionPlanEntry(object):
+    """One junction's knit plan: the op pattern its construction demands,
+    the v2 ops that realize it (verbatim curve refs), or an honest
+    refusal. Bound to its source junction id for traceability."""
+
+    __slots__ = ("graph_junction", "status", "construction", "machine_ops",
+                 "realized_by", "notes")
+
+    def __init__(self, graph_junction, status, construction, machine_ops,
+                 realized_by, notes=()):
+        self.graph_junction = str(graph_junction)
+        self.status = status              # REALIZED | UNREALIZED | NO_PATTERN
+        self.construction = construction
+        self.machine_ops = tuple(machine_ops)
+        self.realized_by = tuple(realized_by)
+        if isinstance(notes, str):
+            notes = (notes,)              # a lone string is one note
+        self.notes = tuple(notes)
+
+    def to_dict(self):
+        return {"graph_junction": self.graph_junction,
+                "status": self.status,
+                "construction": self.construction,
+                "machine_ops": list(self.machine_ops),
+                "realized_by": list(self.realized_by),
+                "notes": list(self.notes)}
+
+    def __eq__(self, other):
+        if not isinstance(other, JunctionPlanEntry):
+            return NotImplemented
+        return self.to_dict() == other.to_dict()
+
+    def __ne__(self, other):
+        eq = self.__eq__(other)
+        return eq if eq is NotImplemented else not eq
+
+    def __repr__(self):  # pragma: no cover
+        return "JunctionPlanEntry(%r, %s)" % (self.graph_junction,
+                                              self.status)
+
+
+# construction -> machine verb pattern per identified pair (v3 §4;
+# verbs are the reference set of _REFERENCE_VERBS)
+_JUNCTION_PATTERNS = {
+    "knitted_in": ("PICK_UP", "KNIT"),
+    "grafted": ("GRAFT",),
+    "selvedge_seam": ("SELVEDGE_SEAM",),
+}
+
+
+def _op_refs(op):
+    """Every primitive/boundary curve ref this op instance touches."""
+    refs = set(op.consumes)
+    if op.produces:
+        refs.add(op.produces)
+    return refs
+
+
+def lower_junctions(graph, backend="default_knit"):
+    """Lower the graph's junction layer to a per-junction knit plan.
+
+    Runs the full validation catalog first (v2 + the four v3 classes);
+    an invalid graph raises BackendNotApplicable — never planned. Each
+    junction gets exactly one JunctionPlanEntry, sorted by junction id:
+      REALIZED    the v2 op program already realizes the identification
+                  verbatim (member curve refs named by ops); machine_ops
+                  match the realizing op's reference verbs.
+      UNREALIZED  a pattern exists for the construction but no v2 op
+                  names the junction's synthetic curves (armholes, leg
+                  tops, re-id'd necks); the advised pattern is emitted
+                  with a note — the plan says the gap, never guesses it.
+      NO_PATTERN  construction "unsupported": documented refusal, like
+                  v2 §10 fingers.
+    v2-only graphs (no patches/junctions) plan empty. Additive: the v2
+    program lowering (lower()) is untouched.
+    """
+    if not isinstance(graph, P.UGPGraph):
+        raise TypeError("lower_junctions() expects a UGPGraph, got %s"
+                        % type(graph).__name__)
+    P.get_backend(backend)                   # RegistryError if unknown
+    if not graph.patches() and not graph.junctions():
+        return ()                            # bare v2 graph: nothing to plan
+    result = V.validate(graph)
+    if not result.ok:
+        raise BackendNotApplicable(result)
+
+    plan = []
+    for j in graph.junctions():
+        if j.construction == "unsupported":
+            plan.append(JunctionPlanEntry(
+                j.id, "NO_PATTERN", j.construction, (), (),
+                ("construction %r has no op pattern in v3 — documented "
+                 "refusal (DESIGN.md §10 convention)" % (j.construction,))))
+            continue
+        pattern = _JUNCTION_PATTERNS[j.construction]
+        # a pair is realized when some v2 op touches both member refs by
+        # their exact names (consume+produce, e.g. pick_up consumes the
+        # parent rim and produces the child rim)
+        realized_by = set()
+        for i in range(0, j.arity, 2):
+            a_ref = "%s/%s" % (j.members[i][0], j.members[i][1])
+            b_ref = "%s/%s" % (j.members[i + 1][0], j.members[i + 1][1])
+            for op in graph.ops:
+                refs = _op_refs(op)
+                if a_ref in refs and b_ref in refs:
+                    realized_by.add(op.id)
+        # the pattern applies per identified pair (arity 4 -> two runs)
+        machine_ops = pattern * (j.arity // 2)
+        if realized_by:
+            plan.append(JunctionPlanEntry(
+                j.id, "REALIZED", j.construction, machine_ops,
+                sorted(realized_by)))
+        else:
+            plan.append(JunctionPlanEntry(
+                j.id, "UNREALIZED", j.construction, machine_ops, (),
+                ("no v2 op names junction %r's member curves; the %s "
+                 "pattern is advised, the v2 program does not realize it"
+                 % (j.id, j.construction))))
+    plan.sort(key=lambda e: e.graph_junction)
+    return tuple(plan)
+
+
 class LoweredOp(object):
     """One lowered op instance: a machine-shaped step bound to its
     source graph op id (for traceability back to the UGP graph)."""
